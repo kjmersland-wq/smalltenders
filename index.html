@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Small Tenders — public contracts small firms can win</title>
+  <meta name="description" content="A human-edited list of public tenders small contractors can actually bid on. Open sources only. Europe-wide." />
+  <style>
+    :root {
+      --bg: #f4efe4;
+      --ink: #1c1914;
+      --muted: #6b6256;
+      --card: #fffdf8;
+      --line: #d9d0c0;
+      --accent: #9a3b16;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.5;
+    }
+    header, main, footer { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+    header { padding-top: 36px; padding-bottom: 8px; }
+    .kicker { font-family: ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+    h1 { font-size: 42px; line-height: 1.1; margin: 10px 0 12px; font-weight: 500; }
+    .lead { font-size: 20px; color: var(--muted); margin: 0 0 28px; }
+    .btn {
+      display: inline-block;
+      background: var(--ink);
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 18px;
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 15px;
+    }
+    .btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--ink); margin-left: 8px; }
+    section { margin: 36px 0; }
+    h2 { font-size: 22px; margin: 0 0 12px; font-weight: 500; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      padding: 16px 18px;
+      margin: 0 0 10px;
+    }
+    .card h3 { margin: 0 0 6px; font-size: 18px; font-weight: 500; }
+    .meta { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 13px; color: var(--muted); }
+    ul { padding-left: 18px; }
+    form { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+    input, select {
+      font: 16px ui-sans-serif, system-ui, sans-serif;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      background: #fff;
+      min-width: 220px;
+    }
+    button {
+      font: 16px ui-sans-serif, system-ui, sans-serif;
+      padding: 10px 16px;
+      border: 0;
+      background: var(--accent);
+      color: #fff;
+      cursor: pointer;
+    }
+    footer { padding: 40px 20px 60px; color: var(--muted); font-size: 14px; }
+    a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="kicker">Open sources · TED + national notices</div>
+    <h1>Small Tenders</h1>
+    <p class="lead">Twice a week: public contracts small firms can actually win. No portal. No AI. Just an edited list.</p>
+    <a class="btn" href="#bestill">Start med prøveliste</a>
+    <a class="btn ghost" href="#eksempel">Se eksempel</a>
+  </header>
+
+  <main>
+    <section>
+      <h2>What you get</h2>
+      <ul>
+        <li>Picked from official open notices (TED and national portals)</li>
+        <li>Filtered by trade and country/region</li>
+        <li>Deadline, buyer, and link to the original notice</li>
+        <li>One line on why a small or mid-size firm can bid</li>
+      </ul>
+    </section>
+
+    <section id="eksempel">
+      <h2>What an issue looks like</h2>
+      <p class="meta">Sample rows — replaced with live official links when the list ships. Always the source notice first.</p>
+      <article class="card">
+        <h3>Painting, municipal buildings</h3>
+        <div class="meta">Norway · Inland · deadline in 18 days · under €150k</div>
+        <p>Fits a painting firm with 3–10 staff. Local if you already do public work.</p>
+      </article>
+      <article class="card">
+        <h3>Ventilation service, school buildings</h3>
+        <div class="meta">Poland · Mazovia · deadline in 24 days · framework</div>
+        <p>Recurring work, not a one-off. Good if you already have service vans.</p>
+      </article>
+      <article class="card">
+        <h3>Electrical switchgear replacement</h3>
+        <div class="meta">Germany · regional · deadline in 12 days</div>
+        <p>Bounded scope. Too big for a one-person shop, too small for national chains.</p>
+      </article>
+    </section>
+
+    <section>
+      <h2>Price</h2>
+      <div class="card">
+        <h3>€29 / month</h3>
+        <p>One trade + one country. Extra regions later. First 14 days: free sample list by email.</p>
+      </div>
+    </section>
+
+    <section id="bestill">
+      <h2>Get the sample list</h2>
+      <p>No account. Email + trade. The list is compiled by hand from official open notices.</p>
+      <form action="mailto:hello@smalltenders.com" method="post" enctype="text/plain">
+        <input type="email" name="email" placeholder="Email" required />
+        <select name="trade" required>
+          <option value="">Trade</option>
+          <option>Electrical</option>
+          <option>Plumbing</option>
+          <option>HVAC / ventilation</option>
+          <option>Painting</option>
+          <option>Carpentry / building</option>
+          <option>Cleaning</option>
+        </select>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    Small Tenders is an edited selection of publicly available notices.
+    We do not replace TED or national portals. Always read the original notice before you bid.
+    smalltenders.com
+  </footer>
+</body>
+</html>
