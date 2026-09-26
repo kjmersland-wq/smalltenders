@@ -9,147 +9,115 @@
   <link rel="alternate" hreflang="en" href="https://smalltenders.com/" />
   <link rel="alternate" hreflang="nb" href="https://smalltenders.com/no/" />
   <link rel="alternate" hreflang="x-default" href="https://smalltenders.com/" />
-  <style>
-    :root {
-      --bg: #f4efe4;
-      --ink: #1c1914;
-      --muted: #6b6256;
-      --card: #fffdf8;
-      --line: #d9d0c0;
-      --accent: #9a3b16;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      background: var(--bg);
-      color: var(--ink);
-      line-height: 1.5;
-    }
-    header, main, footer { max-width: 760px; margin: 0 auto; padding: 0 20px; }
-    header { padding-top: 36px; padding-bottom: 8px; }
-    .kicker { font-family: ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
-    h1 { font-size: 42px; line-height: 1.1; margin: 10px 0 12px; font-weight: 500; }
-    .lead { font-size: 20px; color: var(--muted); margin: 0 0 28px; }
-    .btn {
-      display: inline-block;
-      background: var(--ink);
-      color: #fff;
-      text-decoration: none;
-      padding: 12px 18px;
-      font-family: ui-sans-serif, system-ui, sans-serif;
-      font-size: 15px;
-    }
-    .btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--ink); margin-left: 8px; }
-    section { margin: 36px 0; }
-    h2 { font-size: 22px; margin: 0 0 12px; font-weight: 500; }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      padding: 16px 18px;
-      margin: 0 0 10px;
-    }
-    .card h3 { margin: 0 0 6px; font-size: 18px; font-weight: 500; }
-    .meta { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 13px; color: var(--muted); }
-    ul { padding-left: 18px; }
-    form { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
-    input, select {
-      font: 16px ui-sans-serif, system-ui, sans-serif;
-      padding: 10px 12px;
-      border: 1px solid var(--line);
-      background: #fff;
-      min-width: 220px;
-    }
-    button {
-      font: 16px ui-sans-serif, system-ui, sans-serif;
-      padding: 10px 16px;
-      border: 0;
-      background: var(--accent);
-      color: #fff;
-      cursor: pointer;
-    }
-    footer { padding: 40px 20px 60px; color: var(--muted); font-size: 14px; }
-    a { color: var(--accent); }
-    header { position: relative; }
-    .lang { position: absolute; top: 14px; right: 20px; font-family: ui-monospace, Menlo, monospace; font-size: 13px; letter-spacing: .08em; color: var(--muted); }
-    .lang a { text-decoration: none; color: var(--muted); }
-    .lang a:hover { color: var(--accent); }
-    .lang [aria-current="page"] { color: var(--ink); font-weight: 700; }
-  </style>
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-  <header>
-    <nav class="lang" aria-label="Språk">
-      <a href="/">EN</a> | <a href="/no/" aria-current="page">NO</a>
-    </nav>
-    <div class="kicker">Åpne kilder · TED + nasjonale kunngjøringer</div>
-    <h1>Small Tenders</h1>
-    <p class="lead">To ganger i uka: offentlige kontrakter små firmaer faktisk kan vinne. Ingen portal. Ingen AI. Bare en redigert liste.</p>
-    <a class="btn" href="#proveliste">Få prøvelisten</a>
-    <a class="btn ghost" href="#eksempel">Se eksempel</a>
+  <nav class="nav" aria-label="Hovedmeny">
+    <div class="wrap">
+      <a class="brand" href="/no/">Small Tenders</a>
+      <div class="nav-right">
+        <span class="lang"><a href="/">EN</a> | <a href="/no/" aria-current="page">NO</a></span>
+        <a class="btn sm" href="#proveliste">Få prøvelisten</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="wrap">
+      <p class="kicker">Åpne kilder · TED + nasjonale kunngjøringer</p>
+      <h1>Small Tenders</h1>
+      <p class="lead">To ganger i uka: offentlige kontrakter små firmaer faktisk kan vinne. Ingen portal. Ingen AI. Bare en redigert liste.</p>
+      <div class="actions">
+        <a class="btn" href="#proveliste">Få prøvelisten</a>
+        <a class="btn ghost" href="#eksempel">Se eksempel</a>
+      </div>
+    </div>
   </header>
 
   <main>
     <section>
-      <h2>Dette får du</h2>
-      <ul>
-        <li>Plukket fra offisielle, åpne kunngjøringer (TED og nasjonale portaler)</li>
-        <li>Filtrert etter fag og land/region</li>
-        <li>Frist, oppdragsgiver og lenke til original kunngjøring</li>
-        <li>Én linje om hvorfor et lite eller mellomstort firma kan by</li>
-      </ul>
+      <div class="wrap">
+        <p class="label">Dette får du</p>
+        <div class="tiles">
+          <div class="tile">
+            <span class="n">01</span>
+            <h3>Plukket fra offisielle, åpne kunngjøringer</h3>
+            <p>TED og nasjonale portaler. Kun åpne kilder.</p>
+          </div>
+          <div class="tile">
+            <span class="n">02</span>
+            <h3>Filtrert etter fag og land/region</h3>
+            <p>Ett fag og ett land per abonnement.</p>
+          </div>
+          <div class="tile">
+            <span class="n">03</span>
+            <h3>Frist, oppdragsgiver og lenke til original kunngjøring</h3>
+            <p>Pluss én linje om hvorfor et lite eller mellomstort firma kan by.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="eksempel">
-      <h2>Slik ser en utgave ut</h2>
-      <p class="meta">Eksempelrader — byttes ut med ekte, offisielle lenker når listen sendes. Alltid original kunngjøring først.</p>
-      <article class="card">
-        <h3>Maling, kommunale bygg</h3>
-        <div class="meta">Norge · Innlandet · frist om 18 dager · under €150 000</div>
-        <p>Passer et malerfirma med 3–10 ansatte. Lokalt hvis dere allerede tar offentlige oppdrag.</p>
-      </article>
-      <article class="card">
-        <h3>Ventilasjonsservice, skolebygg</h3>
-        <div class="meta">Polen · Mazowsze · frist om 24 dager · rammeavtale</div>
-        <p>Gjentakende arbeid, ikke et engangsoppdrag. Bra hvis dere allerede har servicebiler.</p>
-      </article>
-      <article class="card">
-        <h3>Utskifting av elektriske sentraler</h3>
-        <div class="meta">Tyskland · regionalt · frist om 12 dager</div>
-        <p>Avgrenset omfang. For stort for enmannsfirma, for lite for de nasjonale kjedene.</p>
-      </article>
+      <div class="wrap">
+        <h2>Slik ser en utgave ut</h2>
+        <p class="note">Eksempelrader — byttes ut med ekte, offisielle lenker når listen sendes. Alltid original kunngjøring først.</p>
+        <div class="rows">
+          <article class="row">
+            <div class="t">Maling, kommunale bygg</div>
+            <div class="m">Norge · Innlandet · frist om 18 dager · under €150 000</div>
+            <div class="w">Passer et malerfirma med 3–10 ansatte. Lokalt hvis dere allerede tar offentlige oppdrag.</div>
+          </article>
+          <article class="row">
+            <div class="t">Ventilasjonsservice, skolebygg</div>
+            <div class="m">Polen · Mazowsze · frist om 24 dager · rammeavtale</div>
+            <div class="w">Gjentakende arbeid, ikke et engangsoppdrag. Bra hvis dere allerede har servicebiler.</div>
+          </article>
+          <article class="row">
+            <div class="t">Utskifting av elektriske sentraler</div>
+            <div class="m">Tyskland · regionalt · frist om 12 dager</div>
+            <div class="w">Avgrenset omfang. For stort for enmannsfirma, for lite for de nasjonale kjedene.</div>
+          </article>
+        </div>
+      </div>
     </section>
 
     <section>
-      <h2>Pris</h2>
-      <div class="card">
-        <h3>€29 / måned</h3>
-        <p>Ett fag + ett land. Flere regioner senere. Første 14 dager: gratis prøveliste på e-post.</p>
+      <div class="wrap">
+        <p class="label">Pris</p>
+        <div class="price">
+          <div class="amount">€29<small> / måned</small></div>
+          <p>Ett fag + ett land. Flere regioner senere. Første 14 dager: gratis prøveliste på e-post.</p>
+        </div>
       </div>
     </section>
 
     <section id="proveliste">
-      <h2>Få prøvelisten</h2>
-      <p>Ingen konto. E-post + fag. Listen settes sammen for hånd fra offisielle, åpne kunngjøringer.</p>
-      <form action="mailto:hello@smalltenders.com" method="post" enctype="text/plain">
-        <input type="email" name="email" placeholder="E-post" required />
-        <select name="trade" required>
-          <option value="">Fag</option>
-          <option>Elektro</option>
-          <option>Rør / sanitær</option>
-          <option>VVS / ventilasjon</option>
-          <option>Maling</option>
-          <option>Snekker / bygg</option>
-          <option>Renhold</option>
-        </select>
-        <button type="submit">Send</button>
-      </form>
+      <div class="wrap form-wrap">
+        <h2>Få prøvelisten</h2>
+        <p>Ingen konto. E-post + fag. Listen settes sammen for hånd fra offisielle, åpne kunngjøringer.</p>
+        <form action="mailto:hello@smalltenders.com" method="post" enctype="text/plain">
+          <input type="email" name="email" placeholder="E-post" required />
+          <select name="trade" required>
+            <option value="">Fag</option>
+            <option>Elektro</option>
+            <option>Rør / sanitær</option>
+            <option>VVS / ventilasjon</option>
+            <option>Maling</option>
+            <option>Snekker / bygg</option>
+            <option>Renhold</option>
+          </select>
+          <button type="submit">Send</button>
+        </form>
+      </div>
     </section>
   </main>
 
   <footer>
-    Small Tenders er et redigert utvalg av offentlig tilgjengelige kunngjøringer. Vi erstatter ikke TED eller nasjonale portaler. Les alltid den originale kunngjøringen før du byr.
-    smalltenders.com
+    <div class="wrap">
+      <p>Small Tenders er et redigert utvalg av offentlig tilgjengelige kunngjøringer. Vi erstatter ikke TED eller nasjonale portaler. Les alltid den originale kunngjøringen før du byr.</p>
+      <p>smalltenders.com</p>
+    </div>
   </footer>
 </body>
 </html>
