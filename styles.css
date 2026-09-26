@@ -20,7 +20,7 @@ a { color: var(--accent); }
 .nav { position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--ink); }
 .nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 56px; }
 .brand { font-family: var(--sans); font-weight: 700; font-size: 15px; letter-spacing: .02em; color: var(--ink); text-decoration: none; display: flex; align-items: center; gap: 10px; }
-.brand::before { content: ""; width: 12px; height: 12px; background: var(--accent); }
+.brand img { display: block; height: 28px; width: auto; }
 .nav-right { display: flex; align-items: center; gap: 20px; }
 .lang { font-family: var(--mono); font-size: 12px; letter-spacing: .1em; color: var(--muted); }
 .lang a { color: var(--muted); text-decoration: none; }
