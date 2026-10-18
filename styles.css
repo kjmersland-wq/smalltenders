@@ -696,3 +696,22 @@ footer a:hover { color: var(--accent); }
 .foot-sources { flex-basis: 100%; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px; margin: 0 0 12px; padding: 18px 22px; background: var(--paper); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 14px; box-shadow: var(--shadow-s); max-width: none; font: 500 16px/1.4 var(--serif); color: var(--ink); }
 .foot-sources a { color: var(--accent); font: 600 15px var(--sans); text-decoration: none; white-space: nowrap; }
 .foot-sources a:hover { text-decoration: underline; }
+
+/* Working across Europe */
+.legal.europe .wide { max-width: 900px; }
+.disclaimer { display: flex; gap: 16px; align-items: flex-start; margin: 8px 0 30px; padding: 20px 22px; background: #fff6e4; border: 1px solid #efd8a4; border-left: 5px solid #d9a21b; border-radius: 14px; font-family: var(--sans); }
+.disclaimer svg { flex: none; width: 26px; height: 26px; margin-top: 2px; fill: none; stroke: #b37d00; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.disclaimer p { margin: 0; font-size: 15px; line-height: 1.6; }
+.legal .basics { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 8px 26px 22px; margin: 30px 0; box-shadow: var(--shadow-s); }
+.legal .basics h2 { font-size: 22px; margin: 22px 0 8px; }
+.r-head { margin-top: 46px; }
+.r-rows { margin: 8px 0 0; font-family: var(--sans); }
+.r-rows > div { display: grid; grid-template-columns: 150px 1fr; gap: 6px 22px; padding: 13px 0; border-top: 1px solid var(--line); }
+.r-rows > div:first-child { border-top: 0; }
+.r-rows dt { font: 600 11px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--accent); padding-top: 3px; }
+.r-rows dd { margin: 0; font-size: 15.5px; line-height: 1.6; }
+.legal .region { padding: 22px 26px 12px; }
+.legal .region h2 { margin: 0; }
+.off-links { list-style: none; padding: 0; margin: 4px 0 14px; display: grid; gap: 8px; font-family: var(--sans); }
+.off-links a { font-weight: 600; }
+@media (max-width: 760px) { .r-rows > div { grid-template-columns: 1fr; gap: 2px; } .legal .basics { padding: 6px 18px 18px; } .legal .region { padding: 20px 18px 8px; } }
