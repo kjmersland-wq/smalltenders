@@ -665,5 +665,250 @@
   "lat": 46.189,
   "lng": 15.406,
   "region": ""
+ },
+ "NO|stavanger": {
+  "lat": 58.97,
+  "lng": 5.732,
+  "region": "Rogaland"
+ },
+ "NO|alta": {
+  "lat": 69.967,
+  "lng": 23.273,
+  "region": "Finnmark"
+ },
+ "NO|bergen": {
+  "lat": 60.394,
+  "lng": 5.326,
+  "region": "Vestland"
+ },
+ "NO|rana": {
+  "lat": 66.44,
+  "lng": 14.395,
+  "region": "Nordland"
+ },
+ "NO|innlandet": {
+  "lat": 61.268,
+  "lng": 10.485,
+  "region": "Innlandet"
+ },
+ "NO|ålesund": {
+  "lat": 62.48,
+  "lng": 6.555,
+  "region": "Møre og Romsdal"
+ },
+ "NO|kvinesdal": {
+  "lat": 58.518,
+  "lng": 6.954,
+  "region": "Agder"
+ },
+ "NO|sveio": {
+  "lat": 59.614,
+  "lng": 5.412,
+  "region": "Vestland"
+ },
+ "NO|vefsn": {
+  "lat": 65.821,
+  "lng": 13.179,
+  "region": "Nordland"
+ },
+ "NO|asker": {
+  "lat": 59.681,
+  "lng": 10.475,
+  "region": "Akershus"
+ },
+ "NO|sørreisa": {
+  "lat": 69.101,
+  "lng": 18.177,
+  "region": "Troms"
+ },
+ "NO|stange": {
+  "lat": 60.624,
+  "lng": 11.383,
+  "region": "Innlandet"
+ },
+ "NO|guovdageainnu suohkan - kautokeino": {
+  "lat": 69.012,
+  "lng": 23.044,
+  "region": "Finnmark"
+ },
+ "NO|halden": {
+  "lat": 59.068,
+  "lng": 11.537,
+  "region": "Østfold"
+ },
+ "NO|haugesund": {
+  "lat": 59.468,
+  "lng": 5.083,
+  "region": "Rogaland"
+ },
+ "NO|salangen": {
+  "lat": 68.875,
+  "lng": 17.835,
+  "region": "Troms"
+ },
+ "NO|harstad": {
+  "lat": 68.8,
+  "lng": 16.544,
+  "region": "Troms"
+ },
+ "NO|tromsø": {
+  "lat": 69.652,
+  "lng": 18.956,
+  "region": "Troms"
+ },
+ "NO|rakkestad": {
+  "lat": 59.36,
+  "lng": 11.421,
+  "region": "Østfold"
+ },
+ "NO|ringsaker": {
+  "lat": 60.985,
+  "lng": 10.845,
+  "region": "Innlandet"
+ },
+ "NO|nordre follo": {
+  "lat": 59.729,
+  "lng": 10.893,
+  "region": "Akershus"
+ },
+ "NO|gjesdal": {
+  "lat": 58.831,
+  "lng": 6.277,
+  "region": "Rogaland"
+ },
+ "NO|giske": {
+  "lat": 62.64,
+  "lng": 5.721,
+  "region": "Møre og Romsdal"
+ },
+ "NO|hægebostad": {
+  "lat": 58.476,
+  "lng": 7.229,
+  "region": "Agder"
+ },
+ "NO|ål": {
+  "lat": 60.697,
+  "lng": 8.504,
+  "region": "Buskerud"
+ },
+ "NO|ringerike": {
+  "lat": 60.327,
+  "lng": 10.022,
+  "region": "Buskerud"
+ },
+ "NO|arendal": {
+  "lat": 58.427,
+  "lng": 8.947,
+  "region": "Agder"
+ },
+ "NO|steigen": {
+  "lat": 67.854,
+  "lng": 14.802,
+  "region": "Nordland"
+ },
+ "NO|nordreisa": {
+  "lat": 69.527,
+  "lng": 21.599,
+  "region": "Troms"
+ },
+ "NO|trondheim": {
+  "lat": 63.43,
+  "lng": 10.395,
+  "region": "Trøndelag"
+ },
+ "NO|øygarden": {
+  "lat": 60.427,
+  "lng": 4.727,
+  "region": "Vestland"
+ },
+ "NO|vennesla": {
+  "lat": 58.34,
+  "lng": 7.771,
+  "region": "Agder"
+ },
+ "NO|sandnes": {
+  "lat": 58.983,
+  "lng": 6.395,
+  "region": "Rogaland"
+ },
+ "NO|randaberg": {
+  "lat": 58.999,
+  "lng": 5.617,
+  "region": "Rogaland"
+ },
+ "NO|karmøy": {
+  "lat": 59.23,
+  "lng": 5.154,
+  "region": "Rogaland"
+ },
+ "NO|narvik": {
+  "lat": 68.438,
+  "lng": 17.427,
+  "region": "Nordland"
+ },
+ "NO|vågan": {
+  "lat": 68.278,
+  "lng": 14.663,
+  "region": "Nordland"
+ },
+ "NO|vestland": {
+  "lat": 60.929,
+  "lng": 6.108,
+  "region": "Vestland"
+ },
+ "NO|kristiansund": {
+  "lat": 63.217,
+  "lng": 7.545,
+  "region": "Møre og Romsdal"
+ },
+ "NO|troms": {
+  "lat": 69.531,
+  "lng": 19.53,
+  "region": "Troms"
+ },
+ "NO|kristiansand": {
+  "lat": 58.086,
+  "lng": 7.932,
+  "region": "Agder"
+ },
+ "NO|volda": {
+  "lat": 62.08,
+  "lng": 6.274,
+  "region": "Møre og Romsdal"
+ },
+ "NO|sirdal": {
+  "lat": 58.845,
+  "lng": 6.822,
+  "region": "Agder"
+ },
+ "NO|loppa": {
+  "lat": 70.4,
+  "lng": 21.435,
+  "region": "Finnmark"
+ },
+ "NO|kongsberg": {
+  "lat": 59.595,
+  "lng": 9.671,
+  "region": "Buskerud"
+ },
+ "NO|frøya": {
+  "lat": 64.071,
+  "lng": 8.89,
+  "region": "Trøndelag"
+ },
+ "NO|nome": {
+  "lat": 59.264,
+  "lng": 9.186,
+  "region": "Telemark"
+ },
+ "NO|aukra": {
+  "lat": 62.939,
+  "lng": 6.679,
+  "region": "Møre og Romsdal"
+ },
+ "NO|vestnes": {
+  "lat": 62.568,
+  "lng": 7.111,
+  "region": "Møre og Romsdal"
  }
 }
