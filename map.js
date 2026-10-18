@@ -205,6 +205,88 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
     }
   }
 
+  // ---------- print / save as PDF for a single tender, in a language of the user's choice ----------
+  // order of the columns: btn, pick, go, trade, where, deadline, value, fit, original, printed
+  var PRINT = {
+    en: ['Print / Save as PDF', 'Language of the PDF', 'Print', 'Trade', 'Location', 'Deadline', 'Value / type', 'Good fit', 'Original notice', 'Printed from smalltenders.com'],
+    no: ['Skriv ut / lagre som PDF', 'Språk for PDF-en', 'Skriv ut', 'Fag', 'Sted', 'Frist', 'Verdi / type', 'Passer godt', 'Opprinnelig kunngjøring', 'Skrevet ut fra smalltenders.com'],
+    sv: ['Skriv ut / spara som PDF', 'Språk för PDF:en', 'Skriv ut', 'Bransch', 'Plats', 'Sista dag', 'Värde / typ', 'Passar bra', 'Ursprunglig annons', 'Utskrivet från smalltenders.com'],
+    da: ['Udskriv / gem som PDF', 'Sprog til PDF’en', 'Udskriv', 'Fag', 'Sted', 'Frist', 'Værdi / type', 'Passer godt', 'Oprindelig bekendtgørelse', 'Udskrevet fra smalltenders.com'],
+    fi: ['Tulosta / tallenna PDF:nä', 'PDF:n kieli', 'Tulosta', 'Ala', 'Sijainti', 'Määräaika', 'Arvo / tyyppi', 'Sopii hyvin', 'Alkuperäinen ilmoitus', 'Tulostettu osoitteesta smalltenders.com'],
+    is: ['Prenta / vista sem PDF', 'Tungumál PDF-skjalsins', 'Prenta', 'Iðngrein', 'Staðsetning', 'Frestur', 'Verðmæti / tegund', 'Hentar vel', 'Upprunaleg auglýsing', 'Prentað frá smalltenders.com'],
+    pl: ['Drukuj / zapisz jako PDF', 'Język pliku PDF', 'Drukuj', 'Branża', 'Lokalizacja', 'Termin', 'Wartość / rodzaj', 'Dobre dopasowanie', 'Oryginalne ogłoszenie', 'Wydrukowano z smalltenders.com'],
+    de: ['Drucken / als PDF speichern', 'Sprache des PDFs', 'Drucken', 'Gewerk', 'Ort', 'Frist', 'Wert / Art', 'Passt gut', 'Originalbekanntmachung', 'Gedruckt von smalltenders.com'],
+    cs: ['Tisk / uložit jako PDF', 'Jazyk PDF', 'Vytisknout', 'Obor', 'Místo', 'Lhůta', 'Hodnota / typ', 'Vhodné pro vás', 'Původní oznámení', 'Vytištěno z smalltenders.com'],
+    sk: ['Tlač / uložiť ako PDF', 'Jazyk PDF', 'Vytlačiť', 'Odbor', 'Miesto', 'Lehota', 'Hodnota / typ', 'Dobrá voľba', 'Pôvodné oznámenie', 'Vytlačené zo smalltenders.com'],
+    nl: ['Afdrukken / opslaan als pdf', 'Taal van de pdf', 'Afdrukken', 'Vakgebied', 'Locatie', 'Deadline', 'Waarde / type', 'Goede match', 'Oorspronkelijke aankondiging', 'Afgedrukt vanaf smalltenders.com'],
+    lt: ['Spausdinti / išsaugoti kaip PDF', 'PDF kalba', 'Spausdinti', 'Sritis', 'Vieta', 'Terminas', 'Vertė / tipas', 'Gerai tinka', 'Originalus skelbimas', 'Atspausdinta iš smalltenders.com'],
+    ee: ['Prindi / salvesta PDF-ina', 'PDF-i keel', 'Prindi', 'Ala', 'Asukoht', 'Tähtaeg', 'Väärtus / liik', 'Sobib hästi', 'Algne teade', 'Prinditud saidilt smalltenders.com'],
+    lv: ['Drukāt / saglabāt kā PDF', 'PDF valoda', 'Drukāt', 'Nozare', 'Vieta', 'Termiņš', 'Vērtība / veids', 'Labi piemērots', 'Oriģinālais paziņojums', 'Izdrukāts no smalltenders.com'],
+    fr: ['Imprimer / enregistrer en PDF', 'Langue du PDF', 'Imprimer', 'Corps de métier', 'Lieu', 'Date limite', 'Valeur / type', 'Bien adapté', 'Avis d’origine', 'Imprimé depuis smalltenders.com'],
+    es: ['Imprimir / guardar como PDF', 'Idioma del PDF', 'Imprimir', 'Oficio', 'Lugar', 'Plazo', 'Valor / tipo', 'Encaja bien', 'Anuncio original', 'Impreso desde smalltenders.com'],
+    it: ['Stampa / salva come PDF', 'Lingua del PDF', 'Stampa', 'Settore', 'Luogo', 'Scadenza', 'Valore / tipo', 'Adatto a voi', 'Avviso originale', 'Stampato da smalltenders.com']
+  };
+  var PRINT_NAMES = { en: 'English', no: 'Norsk', sv: 'Svenska', da: 'Dansk', fi: 'Suomi', is: 'Íslenska', pl: 'Polski', de: 'Deutsch', cs: 'Čeština', sk: 'Slovenčina', nl: 'Nederlands', lt: 'Lietuvių', ee: 'Eesti', lv: 'Latviešu', fr: 'Français', es: 'Español', it: 'Italiano' };
+  var PRINT_LOCALE = { ee: 'et' };   // our folder code differs from the BCP-47 code
+  var PAGE_PRINT = { at: 'de', be: 'nl' };
+  var printCache = {};
+  function pageCode() { var c = lang().toLowerCase().split('-')[0]; if (c === 'et') c = 'ee'; if (c === 'nb' || c === 'nn') c = 'no'; return PRINT[c] ? c : (PAGE_PRINT[c] || 'en'); }
+  function tendersFor(code) {
+    if (!printCache[code]) {
+      printCache[code] = fetch(code === 'en' ? '/tenders.json' : '/tenders.' + code + '.json').then(function (r) { return r.json(); })
+        .then(function (j) { var m = {}; (j.tenders || []).forEach(function (x) { m[x.id] = x; }); return m; }).catch(function () { return {}; });
+    }
+    return printCache[code];
+  }
+  function printSheet(t, code) {
+    var L = PRINT[code], loc = PRINT_LOCALE[code] || code;
+    var country = t.countryName || t.country;
+    try { country = new Intl.DisplayNames([loc], { type: 'region' }).of(t.country) || country; } catch (e) { /* keep the name from the data */ }
+    var date = deadlineDate(t), when = date;
+    try { when = new Intl.DateTimeFormat(loc, { day: 'numeric', month: 'long', year: 'numeric' }).format(date); } catch (e) { when = date.toDateString(); }
+    var s = el('div'); s.id = 'print-sheet'; s.setAttribute('lang', loc);
+    var head = el('div', 'ps-head'); head.appendChild(el('span', 'ps-brand', 'Small Tenders')); head.appendChild(el('span', 'ps-site', 'smalltenders.com')); s.appendChild(head);
+    s.appendChild(el('p', 'ps-trade', t.tradeName));
+    s.appendChild(el('h1', '', t.title));
+    var dl = el('dl', 'ps-dl');
+    [[L[3], t.tradeName], [L[4], t.city + ', ' + t.region + ', ' + country], [L[5], when], [L[6], t.value]].forEach(function (r) {
+      if (!r[1]) return; var row = el('div'); row.appendChild(el('dt', '', r[0])); row.appendChild(el('dd', '', r[1])); dl.appendChild(row);
+    });
+    s.appendChild(dl);
+    var fit = el('p', 'ps-fit'); fit.appendChild(el('b', '', L[7])); fit.appendChild(document.createTextNode(' ' + t.fit)); s.appendChild(fit);
+    var url = noticeUrl(t);
+    if (url) {
+      var o = el('p', 'ps-orig'); o.appendChild(el('b', '', L[8] + (t.source ? ' · ' + t.source : '')));
+      var a = el('a', '', url); a.href = url; o.appendChild(a); s.appendChild(o);
+    }
+    s.appendChild(el('p', 'ps-foot', L[9]));
+    return s;
+  }
+  function doPrint(t, code) {
+    tendersFor(code).then(function (m) {
+      var old = document.getElementById('print-sheet'); if (old) old.remove();
+      var sheet = printSheet(m[t.id] || t, code);
+      document.body.appendChild(sheet);
+      var done = function () { window.removeEventListener('afterprint', done); sheet.remove(); };
+      window.addEventListener('afterprint', done);
+      setTimeout(function () { window.print(); }, 60);
+    });
+  }
+  function printControl(t) {
+    var base = pageCode(), L = PRINT[base];
+    var box = el('div', 'td-print');
+    var btn = el('button', 'btn ghost', L[0] + ' ⎙'); btn.type = 'button'; btn.setAttribute('aria-expanded', 'false');
+    var panel = el('div', 'tp-panel'); panel.hidden = true;
+    var lab = el('label', '', L[1]); var sel = el('select'); sel.id = 'tp-lang'; lab.htmlFor = 'tp-lang';
+    Object.keys(PRINT_NAMES).forEach(function (c) { var o = el('option', '', PRINT_NAMES[c]); o.value = c; if (c === base) o.selected = true; sel.appendChild(o); });
+    var go_ = el('button', 'btn', L[2]); go_.type = 'button';
+    panel.appendChild(lab); panel.appendChild(sel); panel.appendChild(go_);
+    btn.addEventListener('click', function () { panel.hidden = !panel.hidden; btn.setAttribute('aria-expanded', String(!panel.hidden)); if (!panel.hidden) sel.focus(); });
+    go_.addEventListener('click', function () { doPrint(t, sel.value); });
+    box.appendChild(btn); box.appendChild(panel);
+    return box;
+  }
+
   function renderTender() {
     var t = byId[state.id], v = views.tender;
     if (!t) return go('country', state.cc);
@@ -230,6 +312,7 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
     }
     if (t.source) foot.appendChild(el('span', 'tc-from', (url ? ' ' : '') + t.source));
     d.appendChild(foot);
+    d.appendChild(printControl(t));
   }
 
   side.addEventListener('click', function (e) {

@@ -733,3 +733,32 @@ footer a:hover { color: var(--accent); }
 .c-links a:hover { text-decoration: underline; }
 .td-link .btn { font-size: 14px; padding: 11px 18px; }
 .td-link .tc-from { margin-left: 6px; font-weight: 600; color: var(--ink); }
+
+/* print / save as PDF for a single tender */
+.td-print { margin-top: 12px; }
+.td-print .btn { cursor: pointer; font-size: 14px; padding: 10px 16px; }
+.tp-panel { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin-top: 10px; padding: 12px; background: #fffefb; border: 1px solid var(--line); border-radius: 12px; }
+.tp-panel[hidden] { display: none; }
+.tp-panel label { flex: 1 0 100%; font: 600 12px var(--sans); color: var(--muted, #6b6252); letter-spacing: .02em; }
+.tp-panel select { flex: 1 1 140px; min-width: 0; font: 500 15px var(--sans); padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; background: #fff; color: var(--ink); }
+#print-sheet { display: none; }
+@media print {
+  @page { margin: 18mm; }
+  body > *:not(#print-sheet) { display: none !important; }
+  html, body { background: #fff !important; }
+  #print-sheet { display: block; color: #000; background: #fff; font: 12pt/1.5 Georgia, 'Times New Roman', serif; }
+  #print-sheet .ps-head { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid #000; padding-bottom: 8px; margin-bottom: 22px; }
+  #print-sheet .ps-brand { font-weight: 700; font-size: 15pt; }
+  #print-sheet .ps-site { font-size: 10pt; color: #444; }
+  #print-sheet .ps-trade { margin: 0 0 4px; font: 700 10pt Arial, sans-serif; letter-spacing: .08em; text-transform: uppercase; color: #444; }
+  #print-sheet h1 { margin: 0 0 20px; font-size: 22pt; line-height: 1.2; font-weight: 700; }
+  #print-sheet .ps-dl { margin: 0 0 20px; border-top: 1px solid #999; }
+  #print-sheet .ps-dl div { display: flex; gap: 16px; padding: 9px 0; border-bottom: 1px solid #ccc; break-inside: avoid; }
+  #print-sheet dt { flex: 0 0 34%; margin: 0; font: 700 10pt Arial, sans-serif; color: #444; }
+  #print-sheet dd { margin: 0; }
+  #print-sheet .ps-fit { margin: 0 0 20px; padding: 10px 14px; border-left: 4px solid #000; background: #f2f2f2; break-inside: avoid; }
+  #print-sheet .ps-orig { margin: 0 0 28px; word-break: break-all; }
+  #print-sheet .ps-orig b { display: block; font: 700 10pt Arial, sans-serif; color: #444; }
+  #print-sheet a { color: #000; text-decoration: underline; }
+  #print-sheet .ps-foot { margin: 40px 0 0; padding-top: 8px; border-top: 1px solid #999; font: 9pt Arial, sans-serif; color: #555; }
+}
