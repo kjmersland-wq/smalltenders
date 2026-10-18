@@ -46,8 +46,6 @@
       var l = el('a', '', T.original || P.original || 'View the original notice');
       l.href = t.link; l.rel = 'noopener'; l.target = '_blank';
       foot.appendChild(l);
-    } else {
-      foot.textContent = T.sample || P.sample || 'Sample entry. The link to the original notice comes with the live list.';
     }
     if (t.source) foot.appendChild(el('span', 'tc-from', ' · ' + t.source));
     a.appendChild(foot);
@@ -151,6 +149,24 @@
     if (actions) host.insertBefore(box, actions); else host.appendChild(box);
   }
 
+  // ---- hero cards show two real open tenders (different countries), each with its own notice link
+  function fillHero() {
+    var cards = document.querySelectorAll('.hero-cards .tcard'); if (!cards.length) return;
+    var open = all.filter(function (t) { return api.isOpen(t) && t.link; }).sort(function (a, b) { return (b.published || '').localeCompare(a.published || ''); });
+    var picks = [], seen = {};
+    open.forEach(function (t) { if (picks.length < cards.length && !seen[t.country]) { seen[t.country] = 1; picks.push(t); } });
+    var original = (stage && stage.dataset.original) || 'View the original notice';
+    picks.forEach(function (t, i) {
+      var c = cards[i], d = daysLeft(t), set = function (s, v) { var n = c.querySelector(s); if (n) n.textContent = v; };
+      set('.chip', t.tradeName); set('.tc-cc', t.countryName); set('h3', t.title);
+      var dl = c.querySelector('.badge.dl'); if (dl && d !== null) dl.lastChild.textContent = ((T.daysLeft || P.daysLeft || (stage && stage.dataset.daysLeft) || '{n} days left').replace('{n}', d));
+      var bs = c.querySelectorAll('.badge'); if (bs[1]) bs[1].textContent = t.value;
+      var fit = c.querySelector('.fitbox'); if (fit && fit.lastChild) fit.lastChild.textContent = ' ' + t.fit;
+      var a = c.querySelector('.tc-orig') || c.appendChild(el('a', 'tc-orig'));
+      a.textContent = original + ' · ' + t.source + ' ↗'; a.href = t.link; a.target = '_blank'; a.rel = 'noopener';
+    });
+  }
+
   var stage = document.getElementById('mapstage');
   fetch((stage && stage.dataset.tenders) || (box && box.dataset.src) || (panel && panel.dataset.src) || '/tenders.json').then(function (r) { return r.json(); }).then(function (j) {
     var list = j.tenders || [];
@@ -161,6 +177,7 @@
       render();
     }
     buildStats();
+    fillHero();
     resolveReady(all);
   }).catch(function () { resolveReady([]); /* keep the server-rendered cards */ });
 })();

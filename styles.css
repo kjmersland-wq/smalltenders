@@ -762,3 +762,6 @@ footer a:hover { color: var(--accent); }
   #print-sheet a { color: #000; text-decoration: underline; }
   #print-sheet .ps-foot { margin: 40px 0 0; padding-top: 8px; border-top: 1px solid #999; font: 9pt Arial, sans-serif; color: #555; }
 }
+
+#print-sheet .ps-logo { height: 26px; width: auto; }
+@media print { #print-sheet .ps-head { align-items: center; padding-bottom: 10px; border-bottom-width: 1px; } #print-sheet .ps-site { font-size: 9pt; color: #666; letter-spacing: .02em; } }

@@ -122,8 +122,7 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
   }
   // link to the original notice. Real notices carry their own URL in tenders.json (t.link);
   // until then the portal's address is used as an easy-to-replace placeholder.
-  var PORTAL = { Doffin: 'https://www.doffin.no', TED: 'https://ted.europa.eu', Hilma: 'https://www.hankintailmoitukset.fi' };
-  function noticeUrl(t) { return t.link || PORTAL[t.source] || ''; }
+  function noticeUrl(t) { return t.link || ''; }   // the exact notice page; no link when a tender has none
   function matches(t) {
     if (state.newOnly && !(window.stTenders && window.stTenders.isNew && window.stTenders.isNew(t))) return false;
     return !state.trade || t.trade === state.trade;
@@ -245,7 +244,7 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
     var date = deadlineDate(t), when = date;
     try { when = new Intl.DateTimeFormat(loc, { day: 'numeric', month: 'long', year: 'numeric' }).format(date); } catch (e) { when = date.toDateString(); }
     var s = el('div'); s.id = 'print-sheet'; s.setAttribute('lang', loc);
-    var head = el('div', 'ps-head'); head.appendChild(el('span', 'ps-brand', 'Small Tenders')); head.appendChild(el('span', 'ps-site', 'smalltenders.com')); s.appendChild(head);
+    var head = el('div', 'ps-head'); var logo = el('img', 'ps-logo'); logo.src = '/logo.svg'; logo.alt = 'Small Tenders'; head.appendChild(logo); head.appendChild(el('span', 'ps-site', 'www.smalltenders.com')); s.appendChild(head);
     s.appendChild(el('p', 'ps-trade', t.tradeName));
     s.appendChild(el('h1', '', t.title));
     var dl = el('dl', 'ps-dl');
@@ -269,7 +268,8 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
       document.body.appendChild(sheet);
       var done = function () { window.removeEventListener('afterprint', done); sheet.remove(); };
       window.addEventListener('afterprint', done);
-      setTimeout(function () { window.print(); }, 60);
+      var img = sheet.querySelector('.ps-logo'), go = function () { setTimeout(function () { window.print(); }, 60); };
+      if (img && !img.complete) { img.onload = img.onerror = go; } else go();
     });
   }
   function printControl(t) {
@@ -512,7 +512,7 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
       state.trade = selT.value;
       if (state.level === 'tender' && byId[state.id] && !matches(byId[state.id])) go('country', state.cc); else render();
     });
-    var m = /^#map=([A-Z]{2})(?:\/(\w+))?$/.exec(location.hash);
+    var m = /^#map=([A-Z]{2})(?:\/([\w-]+))?$/.exec(location.hash);
     if (m) go(m[2] && byId[m[2]] ? 'tender' : 'country', m[1], m[2] && byId[m[2]] ? m[2] : null);
     if (haveKey) startMap(); else render();
   });

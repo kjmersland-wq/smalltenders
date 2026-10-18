@@ -14,7 +14,6 @@
   }
   var CLOCK = 'M12 7v5l3 2';
 
-  var PORTAL = { Doffin: 'https://www.doffin.no', TED: 'https://ted.europa.eu', Hilma: 'https://www.hankintailmoitukset.fi' };
 
   function card(t) {
     var a = el('article', 'tcard');
@@ -28,7 +27,7 @@
     a.appendChild(b);
     var fit = el('p', 'fitbox'); fit.appendChild(el('b', '', 'Good fit')); fit.appendChild(document.createTextNode(' ' + t.fit)); a.appendChild(fit);
     var row = el('div', 'c-links');
-    var url = t.link || PORTAL[t.source];                       // placeholder until the real notice URL is in tenders.json
+    var url = t.link;                                               // exact notice page from tenders.json
     if (url) { var o = el('a', 'c-orig', 'Original notice · ' + (t.source || '') + ' ↗'); o.href = url; o.target = '_blank'; o.rel = 'noopener'; row.appendChild(o); }
     var m = el('a', 'c-open', 'Open on the map →'); m.href = '/#map=' + cc + '/' + t.id; row.appendChild(m);
     a.appendChild(row);

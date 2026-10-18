@@ -1,0 +1,669 @@
+{
+ "NO|tønsberg": {
+  "lat": 59.355,
+  "lng": 10.282,
+  "region": "Vestfold"
+ },
+ "NO|oslo": {
+  "lat": 59.913,
+  "lng": 10.739,
+  "region": "Oslo"
+ },
+ "NO|fredrikstad": {
+  "lat": 59.186,
+  "lng": 10.868,
+  "region": "Østfold"
+ },
+ "NO|vadsø": {
+  "lat": 70.227,
+  "lng": 29.783,
+  "region": "Finnmark"
+ },
+ "NO|hamar": {
+  "lat": 61.001,
+  "lng": 11.165,
+  "region": "Innlandet"
+ },
+ "SE|visby": {
+  "lat": 57.638,
+  "lng": 18.298,
+  "region": "Gotland County"
+ },
+ "SE|motala": {
+  "lat": 58.542,
+  "lng": 15.041,
+  "region": "Östergötland County"
+ },
+ "SE|stockholm": {
+  "lat": 59.325,
+  "lng": 18.071,
+  "region": "Stockholm County"
+ },
+ "SE|norrköping": {
+  "lat": 58.591,
+  "lng": 16.19,
+  "region": "Östergötland County"
+ },
+ "SE|västerås": {
+  "lat": 59.611,
+  "lng": 16.546,
+  "region": "Västmanland County"
+ },
+ "DK|kerteminde": {
+  "lat": 55.453,
+  "lng": 10.655,
+  "region": "Region of Southern Denmark"
+ },
+ "DK|hinnerup": {
+  "lat": 56.268,
+  "lng": 10.069,
+  "region": "Central Denmark Region"
+ },
+ "DK|københavn nv": {
+  "lat": 55.706,
+  "lng": 12.534,
+  "region": "Capital Region of Denmark"
+ },
+ "DK|sønderjylland": {
+  "lat": 55.063,
+  "lng": 9.378,
+  "region": "Region of Southern Denmark"
+ },
+ "DK|aalborg øst": {
+  "lat": 57.01,
+  "lng": 9.94,
+  "region": "North Denmark Region"
+ },
+ "DK|albertslund": {
+  "lat": 55.659,
+  "lng": 12.356,
+  "region": "Capital Region of Denmark"
+ },
+ "DK|odense c": {
+  "lat": 55.4,
+  "lng": 10.385,
+  "region": "Region of Southern Denmark"
+ },
+ "FI|turku": {
+  "lat": 60.452,
+  "lng": 22.267,
+  "region": "Southwest Finland"
+ },
+ "FI|kaarina": {
+  "lat": 60.407,
+  "lng": 22.368,
+  "region": "Southwest Finland"
+ },
+ "FI|alajärvi": {
+  "lat": 63,
+  "lng": 23.817,
+  "region": "South Ostrobothnia"
+ },
+ "FI|helsinki": {
+  "lat": 60.167,
+  "lng": 24.944,
+  "region": "Uusimaa"
+ },
+ "FI|kemiönsaari": {
+  "lat": 60.165,
+  "lng": 22.727,
+  "region": "Southwest Finland"
+ },
+ "FI|huittinen": {
+  "lat": 61.177,
+  "lng": 22.699,
+  "region": "Satakunta"
+ },
+ "FI|kokkola": {
+  "lat": 63.839,
+  "lng": 23.134,
+  "region": "Central Ostrobothnia"
+ },
+ "IS|reykjavík": {
+  "lat": 64.146,
+  "lng": -21.942,
+  "region": ""
+ },
+ "IS|kópavogur": {
+  "lat": 64.111,
+  "lng": -21.905,
+  "region": ""
+ },
+ "IS|reykjavik": {
+  "lat": 64.146,
+  "lng": -21.942,
+  "region": ""
+ },
+ "PL|sosnowiec": {
+  "lat": 50.271,
+  "lng": 19.216,
+  "region": "Silesian Voivodeship"
+ },
+ "PL|tomaszów maz.": {
+  "lat": 51.532,
+  "lng": 20.008,
+  "region": "Łódź Voivodeship"
+ },
+ "PL|gdańsk": {
+  "lat": 54.348,
+  "lng": 18.654,
+  "region": "Pomeranian Voivodeship"
+ },
+ "DE|münchen": {
+  "lat": 48.137,
+  "lng": 11.575,
+  "region": "Bavaria"
+ },
+ "AT|stegersbach": {
+  "lat": 47.159,
+  "lng": 16.168,
+  "region": "Burgenland"
+ },
+ "AT|wien": {
+  "lat": 48.208,
+  "lng": 16.373,
+  "region": ""
+ },
+ "AT|klagenfurt am wörthersee": {
+  "lat": 46.624,
+  "lng": 14.308,
+  "region": "Carinthia"
+ },
+ "AT|graz": {
+  "lat": 47.071,
+  "lng": 15.438,
+  "region": "Styria"
+ },
+ "AT|st.pölten": {
+  "lat": 48.204,
+  "lng": 15.623,
+  "region": "Lower Austria"
+ },
+ "CZ|praha": {
+  "lat": 50.087,
+  "lng": 14.421,
+  "region": ""
+ },
+ "SK|bratislava - mestská časť ružinov": {
+  "lat": 48.149,
+  "lng": 17.165,
+  "region": "Region of Bratislava"
+ },
+ "SK|banská bystrica": {
+  "lat": 48.735,
+  "lng": 19.146,
+  "region": "Region of Banská Bystrica"
+ },
+ "SK|voderady": {
+  "lat": 48.277,
+  "lng": 17.559,
+  "region": "Region of Trnava"
+ },
+ "SK|košice": {
+  "lat": 48.717,
+  "lng": 21.25,
+  "region": "Region of Košice"
+ },
+ "SK|bratislava - mestská časť čunovo": {
+  "lat": 48.03,
+  "lng": 17.2,
+  "region": "Region of Bratislava"
+ },
+ "SK|jaslovské bohunice": {
+  "lat": 48.477,
+  "lng": 17.647,
+  "region": "Region of Trnava"
+ },
+ "NL|leidschendam": {
+  "lat": 52.086,
+  "lng": 4.395,
+  "region": "South Holland"
+ },
+ "NL|wageningen": {
+  "lat": 51.966,
+  "lng": 5.666,
+  "region": "Gelderland"
+ },
+ "NL|borculo": {
+  "lat": 52.115,
+  "lng": 6.518,
+  "region": "Gelderland"
+ },
+ "NL|almere": {
+  "lat": 52.442,
+  "lng": 5.209,
+  "region": "Flevoland"
+ },
+ "NL|bilthoven": {
+  "lat": 52.129,
+  "lng": 5.205,
+  "region": "Utrecht"
+ },
+ "NL|apeldoorn": {
+  "lat": 52.18,
+  "lng": 5.93,
+  "region": "Gelderland"
+ },
+ "NL|'s-gravenhage": {
+  "lat": 52.08,
+  "lng": 4.311,
+  "region": "South Holland"
+ },
+ "BE|louvain-la-neuve": {
+  "lat": 50.674,
+  "lng": 4.614,
+  "region": "Walloon Brabant"
+ },
+ "BE|saint-gilles": {
+  "lat": 50.83,
+  "lng": 4.342,
+  "region": "Brussels-Capital"
+ },
+ "BE|momignies": {
+  "lat": 50.009,
+  "lng": 4.214,
+  "region": "Hainaut"
+ },
+ "BE|eupen": {
+  "lat": 50.631,
+  "lng": 6.031,
+  "region": "Liège"
+ },
+ "BE|brussel": {
+  "lat": 50.855,
+  "lng": 4.351,
+  "region": "Brussels-Capital"
+ },
+ "BE|trooz": {
+  "lat": 50.573,
+  "lng": 5.688,
+  "region": "Liège"
+ },
+ "BE|sankt vith": {
+  "lat": 50.28,
+  "lng": 6.126,
+  "region": "Liège"
+ },
+ "LT|klaipėda": {
+  "lat": 55.713,
+  "lng": 21.135,
+  "region": "Klaipėda County"
+ },
+ "LT|vilnius": {
+  "lat": 54.687,
+  "lng": 25.283,
+  "region": "Vilnius County"
+ },
+ "LT|kaunas": {
+  "lat": 54.898,
+  "lng": 23.904,
+  "region": "Kaunas County"
+ },
+ "LT|pakruojis": {
+  "lat": 55.978,
+  "lng": 23.845,
+  "region": "Šiauliai County"
+ },
+ "LV|liepāja": {
+  "lat": 56.505,
+  "lng": 21.007,
+  "region": ""
+ },
+ "LV|sigulda": {
+  "lat": 57.154,
+  "lng": 24.857,
+  "region": ""
+ },
+ "LV|rīga": {
+  "lat": 56.949,
+  "lng": 24.105,
+  "region": ""
+ },
+ "LV|gulbene": {
+  "lat": 57.176,
+  "lng": 26.751,
+  "region": ""
+ },
+ "EE|narva-jõesuu linn": {
+  "lat": 59.46,
+  "lng": 28.042,
+  "region": "Ida-Viru County"
+ },
+ "EE|tallinn": {
+  "lat": 59.437,
+  "lng": 24.757,
+  "region": "Harju County"
+ },
+ "EE|tartu linn": {
+  "lat": 58.378,
+  "lng": 26.729,
+  "region": "Tartu County"
+ },
+ "FR|marseille": {
+  "lat": 43.296,
+  "lng": 5.378,
+  "region": "Provence-Alpes-Côte d'Azur"
+ },
+ "FR|epinal": {
+  "lat": 48.175,
+  "lng": 6.45,
+  "region": "Grand Est"
+ },
+ "FR|paris": {
+  "lat": 48.853,
+  "lng": 2.348,
+  "region": "Ile-de-France"
+ },
+ "FR|castelnau-le-lez": {
+  "lat": 43.639,
+  "lng": 3.913,
+  "region": "Occitania"
+ },
+ "FR|arandon-passins": {
+  "lat": 45.707,
+  "lng": 5.437,
+  "region": "Auvergne-Rhône-Alpes"
+ },
+ "FR|metz": {
+  "lat": 49.12,
+  "lng": 6.176,
+  "region": "Grand Est"
+ },
+ "FR|poitiers": {
+  "lat": 46.58,
+  "lng": 0.34,
+  "region": "Nouvelle-Aquitaine"
+ },
+ "ES|no consta": null,
+ "ES|madrid": {
+  "lat": 40.417,
+  "lng": -3.704,
+  "region": "Community of Madrid"
+ },
+ "ES|santander": {
+  "lat": 43.462,
+  "lng": -3.81,
+  "region": "Cantabria"
+ },
+ "ES|ronda": {
+  "lat": 36.742,
+  "lng": -5.167,
+  "region": "Andalusia"
+ },
+ "ES|sant lluís": {
+  "lat": 39.849,
+  "lng": 4.258,
+  "region": "Balearic Islands"
+ },
+ "ES|las palmas de gran canaria": {
+  "lat": 28.129,
+  "lng": -15.435,
+  "region": "Canary Islands"
+ },
+ "ES|elche": {
+  "lat": 38.265,
+  "lng": -0.699,
+  "region": "Valencian Community"
+ },
+ "IT|la spezia": {
+  "lat": 44.238,
+  "lng": 9.691,
+  "region": "Liguria"
+ },
+ "IT|roma": {
+  "lat": 41.893,
+  "lng": 12.483,
+  "region": "Lazio"
+ },
+ "IT|trento": {
+  "lat": 46.103,
+  "lng": 11.13,
+  "region": "Trentino – Alto Adige/Südtirol"
+ },
+ "IT|milano": {
+  "lat": 45.464,
+  "lng": 9.19,
+  "region": "Lombardy"
+ },
+ "PT|funchal": {
+  "lat": 32.65,
+  "lng": -16.909,
+  "region": ""
+ },
+ "PT|pragal": {
+  "lat": 38.666,
+  "lng": -9.18,
+  "region": "Setúbal"
+ },
+ "PT|todos": {
+  "lat": 38.718,
+  "lng": -9.138,
+  "region": "Lisbon"
+ },
+ "PT|freguesia de horta (conceição)": {
+  "lat": 38.547,
+  "lng": -28.626,
+  "region": "Azores"
+ },
+ "PT|as identificadas nas peças": null,
+ "PT|várias": {
+  "lat": 38.699,
+  "lng": -8.953,
+  "region": "Setúbal"
+ },
+ "IE|tivoli": {
+  "lat": 51.903,
+  "lng": -8.409,
+  "region": "County Cork"
+ },
+ "IE|dublin": {
+  "lat": 53.349,
+  "lng": -6.261,
+  "region": "County Dublin"
+ },
+ "IE|ballinasloe": {
+  "lat": 53.33,
+  "lng": -8.221,
+  "region": "County Galway"
+ },
+ "CH|lausanne": {
+  "lat": 46.522,
+  "lng": 6.633,
+  "region": "Vaud"
+ },
+ "CH|bülach": {
+  "lat": 47.517,
+  "lng": 8.541,
+  "region": "Zurich"
+ },
+ "CH|charmey": {
+  "lat": 46.596,
+  "lng": 7.179,
+  "region": "Fribourg"
+ },
+ "CH|au": {
+  "lat": 47.433,
+  "lng": 9.637,
+  "region": "St. Gallen"
+ },
+ "CH|rossens": {
+  "lat": 46.72,
+  "lng": 7.103,
+  "region": "Fribourg"
+ },
+ "CH|chemin du musée 9 fribourg": {
+  "lat": 46.792,
+  "lng": 7.159,
+  "region": "Fribourg"
+ },
+ "RO|iasi": {
+  "lat": 47.162,
+  "lng": 27.584,
+  "region": "Iași"
+ },
+ "RO|valea iasului": {
+  "lat": 45.186,
+  "lng": 24.711,
+  "region": "Argeș"
+ },
+ "RO|galati": {
+  "lat": 45.434,
+  "lng": 28.055,
+  "region": "Galați"
+ },
+ "RO|pitesti": {
+  "lat": 44.857,
+  "lng": 24.872,
+  "region": "Argeș"
+ },
+ "RO|bucuresti": {
+  "lat": 44.436,
+  "lng": 26.103,
+  "region": ""
+ },
+ "RO|bacau": {
+  "lat": 46.556,
+  "lng": 26.915,
+  "region": "Bacău"
+ },
+ "MK|skopje": {
+  "lat": 41.996,
+  "lng": 21.432,
+  "region": "City of Skopje"
+ },
+ "LU|eschdorf": {
+  "lat": 49.884,
+  "lng": 5.935,
+  "region": "Canton Wiltz"
+ },
+ "LU|luxembourg": {
+  "lat": 49.816,
+  "lng": 6.13,
+  "region": ""
+ },
+ "LU|bascharage": {
+  "lat": 49.571,
+  "lng": 5.913,
+  "region": "Canton Capellen"
+ },
+ "HU|villány": {
+  "lat": 45.87,
+  "lng": 18.456,
+  "region": "Baranya"
+ },
+ "HU|szeged": {
+  "lat": 46.255,
+  "lng": 20.149,
+  "region": "Great Plain and North"
+ },
+ "HU|budapest": {
+  "lat": 47.482,
+  "lng": 19.145,
+  "region": "Budapest"
+ },
+ "HU|nyíregyháza": {
+  "lat": 47.956,
+  "lng": 21.717,
+  "region": "Great Plain and North"
+ },
+ "HU|sátoraljaújhely": {
+  "lat": 48.396,
+  "lng": 21.656,
+  "region": "Great Plain and North"
+ },
+ "HU|budakeszi": {
+  "lat": 47.51,
+  "lng": 18.929,
+  "region": "Pest"
+ },
+ "HU|kapuvár": {
+  "lat": 47.594,
+  "lng": 17.027,
+  "region": "Győr-Moson-Sopron"
+ },
+ "GR|αθηνα": {
+  "lat": 37.976,
+  "lng": 23.735,
+  "region": "Attica"
+ },
+ "GR|ροδος": {
+  "lat": 36.172,
+  "lng": 27.919,
+  "region": "Aegean"
+ },
+ "GR|πάτρα": {
+  "lat": 38.246,
+  "lng": 21.735,
+  "region": "Western Greece"
+ },
+ "GR|ερμουπολη": {
+  "lat": 37.445,
+  "lng": 24.942,
+  "region": "South Aegean"
+ },
+ "CY|λευκωσία": {
+  "lat": 35.175,
+  "lng": 33.364,
+  "region": "Cyprus"
+ },
+ "HR|pula - pola": {
+  "lat": 44.87,
+  "lng": 13.846,
+  "region": "Istria County"
+ },
+ "HR|grad zagreb": {
+  "lat": 45.813,
+  "lng": 15.977,
+  "region": ""
+ },
+ "HR|split": {
+  "lat": 43.512,
+  "lng": 16.44,
+  "region": "Split-Dalmatia County"
+ },
+ "BG|софия": {
+  "lat": 42.698,
+  "lng": 23.322,
+  "region": "Sofia-City"
+ },
+ "BG|гр.шумен": {
+  "lat": 43.206,
+  "lng": 27.927,
+  "region": "Varna"
+ },
+ "BG|бургас": {
+  "lat": 42.494,
+  "lng": 27.472,
+  "region": "Burgas"
+ },
+ "BG|гр. софия": {
+  "lat": 42.698,
+  "lng": 23.322,
+  "region": "Sofia-City"
+ },
+ "BG|гр.варна": {
+  "lat": 43.204,
+  "lng": 27.918,
+  "region": "Varna"
+ },
+ "SI|mengeš": {
+  "lat": 46.163,
+  "lng": 14.563,
+  "region": ""
+ },
+ "SI|celje": {
+  "lat": 46.229,
+  "lng": 15.262,
+  "region": ""
+ },
+ "SI|ljubljana": {
+  "lat": 46.05,
+  "lng": 14.507,
+  "region": ""
+ },
+ "SI|šentjur": {
+  "lat": 46.189,
+  "lng": 15.406,
+  "region": ""
+ }
+}
