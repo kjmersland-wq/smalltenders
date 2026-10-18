@@ -22,6 +22,9 @@
   <link rel="alternate" hreflang="lt" href="https://smalltenders.com/lt/" />
   <link rel="alternate" hreflang="et" href="https://smalltenders.com/ee/" />
   <link rel="alternate" hreflang="lv" href="https://smalltenders.com/lv/" />
+  <link rel="alternate" hreflang="fr" href="https://smalltenders.com/fr/" />
+  <link rel="alternate" hreflang="es" href="https://smalltenders.com/es/" />
+  <link rel="alternate" hreflang="it" href="https://smalltenders.com/it/" />
   <link rel="alternate" hreflang="x-default" href="https://smalltenders.com/" />
   <link rel="icon" href="/icon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="/styles.css" />
@@ -33,7 +36,7 @@
         <img src="/logo.svg" alt="Small Tenders" height="28" />
       </a>
       <div class="nav-right">
-        <span class="lang"><a href="/">EN</a> | <a href="/no/">NO</a> | <a href="/da/">DA</a> | <a href="/sv/">SV</a> | <a href="/fi/">FI</a> | <a href="/pl/">PL</a> | <a href="/de/">DE</a> | <a href="/sk/" aria-current="page">SK</a></span>
+        <label class="lang"><select class="lang-select" aria-label="Jazyk"><option value="/">English</option><option value="/no/">Norsk</option><option value="/da/">Dansk</option><option value="/sv/">Svenska</option><option value="/fi/">Suomi</option><option value="/is/">Íslenska</option><option value="/pl/">Polski</option><option value="/de/">Deutsch</option><option value="/at/">Deutsch (Österreich)</option><option value="/cs/">Čeština</option><option value="/sk/" selected>Slovenčina</option><option value="/nl/">Nederlands</option><option value="/be/">Nederlands (België)</option><option value="/lt/">Lietuvių</option><option value="/ee/">Eesti</option><option value="/lv/">Latviešu</option><option value="/fr/">Français</option><option value="/es/">Español</option><option value="/it/">Italiano</option></select></label>
         <a class="navlink" href="#pricing">Cenník</a>
         <a class="btn sm" href="#form">Získať ukážkový zoznam</a>
       </div>
@@ -83,17 +86,14 @@
         <p class="note">Kliknite na krajinu, aby ste videli, čo tam máme, alebo filtrujte podľa krajiny a odboru. Vyberte zákazku pre podrobnosti.</p>
         <div class="filters mapfilters">
           <label>Krajina
-            <select id="f-country"><option value="">Celá Európa</option>
-              <optgroup label="Teraz"><option value="NO">Nórsko</option><option value="SE">Švédsko</option><option value="DK">Dánsko</option><option value="FI">Fínsko</option><option value="IS">Island</option></optgroup>
-              <optgroup label="Ďalej"><option value="PL">Poľsko</option><option value="DE">Nemecko</option></optgroup>
-              <optgroup label="Potom"><option value="AL">Albánsko</option><option value="AD">Andorra</option><option value="BE">Belgicko</option><option value="BA">Bosna a Hercegovina</option><option value="BG">Bulharsko</option><option value="CY">Cyprus</option><option value="CZ">Česko</option><option value="ME">Čierna Hora</option><option value="EE">Estónsko</option><option value="FR">Francúzsko</option><option value="GR">Grécko</option><option value="NL">Holandsko</option><option value="HR">Chorvátsko</option><option value="IE">Írsko</option><option value="XK">Kosovo</option><option value="LT">Litva</option><option value="LV">Lotyšsko</option><option value="LU">Luxembursko</option><option value="HU">Maďarsko</option><option value="MD">Moldavsko</option><option value="PT">Portugalsko</option><option value="AT">Rakúsko</option><option value="RO">Rumunsko</option><option value="MK">Severné Macedónsko</option><option value="SK">Slovensko</option><option value="SI">Slovinsko</option><option value="GB">Spojené kráľovstvo</option><option value="RS">Srbsko</option><option value="ES">Španielsko</option><option value="CH">Švajčiarsko</option><option value="IT">Taliansko</option><option value="UA">Ukrajina</option></optgroup></select>
+            <select id="f-country"><option value="">Celá Európa</option><option value="AL">Albánsko</option><option value="AD">Andorra</option><option value="BE">Belgicko</option><option value="BA">Bosna a Hercegovina</option><option value="BG">Bulharsko</option><option value="CY">Cyprus</option><option value="CZ">Česko</option><option value="ME">Čierna Hora</option><option value="DK">Dánsko</option><option value="EE">Estónsko</option><option value="FI">Fínsko</option><option value="FR">Francúzsko</option><option value="GR">Grécko</option><option value="NL">Holandsko</option><option value="HR">Chorvátsko</option><option value="IE">Írsko</option><option value="IS">Island</option><option value="XK">Kosovo</option><option value="LT">Litva</option><option value="LV">Lotyšsko</option><option value="LU">Luxembursko</option><option value="HU">Maďarsko</option><option value="MD">Moldavsko</option><option value="DE">Nemecko</option><option value="NO">Nórsko</option><option value="PL">Poľsko</option><option value="PT">Portugalsko</option><option value="AT">Rakúsko</option><option value="RO">Rumunsko</option><option value="MK">Severné Macedónsko</option><option value="SK">Slovensko</option><option value="SI">Slovinsko</option><option value="GB">Spojené kráľovstvo</option><option value="RS">Srbsko</option><option value="ES">Španielsko</option><option value="CH">Švajčiarsko</option><option value="SE">Švédsko</option><option value="IT">Taliansko</option><option value="UA">Ukrajina</option></select>
           </label>
           <label>Odbor
-            <select id="f-trade"><option value="">Všetky odbory</option><option value="electrical">Elektro</option><option value="plumbing">Inštalatérstvo</option><option value="hvac">Vzduchotechnika</option><option value="painting">Maľovanie</option><option value="building">Stavba</option><option value="cleaning">Upratovanie</option></select>
+            <select id="f-trade"><option value="">Všetky odbory</option><option value="electrical">Elektro</option><option value="plumbing">Inštalatérstvo</option><option value="hvac">Vzduchotechnika</option><option value="painting">Maľovanie</option><option value="building">Stavba</option><option value="cleaning">Upratovanie</option><option value="roofing">Strechy (vrátane lepenky/asfaltu)</option><option value="flooring">Podlahy</option><option value="windows">Okná a dvere</option><option value="insulation">Izolácia</option><option value="facade">Fasády / obklady</option><option value="groundworks">Zemné práce</option><option value="demolition">Demolácie</option><option value="scaffolding">Lešenie</option></select>
           </label>
           <p class="fcount" id="f-count" aria-live="polite"></p>
         </div>
-        <div class="mapstage" id="mapstage" data-level="overview" data-src="/countries.geojson" data-names='{"GB":"Spojené kráľovstvo","UA":"Ukrajina","CH":"Švajčiarsko","SE":"Švédsko","ES":"Španielsko","SK":"Slovensko","SI":"Slovinsko","RS":"Srbsko","RO":"Rumunsko","PT":"Portugalsko","PL":"Poľsko","NO":"Nórsko","NL":"Holandsko","ME":"Čierna Hora","MD":"Moldavsko","MK":"Severné Macedónsko","LU":"Luxembursko","LT":"Litva","LV":"Lotyšsko","XK":"Kosovo","IT":"Taliansko","IE":"Írsko","IS":"Island","HU":"Maďarsko","GR":"Grécko","DE":"Nemecko","FR":"Francúzsko","FI":"Fínsko","EE":"Estónsko","DK":"Dánsko","CZ":"Česko","CY":"Cyprus","HR":"Chorvátsko","BG":"Bulharsko","BA":"Bosna a Hercegovina","BE":"Belgicko","AT":"Rakúsko","AD":"Andorra","AL":"Albánsko"}' data-tenders="/tenders.sk.json" data-none-filter="V krajine {country} teraz nič nezodpovedá tomuto odboru. Skúste iný odbor."
+        <div class="mapstage" id="mapstage" data-examples="Ukážkové zákazky" data-level="overview" data-src="/countries.geojson" data-names='{"GB":"Spojené kráľovstvo","UA":"Ukrajina","CH":"Švajčiarsko","SE":"Švédsko","ES":"Španielsko","SK":"Slovensko","SI":"Slovinsko","RS":"Srbsko","RO":"Rumunsko","PT":"Portugalsko","PL":"Poľsko","NO":"Nórsko","NL":"Holandsko","ME":"Čierna Hora","MD":"Moldavsko","MK":"Severné Macedónsko","LU":"Luxembursko","LT":"Litva","LV":"Lotyšsko","XK":"Kosovo","IT":"Taliansko","IE":"Írsko","IS":"Island","HU":"Maďarsko","GR":"Grécko","DE":"Nemecko","FR":"Francúzsko","FI":"Fínsko","EE":"Estónsko","DK":"Dánsko","CZ":"Česko","CY":"Cyprus","HR":"Chorvátsko","BG":"Bulharsko","BA":"Bosna a Hercegovina","BE":"Belgicko","AT":"Rakúsko","AD":"Andorra","AL":"Albánsko"}' data-tenders="/tenders.sk.json" data-none-filter="V krajine {country} teraz nič nezodpovedá tomuto odboru. Skúste iný odbor."
              data-back-all="Všetky krajiny" data-back-country="Späť: {country}" data-none="Pre krajinu {country} zatiaľ nie sú žiadne položky. Začíname na Severe a krajiny pridávame krok za krokom."
              data-open-page="Čítať stránku v miestnom jazyku" data-deadline="Termín" data-days-left="zostáva dní: {n}" data-value="Hodnota / druh" data-where="Miesto"
              data-fit="Dobrá zhoda" data-original="Zobraziť pôvodné oznámenie" data-sample="Ukážka. Odkaz na pôvodné oznámenie pribudne so skutočným zoznamom." data-count-one="{n} položka" data-count-many="položky: {n}">
@@ -114,6 +114,9 @@
             <li style="grid-area:5/3" data-wave="3"><a href="/cs/"><b>CZ</b><span>Česko</span></a></li>
             <li style="grid-area:5/4" data-wave="3"><a href="/sk/"><b>SK</b><span>Slovensko</span></a></li>
             <li style="grid-area:6/3" data-wave="3"><a href="/at/"><b>AT</b><span>Österreich</span></a></li>
+            <li style="grid-area:5/1"  data-wave="3"><a href="/fr/"><b>FR</b><span>France</span></a></li>
+            <li style="grid-area:6/1"  data-wave="3"><a href="/es/"><b>ES</b><span>España</span></a></li>
+            <li style="grid-area:6/4"  data-wave="3"><a href="/it/"><b>IT</b><span>Italia</span></a></li>
             </ul>
             <div class="gmap" hidden role="region" aria-label="Mapa krajín, ktoré pokrývame"></div>
             <p class="maptip" hidden></p>
@@ -123,11 +126,7 @@
           <aside class="mapside" id="mapside" aria-live="polite">
             <div data-view="overview">
               <p class="ms-title">Kde hľadáme</p>
-              <ul class="legend">
-                <li data-wave="1"><b>Teraz</b> Nórsko, Dánsko, Švédsko, Fínsko a Island</li>
-                <li data-wave="2"><b>Ďalej</b> Poľsko a Nemecko</li>
-                <li data-wave="3"><b>Potom</b> zvyšok Európy</li>
-              </ul>
+              <p class="ms-lead">Verejné zákazky v celej Európe</p>
               <p class="ms-hint">Vyberte krajinu a priblížite ju. Každý bod je jedna ukážková zákazka, zafarbená podľa odboru.</p>
               <ul class="tlist"></ul>
               <p class="ms-empty empty" hidden>Tomuto odboru zatiaľ nič nezodpovedá.</p>
@@ -237,7 +236,7 @@
   <footer>
     <div class="wrap">
       <p>Small Tenders je redigovaný výber verejne dostupných oznámení. Nenahrádzame TED ani národné portály. Pred podaním ponuky si vždy prečítajte pôvodné oznámenie.</p>
-      <p><strong>Krajiny:</strong> <a href="/">English</a> · <a href="/no/">Norge</a> · <a href="/da/">Danmark</a> · <a href="/sv/">Sverige</a> · <a href="/fi/">Suomi</a> · <a href="/is/">Ísland</a> · <a href="/pl/">Polska</a> · <a href="/de/">Deutschland</a> · <a href="/cs/">Česko</a> · <a href="/sk/" aria-current="page">Slovensko</a> · <a href="/at/">Österreich</a> · <a href="/nl/">Nederland</a> · <a href="/be/">België</a> · <a href="/lt/">Lietuva</a> · <a href="/ee/">Eesti</a> · <a href="/lv/">Latvija</a></p>
+      <p><strong>Krajiny:</strong> <a href="/">English</a> · <a href="/no/">Norge</a> · <a href="/da/">Danmark</a> · <a href="/sv/">Sverige</a> · <a href="/fi/">Suomi</a> · <a href="/is/">Ísland</a> · <a href="/pl/">Polska</a> · <a href="/de/">Deutschland</a> · <a href="/cs/">Česko</a> · <a href="/sk/" aria-current="page">Slovensko</a> · <a href="/at/">Österreich</a> · <a href="/nl/">Nederland</a> · <a href="/be/">België</a> · <a href="/lt/">Lietuva</a> · <a href="/ee/">Eesti</a> · <a href="/lv/">Latvija</a> · <a href="/fr/">France</a> · <a href="/es/">España</a> · <a href="/it/">Italia</a></p>
       <p class="foot-links"><a href="/privacy/">Súkromie</a> · <a href="/terms/">Podmienky</a> · <a href="/refund/">Vrátenie peňazí</a> · <a href="/contact/">Kontakt</a> · <a data-site="email" href="mailto:support@smalltenders.com">support@smalltenders.com</a></p>
       <p class="foot-company">KM TECH LABS · Org. no. 934 044 029 · Kristiansand, Norway</p>
     </div>

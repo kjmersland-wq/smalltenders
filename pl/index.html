@@ -22,6 +22,9 @@
   <link rel="alternate" hreflang="lt" href="https://smalltenders.com/lt/" />
   <link rel="alternate" hreflang="et" href="https://smalltenders.com/ee/" />
   <link rel="alternate" hreflang="lv" href="https://smalltenders.com/lv/" />
+  <link rel="alternate" hreflang="fr" href="https://smalltenders.com/fr/" />
+  <link rel="alternate" hreflang="es" href="https://smalltenders.com/es/" />
+  <link rel="alternate" hreflang="it" href="https://smalltenders.com/it/" />
   <link rel="alternate" hreflang="x-default" href="https://smalltenders.com/" />
   <link rel="icon" href="/icon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="/styles.css" />
@@ -33,7 +36,7 @@
         <img src="/logo.svg" alt="Small Tenders" height="28" />
       </a>
       <div class="nav-right">
-        <span class="lang"><a href="/">EN</a> | <a href="/no/">NO</a> | <a href="/da/">DA</a> | <a href="/sv/">SV</a> | <a href="/fi/">FI</a> | <a href="/pl/" aria-current="page">PL</a> | <a href="/de/">DE</a></span>
+        <label class="lang"><select class="lang-select" aria-label="Język"><option value="/">English</option><option value="/no/">Norsk</option><option value="/da/">Dansk</option><option value="/sv/">Svenska</option><option value="/fi/">Suomi</option><option value="/is/">Íslenska</option><option value="/pl/" selected>Polski</option><option value="/de/">Deutsch</option><option value="/at/">Deutsch (Österreich)</option><option value="/cs/">Čeština</option><option value="/sk/">Slovenčina</option><option value="/nl/">Nederlands</option><option value="/be/">Nederlands (België)</option><option value="/lt/">Lietuvių</option><option value="/ee/">Eesti</option><option value="/lv/">Latviešu</option><option value="/fr/">Français</option><option value="/es/">Español</option><option value="/it/">Italiano</option></select></label>
         <a class="navlink" href="#pricing">Cennik</a>
         <a class="btn sm" href="#form">Odbierz listę próbną</a>
       </div>
@@ -83,17 +86,14 @@
         <p class="note">Kliknij kraj, aby zobaczyć, co tam mamy, albo filtruj według kraju i branży. Wybierz przetarg, by poznać szczegóły.</p>
         <div class="filters mapfilters">
           <label>Kraj
-            <select id="f-country"><option value="">Cała Europa</option>
-              <optgroup label="Teraz"><option value="NO">Norwegia</option><option value="SE">Szwecja</option><option value="DK">Dania</option><option value="FI">Finlandia</option><option value="IS">Islandia</option></optgroup>
-              <optgroup label="Dalej"><option value="PL">Polska</option><option value="DE">Niemcy</option></optgroup>
-              <optgroup label="Potem"><option value="AL">Albania</option><option value="AD">Andora</option><option value="AT">Austria</option><option value="BE">Belgia</option><option value="BA">Bośnia i Hercegowina</option><option value="BG">Bułgaria</option><option value="HR">Chorwacja</option><option value="CY">Cypr</option><option value="ME">Czarnogóra</option><option value="CZ">Czechy</option><option value="EE">Estonia</option><option value="FR">Francja</option><option value="GR">Grecja</option><option value="ES">Hiszpania</option><option value="NL">Holandia</option><option value="IE">Irlandia</option><option value="XK">Kosowo</option><option value="LT">Litwa</option><option value="LU">Luksemburg</option><option value="LV">Łotwa</option><option value="MK">Macedonia Północna</option><option value="MD">Mołdawia</option><option value="PT">Portugalia</option><option value="RO">Rumunia</option><option value="RS">Serbia</option><option value="SK">Słowacja</option><option value="SI">Słowenia</option><option value="CH">Szwajcaria</option><option value="UA">Ukraina</option><option value="HU">Węgry</option><option value="GB">Wielka Brytania</option><option value="IT">Włochy</option></optgroup></select>
+            <select id="f-country"><option value="">Cała Europa</option><option value="AL">Albania</option><option value="AD">Andora</option><option value="AT">Austria</option><option value="BE">Belgia</option><option value="BA">Bośnia i Hercegowina</option><option value="BG">Bułgaria</option><option value="HR">Chorwacja</option><option value="CY">Cypr</option><option value="ME">Czarnogóra</option><option value="CZ">Czechy</option><option value="DK">Dania</option><option value="EE">Estonia</option><option value="FI">Finlandia</option><option value="FR">Francja</option><option value="GR">Grecja</option><option value="ES">Hiszpania</option><option value="NL">Holandia</option><option value="IE">Irlandia</option><option value="IS">Islandia</option><option value="XK">Kosowo</option><option value="LT">Litwa</option><option value="LU">Luksemburg</option><option value="LV">Łotwa</option><option value="MK">Macedonia Północna</option><option value="MD">Mołdawia</option><option value="DE">Niemcy</option><option value="NO">Norwegia</option><option value="PL">Polska</option><option value="PT">Portugalia</option><option value="RO">Rumunia</option><option value="RS">Serbia</option><option value="SK">Słowacja</option><option value="SI">Słowenia</option><option value="CH">Szwajcaria</option><option value="SE">Szwecja</option><option value="UA">Ukraina</option><option value="HU">Węgry</option><option value="GB">Wielka Brytania</option><option value="IT">Włochy</option></select>
           </label>
           <label>Branża
-            <select id="f-trade"><option value="">Wszystkie branże</option><option value="electrical">Elektryka</option><option value="plumbing">Hydraulika</option><option value="hvac">Wentylacja</option><option value="painting">Malowanie</option><option value="building">Budownictwo</option><option value="cleaning">Sprzątanie</option></select>
+            <select id="f-trade"><option value="">Wszystkie branże</option><option value="electrical">Elektryka</option><option value="plumbing">Hydraulika</option><option value="hvac">Wentylacja</option><option value="painting">Malowanie</option><option value="building">Budownictwo</option><option value="cleaning">Sprzątanie</option><option value="roofing">Dachy (w tym papa/bitum)</option><option value="flooring">Podłogi</option><option value="windows">Okna i drzwi</option><option value="insulation">Ocieplenia</option><option value="facade">Elewacje / okładziny</option><option value="groundworks">Roboty ziemne</option><option value="demolition">Rozbiórki</option><option value="scaffolding">Rusztowania</option></select>
           </label>
           <p class="fcount" id="f-count" aria-live="polite"></p>
         </div>
-        <div class="mapstage" id="mapstage" data-level="overview" data-src="/countries.geojson" data-names='{"GB":"Wielka Brytania","UA":"Ukraina","CH":"Szwajcaria","SE":"Szwecja","ES":"Hiszpania","SK":"Słowacja","SI":"Słowenia","RS":"Serbia","RO":"Rumunia","PT":"Portugalia","PL":"Polska","NO":"Norwegia","NL":"Holandia","ME":"Czarnogóra","MD":"Mołdawia","MK":"Macedonia Północna","LU":"Luksemburg","LT":"Litwa","LV":"Łotwa","XK":"Kosowo","IT":"Włochy","IE":"Irlandia","IS":"Islandia","HU":"Węgry","GR":"Grecja","DE":"Niemcy","FR":"Francja","FI":"Finlandia","EE":"Estonia","DK":"Dania","CZ":"Czechy","CY":"Cypr","HR":"Chorwacja","BG":"Bułgaria","BA":"Bośnia i Hercegowina","BE":"Belgia","AT":"Austria","AD":"Andora","AL":"Albania"}' data-tenders="/tenders.pl.json" data-none-filter="Nic w kraju {country} nie pasuje teraz do tej branży. Spróbuj innej branży."
+        <div class="mapstage" id="mapstage" data-examples="Przykładowe przetargi" data-level="overview" data-src="/countries.geojson" data-names='{"GB":"Wielka Brytania","UA":"Ukraina","CH":"Szwajcaria","SE":"Szwecja","ES":"Hiszpania","SK":"Słowacja","SI":"Słowenia","RS":"Serbia","RO":"Rumunia","PT":"Portugalia","PL":"Polska","NO":"Norwegia","NL":"Holandia","ME":"Czarnogóra","MD":"Mołdawia","MK":"Macedonia Północna","LU":"Luksemburg","LT":"Litwa","LV":"Łotwa","XK":"Kosowo","IT":"Włochy","IE":"Irlandia","IS":"Islandia","HU":"Węgry","GR":"Grecja","DE":"Niemcy","FR":"Francja","FI":"Finlandia","EE":"Estonia","DK":"Dania","CZ":"Czechy","CY":"Cypr","HR":"Chorwacja","BG":"Bułgaria","BA":"Bośnia i Hercegowina","BE":"Belgia","AT":"Austria","AD":"Andora","AL":"Albania"}' data-tenders="/tenders.pl.json" data-none-filter="Nic w kraju {country} nie pasuje teraz do tej branży. Spróbuj innej branży."
              data-back-all="Wszystkie kraje" data-back-country="Wróć: {country}" data-none="Brak wpisów dla: {country}. Zaczynamy w krajach nordyckich i dodajemy kolejne kraje krok po kroku."
              data-open-page="Przeczytaj stronę w języku lokalnym" data-deadline="Termin" data-days-left="pozostało dni: {n}" data-value="Wartość / rodzaj" data-where="Miejsce"
              data-fit="Dobre dopasowanie" data-original="Zobacz oryginalne ogłoszenie" data-sample="Przykład. Link do oryginalnego ogłoszenia pojawi się w prawdziwej liście." data-count-one="{n} wpis" data-count-many="wpisy: {n}">
@@ -114,6 +114,9 @@
             <li style="grid-area:5/3" data-wave="3"><a href="/cs/"><b>CZ</b><span>Česko</span></a></li>
             <li style="grid-area:5/4" data-wave="3"><a href="/sk/"><b>SK</b><span>Slovensko</span></a></li>
             <li style="grid-area:6/3" data-wave="3"><a href="/at/"><b>AT</b><span>Österreich</span></a></li>
+            <li style="grid-area:5/1"  data-wave="3"><a href="/fr/"><b>FR</b><span>France</span></a></li>
+            <li style="grid-area:6/1"  data-wave="3"><a href="/es/"><b>ES</b><span>España</span></a></li>
+            <li style="grid-area:6/4"  data-wave="3"><a href="/it/"><b>IT</b><span>Italia</span></a></li>
             </ul>
             <div class="gmap" hidden role="region" aria-label="Mapa krajów, które obejmujemy"></div>
             <p class="maptip" hidden></p>
@@ -123,11 +126,7 @@
           <aside class="mapside" id="mapside" aria-live="polite">
             <div data-view="overview">
               <p class="ms-title">Gdzie szukamy</p>
-              <ul class="legend">
-                <li data-wave="1"><b>Teraz</b> Norwegia, Dania, Szwecja, Finlandia i Islandia</li>
-                <li data-wave="2"><b>Dalej</b> Polska i Niemcy</li>
-                <li data-wave="3"><b>Potem</b> reszta Europy</li>
-              </ul>
+              <p class="ms-lead">Przetargi publiczne w całej Europie</p>
               <p class="ms-hint">Wybierz kraj, aby przybliżyć mapę. Każdy punkt to jeden przykładowy przetarg, oznaczony kolorem branży.</p>
               <ul class="tlist"></ul>
               <p class="ms-empty empty" hidden>Nic jeszcze nie pasuje do tej branży.</p>
@@ -237,7 +236,7 @@
   <footer>
     <div class="wrap">
       <p>Small Tenders to redagowany wybór publicznie dostępnych ogłoszeń. Nie zastępujemy TED ani krajowych portali. Zawsze przeczytaj oryginalne ogłoszenie, zanim złożysz ofertę.</p>
-      <p><strong>Kraje:</strong> <a href="/">English</a> · <a href="/no/">Norge</a> · <a href="/da/">Danmark</a> · <a href="/sv/">Sverige</a> · <a href="/fi/">Suomi</a> · <a href="/is/">Ísland</a> · <a href="/pl/" aria-current="page">Polska</a> · <a href="/de/">Deutschland</a> · <a href="/cs/">Česko</a> · <a href="/sk/">Slovensko</a> · <a href="/at/">Österreich</a> · <a href="/nl/">Nederland</a> · <a href="/be/">België</a> · <a href="/lt/">Lietuva</a> · <a href="/ee/">Eesti</a> · <a href="/lv/">Latvija</a></p>
+      <p><strong>Kraje:</strong> <a href="/">English</a> · <a href="/no/">Norge</a> · <a href="/da/">Danmark</a> · <a href="/sv/">Sverige</a> · <a href="/fi/">Suomi</a> · <a href="/is/">Ísland</a> · <a href="/pl/" aria-current="page">Polska</a> · <a href="/de/">Deutschland</a> · <a href="/cs/">Česko</a> · <a href="/sk/">Slovensko</a> · <a href="/at/">Österreich</a> · <a href="/nl/">Nederland</a> · <a href="/be/">België</a> · <a href="/lt/">Lietuva</a> · <a href="/ee/">Eesti</a> · <a href="/lv/">Latvija</a> · <a href="/fr/">France</a> · <a href="/es/">España</a> · <a href="/it/">Italia</a></p>
       <p class="foot-links"><a href="/privacy/">Prywatność</a> · <a href="/terms/">Regulamin</a> · <a href="/refund/">Zwroty</a> · <a href="/contact/">Kontakt</a> · <a data-site="email" href="mailto:support@smalltenders.com">support@smalltenders.com</a></p>
       <p class="foot-company">KM TECH LABS · Org. no. 934 044 029 · Kristiansand, Norway</p>
     </div>

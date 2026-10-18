@@ -22,6 +22,9 @@
   <link rel="alternate" hreflang="lt" href="https://smalltenders.com/lt/" />
   <link rel="alternate" hreflang="et" href="https://smalltenders.com/ee/" />
   <link rel="alternate" hreflang="lv" href="https://smalltenders.com/lv/" />
+  <link rel="alternate" hreflang="fr" href="https://smalltenders.com/fr/" />
+  <link rel="alternate" hreflang="es" href="https://smalltenders.com/es/" />
+  <link rel="alternate" hreflang="it" href="https://smalltenders.com/it/" />
   <link rel="alternate" hreflang="x-default" href="https://smalltenders.com/" />
   <link rel="icon" href="/icon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="/styles.css" />
@@ -33,7 +36,7 @@
         <img src="/logo.svg" alt="Small Tenders" height="28" />
       </a>
       <div class="nav-right">
-        <span class="lang"><a href="/">EN</a> | <a href="/no/">NO</a> | <a href="/da/">DA</a> | <a href="/sv/">SV</a> | <a href="/fi/">FI</a> | <a href="/pl/">PL</a> | <a href="/de/">DE</a> | <a href="/is/" aria-current="page">IS</a></span>
+        <label class="lang"><select class="lang-select" aria-label="Tungumál"><option value="/">English</option><option value="/no/">Norsk</option><option value="/da/">Dansk</option><option value="/sv/">Svenska</option><option value="/fi/">Suomi</option><option value="/is/" selected>Íslenska</option><option value="/pl/">Polski</option><option value="/de/">Deutsch</option><option value="/at/">Deutsch (Österreich)</option><option value="/cs/">Čeština</option><option value="/sk/">Slovenčina</option><option value="/nl/">Nederlands</option><option value="/be/">Nederlands (België)</option><option value="/lt/">Lietuvių</option><option value="/ee/">Eesti</option><option value="/lv/">Latviešu</option><option value="/fr/">Français</option><option value="/es/">Español</option><option value="/it/">Italiano</option></select></label>
         <a class="navlink" href="#pricing">Verð</a>
         <a class="btn sm" href="#form">Fáðu prufulistann</a>
       </div>
@@ -83,17 +86,14 @@
         <p class="note">Smelltu á land til að sjá hvað við höfum þar, eða síaðu eftir landi og iðngrein. Veldu útboð til að sjá nánar.</p>
         <div class="filters mapfilters">
           <label>Land
-            <select id="f-country"><option value="">Öll Evrópa</option>
-              <optgroup label="Núna"><option value="NO">Noregur</option><option value="SE">Svíþjóð</option><option value="DK">Danmörk</option><option value="FI">Finnland</option><option value="IS">Ísland</option></optgroup>
-              <optgroup label="Næst"><option value="PL">Pólland</option><option value="DE">Þýskaland</option></optgroup>
-              <optgroup label="Síðan"><option value="AL">Albanía</option><option value="AD">Andorra</option><option value="AT">Austurríki</option><option value="BE">Belgía</option><option value="BA">Bosnía og Hersegóvína</option><option value="GB">Bretland</option><option value="BG">Búlgaría</option><option value="EE">Eistland</option><option value="FR">Frakkland</option><option value="GR">Grikkland</option><option value="NL">Holland</option><option value="IE">Írland</option><option value="IT">Ítalía</option><option value="XK">Kósóvó</option><option value="HR">Króatía</option><option value="CY">Kýpur</option><option value="LV">Lettland</option><option value="LT">Litháen</option><option value="LU">Lúxemborg</option><option value="MD">Moldóva</option><option value="MK">Norður-Makedónía</option><option value="PT">Portúgal</option><option value="RO">Rúmenía</option><option value="RS">Serbía</option><option value="SK">Slóvakía</option><option value="SI">Slóvenía</option><option value="ES">Spánn</option><option value="ME">Svartfjallaland</option><option value="CH">Sviss</option><option value="CZ">Tékkland</option><option value="HU">Ungverjaland</option><option value="UA">Úkraína</option></optgroup></select>
+            <select id="f-country"><option value="">Öll Evrópa</option><option value="AL">Albanía</option><option value="AD">Andorra</option><option value="AT">Austurríki</option><option value="BE">Belgía</option><option value="BA">Bosnía og Hersegóvína</option><option value="GB">Bretland</option><option value="BG">Búlgaría</option><option value="DK">Danmörk</option><option value="EE">Eistland</option><option value="FI">Finnland</option><option value="FR">Frakkland</option><option value="GR">Grikkland</option><option value="NL">Holland</option><option value="IE">Írland</option><option value="IS">Ísland</option><option value="IT">Ítalía</option><option value="XK">Kósóvó</option><option value="HR">Króatía</option><option value="CY">Kýpur</option><option value="LV">Lettland</option><option value="LT">Litháen</option><option value="LU">Lúxemborg</option><option value="MD">Moldóva</option><option value="MK">Norður-Makedónía</option><option value="NO">Noregur</option><option value="PT">Portúgal</option><option value="PL">Pólland</option><option value="RO">Rúmenía</option><option value="RS">Serbía</option><option value="SK">Slóvakía</option><option value="SI">Slóvenía</option><option value="ES">Spánn</option><option value="ME">Svartfjallaland</option><option value="CH">Sviss</option><option value="SE">Svíþjóð</option><option value="CZ">Tékkland</option><option value="HU">Ungverjaland</option><option value="UA">Úkraína</option><option value="DE">Þýskaland</option></select>
           </label>
           <label>Iðngrein
-            <select id="f-trade"><option value="">Allar iðngreinar</option><option value="electrical">Raflagnir</option><option value="plumbing">Pípulagnir</option><option value="hvac">Loftræsting</option><option value="painting">Málun</option><option value="building">Byggingar</option><option value="cleaning">Ræsting</option></select>
+            <select id="f-trade"><option value="">Allar iðngreinar</option><option value="electrical">Raflagnir</option><option value="plumbing">Pípulagnir</option><option value="hvac">Loftræsting</option><option value="painting">Málun</option><option value="building">Byggingar</option><option value="cleaning">Ræsting</option><option value="roofing">Þök (m.a. þakpappi/bik)</option><option value="flooring">Gólf</option><option value="windows">Gluggar og hurðir</option><option value="insulation">Einangrun</option><option value="facade">Framhlið / klæðning</option><option value="groundworks">Jarðvinna</option><option value="demolition">Niðurrif</option><option value="scaffolding">Vinnupallar</option></select>
           </label>
           <p class="fcount" id="f-count" aria-live="polite"></p>
         </div>
-        <div class="mapstage" id="mapstage" data-level="overview" data-src="/countries.geojson" data-names='{"GB":"Bretland","UA":"Úkraína","CH":"Sviss","SE":"Svíþjóð","ES":"Spánn","SK":"Slóvakía","SI":"Slóvenía","RS":"Serbía","RO":"Rúmenía","PT":"Portúgal","PL":"Pólland","NO":"Noregur","NL":"Holland","ME":"Svartfjallaland","MD":"Moldóva","MK":"Norður-Makedónía","LU":"Lúxemborg","LT":"Litháen","LV":"Lettland","XK":"Kósóvó","IT":"Ítalía","IE":"Írland","IS":"Ísland","HU":"Ungverjaland","GR":"Grikkland","DE":"Þýskaland","FR":"Frakkland","FI":"Finnland","EE":"Eistland","DK":"Danmörk","CZ":"Tékkland","CY":"Kýpur","HR":"Króatía","BG":"Búlgaría","BA":"Bosnía og Hersegóvína","BE":"Belgía","AT":"Austurríki","AD":"Andorra","AL":"Albanía"}' data-tenders="/tenders.is.json" data-none-filter="Ekkert í {country} passar við þá iðngrein núna. Prófaðu aðra iðngrein."
+        <div class="mapstage" id="mapstage" data-examples="Dæmi um útboð" data-level="overview" data-src="/countries.geojson" data-names='{"GB":"Bretland","UA":"Úkraína","CH":"Sviss","SE":"Svíþjóð","ES":"Spánn","SK":"Slóvakía","SI":"Slóvenía","RS":"Serbía","RO":"Rúmenía","PT":"Portúgal","PL":"Pólland","NO":"Noregur","NL":"Holland","ME":"Svartfjallaland","MD":"Moldóva","MK":"Norður-Makedónía","LU":"Lúxemborg","LT":"Litháen","LV":"Lettland","XK":"Kósóvó","IT":"Ítalía","IE":"Írland","IS":"Ísland","HU":"Ungverjaland","GR":"Grikkland","DE":"Þýskaland","FR":"Frakkland","FI":"Finnland","EE":"Eistland","DK":"Danmörk","CZ":"Tékkland","CY":"Kýpur","HR":"Króatía","BG":"Búlgaría","BA":"Bosnía og Hersegóvína","BE":"Belgía","AT":"Austurríki","AD":"Andorra","AL":"Albanía"}' data-tenders="/tenders.is.json" data-none-filter="Ekkert í {country} passar við þá iðngrein núna. Prófaðu aðra iðngrein."
              data-back-all="Öll lönd" data-back-country="Til baka: {country}" data-none="Engar færslur fyrir {country} ennþá. Við byrjum á Norðurlöndunum og bætum við löndum skref fyrir skref."
              data-open-page="Lesa síðuna á staðartungumálinu" data-deadline="Frestur" data-days-left="{n} d. eftir" data-value="Verðmæti / tegund" data-where="Staðsetning"
              data-fit="Hentar vel" data-original="Sjá upprunalegu auglýsinguna" data-sample="Dæmi. Tengillinn á upprunalegu auglýsinguna fylgir með alvöru listanum." data-count-one="færsla" data-count-many="færslur">
@@ -114,6 +114,9 @@
             <li style="grid-area:5/3" data-wave="3"><a href="/cs/"><b>CZ</b><span>Česko</span></a></li>
             <li style="grid-area:5/4" data-wave="3"><a href="/sk/"><b>SK</b><span>Slovensko</span></a></li>
             <li style="grid-area:6/3" data-wave="3"><a href="/at/"><b>AT</b><span>Österreich</span></a></li>
+            <li style="grid-area:5/1"  data-wave="3"><a href="/fr/"><b>FR</b><span>France</span></a></li>
+            <li style="grid-area:6/1"  data-wave="3"><a href="/es/"><b>ES</b><span>España</span></a></li>
+            <li style="grid-area:6/4"  data-wave="3"><a href="/it/"><b>IT</b><span>Italia</span></a></li>
             </ul>
             <div class="gmap" hidden role="region" aria-label="Kort af löndunum sem við náum yfir"></div>
             <p class="maptip" hidden></p>
@@ -123,11 +126,7 @@
           <aside class="mapside" id="mapside" aria-live="polite">
             <div data-view="overview">
               <p class="ms-title">Hvar við leitum</p>
-              <ul class="legend">
-                <li data-wave="1"><b>Núna</b> Noregur, Danmörk, Svíþjóð, Finnland og Ísland</li>
-                <li data-wave="2"><b>Næst</b> Pólland og Þýskaland</li>
-                <li data-wave="3"><b>Síðan</b> restin af Evrópu</li>
-              </ul>
+              <p class="ms-lead">Opinber útboð um alla Evrópu</p>
               <p class="ms-hint">Veldu land til að þysja inn. Hver punktur er eitt dæmi um útboð, litaður eftir iðngrein.</p>
               <ul class="tlist"></ul>
               <p class="ms-empty empty" hidden>Ekkert passar við þá iðngrein ennþá.</p>
@@ -237,7 +236,7 @@
   <footer>
     <div class="wrap">
       <p>Small Tenders er ritstýrt úrval af opinberlega aðgengilegum auglýsingum. Við komum ekki í stað TED eða landsbundinna gátta. Lestu alltaf upprunalegu auglýsinguna áður en þú gerir tilboð.</p>
-      <p><strong>Lönd:</strong> <a href="/">English</a> · <a href="/no/">Norge</a> · <a href="/da/">Danmark</a> · <a href="/sv/">Sverige</a> · <a href="/fi/">Suomi</a> · <a href="/is/" aria-current="page">Ísland</a> · <a href="/pl/">Polska</a> · <a href="/de/">Deutschland</a> · <a href="/cs/">Česko</a> · <a href="/sk/">Slovensko</a> · <a href="/at/">Österreich</a> · <a href="/nl/">Nederland</a> · <a href="/be/">België</a> · <a href="/lt/">Lietuva</a> · <a href="/ee/">Eesti</a> · <a href="/lv/">Latvija</a></p>
+      <p><strong>Lönd:</strong> <a href="/">English</a> · <a href="/no/">Norge</a> · <a href="/da/">Danmark</a> · <a href="/sv/">Sverige</a> · <a href="/fi/">Suomi</a> · <a href="/is/" aria-current="page">Ísland</a> · <a href="/pl/">Polska</a> · <a href="/de/">Deutschland</a> · <a href="/cs/">Česko</a> · <a href="/sk/">Slovensko</a> · <a href="/at/">Österreich</a> · <a href="/nl/">Nederland</a> · <a href="/be/">België</a> · <a href="/lt/">Lietuva</a> · <a href="/ee/">Eesti</a> · <a href="/lv/">Latvija</a> · <a href="/fr/">France</a> · <a href="/es/">España</a> · <a href="/it/">Italia</a></p>
       <p class="foot-links"><a href="/privacy/">Persónuvernd</a> · <a href="/terms/">Skilmálar</a> · <a href="/refund/">Endurgreiðslur</a> · <a href="/contact/">Samband</a> · <a data-site="email" href="mailto:support@smalltenders.com">support@smalltenders.com</a></p>
       <p class="foot-company">KM TECH LABS · Org. no. 934 044 029 · Kristiansand, Norway</p>
     </div>

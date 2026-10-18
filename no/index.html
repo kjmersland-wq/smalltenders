@@ -22,6 +22,9 @@
   <link rel="alternate" hreflang="lt" href="https://smalltenders.com/lt/" />
   <link rel="alternate" hreflang="et" href="https://smalltenders.com/ee/" />
   <link rel="alternate" hreflang="lv" href="https://smalltenders.com/lv/" />
+  <link rel="alternate" hreflang="fr" href="https://smalltenders.com/fr/" />
+  <link rel="alternate" hreflang="es" href="https://smalltenders.com/es/" />
+  <link rel="alternate" hreflang="it" href="https://smalltenders.com/it/" />
   <link rel="alternate" hreflang="x-default" href="https://smalltenders.com/" />
   <link rel="icon" href="/icon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="/styles.css" />
@@ -33,7 +36,7 @@
         <img src="/logo.svg" alt="Small Tenders" height="28" />
       </a>
       <div class="nav-right">
-        <span class="lang"><a href="/">EN</a> | <a href="/no/" aria-current="page">NO</a> | <a href="/da/">DA</a> | <a href="/sv/">SV</a> | <a href="/fi/">FI</a> | <a href="/pl/">PL</a> | <a href="/de/">DE</a></span>
+        <label class="lang"><select class="lang-select" aria-label="Språk"><option value="/">English</option><option value="/no/" selected>Norsk</option><option value="/da/">Dansk</option><option value="/sv/">Svenska</option><option value="/fi/">Suomi</option><option value="/is/">Íslenska</option><option value="/pl/">Polski</option><option value="/de/">Deutsch</option><option value="/at/">Deutsch (Österreich)</option><option value="/cs/">Čeština</option><option value="/sk/">Slovenčina</option><option value="/nl/">Nederlands</option><option value="/be/">Nederlands (België)</option><option value="/lt/">Lietuvių</option><option value="/ee/">Eesti</option><option value="/lv/">Latviešu</option><option value="/fr/">Français</option><option value="/es/">Español</option><option value="/it/">Italiano</option></select></label>
         <a class="navlink" href="#pricing">Priser</a>
         <a class="btn sm" href="#form">Få prøvelisten</a>
       </div>
@@ -83,17 +86,14 @@
         <p class="note">Klikk på et land for å se hva vi har der, eller filtrer på land og fag. Velg et anbud for detaljene.</p>
         <div class="filters mapfilters">
           <label>Land
-            <select id="f-country"><option value="">Hele Europa</option>
-              <optgroup label="Nå"><option value="NO">Norge</option><option value="SE">Sverige</option><option value="DK">Danmark</option><option value="FI">Finland</option><option value="IS">Island</option></optgroup>
-              <optgroup label="Neste"><option value="PL">Polen</option><option value="DE">Tyskland</option></optgroup>
-              <optgroup label="Deretter"><option value="AL">Albania</option><option value="AD">Andorra</option><option value="BE">Belgia</option><option value="BA">Bosnia-Hercegovina</option><option value="BG">Bulgaria</option><option value="EE">Estland</option><option value="FR">Frankrike</option><option value="GR">Hellas</option><option value="IE">Irland</option><option value="IT">Italia</option><option value="XK">Kosovo</option><option value="HR">Kroatia</option><option value="CY">Kypros</option><option value="LV">Latvia</option><option value="LT">Litauen</option><option value="LU">Luxemburg</option><option value="MD">Moldova</option><option value="ME">Montenegro</option><option value="NL">Nederland</option><option value="MK">Nord-Makedonia</option><option value="PT">Portugal</option><option value="RO">Romania</option><option value="RS">Serbia</option><option value="SK">Slovakia</option><option value="SI">Slovenia</option><option value="ES">Spania</option><option value="GB">Storbritannia</option><option value="CH">Sveits</option><option value="CZ">Tsjekkia</option><option value="UA">Ukraina</option><option value="HU">Ungarn</option><option value="AT">Østerrike</option></optgroup></select>
+            <select id="f-country"><option value="">Hele Europa</option><option value="AL">Albania</option><option value="AD">Andorra</option><option value="BE">Belgia</option><option value="BA">Bosnia-Hercegovina</option><option value="BG">Bulgaria</option><option value="DK">Danmark</option><option value="EE">Estland</option><option value="FI">Finland</option><option value="FR">Frankrike</option><option value="GR">Hellas</option><option value="IE">Irland</option><option value="IS">Island</option><option value="IT">Italia</option><option value="XK">Kosovo</option><option value="HR">Kroatia</option><option value="CY">Kypros</option><option value="LV">Latvia</option><option value="LT">Litauen</option><option value="LU">Luxemburg</option><option value="MD">Moldova</option><option value="ME">Montenegro</option><option value="NL">Nederland</option><option value="MK">Nord-Makedonia</option><option value="NO">Norge</option><option value="PL">Polen</option><option value="PT">Portugal</option><option value="RO">Romania</option><option value="RS">Serbia</option><option value="SK">Slovakia</option><option value="SI">Slovenia</option><option value="ES">Spania</option><option value="GB">Storbritannia</option><option value="CH">Sveits</option><option value="SE">Sverige</option><option value="CZ">Tsjekkia</option><option value="DE">Tyskland</option><option value="UA">Ukraina</option><option value="HU">Ungarn</option><option value="AT">Østerrike</option></select>
           </label>
           <label>Fag
-            <select id="f-trade"><option value="">Alle fag</option><option value="electrical">Elektro</option><option value="plumbing">Rør</option><option value="hvac">Ventilasjon</option><option value="painting">Maling</option><option value="building">Bygg</option><option value="cleaning">Renhold</option></select>
+            <select id="f-trade"><option value="">Alle fag</option><option value="electrical">Elektro</option><option value="plumbing">Rør</option><option value="hvac">Ventilasjon</option><option value="painting">Maling</option><option value="building">Bygg</option><option value="cleaning">Renhold</option><option value="roofing">Tak (inkl. takpapp/bitumen)</option><option value="flooring">Gulv</option><option value="windows">Vinduer og dører</option><option value="insulation">Isolasjon</option><option value="facade">Fasade / kledning</option><option value="groundworks">Grunnarbeid</option><option value="demolition">Riving</option><option value="scaffolding">Stillas</option></select>
           </label>
           <p class="fcount" id="f-count" aria-live="polite"></p>
         </div>
-        <div class="mapstage" id="mapstage" data-level="overview" data-src="/countries.geojson" data-names='{"GB":"Storbritannia","UA":"Ukraina","CH":"Sveits","SE":"Sverige","ES":"Spania","SK":"Slovakia","SI":"Slovenia","RS":"Serbia","RO":"Romania","PT":"Portugal","PL":"Polen","NO":"Norge","NL":"Nederland","ME":"Montenegro","MD":"Moldova","MK":"Nord-Makedonia","LU":"Luxemburg","LT":"Litauen","LV":"Latvia","XK":"Kosovo","IT":"Italia","IE":"Irland","IS":"Island","HU":"Ungarn","GR":"Hellas","DE":"Tyskland","FR":"Frankrike","FI":"Finland","EE":"Estland","DK":"Danmark","CZ":"Tsjekkia","CY":"Kypros","HR":"Kroatia","BG":"Bulgaria","BA":"Bosnia-Hercegovina","BE":"Belgia","AT":"Østerrike","AD":"Andorra","AL":"Albania"}' data-tenders="/tenders.no.json" data-none-filter="Ingenting i {country} passer med det faget akkurat nå. Prøv et annet fag."
+        <div class="mapstage" id="mapstage" data-examples="Eksempelanbud" data-level="overview" data-src="/countries.geojson" data-names='{"GB":"Storbritannia","UA":"Ukraina","CH":"Sveits","SE":"Sverige","ES":"Spania","SK":"Slovakia","SI":"Slovenia","RS":"Serbia","RO":"Romania","PT":"Portugal","PL":"Polen","NO":"Norge","NL":"Nederland","ME":"Montenegro","MD":"Moldova","MK":"Nord-Makedonia","LU":"Luxemburg","LT":"Litauen","LV":"Latvia","XK":"Kosovo","IT":"Italia","IE":"Irland","IS":"Island","HU":"Ungarn","GR":"Hellas","DE":"Tyskland","FR":"Frankrike","FI":"Finland","EE":"Estland","DK":"Danmark","CZ":"Tsjekkia","CY":"Kypros","HR":"Kroatia","BG":"Bulgaria","BA":"Bosnia-Hercegovina","BE":"Belgia","AT":"Østerrike","AD":"Andorra","AL":"Albania"}' data-tenders="/tenders.no.json" data-none-filter="Ingenting i {country} passer med det faget akkurat nå. Prøv et annet fag."
              data-back-all="Alle land" data-back-country="Tilbake til {country}" data-none="Ingen oppføringer for {country} ennå. Vi starter i Norden og legger til land steg for steg."
              data-open-page="Les denne siden på lokalt språk" data-deadline="Frist" data-days-left="{n} dager igjen" data-value="Verdi / type" data-where="Sted"
              data-fit="Passer godt" data-original="Se den opprinnelige kunngjøringen" data-sample="Eksempel. Lenken til den opprinnelige kunngjøringen kommer med den ekte listen." data-count-one="oppføring" data-count-many="oppføringer">
@@ -114,6 +114,9 @@
             <li style="grid-area:5/3" data-wave="3"><a href="/cs/"><b>CZ</b><span>Česko</span></a></li>
             <li style="grid-area:5/4" data-wave="3"><a href="/sk/"><b>SK</b><span>Slovensko</span></a></li>
             <li style="grid-area:6/3" data-wave="3"><a href="/at/"><b>AT</b><span>Österreich</span></a></li>
+            <li style="grid-area:5/1"  data-wave="3"><a href="/fr/"><b>FR</b><span>France</span></a></li>
+            <li style="grid-area:6/1"  data-wave="3"><a href="/es/"><b>ES</b><span>España</span></a></li>
+            <li style="grid-area:6/4"  data-wave="3"><a href="/it/"><b>IT</b><span>Italia</span></a></li>
             </ul>
             <div class="gmap" hidden role="region" aria-label="Kart over landene vi dekker"></div>
             <p class="maptip" hidden></p>
@@ -123,11 +126,7 @@
           <aside class="mapside" id="mapside" aria-live="polite">
             <div data-view="overview">
               <p class="ms-title">Hvor vi leter</p>
-              <ul class="legend">
-                <li data-wave="1"><b>Nå</b> Norge, Danmark, Sverige, Finland og Island</li>
-                <li data-wave="2"><b>Neste</b> Polen og Tyskland</li>
-                <li data-wave="3"><b>Deretter</b> resten av Europa</li>
-              </ul>
+              <p class="ms-lead">Offentlige anbud i hele Europa</p>
               <p class="ms-hint">Velg et land for å zoome inn. Hver prikk er ett eksempelanbud, farget etter fag.</p>
               <ul class="tlist"></ul>
               <p class="ms-empty empty" hidden>Ingenting passer med det faget ennå.</p>
@@ -237,7 +236,7 @@
   <footer>
     <div class="wrap">
       <p>Small Tenders er et redigert utvalg av offentlig tilgjengelige kunngjøringer. Vi erstatter ikke TED eller nasjonale portaler. Les alltid den originale kunngjøringen før du byr.</p>
-      <p><strong>Land:</strong> <a href="/">English</a> · <a href="/no/" aria-current="page">Norge</a> · <a href="/da/">Danmark</a> · <a href="/sv/">Sverige</a> · <a href="/fi/">Suomi</a> · <a href="/is/">Ísland</a> · <a href="/pl/">Polska</a> · <a href="/de/">Deutschland</a> · <a href="/cs/">Česko</a> · <a href="/sk/">Slovensko</a> · <a href="/at/">Österreich</a> · <a href="/nl/">Nederland</a> · <a href="/be/">België</a> · <a href="/lt/">Lietuva</a> · <a href="/ee/">Eesti</a> · <a href="/lv/">Latvija</a></p>
+      <p><strong>Land:</strong> <a href="/">English</a> · <a href="/no/" aria-current="page">Norge</a> · <a href="/da/">Danmark</a> · <a href="/sv/">Sverige</a> · <a href="/fi/">Suomi</a> · <a href="/is/">Ísland</a> · <a href="/pl/">Polska</a> · <a href="/de/">Deutschland</a> · <a href="/cs/">Česko</a> · <a href="/sk/">Slovensko</a> · <a href="/at/">Österreich</a> · <a href="/nl/">Nederland</a> · <a href="/be/">België</a> · <a href="/lt/">Lietuva</a> · <a href="/ee/">Eesti</a> · <a href="/lv/">Latvija</a> · <a href="/fr/">France</a> · <a href="/es/">España</a> · <a href="/it/">Italia</a></p>
       <p class="foot-links"><a href="/privacy/">Personvern</a> · <a href="/terms/">Vilkår</a> · <a href="/refund/">Refusjon</a> · <a href="/contact/">Kontakt</a> · <a data-site="email" href="mailto:support@smalltenders.com">support@smalltenders.com</a></p>
       <p class="foot-company">KM TECH LABS · Org. no. 934 044 029 · Kristiansand, Norway</p>
     </div>

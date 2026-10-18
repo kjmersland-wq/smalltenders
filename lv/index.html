@@ -22,6 +22,9 @@
   <link rel="alternate" hreflang="lt" href="https://smalltenders.com/lt/" />
   <link rel="alternate" hreflang="et" href="https://smalltenders.com/ee/" />
   <link rel="alternate" hreflang="lv" href="https://smalltenders.com/lv/" />
+  <link rel="alternate" hreflang="fr" href="https://smalltenders.com/fr/" />
+  <link rel="alternate" hreflang="es" href="https://smalltenders.com/es/" />
+  <link rel="alternate" hreflang="it" href="https://smalltenders.com/it/" />
   <link rel="alternate" hreflang="x-default" href="https://smalltenders.com/" />
   <link rel="icon" href="/icon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="/styles.css" />
@@ -33,7 +36,7 @@
         <img src="/logo.svg" alt="Small Tenders" height="28" />
       </a>
       <div class="nav-right">
-        <span class="lang"><a href="/">EN</a> | <a href="/no/">NO</a> | <a href="/da/">DA</a> | <a href="/sv/">SV</a> | <a href="/fi/">FI</a> | <a href="/pl/">PL</a> | <a href="/de/">DE</a> | <a href="/lv/" aria-current="page">LV</a></span>
+        <label class="lang"><select class="lang-select" aria-label="Valoda"><option value="/">English</option><option value="/no/">Norsk</option><option value="/da/">Dansk</option><option value="/sv/">Svenska</option><option value="/fi/">Suomi</option><option value="/is/">Íslenska</option><option value="/pl/">Polski</option><option value="/de/">Deutsch</option><option value="/at/">Deutsch (Österreich)</option><option value="/cs/">Čeština</option><option value="/sk/">Slovenčina</option><option value="/nl/">Nederlands</option><option value="/be/">Nederlands (België)</option><option value="/lt/">Lietuvių</option><option value="/ee/">Eesti</option><option value="/lv/" selected>Latviešu</option><option value="/fr/">Français</option><option value="/es/">Español</option><option value="/it/">Italiano</option></select></label>
         <a class="navlink" href="#pricing">Cenas</a>
         <a class="btn sm" href="#form">Saņemt parauga sarakstu</a>
       </div>
@@ -83,17 +86,14 @@
         <p class="note">Noklikšķiniet uz valsts, lai redzētu, kas mums tur ir, vai filtrējiet pēc valsts un nozares. Izvēlieties iepirkumu, lai redzētu detaļas.</p>
         <div class="filters mapfilters">
           <label>Valsts
-            <select id="f-country"><option value="">Visa Eiropa</option>
-              <optgroup label="Tagad"><option value="NO">Norvēģija</option><option value="SE">Zviedrija</option><option value="DK">Dānija</option><option value="FI">Somija</option><option value="IS">Islande</option></optgroup>
-              <optgroup label="Tālāk"><option value="PL">Polija</option><option value="DE">Vācija</option></optgroup>
-              <optgroup label="Pēc tam"><option value="AL">Albānija</option><option value="AD">Andora</option><option value="GB">Apvienotā Karaliste</option><option value="AT">Austrija</option><option value="BE">Beļģija</option><option value="BA">Bosnija un Hercegovina</option><option value="BG">Bulgārija</option><option value="CZ">Čehija</option><option value="FR">Francija</option><option value="GR">Grieķija</option><option value="HR">Horvātija</option><option value="EE">Igaunija</option><option value="IT">Itālija</option><option value="IE">Īrija</option><option value="CY">Kipra</option><option value="XK">Kosova</option><option value="LV">Latvija</option><option value="LT">Lietuva</option><option value="LU">Luksemburga</option><option value="ME">Melnkalne</option><option value="MD">Moldova</option><option value="NL">Nīderlande</option><option value="PT">Portugāle</option><option value="RO">Rumānija</option><option value="RS">Serbija</option><option value="SK">Slovākija</option><option value="SI">Slovēnija</option><option value="ES">Spānija</option><option value="CH">Šveice</option><option value="UA">Ukraina</option><option value="HU">Ungārija</option><option value="MK">Ziemeļmaķedonija</option></optgroup></select>
+            <select id="f-country"><option value="">Visa Eiropa</option><option value="AL">Albānija</option><option value="AD">Andora</option><option value="GB">Apvienotā Karaliste</option><option value="AT">Austrija</option><option value="BE">Beļģija</option><option value="BA">Bosnija un Hercegovina</option><option value="BG">Bulgārija</option><option value="CZ">Čehija</option><option value="DK">Dānija</option><option value="FR">Francija</option><option value="GR">Grieķija</option><option value="HR">Horvātija</option><option value="EE">Igaunija</option><option value="IS">Islande</option><option value="IT">Itālija</option><option value="IE">Īrija</option><option value="CY">Kipra</option><option value="XK">Kosova</option><option value="LV">Latvija</option><option value="LT">Lietuva</option><option value="LU">Luksemburga</option><option value="ME">Melnkalne</option><option value="MD">Moldova</option><option value="NL">Nīderlande</option><option value="NO">Norvēģija</option><option value="PL">Polija</option><option value="PT">Portugāle</option><option value="RO">Rumānija</option><option value="RS">Serbija</option><option value="SK">Slovākija</option><option value="SI">Slovēnija</option><option value="FI">Somija</option><option value="ES">Spānija</option><option value="CH">Šveice</option><option value="UA">Ukraina</option><option value="HU">Ungārija</option><option value="DE">Vācija</option><option value="MK">Ziemeļmaķedonija</option><option value="SE">Zviedrija</option></select>
           </label>
           <label>Nozare
-            <select id="f-trade"><option value="">Visas nozares</option><option value="electrical">Elektrība</option><option value="plumbing">Santehnika</option><option value="hvac">Ventilācija</option><option value="painting">Krāsošana</option><option value="building">Būvniecība</option><option value="cleaning">Uzkopšana</option></select>
+            <select id="f-trade"><option value="">Visas nozares</option><option value="electrical">Elektrība</option><option value="plumbing">Santehnika</option><option value="hvac">Ventilācija</option><option value="painting">Krāsošana</option><option value="building">Būvniecība</option><option value="cleaning">Uzkopšana</option><option value="roofing">Jumti (t.sk. jumta filcs/bitums)</option><option value="flooring">Grīdas</option><option value="windows">Logi un durvis</option><option value="insulation">Siltināšana</option><option value="facade">Fasāde / apdare</option><option value="groundworks">Zemes darbi</option><option value="demolition">Nojaukšana</option><option value="scaffolding">Sastatnes</option></select>
           </label>
           <p class="fcount" id="f-count" aria-live="polite"></p>
         </div>
-        <div class="mapstage" id="mapstage" data-level="overview" data-src="/countries.geojson" data-names='{"GB":"Apvienotā Karaliste","UA":"Ukraina","CH":"Šveice","SE":"Zviedrija","ES":"Spānija","SK":"Slovākija","SI":"Slovēnija","RS":"Serbija","RO":"Rumānija","PT":"Portugāle","PL":"Polija","NO":"Norvēģija","NL":"Nīderlande","ME":"Melnkalne","MD":"Moldova","MK":"Ziemeļmaķedonija","LU":"Luksemburga","LT":"Lietuva","LV":"Latvija","XK":"Kosova","IT":"Itālija","IE":"Īrija","IS":"Islande","HU":"Ungārija","GR":"Grieķija","DE":"Vācija","FR":"Francija","FI":"Somija","EE":"Igaunija","DK":"Dānija","CZ":"Čehija","CY":"Kipra","HR":"Horvātija","BG":"Bulgārija","BA":"Bosnija un Hercegovina","BE":"Beļģija","AT":"Austrija","AD":"Andora","AL":"Albānija"}' data-tenders="/tenders.lv.json" data-none-filter="Valstij “{country}” šobrīd nekas neder šai nozarei. Izmēģiniet citu nozari."
+        <div class="mapstage" id="mapstage" data-examples="Parauga iepirkumi" data-level="overview" data-src="/countries.geojson" data-names='{"GB":"Apvienotā Karaliste","UA":"Ukraina","CH":"Šveice","SE":"Zviedrija","ES":"Spānija","SK":"Slovākija","SI":"Slovēnija","RS":"Serbija","RO":"Rumānija","PT":"Portugāle","PL":"Polija","NO":"Norvēģija","NL":"Nīderlande","ME":"Melnkalne","MD":"Moldova","MK":"Ziemeļmaķedonija","LU":"Luksemburga","LT":"Lietuva","LV":"Latvija","XK":"Kosova","IT":"Itālija","IE":"Īrija","IS":"Islande","HU":"Ungārija","GR":"Grieķija","DE":"Vācija","FR":"Francija","FI":"Somija","EE":"Igaunija","DK":"Dānija","CZ":"Čehija","CY":"Kipra","HR":"Horvātija","BG":"Bulgārija","BA":"Bosnija un Hercegovina","BE":"Beļģija","AT":"Austrija","AD":"Andora","AL":"Albānija"}' data-tenders="/tenders.lv.json" data-none-filter="Valstij “{country}” šobrīd nekas neder šai nozarei. Izmēģiniet citu nozari."
              data-back-all="Visas valstis" data-back-country="Atpakaļ uz: {country}" data-none="Valstij “{country}” pagaidām nav ierakstu. Sākam Ziemeļvalstīs un valstis pievienojam solis pa solim."
              data-open-page="Lasīt lapu vietējā valodā" data-deadline="Termiņš" data-days-left="atlikušas dienas: {n}" data-value="Vērtība / veids" data-where="Vieta"
              data-fit="Labi der" data-original="Skatīt oriģinālo paziņojumu" data-sample="Piemērs. Saite uz oriģinālo paziņojumu būs īstajā sarakstā." data-count-one="{n} ieraksts" data-count-many="ierakstu: {n}">
@@ -114,6 +114,9 @@
             <li style="grid-area:5/3" data-wave="3"><a href="/cs/"><b>CZ</b><span>Česko</span></a></li>
             <li style="grid-area:5/4" data-wave="3"><a href="/sk/"><b>SK</b><span>Slovensko</span></a></li>
             <li style="grid-area:6/3" data-wave="3"><a href="/at/"><b>AT</b><span>Österreich</span></a></li>
+            <li style="grid-area:5/1"  data-wave="3"><a href="/fr/"><b>FR</b><span>France</span></a></li>
+            <li style="grid-area:6/1"  data-wave="3"><a href="/es/"><b>ES</b><span>España</span></a></li>
+            <li style="grid-area:6/4"  data-wave="3"><a href="/it/"><b>IT</b><span>Italia</span></a></li>
             </ul>
             <div class="gmap" hidden role="region" aria-label="Karte ar valstīm, kuras aptveram"></div>
             <p class="maptip" hidden></p>
@@ -123,11 +126,7 @@
           <aside class="mapside" id="mapside" aria-live="polite">
             <div data-view="overview">
               <p class="ms-title">Kur meklējam</p>
-              <ul class="legend">
-                <li data-wave="1"><b>Tagad</b> Norvēģija, Dānija, Zviedrija, Somija un Islande</li>
-                <li data-wave="2"><b>Tālāk</b> Polija un Vācija</li>
-                <li data-wave="3"><b>Pēc tam</b> pārējā Eiropa</li>
-              </ul>
+              <p class="ms-lead">Publiskie iepirkumi visā Eiropā</p>
               <p class="ms-hint">Izvēlieties valsti, lai tuvinātu. Katrs punkts ir viens parauga iepirkums, iekrāsots pēc nozares.</p>
               <ul class="tlist"></ul>
               <p class="ms-empty empty" hidden>Šai nozarei pagaidām nekas neder.</p>
@@ -237,7 +236,7 @@
   <footer>
     <div class="wrap">
       <p>Small Tenders ir rediģēta publiski pieejamu paziņojumu izlase. Mēs neaizstājam TED vai valstu portālus. Pirms piedāvājuma iesniegšanas vienmēr izlasiet oriģinālo paziņojumu.</p>
-      <p><strong>Valstis:</strong> <a href="/">English</a> · <a href="/no/">Norge</a> · <a href="/da/">Danmark</a> · <a href="/sv/">Sverige</a> · <a href="/fi/">Suomi</a> · <a href="/is/">Ísland</a> · <a href="/pl/">Polska</a> · <a href="/de/">Deutschland</a> · <a href="/cs/">Česko</a> · <a href="/sk/">Slovensko</a> · <a href="/at/">Österreich</a> · <a href="/nl/">Nederland</a> · <a href="/be/">België</a> · <a href="/lt/">Lietuva</a> · <a href="/ee/">Eesti</a> · <a href="/lv/" aria-current="page">Latvija</a></p>
+      <p><strong>Valstis:</strong> <a href="/">English</a> · <a href="/no/">Norge</a> · <a href="/da/">Danmark</a> · <a href="/sv/">Sverige</a> · <a href="/fi/">Suomi</a> · <a href="/is/">Ísland</a> · <a href="/pl/">Polska</a> · <a href="/de/">Deutschland</a> · <a href="/cs/">Česko</a> · <a href="/sk/">Slovensko</a> · <a href="/at/">Österreich</a> · <a href="/nl/">Nederland</a> · <a href="/be/">België</a> · <a href="/lt/">Lietuva</a> · <a href="/ee/">Eesti</a> · <a href="/lv/" aria-current="page">Latvija</a> · <a href="/fr/">France</a> · <a href="/es/">España</a> · <a href="/it/">Italia</a></p>
       <p class="foot-links"><a href="/privacy/">Privātums</a> · <a href="/terms/">Noteikumi</a> · <a href="/refund/">Atmaksa</a> · <a href="/contact/">Kontakti</a> · <a data-site="email" href="mailto:support@smalltenders.com">support@smalltenders.com</a></p>
       <p class="foot-company">KM TECH LABS · Org. no. 934 044 029 · Kristiansand, Norway</p>
     </div>

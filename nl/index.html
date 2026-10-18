@@ -22,6 +22,9 @@
   <link rel="alternate" hreflang="lt" href="https://smalltenders.com/lt/" />
   <link rel="alternate" hreflang="et" href="https://smalltenders.com/ee/" />
   <link rel="alternate" hreflang="lv" href="https://smalltenders.com/lv/" />
+  <link rel="alternate" hreflang="fr" href="https://smalltenders.com/fr/" />
+  <link rel="alternate" hreflang="es" href="https://smalltenders.com/es/" />
+  <link rel="alternate" hreflang="it" href="https://smalltenders.com/it/" />
   <link rel="alternate" hreflang="x-default" href="https://smalltenders.com/" />
   <link rel="icon" href="/icon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="/styles.css" />
@@ -33,7 +36,7 @@
         <img src="/logo.svg" alt="Small Tenders" height="28" />
       </a>
       <div class="nav-right">
-        <span class="lang"><a href="/">EN</a> | <a href="/no/">NO</a> | <a href="/da/">DA</a> | <a href="/sv/">SV</a> | <a href="/fi/">FI</a> | <a href="/pl/">PL</a> | <a href="/de/">DE</a> | <a href="/nl/" aria-current="page">NL</a></span>
+        <label class="lang"><select class="lang-select" aria-label="Taal"><option value="/">English</option><option value="/no/">Norsk</option><option value="/da/">Dansk</option><option value="/sv/">Svenska</option><option value="/fi/">Suomi</option><option value="/is/">Íslenska</option><option value="/pl/">Polski</option><option value="/de/">Deutsch</option><option value="/at/">Deutsch (Österreich)</option><option value="/cs/">Čeština</option><option value="/sk/">Slovenčina</option><option value="/nl/" selected>Nederlands</option><option value="/be/">Nederlands (België)</option><option value="/lt/">Lietuvių</option><option value="/ee/">Eesti</option><option value="/lv/">Latviešu</option><option value="/fr/">Français</option><option value="/es/">Español</option><option value="/it/">Italiano</option></select></label>
         <a class="navlink" href="#pricing">Prijzen</a>
         <a class="btn sm" href="#form">Vraag de proeflijst aan</a>
       </div>
@@ -83,17 +86,14 @@
         <p class="note">Klik op een land om te zien wat we daar hebben, of filter op land en vakgebied. Kies een aanbesteding voor de details.</p>
         <div class="filters mapfilters">
           <label>Land
-            <select id="f-country"><option value="">Heel Europa</option>
-              <optgroup label="Nu"><option value="NO">Noorwegen</option><option value="SE">Zweden</option><option value="DK">Denemarken</option><option value="FI">Finland</option><option value="IS">IJsland</option></optgroup>
-              <optgroup label="Daarna"><option value="PL">Polen</option><option value="DE">Duitsland</option></optgroup>
-              <optgroup label="Vervolgens"><option value="AL">Albanië</option><option value="AD">Andorra</option><option value="BE">België</option><option value="BA">Bosnië en Herzegovina</option><option value="BG">Bulgarije</option><option value="CY">Cyprus</option><option value="EE">Estland</option><option value="FR">Frankrijk</option><option value="GR">Griekenland</option><option value="HU">Hongarije</option><option value="IE">Ierland</option><option value="IT">Italië</option><option value="XK">Kosovo</option><option value="HR">Kroatië</option><option value="LV">Letland</option><option value="LT">Litouwen</option><option value="LU">Luxemburg</option><option value="MD">Moldavië</option><option value="ME">Montenegro</option><option value="NL">Nederland</option><option value="MK">Noord-Macedonië</option><option value="UA">Oekraïne</option><option value="AT">Oostenrijk</option><option value="PT">Portugal</option><option value="RO">Roemenië</option><option value="RS">Servië</option><option value="SI">Slovenië</option><option value="SK">Slowakije</option><option value="ES">Spanje</option><option value="CZ">Tsjechië</option><option value="GB">Verenigd Koninkrijk</option><option value="CH">Zwitserland</option></optgroup></select>
+            <select id="f-country"><option value="">Heel Europa</option><option value="AL">Albanië</option><option value="AD">Andorra</option><option value="BE">België</option><option value="BA">Bosnië en Herzegovina</option><option value="BG">Bulgarije</option><option value="CY">Cyprus</option><option value="DK">Denemarken</option><option value="DE">Duitsland</option><option value="EE">Estland</option><option value="FI">Finland</option><option value="FR">Frankrijk</option><option value="GR">Griekenland</option><option value="HU">Hongarije</option><option value="IE">Ierland</option><option value="IS">IJsland</option><option value="IT">Italië</option><option value="XK">Kosovo</option><option value="HR">Kroatië</option><option value="LV">Letland</option><option value="LT">Litouwen</option><option value="LU">Luxemburg</option><option value="MD">Moldavië</option><option value="ME">Montenegro</option><option value="NL">Nederland</option><option value="MK">Noord-Macedonië</option><option value="NO">Noorwegen</option><option value="UA">Oekraïne</option><option value="AT">Oostenrijk</option><option value="PL">Polen</option><option value="PT">Portugal</option><option value="RO">Roemenië</option><option value="RS">Servië</option><option value="SI">Slovenië</option><option value="SK">Slowakije</option><option value="ES">Spanje</option><option value="CZ">Tsjechië</option><option value="GB">Verenigd Koninkrijk</option><option value="SE">Zweden</option><option value="CH">Zwitserland</option></select>
           </label>
           <label>Vakgebied
-            <select id="f-trade"><option value="">Alle vakgebieden</option><option value="electrical">Elektra</option><option value="plumbing">Loodgieterswerk</option><option value="hvac">Ventilatie</option><option value="painting">Schilderwerk</option><option value="building">Bouw</option><option value="cleaning">Schoonmaak</option></select>
+            <select id="f-trade"><option value="">Alle vakgebieden</option><option value="electrical">Elektra</option><option value="plumbing">Loodgieterswerk</option><option value="hvac">Ventilatie</option><option value="painting">Schilderwerk</option><option value="building">Bouw</option><option value="cleaning">Schoonmaak</option><option value="roofing">Dakwerk (incl. dakleer/bitumen)</option><option value="flooring">Vloeren</option><option value="windows">Ramen & deuren</option><option value="insulation">Isolatie</option><option value="facade">Gevel / bekleding</option><option value="groundworks">Grondwerk</option><option value="demolition">Sloop</option><option value="scaffolding">Steigerbouw</option></select>
           </label>
           <p class="fcount" id="f-count" aria-live="polite"></p>
         </div>
-        <div class="mapstage" id="mapstage" data-level="overview" data-src="/countries.geojson" data-names='{"GB":"Verenigd Koninkrijk","UA":"Oekraïne","CH":"Zwitserland","SE":"Zweden","ES":"Spanje","SK":"Slowakije","SI":"Slovenië","RS":"Servië","RO":"Roemenië","PT":"Portugal","PL":"Polen","NO":"Noorwegen","NL":"Nederland","ME":"Montenegro","MD":"Moldavië","MK":"Noord-Macedonië","LU":"Luxemburg","LT":"Litouwen","LV":"Letland","XK":"Kosovo","IT":"Italië","IE":"Ierland","IS":"IJsland","HU":"Hongarije","GR":"Griekenland","DE":"Duitsland","FR":"Frankrijk","FI":"Finland","EE":"Estland","DK":"Denemarken","CZ":"Tsjechië","CY":"Cyprus","HR":"Kroatië","BG":"Bulgarije","BA":"Bosnië en Herzegovina","BE":"België","AT":"Oostenrijk","AD":"Andorra","AL":"Albanië"}' data-tenders="/tenders.nl.json" data-none-filter="In {country} past nu niets bij dat vakgebied. Probeer een ander vakgebied."
+        <div class="mapstage" id="mapstage" data-examples="Voorbeeldaanbestedingen" data-level="overview" data-src="/countries.geojson" data-names='{"GB":"Verenigd Koninkrijk","UA":"Oekraïne","CH":"Zwitserland","SE":"Zweden","ES":"Spanje","SK":"Slowakije","SI":"Slovenië","RS":"Servië","RO":"Roemenië","PT":"Portugal","PL":"Polen","NO":"Noorwegen","NL":"Nederland","ME":"Montenegro","MD":"Moldavië","MK":"Noord-Macedonië","LU":"Luxemburg","LT":"Litouwen","LV":"Letland","XK":"Kosovo","IT":"Italië","IE":"Ierland","IS":"IJsland","HU":"Hongarije","GR":"Griekenland","DE":"Duitsland","FR":"Frankrijk","FI":"Finland","EE":"Estland","DK":"Denemarken","CZ":"Tsjechië","CY":"Cyprus","HR":"Kroatië","BG":"Bulgarije","BA":"Bosnië en Herzegovina","BE":"België","AT":"Oostenrijk","AD":"Andorra","AL":"Albanië"}' data-tenders="/tenders.nl.json" data-none-filter="In {country} past nu niets bij dat vakgebied. Probeer een ander vakgebied."
              data-back-all="Alle landen" data-back-country="Terug naar {country}" data-none="Nog geen items voor {country}. We beginnen in het Noorden en voegen stap voor stap landen toe."
              data-open-page="Lees deze pagina in de lokale taal" data-deadline="Deadline" data-days-left="nog {n} dagen" data-value="Waarde / soort" data-where="Plaats"
              data-fit="Past goed" data-original="Bekijk de oorspronkelijke aankondiging" data-sample="Voorbeeld. De link naar de oorspronkelijke aankondiging komt met de echte lijst." data-count-one="item" data-count-many="items">
@@ -114,6 +114,9 @@
             <li style="grid-area:5/3" data-wave="3"><a href="/cs/"><b>CZ</b><span>Česko</span></a></li>
             <li style="grid-area:5/4" data-wave="3"><a href="/sk/"><b>SK</b><span>Slovensko</span></a></li>
             <li style="grid-area:6/3" data-wave="3"><a href="/at/"><b>AT</b><span>Österreich</span></a></li>
+            <li style="grid-area:5/1"  data-wave="3"><a href="/fr/"><b>FR</b><span>France</span></a></li>
+            <li style="grid-area:6/1"  data-wave="3"><a href="/es/"><b>ES</b><span>España</span></a></li>
+            <li style="grid-area:6/4"  data-wave="3"><a href="/it/"><b>IT</b><span>Italia</span></a></li>
             </ul>
             <div class="gmap" hidden role="region" aria-label="Kaart van de landen die we dekken"></div>
             <p class="maptip" hidden></p>
@@ -123,11 +126,7 @@
           <aside class="mapside" id="mapside" aria-live="polite">
             <div data-view="overview">
               <p class="ms-title">Waar we zoeken</p>
-              <ul class="legend">
-                <li data-wave="1"><b>Nu</b> Noorwegen, Denemarken, Zweden, Finland en IJsland</li>
-                <li data-wave="2"><b>Daarna</b> Polen en Duitsland</li>
-                <li data-wave="3"><b>Vervolgens</b> de rest van Europa</li>
-              </ul>
+              <p class="ms-lead">Openbare aanbestedingen in heel Europa</p>
               <p class="ms-hint">Kies een land om in te zoomen. Elke stip is één voorbeeldaanbesteding, gekleurd per vakgebied.</p>
               <ul class="tlist"></ul>
               <p class="ms-empty empty" hidden>Er past nog niets bij dat vakgebied.</p>
@@ -237,7 +236,7 @@
   <footer>
     <div class="wrap">
       <p>Small Tenders is een samengestelde selectie van openbaar beschikbare bekendmakingen. Wij vervangen TED of nationale portalen niet. Lees altijd de oorspronkelijke bekendmaking voordat je inschrijft.</p>
-      <p><strong>Landen:</strong> <a href="/">English</a> · <a href="/no/">Norge</a> · <a href="/da/">Danmark</a> · <a href="/sv/">Sverige</a> · <a href="/fi/">Suomi</a> · <a href="/is/">Ísland</a> · <a href="/pl/">Polska</a> · <a href="/de/">Deutschland</a> · <a href="/cs/">Česko</a> · <a href="/sk/">Slovensko</a> · <a href="/at/">Österreich</a> · <a href="/nl/" aria-current="page">Nederland</a> · <a href="/be/">België</a> · <a href="/lt/">Lietuva</a> · <a href="/ee/">Eesti</a> · <a href="/lv/">Latvija</a></p>
+      <p><strong>Landen:</strong> <a href="/">English</a> · <a href="/no/">Norge</a> · <a href="/da/">Danmark</a> · <a href="/sv/">Sverige</a> · <a href="/fi/">Suomi</a> · <a href="/is/">Ísland</a> · <a href="/pl/">Polska</a> · <a href="/de/">Deutschland</a> · <a href="/cs/">Česko</a> · <a href="/sk/">Slovensko</a> · <a href="/at/">Österreich</a> · <a href="/nl/" aria-current="page">Nederland</a> · <a href="/be/">België</a> · <a href="/lt/">Lietuva</a> · <a href="/ee/">Eesti</a> · <a href="/lv/">Latvija</a> · <a href="/fr/">France</a> · <a href="/es/">España</a> · <a href="/it/">Italia</a></p>
       <p class="foot-links"><a href="/privacy/">Privacy</a> · <a href="/terms/">Voorwaarden</a> · <a href="/refund/">Restitutie</a> · <a href="/contact/">Contact</a> · <a data-site="email" href="mailto:support@smalltenders.com">support@smalltenders.com</a></p>
       <p class="foot-company">KM TECH LABS · Org. no. 934 044 029 · Kristiansand, Norway</p>
     </div>

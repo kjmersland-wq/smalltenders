@@ -22,8 +22,10 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
   var views = {};
   side.querySelectorAll('[data-view]').forEach(function (v) { views[v.dataset.view] = v; });
 
-  var COLORS = { 1: '#9a3b16', 2: '#e8bfa5', 3: '#fffdf8' };
-  var TRADE = { electrical: '#1d5fa8', plumbing: '#1b7f8e', hvac: '#6b4aa0', painting: '#c28a00', building: '#4d6b2f', cleaning: '#a23a6b' };
+  // one neutral colour for every European country; the chosen country gets a stronger outline and fill
+  var LAND = { fill: '#e2d8c3', pick: '#cdbd9c', line: '#8f8372' };
+  var TRADE = { electrical: '#1d5fa8', plumbing: '#1b7f8e', hvac: '#6b4aa0', painting: '#c28a00', building: '#4d6b2f', cleaning: '#a23a6b',
+    roofing: '#3f4a56', flooring: '#8d6e63', windows: '#4fa3d9', insulation: '#e58fb0', facade: '#7f8c8d', groundworks: '#9ccc65', demolition: '#e53935', scaffolding: '#ff7043' };
   var EUROPE = { north: 71.5, south: 35.5, west: -24.5, east: 42 };
   var PRIORITY = ['NO', 'SE', 'DK', 'FI', 'IS', 'PL', 'DE'];   // "Now" and "Next" first, then the rest alphabetically
   var selC = document.getElementById('f-country');
@@ -210,7 +212,8 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
     var gm = google.maps;
     map.data.setStyle(function (f) {
       var cc = f.getProperty('cc'), on = !state.cc || cc === state.cc;
-      return { fillColor: COLORS[f.getProperty('wave')], fillOpacity: on ? 0.9 : 0.22, strokeColor: '#1c1914', strokeWeight: state.cc && cc === state.cc ? 3 : 1, clickable: true, cursor: 'pointer' };
+      var picked = !!state.cc && cc === state.cc;
+      return { fillColor: picked ? LAND.pick : LAND.fill, fillOpacity: on ? 0.9 : 0.4, strokeColor: picked ? '#1c1914' : LAND.line, strokeWeight: picked ? 3 : 1, clickable: true, cursor: 'pointer' };
     });
     tenders.forEach(function (t) {
       var m = markers[t.id]; if (!m) return;
@@ -263,7 +266,7 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
       });
       applyMap();
     });
-    map.data.setStyle({ fillColor: '#fffdf8', fillOpacity: 0.9, strokeColor: '#1c1914', strokeWeight: 1 });
+    map.data.setStyle({ fillColor: LAND.fill, fillOpacity: 0.9, strokeColor: LAND.line, strokeWeight: 1 });
     map.data.addListener('mouseover', function (e) {
       var cc = e.feature.getProperty('cc');
       if (cc !== state.cc) map.data.overrideStyle(e.feature, { strokeWeight: 2.5 });
@@ -284,6 +287,7 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
       var seen = {};
       tenders.forEach(function (t) { seen[t.trade] = t.tradeName; });
       legendEl.textContent = '';
+      if (D.examples) { var h = document.createElement('li'); h.className = 'lg-title'; h.textContent = D.examples + ':'; legendEl.appendChild(h); }
       Object.keys(seen).forEach(function (k) {
         var li = document.createElement('li'), dot = document.createElement('i'); dot.style.background = TRADE[k] || '#1c1914';
         li.appendChild(dot); li.appendChild(document.createTextNode(seen[k])); legendEl.appendChild(li);

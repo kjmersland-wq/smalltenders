@@ -22,6 +22,9 @@
   <link rel="alternate" hreflang="lt" href="https://smalltenders.com/lt/" />
   <link rel="alternate" hreflang="et" href="https://smalltenders.com/ee/" />
   <link rel="alternate" hreflang="lv" href="https://smalltenders.com/lv/" />
+  <link rel="alternate" hreflang="fr" href="https://smalltenders.com/fr/" />
+  <link rel="alternate" hreflang="es" href="https://smalltenders.com/es/" />
+  <link rel="alternate" hreflang="it" href="https://smalltenders.com/it/" />
   <link rel="alternate" hreflang="x-default" href="https://smalltenders.com/" />
   <link rel="icon" href="/icon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="/styles.css" />
@@ -33,7 +36,7 @@
         <img src="/logo.svg" alt="Small Tenders" height="28" />
       </a>
       <div class="nav-right">
-        <span class="lang"><a href="/">EN</a> | <a href="/no/">NO</a> | <a href="/da/">DA</a> | <a href="/sv/">SV</a> | <a href="/fi/" aria-current="page">FI</a> | <a href="/pl/">PL</a> | <a href="/de/">DE</a></span>
+        <label class="lang"><select class="lang-select" aria-label="Kieli"><option value="/">English</option><option value="/no/">Norsk</option><option value="/da/">Dansk</option><option value="/sv/">Svenska</option><option value="/fi/" selected>Suomi</option><option value="/is/">Íslenska</option><option value="/pl/">Polski</option><option value="/de/">Deutsch</option><option value="/at/">Deutsch (Österreich)</option><option value="/cs/">Čeština</option><option value="/sk/">Slovenčina</option><option value="/nl/">Nederlands</option><option value="/be/">Nederlands (België)</option><option value="/lt/">Lietuvių</option><option value="/ee/">Eesti</option><option value="/lv/">Latviešu</option><option value="/fr/">Français</option><option value="/es/">Español</option><option value="/it/">Italiano</option></select></label>
         <a class="navlink" href="#pricing">Hinnat</a>
         <a class="btn sm" href="#form">Hae näytelista</a>
       </div>
@@ -83,17 +86,14 @@
         <p class="note">Napsauta maata nähdäksesi, mitä meillä on siellä, tai suodata maan ja alan mukaan. Valitse kohde nähdäksesi tiedot.</p>
         <div class="filters mapfilters">
           <label>Maa
-            <select id="f-country"><option value="">Koko Eurooppa</option>
-              <optgroup label="Nyt"><option value="NO">Norja</option><option value="SE">Ruotsi</option><option value="DK">Tanska</option><option value="FI">Suomi</option><option value="IS">Islanti</option></optgroup>
-              <optgroup label="Seuraavaksi"><option value="PL">Puola</option><option value="DE">Saksa</option></optgroup>
-              <optgroup label="Sen jälkeen"><option value="NL">Alankomaat</option><option value="AL">Albania</option><option value="AD">Andorra</option><option value="BE">Belgia</option><option value="BA">Bosnia ja Hertsegovina</option><option value="BG">Bulgaria</option><option value="ES">Espanja</option><option value="IE">Irlanti</option><option value="GB">Iso-Britannia</option><option value="IT">Italia</option><option value="AT">Itävalta</option><option value="XK">Kosovo</option><option value="GR">Kreikka</option><option value="HR">Kroatia</option><option value="CY">Kypros</option><option value="LV">Latvia</option><option value="LT">Liettua</option><option value="LU">Luxemburg</option><option value="MD">Moldova</option><option value="ME">Montenegro</option><option value="MK">Pohjois-Makedonia</option><option value="PT">Portugali</option><option value="FR">Ranska</option><option value="RO">Romania</option><option value="RS">Serbia</option><option value="SK">Slovakia</option><option value="SI">Slovenia</option><option value="CH">Sveitsi</option><option value="CZ">Tšekki</option><option value="UA">Ukraina</option><option value="HU">Unkari</option><option value="EE">Viro</option></optgroup></select>
+            <select id="f-country"><option value="">Koko Eurooppa</option><option value="NL">Alankomaat</option><option value="AL">Albania</option><option value="AD">Andorra</option><option value="BE">Belgia</option><option value="BA">Bosnia ja Hertsegovina</option><option value="BG">Bulgaria</option><option value="ES">Espanja</option><option value="IE">Irlanti</option><option value="IS">Islanti</option><option value="GB">Iso-Britannia</option><option value="IT">Italia</option><option value="AT">Itävalta</option><option value="XK">Kosovo</option><option value="GR">Kreikka</option><option value="HR">Kroatia</option><option value="CY">Kypros</option><option value="LV">Latvia</option><option value="LT">Liettua</option><option value="LU">Luxemburg</option><option value="MD">Moldova</option><option value="ME">Montenegro</option><option value="NO">Norja</option><option value="MK">Pohjois-Makedonia</option><option value="PT">Portugali</option><option value="PL">Puola</option><option value="FR">Ranska</option><option value="RO">Romania</option><option value="SE">Ruotsi</option><option value="DE">Saksa</option><option value="RS">Serbia</option><option value="SK">Slovakia</option><option value="SI">Slovenia</option><option value="FI">Suomi</option><option value="CH">Sveitsi</option><option value="DK">Tanska</option><option value="CZ">Tšekki</option><option value="UA">Ukraina</option><option value="HU">Unkari</option><option value="EE">Viro</option></select>
           </label>
           <label>Ala
-            <select id="f-trade"><option value="">Kaikki alat</option><option value="electrical">Sähkö</option><option value="plumbing">Putkityö</option><option value="hvac">Ilmanvaihto</option><option value="painting">Maalaus</option><option value="building">Rakennus</option><option value="cleaning">Siivous</option></select>
+            <select id="f-trade"><option value="">Kaikki alat</option><option value="electrical">Sähkö</option><option value="plumbing">Putkityö</option><option value="hvac">Ilmanvaihto</option><option value="painting">Maalaus</option><option value="building">Rakennus</option><option value="cleaning">Siivous</option><option value="roofing">Katto (myös huopa/bitumi)</option><option value="flooring">Lattia</option><option value="windows">Ikkunat ja ovet</option><option value="insulation">Eristys</option><option value="facade">Julkisivu / verhous</option><option value="groundworks">Maanrakennus</option><option value="demolition">Purku</option><option value="scaffolding">Rakennustelineet</option></select>
           </label>
           <p class="fcount" id="f-count" aria-live="polite"></p>
         </div>
-        <div class="mapstage" id="mapstage" data-level="overview" data-src="/countries.geojson" data-names='{"GB":"Iso-Britannia","UA":"Ukraina","CH":"Sveitsi","SE":"Ruotsi","ES":"Espanja","SK":"Slovakia","SI":"Slovenia","RS":"Serbia","RO":"Romania","PT":"Portugali","PL":"Puola","NO":"Norja","NL":"Alankomaat","ME":"Montenegro","MD":"Moldova","MK":"Pohjois-Makedonia","LU":"Luxemburg","LT":"Liettua","LV":"Latvia","XK":"Kosovo","IT":"Italia","IE":"Irlanti","IS":"Islanti","HU":"Unkari","GR":"Kreikka","DE":"Saksa","FR":"Ranska","FI":"Suomi","EE":"Viro","DK":"Tanska","CZ":"Tšekki","CY":"Kypros","HR":"Kroatia","BG":"Bulgaria","BA":"Bosnia ja Hertsegovina","BE":"Belgia","AT":"Itävalta","AD":"Andorra","AL":"Albania"}' data-tenders="/tenders.fi.json" data-none-filter="Maassa {country} ei ole juuri nyt kohteita tälle alalle. Kokeile toista alaa."
+        <div class="mapstage" id="mapstage" data-examples="Esimerkkikohteet" data-level="overview" data-src="/countries.geojson" data-names='{"GB":"Iso-Britannia","UA":"Ukraina","CH":"Sveitsi","SE":"Ruotsi","ES":"Espanja","SK":"Slovakia","SI":"Slovenia","RS":"Serbia","RO":"Romania","PT":"Portugali","PL":"Puola","NO":"Norja","NL":"Alankomaat","ME":"Montenegro","MD":"Moldova","MK":"Pohjois-Makedonia","LU":"Luxemburg","LT":"Liettua","LV":"Latvia","XK":"Kosovo","IT":"Italia","IE":"Irlanti","IS":"Islanti","HU":"Unkari","GR":"Kreikka","DE":"Saksa","FR":"Ranska","FI":"Suomi","EE":"Viro","DK":"Tanska","CZ":"Tšekki","CY":"Kypros","HR":"Kroatia","BG":"Bulgaria","BA":"Bosnia ja Hertsegovina","BE":"Belgia","AT":"Itävalta","AD":"Andorra","AL":"Albania"}' data-tenders="/tenders.fi.json" data-none-filter="Maassa {country} ei ole juuri nyt kohteita tälle alalle. Kokeile toista alaa."
              data-back-all="Kaikki maat" data-back-country="Takaisin: {country}" data-none="Maalle {country} ei ole vielä kohteita. Aloitamme Pohjoismaista ja lisäämme maita vaihe vaiheelta."
              data-open-page="Lue sivu paikallisella kielellä" data-deadline="Määräaika" data-days-left="{n} pv jäljellä" data-value="Arvo / tyyppi" data-where="Paikka"
              data-fit="Sopii hyvin" data-original="Katso alkuperäinen ilmoitus" data-sample="Esimerkki. Linkki alkuperäiseen ilmoitukseen tulee mukaan oikeaan listaan." data-count-one="kohde" data-count-many="kohdetta">
@@ -114,6 +114,9 @@
             <li style="grid-area:5/3" data-wave="3"><a href="/cs/"><b>CZ</b><span>Česko</span></a></li>
             <li style="grid-area:5/4" data-wave="3"><a href="/sk/"><b>SK</b><span>Slovensko</span></a></li>
             <li style="grid-area:6/3" data-wave="3"><a href="/at/"><b>AT</b><span>Österreich</span></a></li>
+            <li style="grid-area:5/1"  data-wave="3"><a href="/fr/"><b>FR</b><span>France</span></a></li>
+            <li style="grid-area:6/1"  data-wave="3"><a href="/es/"><b>ES</b><span>España</span></a></li>
+            <li style="grid-area:6/4"  data-wave="3"><a href="/it/"><b>IT</b><span>Italia</span></a></li>
             </ul>
             <div class="gmap" hidden role="region" aria-label="Kartta maista, joita katamme"></div>
             <p class="maptip" hidden></p>
@@ -123,11 +126,7 @@
           <aside class="mapside" id="mapside" aria-live="polite">
             <div data-view="overview">
               <p class="ms-title">Mistä etsimme</p>
-              <ul class="legend">
-                <li data-wave="1"><b>Nyt</b> Norja, Tanska, Ruotsi, Suomi ja Islanti</li>
-                <li data-wave="2"><b>Seuraavaksi</b> Puola ja Saksa</li>
-                <li data-wave="3"><b>Sen jälkeen</b> muu Eurooppa</li>
-              </ul>
+              <p class="ms-lead">Julkisia hankintoja kaikkialla Euroopassa</p>
               <p class="ms-hint">Valitse maa zoomataksesi sisään. Jokainen piste on yksi esimerkkikohde, väritetty alan mukaan.</p>
               <ul class="tlist"></ul>
               <p class="ms-empty empty" hidden>Mikään ei vielä vastaa tuota alaa.</p>
@@ -237,7 +236,7 @@
   <footer>
     <div class="wrap">
       <p>Small Tenders on toimitettu valikoima julkisesti saatavilla olevia ilmoituksia. Emme korvaa TED:iä tai kansallisia portaaleja. Lue aina alkuperäinen ilmoitus ennen tarjouksen jättämistä.</p>
-      <p><strong>Maat:</strong> <a href="/">English</a> · <a href="/no/">Norge</a> · <a href="/da/">Danmark</a> · <a href="/sv/">Sverige</a> · <a href="/fi/" aria-current="page">Suomi</a> · <a href="/is/">Ísland</a> · <a href="/pl/">Polska</a> · <a href="/de/">Deutschland</a> · <a href="/cs/">Česko</a> · <a href="/sk/">Slovensko</a> · <a href="/at/">Österreich</a> · <a href="/nl/">Nederland</a> · <a href="/be/">België</a> · <a href="/lt/">Lietuva</a> · <a href="/ee/">Eesti</a> · <a href="/lv/">Latvija</a></p>
+      <p><strong>Maat:</strong> <a href="/">English</a> · <a href="/no/">Norge</a> · <a href="/da/">Danmark</a> · <a href="/sv/">Sverige</a> · <a href="/fi/" aria-current="page">Suomi</a> · <a href="/is/">Ísland</a> · <a href="/pl/">Polska</a> · <a href="/de/">Deutschland</a> · <a href="/cs/">Česko</a> · <a href="/sk/">Slovensko</a> · <a href="/at/">Österreich</a> · <a href="/nl/">Nederland</a> · <a href="/be/">België</a> · <a href="/lt/">Lietuva</a> · <a href="/ee/">Eesti</a> · <a href="/lv/">Latvija</a> · <a href="/fr/">France</a> · <a href="/es/">España</a> · <a href="/it/">Italia</a></p>
       <p class="foot-links"><a href="/privacy/">Tietosuoja</a> · <a href="/terms/">Ehdot</a> · <a href="/refund/">Palautukset</a> · <a href="/contact/">Yhteystiedot</a> · <a data-site="email" href="mailto:support@smalltenders.com">support@smalltenders.com</a></p>
       <p class="foot-company">KM TECH LABS · Org. no. 934 044 029 · Kristiansand, Norway</p>
     </div>

@@ -326,3 +326,15 @@ footer .wrap { align-items: flex-start; }
 .mapfilters { margin: 0 0 18px; }
 .ms-empty { margin: 12px 0 0; }
 .mapside .tlist { margin-top: 14px; }
+
+/* neutral map: no phases */
+[data-wave] > a, [data-wave="1"] > a, [data-wave="2"] > a, [data-wave="3"] > a { background: #e2d8c3; color: var(--ink); border-color: #8f8372; }
+.tilemap li.sel a { background: #cdbd9c; border-color: var(--ink); }
+.ms-lead { font: 500 22px/1.3 var(--serif); margin: 0 0 8px; }
+.tradelegend .lg-title { font-weight: 600; color: var(--ink); margin-right: 2px; }
+.tradelegend .lg-title::before { display: none; }
+
+/* language dropdown */
+.lang { display: inline-block; }
+.lang select.lang-select { min-width: 0; width: auto; padding: 6px 28px 6px 10px; font: 600 13px var(--sans); letter-spacing: 0; color: var(--ink); background-color: var(--paper); border: 1px solid var(--ink); border-radius: 4px; cursor: pointer; }
+.lang select.lang-select:hover { border-color: var(--accent); }
