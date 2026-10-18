@@ -18,5 +18,5 @@ Site: [smalltenders.com](https://smalltenders.com)
 
 ## Email
 
-Point `hello@smalltenders.com` at the mailbox you actually read.
+Point `support@smalltenders.com` at the mailbox you actually read.
 The form on the page is a simple `mailto:` until you add a free form endpoint.
