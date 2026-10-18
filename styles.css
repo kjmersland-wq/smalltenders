@@ -320,3 +320,5 @@ footer .wrap { align-items: flex-start; }
 .contact-side .plan-mail a { font-weight: 700; word-break: break-all; }
 @media (max-width: 900px) { .plan, .contact-grid { grid-template-columns: 1fr; } .navlink { display: none; } }
 @media (max-width: 760px) { .plan-main { padding: 22px; box-shadow: 4px 4px 0 var(--line); } .plan-price { font-size: 48px; } }
+
+.foot-company { flex-basis: 100%; font-size: 12px; }
