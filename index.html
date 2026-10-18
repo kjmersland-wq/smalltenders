@@ -48,7 +48,7 @@
         <p class="lead">We read the public notices so you don't have to, and send you the ones that fit. For now it's a hand-edited list by email, starting in the Nordics, then Poland, Germany and our neighbours. No AI, and no search engine yet.</p>
         <div class="actions">
           <a class="btn lg" href="#form">Get the sample list</a>
-          <a class="btn ghost lg" href="#examples">See examples</a>
+          <a class="btn ghost lg" href="#coverage">Explore the map</a>
         </div>
         <p class="hero-price"><span data-site="price">€29</span> / month · 14-day free sample · <a href="#pricing">See pricing</a></p>
         <ul class="trust">
@@ -79,11 +79,23 @@
     <section id="coverage" class="alt">
       <div class="wrap">
         <p class="label">Where we look</p>
-        <h2>Fifteen countries, one step at a time</h2>
-        <p class="note">Click a country on the map to see what we have there, then pick a tender for the details.</p>
+        <h2>All of Europe, one step at a time</h2>
+        <p class="note">Click any country to see what we have there, or filter by country and trade. Pick a tender for the details.</p>
+        <div class="filters mapfilters">
+          <label>Country
+            <select id="f-country"><option value="">All of Europe</option>
+              <optgroup label="Now"><option value="NO">Norway</option><option value="SE">Sweden</option><option value="DK">Denmark</option><option value="FI">Finland</option><option value="IS">Iceland</option></optgroup>
+              <optgroup label="Next"><option value="PL">Poland</option><option value="DE">Germany</option></optgroup>
+              <optgroup label="Later"><option value="AL">Albania</option><option value="AD">Andorra</option><option value="AT">Austria</option><option value="BE">Belgium</option><option value="BA">Bosnia and Herzegovina</option><option value="BG">Bulgaria</option><option value="HR">Croatia</option><option value="CY">Cyprus</option><option value="CZ">Czechia</option><option value="EE">Estonia</option><option value="FR">France</option><option value="GR">Greece</option><option value="HU">Hungary</option><option value="IE">Ireland</option><option value="IT">Italy</option><option value="XK">Kosovo</option><option value="LV">Latvia</option><option value="LI">Liechtenstein</option><option value="LT">Lithuania</option><option value="LU">Luxembourg</option><option value="MT">Malta</option><option value="MD">Moldova</option><option value="MC">Monaco</option><option value="ME">Montenegro</option><option value="NL">Netherlands</option><option value="MK">North Macedonia</option><option value="PT">Portugal</option><option value="RO">Romania</option><option value="SM">San Marino</option><option value="RS">Serbia</option><option value="SK">Slovakia</option><option value="SI">Slovenia</option><option value="ES">Spain</option><option value="CH">Switzerland</option><option value="UA">Ukraine</option><option value="GB">United Kingdom</option><option value="VA">Vatican City</option></optgroup></select>
+          </label>
+          <label>Trade
+            <select id="f-trade"><option value="">All trades</option><option value="electrical">Electrical</option><option value="plumbing">Plumbing</option><option value="hvac">HVAC</option><option value="painting">Painting</option><option value="building">Carpentry / building</option><option value="cleaning">Cleaning</option></select>
+          </label>
+          <p class="fcount" id="f-count" aria-live="polite"></p>
+        </div>
         <div class="mapstage" id="mapstage" data-level="overview" data-src="/countries.geojson"
-             data-names='{"IS":"Iceland","NO":"Norway","SE":"Sweden","FI":"Finland","DK":"Denmark","EE":"Estonia","LV":"Latvia","LT":"Lithuania","NL":"Netherlands","BE":"Belgium","DE":"Germany","PL":"Poland","CZ":"Czechia","SK":"Slovakia","AT":"Austria"}'
-             data-back-all="All countries" data-back-country="Back to {country}" data-none="No entries for {country} yet. We start in the Nordics and add countries step by step."
+             data-names='{"AD":"Andorra","AL":"Albania","AT":"Austria","BA":"Bosnia and Herzegovina","BE":"Belgium","BG":"Bulgaria","CH":"Switzerland","CY":"Cyprus","CZ":"Czechia","DE":"Germany","DK":"Denmark","EE":"Estonia","ES":"Spain","FI":"Finland","FR":"France","GB":"United Kingdom","GR":"Greece","HR":"Croatia","HU":"Hungary","IE":"Ireland","IS":"Iceland","IT":"Italy","LI":"Liechtenstein","LT":"Lithuania","LU":"Luxembourg","LV":"Latvia","MC":"Monaco","MD":"Moldova","ME":"Montenegro","MK":"North Macedonia","MT":"Malta","NL":"Netherlands","NO":"Norway","PL":"Poland","PT":"Portugal","RO":"Romania","RS":"Serbia","SE":"Sweden","SI":"Slovenia","SK":"Slovakia","SM":"San Marino","UA":"Ukraine","VA":"Vatican City","XK":"Kosovo"}'
+             data-back-all="All countries" data-back-country="Back to {country}" data-none-filter="Nothing for {country} matches this trade right now. Try another trade." data-none="No entries for {country} yet. We start in the Nordics and add countries step by step."
              data-open-page="Read this page in the local language" data-deadline="Deadline" data-days-left="{n} days left" data-value="Value / type" data-where="Location"
              data-fit="Good fit" data-original="View the original notice" data-sample="Sample entry. The link to the original notice comes with the live list." data-count-one="entry" data-count-many="entries">
           <div class="mappanel" id="mappanel" data-btn="Show the interactive map" data-back="Show simple tiles">
@@ -115,9 +127,11 @@
               <ul class="legend">
                 <li data-wave="1"><b>Now</b> Norway, Denmark, Sweden, Finland, Iceland</li>
                 <li data-wave="2"><b>Next</b> Poland and Germany</li>
-                <li data-wave="3"><b>After</b> our neighbouring countries</li>
+                <li data-wave="3"><b>Later</b> the rest of Europe</li>
               </ul>
-              <p class="ms-hint">Pick a country to zoom in. The coloured dots are sample tenders, one dot per tender.</p>
+              <p class="ms-hint">Pick a country to zoom in. Each dot is one sample tender, coloured by trade.</p>
+              <ul class="tlist"></ul>
+              <p class="ms-empty empty" hidden>Nothing matches that trade yet.</p>
             </div>
             <div data-view="country" hidden tabindex="-1">
               <button type="button" class="back" data-back="overview"></button>
@@ -158,48 +172,6 @@
       </div>
     </section>
 
-    <section id="examples" class="alt">
-      <div class="wrap">
-        <h2>A peek at an issue</h2>
-        <p class="note">These are samples. Live links to the official notices arrive when the list launches — and the source notice always comes first.</p>
-        <div class="filters">
-          <label>Country
-            <select id="f-country">
-              <option value="">All countries</option>
-              <option value="NO">Norway</option><option value="DK">Denmark</option><option value="SE">Sweden</option><option value="FI">Finland</option><option value="IS">Iceland</option>
-              <option value="PL">Poland</option><option value="DE">Germany</option>
-            </select>
-          </label>
-          <label>Trade
-            <select id="f-trade">
-              <option value="">All trades</option>
-              <option value="electrical">Electrical</option><option value="plumbing">Plumbing</option><option value="hvac">HVAC</option><option value="painting">Painting</option><option value="building">Building</option><option value="cleaning">Cleaning</option>
-            </select>
-          </label>
-          <p class="fcount" id="f-count" aria-live="polite"></p>
-        </div>
-        <div class="cards" id="tenders" data-src="/tenders.json">          <article class="tcard">
-            <div class="tc-top"><span class="chip">Painting</span><span class="tc-cc">Norway</span></div>
-            <h3>Painting, municipal buildings</h3>
-            <p class="tc-where">Inland</p>
-            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>18 days left</span><span class="badge">under €150k</span></div>
-            <p class="fitbox"><b>Good fit</b> for a painting firm with 3–10 people, especially if you already do public work.</p>
-          </article>          <article class="tcard">
-            <div class="tc-top"><span class="chip">HVAC</span><span class="tc-cc">Poland</span></div>
-            <h3>Ventilation service, school buildings</h3>
-            <p class="tc-where">Mazovia</p>
-            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>24 days left</span><span class="badge">Framework agreement</span></div>
-            <p class="fitbox"><b>Good fit</b> if you want steady, recurring work and already have service vans on the road.</p>
-          </article>          <article class="tcard">
-            <div class="tc-top"><span class="chip">Electrical</span><span class="tc-cc">Germany</span></div>
-            <h3>Electrical switchgear replacement</h3>
-            <p class="tc-where">Regional</p>
-            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>12 days left</span><span class="badge">Bounded scope</span></div>
-            <p class="fitbox"><b>Good fit</b> for a growing firm: a clear scope, bigger than a one-person shop, smaller than the national chains.</p>
-          </article>
-        </div>
-      </div>
-    </section>
 
     <section>
       <div class="wrap">

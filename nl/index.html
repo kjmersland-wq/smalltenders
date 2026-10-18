@@ -48,7 +48,7 @@
         <p class="lead">Wij lezen de openbare aankondigingen voor je en sturen je de aanbestedingen die passen. Voorlopig is het een handmatig samengestelde lijst per e-mail — eerst de Noordse landen, daarna Polen, Duitsland en de buurlanden. Geen AI en nog geen zoekmachine.</p>
         <div class="actions">
           <a class="btn lg" href="#form">Vraag de proeflijst aan</a>
-          <a class="btn ghost lg" href="#examples">Bekijk voorbeelden</a>
+          <a class="btn ghost lg" href="#coverage">Verken de kaart</a>
         </div>
         <p class="hero-price"><span data-site="price">€29</span> / maand · 14 dagen gratis proef · <a href="#pricing">Bekijk de prijzen</a></p>
         <ul class="trust">
@@ -79,9 +79,21 @@
     <section id="coverage" class="alt">
       <div class="wrap">
         <p class="label">Waar we zoeken</p>
-        <h2>Vijftien landen, stap voor stap</h2>
-        <p class="note">Klik op een land op de kaart om te zien wat we daar hebben en kies dan een aanbesteding voor de details.</p>
-        <div class="mapstage" id="mapstage" data-level="overview" data-src="/countries.geojson" data-names='{"IS":"Ísland","NO":"Norge","SE":"Sverige","FI":"Suomi","DK":"Danmark","EE":"Eesti","LV":"Latvija","NL":"Nederland","DE":"Deutschland","PL":"Polska","LT":"Lietuva","BE":"België","CZ":"Česko","SK":"Slovensko","AT":"Österreich"}'
+        <h2>Heel Europa, stap voor stap</h2>
+        <p class="note">Klik op een land om te zien wat we daar hebben, of filter op land en vakgebied. Kies een aanbesteding voor de details.</p>
+        <div class="filters mapfilters">
+          <label>Land
+            <select id="f-country"><option value="">Heel Europa</option>
+              <optgroup label="Nu"><option value="NO">Noorwegen</option><option value="SE">Zweden</option><option value="DK">Denemarken</option><option value="FI">Finland</option><option value="IS">IJsland</option></optgroup>
+              <optgroup label="Daarna"><option value="PL">Polen</option><option value="DE">Duitsland</option></optgroup>
+              <optgroup label="Vervolgens"><option value="AL">Albanië</option><option value="AD">Andorra</option><option value="BE">België</option><option value="BA">Bosnië en Herzegovina</option><option value="BG">Bulgarije</option><option value="CY">Cyprus</option><option value="EE">Estland</option><option value="FR">Frankrijk</option><option value="GR">Griekenland</option><option value="HU">Hongarije</option><option value="IE">Ierland</option><option value="IT">Italië</option><option value="XK">Kosovo</option><option value="HR">Kroatië</option><option value="LV">Letland</option><option value="LT">Litouwen</option><option value="LU">Luxemburg</option><option value="MD">Moldavië</option><option value="ME">Montenegro</option><option value="NL">Nederland</option><option value="MK">Noord-Macedonië</option><option value="UA">Oekraïne</option><option value="AT">Oostenrijk</option><option value="PT">Portugal</option><option value="RO">Roemenië</option><option value="RS">Servië</option><option value="SI">Slovenië</option><option value="SK">Slowakije</option><option value="ES">Spanje</option><option value="CZ">Tsjechië</option><option value="GB">Verenigd Koninkrijk</option><option value="CH">Zwitserland</option></optgroup></select>
+          </label>
+          <label>Vakgebied
+            <select id="f-trade"><option value="">Alle vakgebieden</option><option value="electrical">Elektra</option><option value="plumbing">Loodgieterswerk</option><option value="hvac">Ventilatie</option><option value="painting">Schilderwerk</option><option value="building">Bouw</option><option value="cleaning">Schoonmaak</option></select>
+          </label>
+          <p class="fcount" id="f-count" aria-live="polite"></p>
+        </div>
+        <div class="mapstage" id="mapstage" data-level="overview" data-src="/countries.geojson" data-names='{"GB":"Verenigd Koninkrijk","UA":"Oekraïne","CH":"Zwitserland","SE":"Zweden","ES":"Spanje","SK":"Slowakije","SI":"Slovenië","RS":"Servië","RO":"Roemenië","PT":"Portugal","PL":"Polen","NO":"Noorwegen","NL":"Nederland","ME":"Montenegro","MD":"Moldavië","MK":"Noord-Macedonië","LU":"Luxemburg","LT":"Litouwen","LV":"Letland","XK":"Kosovo","IT":"Italië","IE":"Ierland","IS":"IJsland","HU":"Hongarije","GR":"Griekenland","DE":"Duitsland","FR":"Frankrijk","FI":"Finland","EE":"Estland","DK":"Denemarken","CZ":"Tsjechië","CY":"Cyprus","HR":"Kroatië","BG":"Bulgarije","BA":"Bosnië en Herzegovina","BE":"België","AT":"Oostenrijk","AD":"Andorra","AL":"Albanië"}' data-tenders="/tenders.nl.json" data-none-filter="In {country} past nu niets bij dat vakgebied. Probeer een ander vakgebied."
              data-back-all="Alle landen" data-back-country="Terug naar {country}" data-none="Nog geen items voor {country}. We beginnen in het Noorden en voegen stap voor stap landen toe."
              data-open-page="Lees deze pagina in de lokale taal" data-deadline="Deadline" data-days-left="nog {n} dagen" data-value="Waarde / soort" data-where="Plaats"
              data-fit="Past goed" data-original="Bekijk de oorspronkelijke aankondiging" data-sample="Voorbeeld. De link naar de oorspronkelijke aankondiging komt met de echte lijst." data-count-one="item" data-count-many="items">
@@ -114,9 +126,11 @@
               <ul class="legend">
                 <li data-wave="1"><b>Nu</b> Noorwegen, Denemarken, Zweden, Finland en IJsland</li>
                 <li data-wave="2"><b>Daarna</b> Polen en Duitsland</li>
-                <li data-wave="3"><b>Vervolgens</b> de buurlanden</li>
+                <li data-wave="3"><b>Vervolgens</b> de rest van Europa</li>
               </ul>
-              <p class="ms-hint">Kies een land om in te zoomen. De gekleurde stippen zijn voorbeeldaanbestedingen, één stip per aanbesteding.</p>
+              <p class="ms-hint">Kies een land om in te zoomen. Elke stip is één voorbeeldaanbesteding, gekleurd per vakgebied.</p>
+              <ul class="tlist"></ul>
+              <p class="ms-empty empty" hidden>Er past nog niets bij dat vakgebied.</p>
             </div>
             <div data-view="country" hidden tabindex="-1">
               <button type="button" class="back" data-back="overview"></button>
@@ -153,45 +167,6 @@
             <h3>Rechtstreeks uit de bron</h3>
             <p>Alles komt van TED en nationale aankondigingen, en elk item verwijst naar het origineel. Lees het voordat je inschrijft — wij wijzen je altijd die kant op.</p>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="examples" class="alt">
-      <div class="wrap">
-        <h2>Een kijkje in één editie</h2>
-        <p class="note">Dit zijn voorbeelden. Echte links naar de officiële aankondigingen volgen zodra de lijst van start gaat — en de oorspronkelijke aankondiging komt altijd eerst.</p>
-        <div class="filters">
-          <label>Land
-            <select id="f-country"><option value="">Alle landen</option><option value="NO">Norge</option><option value="DK">Danmark</option><option value="SE">Sverige</option><option value="FI">Suomi</option><option value="IS">Ísland</option><option value="PL">Polska</option><option value="DE">Deutschland</option></select>
-          </label>
-          <label>Vakgebied
-            <select id="f-trade"><option value="">Alle vakgebieden</option><option value="electrical">Elektra</option><option value="plumbing">Loodgieterswerk</option><option value="hvac">Ventilatie</option><option value="painting">Schilderwerk</option><option value="building">Bouw</option><option value="cleaning">Schoonmaak</option></select>
-          </label>
-          <p class="fcount" id="f-count" aria-live="polite"></p>
-        </div>
-        <div class="cards" id="tenders" data-src="/tenders.nl.json" data-fit="Past goed" data-original="Bekijk de oorspronkelijke aankondiging" data-sample="Voorbeeld. De link naar de oorspronkelijke aankondiging komt met de echte lijst." data-empty="Er past nog niets bij deze filters." data-one="item" data-many="items" data-days-left="nog {n} dagen">
-          <article class="tcard">
-            <div class="tc-top"><span class="chip">Schilderwerk</span><span class="tc-cc">Noorwegen</span></div>
-            <h3>Schilderwerk, gemeentelijke gebouwen</h3>
-            <p class="tc-where">Innlandet</p>
-            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>nog 18 dagen</span><span class="badge">onder €150.000</span></div>
-            <p class="fitbox"><b>Past goed</b> bij een schildersbedrijf met 3–10 medewerkers, zeker als je al overheidsopdrachten doet.</p>
-          </article>
-          <article class="tcard">
-            <div class="tc-top"><span class="chip">Ventilatie</span><span class="tc-cc">Polen</span></div>
-            <h3>Onderhoud ventilatiesystemen, schoolgebouwen</h3>
-            <p class="tc-where">Mazovië</p>
-            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>nog 24 dagen</span><span class="badge">Soort: Raamovereenkomst</span></div>
-            <p class="fitbox"><b>Past goed</b> als je graag vast, terugkerend werk wilt en al servicebusjes hebt rondrijden.</p>
-          </article>
-          <article class="tcard">
-            <div class="tc-top"><span class="chip">Elektra</span><span class="tc-cc">Duitsland</span></div>
-            <h3>Vervanging van schakelinstallaties</h3>
-            <p class="tc-where">regionaal</p>
-            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>nog 12 dagen</span><span class="badge">Omvang: Duidelijk afgebakend</span></div>
-            <p class="fitbox"><b>Past goed</b> bij een groeiend bedrijf: een duidelijke omvang, groter dan een eenmanszaak, kleiner dan de landelijke ketens.</p>
-          </article>
         </div>
       </div>
     </section>

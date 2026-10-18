@@ -48,7 +48,7 @@
         <p class="lead">Viešuosius skelbimus skaitome už jus ir siunčiame tuos, kurie tinka. Kol kas tai rankomis sudaromas sąrašas el. paštu — pirmiausia Šiaurės šalys, vėliau Lenkija, Vokietija ir kaimyninės šalys. Jokio dirbtinio intelekto ir kol kas jokios paieškos sistemos.</p>
         <div class="actions">
           <a class="btn lg" href="#form">Gauti pavyzdinį sąrašą</a>
-          <a class="btn ghost lg" href="#examples">Žiūrėti pavyzdžius</a>
+          <a class="btn ghost lg" href="#coverage">Naršyti žemėlapį</a>
         </div>
         <p class="hero-price"><span data-site="price">€29</span> / mėn. · 14 dienų nemokamas pavyzdys · <a href="#pricing">Žiūrėti kainas</a></p>
         <ul class="trust">
@@ -79,9 +79,21 @@
     <section id="coverage" class="alt">
       <div class="wrap">
         <p class="label">Kur ieškome</p>
-        <h2>Penkiolika šalių, žingsnis po žingsnio</h2>
-        <p class="note">Spustelėkite šalį žemėlapyje, kad pamatytumėte, ką ten turime, tada pasirinkite pirkimą, kad matytumėte detales.</p>
-        <div class="mapstage" id="mapstage" data-level="overview" data-src="/countries.geojson" data-names='{"IS":"Ísland","NO":"Norge","SE":"Sverige","FI":"Suomi","DK":"Danmark","EE":"Eesti","LV":"Latvija","NL":"Nederland","DE":"Deutschland","PL":"Polska","LT":"Lietuva","BE":"België","CZ":"Česko","SK":"Slovensko","AT":"Österreich"}'
+        <h2>Visa Europa, žingsnis po žingsnio</h2>
+        <p class="note">Spustelėkite šalį, kad pamatytumėte, ką ten turime, arba filtruokite pagal šalį ir sritį. Pasirinkite pirkimą, kad matytumėte detales.</p>
+        <div class="filters mapfilters">
+          <label>Šalis
+            <select id="f-country"><option value="">Visa Europa</option>
+              <optgroup label="Dabar"><option value="NO">Norvegija</option><option value="SE">Švedija</option><option value="DK">Danija</option><option value="FI">Suomija</option><option value="IS">Islandija</option></optgroup>
+              <optgroup label="Toliau"><option value="PL">Lenkija</option><option value="DE">Vokietija</option></optgroup>
+              <optgroup label="Vėliau"><option value="IE">Airija</option><option value="AL">Albanija</option><option value="AD">Andora</option><option value="AT">Austrija</option><option value="BE">Belgija</option><option value="BA">Bosnija ir Hercegovina</option><option value="BG">Bulgarija</option><option value="CZ">Čekija</option><option value="EE">Estija</option><option value="GR">Graikija</option><option value="ES">Ispanija</option><option value="IT">Italija</option><option value="GB">Jungtinė Karalystė</option><option value="ME">Juodkalnija</option><option value="CY">Kipras</option><option value="XK">Kosovas</option><option value="HR">Kroatija</option><option value="LV">Latvija</option><option value="LT">Lietuva</option><option value="LU">Liuksemburgas</option><option value="MD">Moldova</option><option value="NL">Nyderlandai</option><option value="PT">Portugalija</option><option value="FR">Prancūzija</option><option value="RO">Rumunija</option><option value="RS">Serbija</option><option value="SK">Slovakija</option><option value="SI">Slovėnija</option><option value="MK">Šiaurės Makedonija</option><option value="CH">Šveicarija</option><option value="UA">Ukraina</option><option value="HU">Vengrija</option></optgroup></select>
+          </label>
+          <label>Sritis
+            <select id="f-trade"><option value="">Visos sritys</option><option value="electrical">Elektra</option><option value="plumbing">Santechnika</option><option value="hvac">Vėdinimas</option><option value="painting">Dažymas</option><option value="building">Statyba</option><option value="cleaning">Valymas</option></select>
+          </label>
+          <p class="fcount" id="f-count" aria-live="polite"></p>
+        </div>
+        <div class="mapstage" id="mapstage" data-level="overview" data-src="/countries.geojson" data-names='{"GB":"Jungtinė Karalystė","UA":"Ukraina","CH":"Šveicarija","SE":"Švedija","ES":"Ispanija","SK":"Slovakija","SI":"Slovėnija","RS":"Serbija","RO":"Rumunija","PT":"Portugalija","PL":"Lenkija","NO":"Norvegija","NL":"Nyderlandai","ME":"Juodkalnija","MD":"Moldova","MK":"Šiaurės Makedonija","LU":"Liuksemburgas","LT":"Lietuva","LV":"Latvija","XK":"Kosovas","IT":"Italija","IE":"Airija","IS":"Islandija","HU":"Vengrija","GR":"Graikija","DE":"Vokietija","FR":"Prancūzija","FI":"Suomija","EE":"Estija","DK":"Danija","CZ":"Čekija","CY":"Kipras","HR":"Kroatija","BG":"Bulgarija","BA":"Bosnija ir Hercegovina","BE":"Belgija","AT":"Austrija","AD":"Andora","AL":"Albanija"}' data-tenders="/tenders.lt.json" data-none-filter="Šaliai „{country}“ šiuo metu nieko nėra šiai sričiai. Išbandykite kitą sritį."
              data-back-all="Visos šalys" data-back-country="Atgal: {country}" data-none="Šaliai „{country}“ kol kas įrašų nėra. Pradedame nuo Šiaurės ir šalis pridedame žingsnis po žingsnio."
              data-open-page="Skaityti puslapį vietos kalba" data-deadline="Terminas" data-days-left="liko dienų: {n}" data-value="Vertė / rūšis" data-where="Vieta"
              data-fit="Gerai tinka" data-original="Žiūrėti originalų skelbimą" data-sample="Pavyzdys. Nuoroda į originalų skelbimą bus tikrame sąraše." data-count-one="{n} įrašas" data-count-many="įrašų: {n}">
@@ -114,9 +126,11 @@
               <ul class="legend">
                 <li data-wave="1"><b>Dabar</b> Norvegija, Danija, Švedija, Suomija ir Islandija</li>
                 <li data-wave="2"><b>Toliau</b> Lenkija ir Vokietija</li>
-                <li data-wave="3"><b>Vėliau</b> kaimyninės šalys</li>
+                <li data-wave="3"><b>Vėliau</b> likusi Europa</li>
               </ul>
-              <p class="ms-hint">Pasirinkite šalį, kad priartintumėte. Spalvoti taškai – pavyzdiniai pirkimai, vienas taškas vienam pirkimui.</p>
+              <p class="ms-hint">Pasirinkite šalį, kad priartintumėte. Kiekvienas taškas – vienas pavyzdinis pirkimas, nuspalvintas pagal sritį.</p>
+              <ul class="tlist"></ul>
+              <p class="ms-empty empty" hidden>Šiai sričiai kol kas nieko nėra.</p>
             </div>
             <div data-view="country" hidden tabindex="-1">
               <button type="button" class="back" data-back="overview"></button>
@@ -153,45 +167,6 @@
             <h3>Tiesiai iš šaltinio</h3>
             <p>Viskas iš TED ir nacionalinių skelbimų, o kiekvienas įrašas veda į originalą. Perskaitykite jį prieš teikdami pasiūlymą — mes visada nukreipsime jus ten.</p>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="examples" class="alt">
-      <div class="wrap">
-        <h2>Žvilgsnis į vieną leidimą</h2>
-        <p class="note">Tai tik pavyzdžiai. Tikros nuorodos į oficialius skelbimus atsiras, kai sąrašas startuos — o originalus skelbimas visada svarbiausias.</p>
-        <div class="filters">
-          <label>Šalis
-            <select id="f-country"><option value="">Visos šalys</option><option value="NO">Norge</option><option value="DK">Danmark</option><option value="SE">Sverige</option><option value="FI">Suomi</option><option value="IS">Ísland</option><option value="PL">Polska</option><option value="DE">Deutschland</option></select>
-          </label>
-          <label>Sritis
-            <select id="f-trade"><option value="">Visos sritys</option><option value="electrical">Elektra</option><option value="plumbing">Santechnika</option><option value="hvac">Vėdinimas</option><option value="painting">Dažymas</option><option value="building">Statyba</option><option value="cleaning">Valymas</option></select>
-          </label>
-          <p class="fcount" id="f-count" aria-live="polite"></p>
-        </div>
-        <div class="cards" id="tenders" data-src="/tenders.lt.json" data-fit="Gerai tinka" data-original="Žiūrėti originalų skelbimą" data-sample="Pavyzdys. Nuoroda į originalų skelbimą bus tikrame sąraše." data-empty="Pagal šiuos filtrus kol kas nieko nėra." data-one="{n} įrašas" data-many="įrašų: {n}" data-days-left="liko dienų: {n}">
-          <article class="tcard">
-            <div class="tc-top"><span class="chip">Dažymas</span><span class="tc-cc">Norvegija</span></div>
-            <h3>Dažymas, savivaldybės pastatai</h3>
-            <p class="tc-where">Innlandet</p>
-            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>liko 18 dienų</span><span class="badge">iki 150 000 €</span></div>
-            <p class="fitbox"><b>Gerai tinka</b> dažymo įmonei, turinčiai 3–10 darbuotojų, ypač jei jau dirbate su viešaisiais užsakovais.</p>
-          </article>
-          <article class="tcard">
-            <div class="tc-top"><span class="chip">Vėdinimas</span><span class="tc-cc">Lenkija</span></div>
-            <h3>Vėdinimo sistemų priežiūra, mokyklų pastatai</h3>
-            <p class="tc-where">Mazovija</p>
-            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>liko 24 dienos</span><span class="badge">Rūšis: Preliminarioji sutartis</span></div>
-            <p class="fitbox"><b>Gerai tinka</b> jei norite pastovaus, pasikartojančio darbo ir jau turite aptarnavimo automobilių.</p>
-          </article>
-          <article class="tcard">
-            <div class="tc-top"><span class="chip">Elektra</span><span class="tc-cc">Vokietija</span></div>
-            <h3>Skirstomųjų įrenginių keitimas</h3>
-            <p class="tc-where">regioninis</p>
-            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>liko 12 dienų</span><span class="badge">Apimtis: Aiškiai apribota</span></div>
-            <p class="fitbox"><b>Gerai tinka</b> augančiai įmonei: aiški apimtis, didesnė nei vieno žmogaus verslui, bet mažesnė nei nacionaliniams tinklams.</p>
-          </article>
         </div>
       </div>
     </section>

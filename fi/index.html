@@ -48,7 +48,7 @@
         <p class="lead">Luemme julkiset ilmoitukset puolestasi ja lähetämme sinulle ne, jotka sopivat. Toistaiseksi kyse on käsin toimitetusta listasta sähköpostitse — ensin Pohjoismaat, sitten Puola, Saksa ja naapurimaat. Ei tekoälyä eikä vielä hakukonetta.</p>
         <div class="actions">
           <a class="btn lg" href="#form">Hae näytelista</a>
-          <a class="btn ghost lg" href="#examples">Katso esimerkkejä</a>
+          <a class="btn ghost lg" href="#coverage">Tutustu karttaan</a>
         </div>
         <p class="hero-price"><span data-site="price">€29</span> / kk · 14 päivän ilmainen näyte · <a href="#pricing">Katso hinnat</a></p>
         <ul class="trust">
@@ -79,9 +79,21 @@
     <section id="coverage" class="alt">
       <div class="wrap">
         <p class="label">Mistä etsimme</p>
-        <h2>Viisitoista maata, yksi askel kerrallaan</h2>
-        <p class="note">Napsauta karttaa nähdäksesi, mitä meillä on kyseisessä maassa, ja valitse sitten kohde nähdäksesi tiedot.</p>
-        <div class="mapstage" id="mapstage" data-level="overview" data-src="/countries.geojson" data-names='{"IS":"Ísland","NO":"Norge","SE":"Sverige","FI":"Suomi","DK":"Danmark","EE":"Eesti","LV":"Latvija","NL":"Nederland","DE":"Deutschland","PL":"Polska","LT":"Lietuva","BE":"België","CZ":"Česko","SK":"Slovensko","AT":"Österreich"}'
+        <h2>Koko Eurooppa, yksi askel kerrallaan</h2>
+        <p class="note">Napsauta maata nähdäksesi, mitä meillä on siellä, tai suodata maan ja alan mukaan. Valitse kohde nähdäksesi tiedot.</p>
+        <div class="filters mapfilters">
+          <label>Maa
+            <select id="f-country"><option value="">Koko Eurooppa</option>
+              <optgroup label="Nyt"><option value="NO">Norja</option><option value="SE">Ruotsi</option><option value="DK">Tanska</option><option value="FI">Suomi</option><option value="IS">Islanti</option></optgroup>
+              <optgroup label="Seuraavaksi"><option value="PL">Puola</option><option value="DE">Saksa</option></optgroup>
+              <optgroup label="Sen jälkeen"><option value="NL">Alankomaat</option><option value="AL">Albania</option><option value="AD">Andorra</option><option value="BE">Belgia</option><option value="BA">Bosnia ja Hertsegovina</option><option value="BG">Bulgaria</option><option value="ES">Espanja</option><option value="IE">Irlanti</option><option value="GB">Iso-Britannia</option><option value="IT">Italia</option><option value="AT">Itävalta</option><option value="XK">Kosovo</option><option value="GR">Kreikka</option><option value="HR">Kroatia</option><option value="CY">Kypros</option><option value="LV">Latvia</option><option value="LT">Liettua</option><option value="LU">Luxemburg</option><option value="MD">Moldova</option><option value="ME">Montenegro</option><option value="MK">Pohjois-Makedonia</option><option value="PT">Portugali</option><option value="FR">Ranska</option><option value="RO">Romania</option><option value="RS">Serbia</option><option value="SK">Slovakia</option><option value="SI">Slovenia</option><option value="CH">Sveitsi</option><option value="CZ">Tšekki</option><option value="UA">Ukraina</option><option value="HU">Unkari</option><option value="EE">Viro</option></optgroup></select>
+          </label>
+          <label>Ala
+            <select id="f-trade"><option value="">Kaikki alat</option><option value="electrical">Sähkö</option><option value="plumbing">Putkityö</option><option value="hvac">Ilmanvaihto</option><option value="painting">Maalaus</option><option value="building">Rakennus</option><option value="cleaning">Siivous</option></select>
+          </label>
+          <p class="fcount" id="f-count" aria-live="polite"></p>
+        </div>
+        <div class="mapstage" id="mapstage" data-level="overview" data-src="/countries.geojson" data-names='{"GB":"Iso-Britannia","UA":"Ukraina","CH":"Sveitsi","SE":"Ruotsi","ES":"Espanja","SK":"Slovakia","SI":"Slovenia","RS":"Serbia","RO":"Romania","PT":"Portugali","PL":"Puola","NO":"Norja","NL":"Alankomaat","ME":"Montenegro","MD":"Moldova","MK":"Pohjois-Makedonia","LU":"Luxemburg","LT":"Liettua","LV":"Latvia","XK":"Kosovo","IT":"Italia","IE":"Irlanti","IS":"Islanti","HU":"Unkari","GR":"Kreikka","DE":"Saksa","FR":"Ranska","FI":"Suomi","EE":"Viro","DK":"Tanska","CZ":"Tšekki","CY":"Kypros","HR":"Kroatia","BG":"Bulgaria","BA":"Bosnia ja Hertsegovina","BE":"Belgia","AT":"Itävalta","AD":"Andorra","AL":"Albania"}' data-tenders="/tenders.fi.json" data-none-filter="Maassa {country} ei ole juuri nyt kohteita tälle alalle. Kokeile toista alaa."
              data-back-all="Kaikki maat" data-back-country="Takaisin: {country}" data-none="Maalle {country} ei ole vielä kohteita. Aloitamme Pohjoismaista ja lisäämme maita vaihe vaiheelta."
              data-open-page="Lue sivu paikallisella kielellä" data-deadline="Määräaika" data-days-left="{n} pv jäljellä" data-value="Arvo / tyyppi" data-where="Paikka"
              data-fit="Sopii hyvin" data-original="Katso alkuperäinen ilmoitus" data-sample="Esimerkki. Linkki alkuperäiseen ilmoitukseen tulee mukaan oikeaan listaan." data-count-one="kohde" data-count-many="kohdetta">
@@ -114,9 +126,11 @@
               <ul class="legend">
                 <li data-wave="1"><b>Nyt</b> Norja, Tanska, Ruotsi, Suomi ja Islanti</li>
                 <li data-wave="2"><b>Seuraavaksi</b> Puola ja Saksa</li>
-                <li data-wave="3"><b>Sen jälkeen</b> naapurimaat</li>
+                <li data-wave="3"><b>Sen jälkeen</b> muu Eurooppa</li>
               </ul>
-              <p class="ms-hint">Valitse maa zoomataksesi sisään. Värilliset pisteet ovat esimerkkikohteita, yksi piste per kohde.</p>
+              <p class="ms-hint">Valitse maa zoomataksesi sisään. Jokainen piste on yksi esimerkkikohde, väritetty alan mukaan.</p>
+              <ul class="tlist"></ul>
+              <p class="ms-empty empty" hidden>Mikään ei vielä vastaa tuota alaa.</p>
             </div>
             <div data-view="country" hidden tabindex="-1">
               <button type="button" class="back" data-back="overview"></button>
@@ -153,45 +167,6 @@
             <h3>Suoraan lähteestä</h3>
             <p>Kaikki tulee TED:stä ja kansallisista ilmoituksista, ja jokainen kohde linkittää alkuperäiseen. Lue se ennen tarjousta — osoitamme sinut aina sinne.</p>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="examples" class="alt">
-      <div class="wrap">
-        <h2>Kurkistus yhteen numeroon</h2>
-        <p class="note">Nämä ovat esimerkkejä. Oikeat linkit virallisiin ilmoituksiin tulevat, kun lista lähtee liikkeelle — ja alkuperäinen ilmoitus on aina ensin.</p>
-        <div class="filters">
-          <label>Maa
-            <select id="f-country"><option value="">Kaikki maat</option><option value="NO">Norge</option><option value="DK">Danmark</option><option value="SE">Sverige</option><option value="FI">Suomi</option><option value="IS">Ísland</option><option value="PL">Polska</option><option value="DE">Deutschland</option></select>
-          </label>
-          <label>Ala
-            <select id="f-trade"><option value="">Kaikki alat</option><option value="electrical">Sähkö</option><option value="plumbing">Putkityö</option><option value="hvac">Ilmanvaihto</option><option value="painting">Maalaus</option><option value="building">Rakennus</option><option value="cleaning">Siivous</option></select>
-          </label>
-          <p class="fcount" id="f-count" aria-live="polite"></p>
-        </div>
-        <div class="cards" id="tenders" data-src="/tenders.fi.json" data-fit="Sopii hyvin" data-original="Katso alkuperäinen ilmoitus" data-sample="Esimerkki. Linkki alkuperäiseen ilmoitukseen tulee mukaan oikeaan listaan." data-empty="Mikään ei vielä vastaa suodattimia." data-one="kohde" data-many="kohdetta" data-days-left="{n} pv jäljellä">
-          <article class="tcard">
-            <div class="tc-top"><span class="chip">Maalaus</span><span class="tc-cc">Norja</span></div>
-            <h3>Maalaus, kunnalliset rakennukset</h3>
-            <p class="tc-where">Innlandet</p>
-            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>18 päivää jäljellä</span><span class="badge">alle 150 000 €</span></div>
-            <p class="fitbox"><b>Sopii hyvin</b> 3–10 hengen maalausyritykselle, etenkin jos teette jo julkisia töitä.</p>
-          </article>
-          <article class="tcard">
-            <div class="tc-top"><span class="chip">Ilmanvaihto</span><span class="tc-cc">Puola</span></div>
-            <h3>Ilmanvaihdon huolto, koulurakennukset</h3>
-            <p class="tc-where">Masovia</p>
-            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>24 päivää jäljellä</span><span class="badge">Tyyppi: Puitesopimus</span></div>
-            <p class="fitbox"><b>Sopii hyvin</b> jos haluat tasaista, toistuvaa työtä ja huoltoautot ovat jo tiellä.</p>
-          </article>
-          <article class="tcard">
-            <div class="tc-top"><span class="chip">Sähkö</span><span class="tc-cc">Saksa</span></div>
-            <h3>Kytkinlaitteiden uusiminen</h3>
-            <p class="tc-where">alueellinen</p>
-            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>12 päivää jäljellä</span><span class="badge">Laajuus: Rajattu</span></div>
-            <p class="fitbox"><b>Sopii hyvin</b> kasvavalle yritykselle: selkeä laajuus, suurempi kuin yhden hengen firmalle, mutta pienempi kuin valtakunnallisille ketjuille.</p>
-          </article>
         </div>
       </div>
     </section>

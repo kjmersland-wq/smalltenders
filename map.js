@@ -24,7 +24,11 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
 
   var COLORS = { 1: '#9a3b16', 2: '#e8bfa5', 3: '#fffdf8' };
   var TRADE = { electrical: '#1d5fa8', plumbing: '#1b7f8e', hvac: '#6b4aa0', painting: '#c28a00', building: '#4d6b2f', cleaning: '#a23a6b' };
-  var EUROPE = { north: 71.5, south: 46, west: -24.5, east: 32 };
+  var EUROPE = { north: 71.5, south: 35.5, west: -24.5, east: 42 };
+  var PRIORITY = ['NO', 'SE', 'DK', 'FI', 'IS', 'PL', 'DE'];   // "Now" and "Next" first, then the rest alphabetically
+  var selC = document.getElementById('f-country');
+  var selT = document.getElementById('f-trade');
+  var cnt = document.getElementById('f-count');
   var names = {};
   try { names = JSON.parse(D.names || '{}'); } catch (e) { names = {}; }
   var native = {}, hrefOf = {};
@@ -39,7 +43,7 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
   var map = null, loading = false, mapOn = false, infoTip = null;
   var markers = {};          // tender id -> marker
   var bounds = {};           // country code -> LatLngBounds
-  var state = { level: 'overview', cc: null, id: null };
+  var state = { level: 'overview', cc: null, id: null, trade: '' };
 
   function el(tag, cls, text) { var n = document.createElement(tag); if (cls) n.className = cls; if (text) n.textContent = text; return n; }
   function fill(t, o) { return t.replace(/\{(\w+)\}/g, function (_, k) { return o[k]; }); }
@@ -69,8 +73,12 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
     tiles.querySelectorAll('li').forEach(function (li) {
       li.classList.toggle('sel', !!state.cc && li.querySelector('b').textContent === state.cc);
     });
+    if (selC) selC.value = state.cc && selC.querySelector('option[value="' + state.cc + '"]') ? state.cc : '';
+    if (selT) selT.value = state.trade;
+    if (state.level === 'overview') renderOverview();
     if (state.level === 'country') renderCountry();
     if (state.level === 'tender') renderTender();
+    if (cnt) { var n = scoped().length; cnt.textContent = countText(n); }
     applyMap();
     if (state.level !== 'overview' && window.matchMedia('(max-width: 900px)').matches) {
       side.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -78,32 +86,63 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
     var f = views[state.level]; if (f && f.hasAttribute('tabindex') && state.level !== 'overview') f.focus({ preventScroll: true });
   }
 
-  function listFor(cc) { return tenders.filter(function (t) { return t.country === cc; }); }
+  function matches(t) { return !state.trade || t.trade === state.trade; }
+  function order(a, b) {
+    var pa = PRIORITY.indexOf(a.country), pb = PRIORITY.indexOf(b.country);
+    if (pa < 0) pa = 99; if (pb < 0) pb = 99;
+    if (pa !== pb) return pa - pb;
+    if (a.country !== b.country) return cname(a.country).localeCompare(cname(b.country));
+    return deadlineDate(a) - deadlineDate(b);
+  }
+  // the tenders that match the trade filter (and the country, when one is chosen)
+  function scoped() {
+    return tenders.filter(function (t) { return matches(t) && (state.level === 'overview' || !state.cc || t.country === state.cc); }).sort(order);
+  }
+  function countText(n) {
+    var w = n === 1 ? D.countOne : D.countMany;
+    return w.indexOf('{n}') > -1 ? w.replace('{n}', n) : n + ' ' + w;
+  }
 
-  function renderCountry() {
-    var v = views.country, cc = state.cc, list = listFor(cc);
-    v.querySelector('.back').textContent = '← ' + D.backAll;
-    v.querySelector('.ms-country').textContent = cname(cc);
-    var cw = list.length === 1 ? D.countOne : D.countMany;
-    v.querySelector('.ms-count').textContent = list.length ? (cw.indexOf('{n}') > -1 ? cw.replace('{n}', list.length) : list.length + ' ' + cw) : '';
-    var ul = v.querySelector('.tlist'); ul.textContent = '';
+  // one list used by the overview and the country view; markers and list stay in sync
+  function fillList(ul, list, withCountry) {
+    ul.textContent = '';
     list.forEach(function (t) {
       var li = el('li'), b = el('button'); b.type = 'button'; b.dataset.id = t.id;
       var top = el('span', 'tl-top');
       var dot = el('i'); dot.style.background = TRADE[t.trade] || '#1c1914';
-      top.appendChild(dot); top.appendChild(el('b', '', t.city + ' · ' + t.region));
+      top.appendChild(dot); top.appendChild(el('b', '', withCountry ? t.city + ' · ' + cname(t.country) : t.city + ' · ' + t.region));
       b.appendChild(top);
       b.appendChild(el('span', 'tl-title', t.title));
       b.appendChild(el('small', '', t.tradeName + ' · ' + D.deadline + ' ' + fmt(t) + ' · ' + t.value));
-      b.addEventListener('click', function () { go('tender', cc, t.id); });
+      b.addEventListener('click', function () { go('tender', t.country, t.id); });
       b.addEventListener('mouseenter', function () { hot(t.id, true); });
       b.addEventListener('mouseleave', function () { hot(t.id, false); });
       b.addEventListener('focus', function () { hot(t.id, true); });
       b.addEventListener('blur', function () { hot(t.id, false); });
       li.appendChild(b); ul.appendChild(li);
     });
+  }
+
+  function renderOverview() {
+    var ul = views.overview.querySelector('.tlist'); if (!ul) return;
+    var list = scoped();
+    fillList(ul, list, true);
+    var empty = views.overview.querySelector('.ms-empty');
+    if (empty) { empty.hidden = list.length > 0; }
+  }
+
+  function renderCountry() {
+    var v = views.country, cc = state.cc, list = scoped();
+    v.querySelector('.back').textContent = '← ' + D.backAll;
+    v.querySelector('.ms-country').textContent = cname(cc);
+    v.querySelector('.ms-count').textContent = list.length ? countText(list.length) : '';
+    var ul = v.querySelector('.tlist');
+    fillList(ul, list, false);
     var more = v.querySelector('.cp-more'); more.textContent = '';
-    if (!list.length) more.appendChild(el('span', 'empty', fill(D.none, { country: cname(cc) })));
+    if (!list.length) {
+      var hasOthers = state.trade && tenders.some(function (t) { return t.country === cc; });
+      more.appendChild(el('span', 'empty', fill(hasOthers ? (D.noneFilter || D.none) : D.none, { country: cname(cc) })));
+    }
     if (hrefOf[cc]) {
       var a = el('a', '', D.openPage); a.href = hrefOf[cc];
       if (!list.length) more.appendChild(document.createElement('br'));
@@ -158,7 +197,8 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
 
   function icon(t, big) {
     var gm = google.maps;
-    return { path: gm.SymbolPath.CIRCLE, scale: big ? 13 : 9, fillColor: TRADE[t.trade] || '#1c1914', fillOpacity: 1, strokeColor: big ? '#1c1914' : '#ffffff', strokeWeight: big ? 3 : 2.5 };
+    var small = state.level === 'overview';
+    return { path: gm.SymbolPath.CIRCLE, scale: big ? 13 : small ? 6 : 9, fillColor: TRADE[t.trade] || '#1c1914', fillOpacity: 1, strokeColor: big ? '#1c1914' : '#ffffff', strokeWeight: big ? 3 : small ? 1.5 : 2.5 };
   }
   function hot(id, on) {
     var m = markers[id]; if (!m || !map) return;
@@ -174,7 +214,7 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
     });
     tenders.forEach(function (t) {
       var m = markers[t.id]; if (!m) return;
-      m.setVisible(state.level !== 'overview' && t.country === state.cc);
+      m.setVisible(matches(t) && (state.level === 'overview' || t.country === state.cc));
       m.setIcon(icon(t, state.id === t.id)); m.setZIndex(state.id === t.id ? 10 : 1);
     });
     gm.event.trigger(map, 'resize');
@@ -270,6 +310,11 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
   // ---------- start ----------
   (window.stTendersReady || Promise.resolve([])).then(function (list) {
     tenders = list; list.forEach(function (t) { byId[t.id] = t; });
+    if (selC) selC.addEventListener('change', function () { selC.value ? go('country', selC.value) : go('overview'); });
+    if (selT) selT.addEventListener('change', function () {
+      state.trade = selT.value;
+      if (state.level === 'tender' && byId[state.id] && !matches(byId[state.id])) go('country', state.cc); else render();
+    });
     var m = /^#map=([A-Z]{2})(?:\/(\w+))?$/.exec(location.hash);
     if (m) go(m[2] && byId[m[2]] ? 'tender' : 'country', m[1], m[2] && byId[m[2]] ? m[2] : null);
     if (haveKey) startMap(); else render();

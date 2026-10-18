@@ -113,7 +113,8 @@
     });
   });
 
-  fetch((box && box.dataset.src) || (panel && panel.dataset.src) || '/tenders.json').then(function (r) { return r.json(); }).then(function (j) {
+  var stage = document.getElementById('mapstage');
+  fetch((stage && stage.dataset.tenders) || (box && box.dataset.src) || (panel && panel.dataset.src) || '/tenders.json').then(function (r) { return r.json(); }).then(function (j) {
     var list = j.tenders || [];
     list.forEach(function (t) { all.push(t); });
     if (box && selC && selT && all.length) {

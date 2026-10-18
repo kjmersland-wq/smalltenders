@@ -48,7 +48,7 @@
         <p class="lead">Vi läser de offentliga annonserna åt dig och skickar dem som passar. Just nu är det en handredigerad lista via e-post — först i Norden, sedan Polen, Tyskland och grannländerna. Ingen AI, och ännu ingen sökmotor.</p>
         <div class="actions">
           <a class="btn lg" href="#form">Få provlistan</a>
-          <a class="btn ghost lg" href="#examples">Se exempel</a>
+          <a class="btn ghost lg" href="#coverage">Utforska kartan</a>
         </div>
         <p class="hero-price"><span data-site="price">€29</span> / månad · 14 dagars kostnadsfritt prov · <a href="#pricing">Se priser</a></p>
         <ul class="trust">
@@ -79,9 +79,21 @@
     <section id="coverage" class="alt">
       <div class="wrap">
         <p class="label">Var vi letar</p>
-        <h2>Femton länder, ett steg i taget</h2>
-        <p class="note">Klicka på ett land på kartan för att se vad vi har där och välj sedan en upphandling för detaljerna.</p>
-        <div class="mapstage" id="mapstage" data-level="overview" data-src="/countries.geojson" data-names='{"IS":"Ísland","NO":"Norge","SE":"Sverige","FI":"Suomi","DK":"Danmark","EE":"Eesti","LV":"Latvija","NL":"Nederland","DE":"Deutschland","PL":"Polska","LT":"Lietuva","BE":"België","CZ":"Česko","SK":"Slovensko","AT":"Österreich"}'
+        <h2>Hela Europa, ett steg i taget</h2>
+        <p class="note">Klicka på ett land för att se vad vi har där, eller filtrera på land och yrke. Välj en upphandling för detaljerna.</p>
+        <div class="filters mapfilters">
+          <label>Land
+            <select id="f-country"><option value="">Hela Europa</option>
+              <optgroup label="Nu"><option value="NO">Norge</option><option value="SE">Sverige</option><option value="DK">Danmark</option><option value="FI">Finland</option><option value="IS">Island</option></optgroup>
+              <optgroup label="Nästa"><option value="PL">Polen</option><option value="DE">Tyskland</option></optgroup>
+              <optgroup label="Sedan"><option value="AL">Albanien</option><option value="AD">Andorra</option><option value="BE">Belgien</option><option value="BA">Bosnien och Hercegovina</option><option value="BG">Bulgarien</option><option value="CY">Cypern</option><option value="EE">Estland</option><option value="FR">Frankrike</option><option value="GR">Grekland</option><option value="IE">Irland</option><option value="IT">Italien</option><option value="XK">Kosovo</option><option value="HR">Kroatien</option><option value="LV">Lettland</option><option value="LT">Litauen</option><option value="LU">Luxemburg</option><option value="MD">Moldavien</option><option value="ME">Montenegro</option><option value="NL">Nederländerna</option><option value="MK">Nordmakedonien</option><option value="PT">Portugal</option><option value="RO">Rumänien</option><option value="CH">Schweiz</option><option value="RS">Serbien</option><option value="SK">Slovakien</option><option value="SI">Slovenien</option><option value="ES">Spanien</option><option value="GB">Storbritannien</option><option value="CZ">Tjeckien</option><option value="UA">Ukraina</option><option value="HU">Ungern</option><option value="AT">Österrike</option></optgroup></select>
+          </label>
+          <label>Yrke
+            <select id="f-trade"><option value="">Alla yrken</option><option value="electrical">El</option><option value="plumbing">VVS</option><option value="hvac">Ventilation</option><option value="painting">Målning</option><option value="building">Bygg</option><option value="cleaning">Städning</option></select>
+          </label>
+          <p class="fcount" id="f-count" aria-live="polite"></p>
+        </div>
+        <div class="mapstage" id="mapstage" data-level="overview" data-src="/countries.geojson" data-names='{"GB":"Storbritannien","UA":"Ukraina","CH":"Schweiz","SE":"Sverige","ES":"Spanien","SK":"Slovakien","SI":"Slovenien","RS":"Serbien","RO":"Rumänien","PT":"Portugal","PL":"Polen","NO":"Norge","NL":"Nederländerna","ME":"Montenegro","MD":"Moldavien","MK":"Nordmakedonien","LU":"Luxemburg","LT":"Litauen","LV":"Lettland","XK":"Kosovo","IT":"Italien","IE":"Irland","IS":"Island","HU":"Ungern","GR":"Grekland","DE":"Tyskland","FR":"Frankrike","FI":"Finland","EE":"Estland","DK":"Danmark","CZ":"Tjeckien","CY":"Cypern","HR":"Kroatien","BG":"Bulgarien","BA":"Bosnien och Hercegovina","BE":"Belgien","AT":"Österrike","AD":"Andorra","AL":"Albanien"}' data-tenders="/tenders.sv.json" data-none-filter="Inget i {country} matchar det yrket just nu. Prova ett annat yrke."
              data-back-all="Alla länder" data-back-country="Tillbaka till {country}" data-none="Inga poster för {country} ännu. Vi börjar i Norden och lägger till länder steg för steg."
              data-open-page="Läs sidan på det lokala språket" data-deadline="Sista dag" data-days-left="{n} dagar kvar" data-value="Värde / typ" data-where="Plats"
              data-fit="Passar bra" data-original="Se den ursprungliga annonsen" data-sample="Exempel. Länken till den ursprungliga annonsen följer med den riktiga listan." data-count-one="post" data-count-many="poster">
@@ -114,9 +126,11 @@
               <ul class="legend">
                 <li data-wave="1"><b>Nu</b> Norge, Danmark, Sverige, Finland och Island</li>
                 <li data-wave="2"><b>Nästa</b> Polen och Tyskland</li>
-                <li data-wave="3"><b>Sedan</b> grannländerna</li>
+                <li data-wave="3"><b>Sedan</b> resten av Europa</li>
               </ul>
-              <p class="ms-hint">Välj ett land för att zooma in. De färgade prickarna är exempelupphandlingar, en prick per upphandling.</p>
+              <p class="ms-hint">Välj ett land för att zooma in. Varje prick är en exempelupphandling, färgad efter yrke.</p>
+              <ul class="tlist"></ul>
+              <p class="ms-empty empty" hidden>Inget matchar det yrket ännu.</p>
             </div>
             <div data-view="country" hidden tabindex="-1">
               <button type="button" class="back" data-back="overview"></button>
@@ -153,45 +167,6 @@
             <h3>Direkt från källan</h3>
             <p>Allt kommer från TED och nationella annonser, och varje post länkar till originalet. Läs det innan du lämnar anbud — vi pekar dig alltid dit.</p>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="examples" class="alt">
-      <div class="wrap">
-        <h2>En titt på ett nummer</h2>
-        <p class="note">Det här är exempel. Riktiga länkar till de officiella annonserna kommer när listan startar — och originalet kommer alltid först.</p>
-        <div class="filters">
-          <label>Land
-            <select id="f-country"><option value="">Alla länder</option><option value="NO">Norge</option><option value="DK">Danmark</option><option value="SE">Sverige</option><option value="FI">Suomi</option><option value="IS">Ísland</option><option value="PL">Polska</option><option value="DE">Deutschland</option></select>
-          </label>
-          <label>Yrke
-            <select id="f-trade"><option value="">Alla yrken</option><option value="electrical">El</option><option value="plumbing">VVS</option><option value="hvac">Ventilation</option><option value="painting">Målning</option><option value="building">Bygg</option><option value="cleaning">Städning</option></select>
-          </label>
-          <p class="fcount" id="f-count" aria-live="polite"></p>
-        </div>
-        <div class="cards" id="tenders" data-src="/tenders.sv.json" data-fit="Passar bra" data-original="Se den ursprungliga annonsen" data-sample="Exempel. Länken till den ursprungliga annonsen följer med den riktiga listan." data-empty="Inget matchar filtren ännu." data-one="post" data-many="poster" data-days-left="{n} dagar kvar">
-          <article class="tcard">
-            <div class="tc-top"><span class="chip">Målning</span><span class="tc-cc">Norge</span></div>
-            <h3>Målning, kommunala byggnader</h3>
-            <p class="tc-where">Innlandet</p>
-            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>18 dagar kvar</span><span class="badge">under €150 000</span></div>
-            <p class="fitbox"><b>Passar bra</b> för ett målerifirma med 3–10 anställda, särskilt om ni redan tar offentliga uppdrag.</p>
-          </article>
-          <article class="tcard">
-            <div class="tc-top"><span class="chip">Ventilation</span><span class="tc-cc">Polen</span></div>
-            <h3>Ventilationsservice, skolbyggnader</h3>
-            <p class="tc-where">Masovien</p>
-            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>24 dagar kvar</span><span class="badge">Typ: Ramavtal</span></div>
-            <p class="fitbox"><b>Passar bra</b> om du vill ha jämnt, återkommande arbete och redan har servicebilar på vägarna.</p>
-          </article>
-          <article class="tcard">
-            <div class="tc-top"><span class="chip">El</span><span class="tc-cc">Tyskland</span></div>
-            <h3>Byte av ställverk</h3>
-            <p class="tc-where">regionalt</p>
-            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>12 dagar kvar</span><span class="badge">Omfattning: Avgränsad</span></div>
-            <p class="fitbox"><b>Passar bra</b> för ett växande företag: tydlig omfattning, större än ett enmansföretag men mindre än de nationella kedjorna.</p>
-          </article>
         </div>
       </div>
     </section>

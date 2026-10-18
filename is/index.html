@@ -48,7 +48,7 @@
         <p class="lead">Við lesum opinberu auglýsingarnar fyrir þig og sendum þér þær sem henta. Enn sem komið er er þetta handritstýrður listi í tölvupósti — fyrst Norðurlöndin, svo Pólland, Þýskaland og nágrannalöndin. Engin gervigreind og engin leitarvél enn.</p>
         <div class="actions">
           <a class="btn lg" href="#form">Fáðu prufulistann</a>
-          <a class="btn ghost lg" href="#examples">Sjá dæmi</a>
+          <a class="btn ghost lg" href="#coverage">Skoða kortið</a>
         </div>
         <p class="hero-price"><span data-site="price">€29</span> / mánuði · 14 daga ókeypis prufa · <a href="#pricing">Sjá verð</a></p>
         <ul class="trust">
@@ -79,9 +79,21 @@
     <section id="coverage" class="alt">
       <div class="wrap">
         <p class="label">Hvar við leitum</p>
-        <h2>Fimmtán lönd, eitt skref í einu</h2>
-        <p class="note">Smelltu á land á kortinu til að sjá hvað við höfum þar og veldu síðan útboð til að sjá nánar.</p>
-        <div class="mapstage" id="mapstage" data-level="overview" data-src="/countries.geojson" data-names='{"IS":"Ísland","NO":"Norge","SE":"Sverige","FI":"Suomi","DK":"Danmark","EE":"Eesti","LV":"Latvija","NL":"Nederland","DE":"Deutschland","PL":"Polska","LT":"Lietuva","BE":"België","CZ":"Česko","SK":"Slovensko","AT":"Österreich"}'
+        <h2>Öll Evrópa, eitt skref í einu</h2>
+        <p class="note">Smelltu á land til að sjá hvað við höfum þar, eða síaðu eftir landi og iðngrein. Veldu útboð til að sjá nánar.</p>
+        <div class="filters mapfilters">
+          <label>Land
+            <select id="f-country"><option value="">Öll Evrópa</option>
+              <optgroup label="Núna"><option value="NO">Noregur</option><option value="SE">Svíþjóð</option><option value="DK">Danmörk</option><option value="FI">Finnland</option><option value="IS">Ísland</option></optgroup>
+              <optgroup label="Næst"><option value="PL">Pólland</option><option value="DE">Þýskaland</option></optgroup>
+              <optgroup label="Síðan"><option value="AL">Albanía</option><option value="AD">Andorra</option><option value="AT">Austurríki</option><option value="BE">Belgía</option><option value="BA">Bosnía og Hersegóvína</option><option value="GB">Bretland</option><option value="BG">Búlgaría</option><option value="EE">Eistland</option><option value="FR">Frakkland</option><option value="GR">Grikkland</option><option value="NL">Holland</option><option value="IE">Írland</option><option value="IT">Ítalía</option><option value="XK">Kósóvó</option><option value="HR">Króatía</option><option value="CY">Kýpur</option><option value="LV">Lettland</option><option value="LT">Litháen</option><option value="LU">Lúxemborg</option><option value="MD">Moldóva</option><option value="MK">Norður-Makedónía</option><option value="PT">Portúgal</option><option value="RO">Rúmenía</option><option value="RS">Serbía</option><option value="SK">Slóvakía</option><option value="SI">Slóvenía</option><option value="ES">Spánn</option><option value="ME">Svartfjallaland</option><option value="CH">Sviss</option><option value="CZ">Tékkland</option><option value="HU">Ungverjaland</option><option value="UA">Úkraína</option></optgroup></select>
+          </label>
+          <label>Iðngrein
+            <select id="f-trade"><option value="">Allar iðngreinar</option><option value="electrical">Raflagnir</option><option value="plumbing">Pípulagnir</option><option value="hvac">Loftræsting</option><option value="painting">Málun</option><option value="building">Byggingar</option><option value="cleaning">Ræsting</option></select>
+          </label>
+          <p class="fcount" id="f-count" aria-live="polite"></p>
+        </div>
+        <div class="mapstage" id="mapstage" data-level="overview" data-src="/countries.geojson" data-names='{"GB":"Bretland","UA":"Úkraína","CH":"Sviss","SE":"Svíþjóð","ES":"Spánn","SK":"Slóvakía","SI":"Slóvenía","RS":"Serbía","RO":"Rúmenía","PT":"Portúgal","PL":"Pólland","NO":"Noregur","NL":"Holland","ME":"Svartfjallaland","MD":"Moldóva","MK":"Norður-Makedónía","LU":"Lúxemborg","LT":"Litháen","LV":"Lettland","XK":"Kósóvó","IT":"Ítalía","IE":"Írland","IS":"Ísland","HU":"Ungverjaland","GR":"Grikkland","DE":"Þýskaland","FR":"Frakkland","FI":"Finnland","EE":"Eistland","DK":"Danmörk","CZ":"Tékkland","CY":"Kýpur","HR":"Króatía","BG":"Búlgaría","BA":"Bosnía og Hersegóvína","BE":"Belgía","AT":"Austurríki","AD":"Andorra","AL":"Albanía"}' data-tenders="/tenders.is.json" data-none-filter="Ekkert í {country} passar við þá iðngrein núna. Prófaðu aðra iðngrein."
              data-back-all="Öll lönd" data-back-country="Til baka: {country}" data-none="Engar færslur fyrir {country} ennþá. Við byrjum á Norðurlöndunum og bætum við löndum skref fyrir skref."
              data-open-page="Lesa síðuna á staðartungumálinu" data-deadline="Frestur" data-days-left="{n} d. eftir" data-value="Verðmæti / tegund" data-where="Staðsetning"
              data-fit="Hentar vel" data-original="Sjá upprunalegu auglýsinguna" data-sample="Dæmi. Tengillinn á upprunalegu auglýsinguna fylgir með alvöru listanum." data-count-one="færsla" data-count-many="færslur">
@@ -114,9 +126,11 @@
               <ul class="legend">
                 <li data-wave="1"><b>Núna</b> Noregur, Danmörk, Svíþjóð, Finnland og Ísland</li>
                 <li data-wave="2"><b>Næst</b> Pólland og Þýskaland</li>
-                <li data-wave="3"><b>Síðan</b> nágrannalöndin</li>
+                <li data-wave="3"><b>Síðan</b> restin af Evrópu</li>
               </ul>
-              <p class="ms-hint">Veldu land til að þysja inn. Lituðu punktarnir eru dæmi um útboð, einn punktur fyrir hvert útboð.</p>
+              <p class="ms-hint">Veldu land til að þysja inn. Hver punktur er eitt dæmi um útboð, litaður eftir iðngrein.</p>
+              <ul class="tlist"></ul>
+              <p class="ms-empty empty" hidden>Ekkert passar við þá iðngrein ennþá.</p>
             </div>
             <div data-view="country" hidden tabindex="-1">
               <button type="button" class="back" data-back="overview"></button>
@@ -153,45 +167,6 @@
             <h3>Beint frá upprunanum</h3>
             <p>Allt kemur frá TED og landsbundnum auglýsingum og hver færsla vísar á frumritið. Lestu það áður en þú býður — við bendum þér alltaf þangað.</p>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="examples" class="alt">
-      <div class="wrap">
-        <h2>Innlit í eitt tölublað</h2>
-        <p class="note">Þetta eru dæmi. Raunverulegir tenglar á opinberu auglýsingarnar koma þegar listinn fer af stað — og frumritið er alltaf fyrst.</p>
-        <div class="filters">
-          <label>Land
-            <select id="f-country"><option value="">Öll lönd</option><option value="NO">Norge</option><option value="DK">Danmark</option><option value="SE">Sverige</option><option value="FI">Suomi</option><option value="IS">Ísland</option><option value="PL">Polska</option><option value="DE">Deutschland</option></select>
-          </label>
-          <label>Iðngrein
-            <select id="f-trade"><option value="">Allar iðngreinar</option><option value="electrical">Raflagnir</option><option value="plumbing">Pípulagnir</option><option value="hvac">Loftræsting</option><option value="painting">Málun</option><option value="building">Byggingar</option><option value="cleaning">Ræsting</option></select>
-          </label>
-          <p class="fcount" id="f-count" aria-live="polite"></p>
-        </div>
-        <div class="cards" id="tenders" data-src="/tenders.is.json" data-fit="Hentar vel" data-original="Sjá upprunalegu auglýsinguna" data-sample="Dæmi. Tengillinn á upprunalegu auglýsinguna fylgir með alvöru listanum." data-empty="Ekkert passar við síurnar ennþá." data-one="færsla" data-many="færslur" data-days-left="{n} d. eftir">
-          <article class="tcard">
-            <div class="tc-top"><span class="chip">Málun</span><span class="tc-cc">Noregur</span></div>
-            <h3>Málun, byggingar sveitarfélags</h3>
-            <p class="tc-where">Innlandet</p>
-            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>18 dagar eftir</span><span class="badge">undir €150.000</span></div>
-            <p class="fitbox"><b>Hentar vel</b> málningarfyrirtæki með 3–10 starfsmenn, sérstaklega ef þið takið nú þegar að ykkur opinber verkefni.</p>
-          </article>
-          <article class="tcard">
-            <div class="tc-top"><span class="chip">Loftræsting</span><span class="tc-cc">Pólland</span></div>
-            <h3>Þjónusta við loftræstikerfi, skólabyggingar</h3>
-            <p class="tc-where">Masóvía</p>
-            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>24 dagar eftir</span><span class="badge">Tegund: Rammasamningur</span></div>
-            <p class="fitbox"><b>Hentar vel</b> ef þú vilt jafna, endurtekna vinnu og ert nú þegar með þjónustubíla á ferðinni.</p>
-          </article>
-          <article class="tcard">
-            <div class="tc-top"><span class="chip">Raflagnir</span><span class="tc-cc">Þýskaland</span></div>
-            <h3>Endurnýjun rafmagnstaflna</h3>
-            <p class="tc-where">svæðisbundið</p>
-            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>12 dagar eftir</span><span class="badge">Umfang: Afmarkað</span></div>
-            <p class="fitbox"><b>Hentar vel</b> vaxandi fyrirtæki: skýrt umfang, stærra en eins manns fyrirtæki en minna en landsbundnar keðjur.</p>
-          </article>
         </div>
       </div>
     </section>

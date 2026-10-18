@@ -48,7 +48,7 @@
         <p class="lead">Mēs izlasām publiskos paziņojumus jūsu vietā un nosūtām tos, kas der. Pagaidām tas ir ar roku veidots saraksts e-pastā — vispirms Ziemeļvalstis, tad Polija, Vācija un kaimiņvalstis. Bez mākslīgā intelekta un pagaidām bez meklētāja.</p>
         <div class="actions">
           <a class="btn lg" href="#form">Saņemt parauga sarakstu</a>
-          <a class="btn ghost lg" href="#examples">Skatīt piemērus</a>
+          <a class="btn ghost lg" href="#coverage">Izpētīt karti</a>
         </div>
         <p class="hero-price"><span data-site="price">€29</span> / mēnesī · 14 dienu bezmaksas paraugs · <a href="#pricing">Skatīt cenas</a></p>
         <ul class="trust">
@@ -79,9 +79,21 @@
     <section id="coverage" class="alt">
       <div class="wrap">
         <p class="label">Kur meklējam</p>
-        <h2>Piecpadsmit valstis, solis pa solim</h2>
-        <p class="note">Noklikšķiniet uz valsts kartē, lai redzētu, kas mums tur ir, un izvēlieties iepirkumu, lai redzētu detaļas.</p>
-        <div class="mapstage" id="mapstage" data-level="overview" data-src="/countries.geojson" data-names='{"IS":"Ísland","NO":"Norge","SE":"Sverige","FI":"Suomi","DK":"Danmark","EE":"Eesti","LV":"Latvija","NL":"Nederland","DE":"Deutschland","PL":"Polska","LT":"Lietuva","BE":"België","CZ":"Česko","SK":"Slovensko","AT":"Österreich"}'
+        <h2>Visa Eiropa, solis pa solim</h2>
+        <p class="note">Noklikšķiniet uz valsts, lai redzētu, kas mums tur ir, vai filtrējiet pēc valsts un nozares. Izvēlieties iepirkumu, lai redzētu detaļas.</p>
+        <div class="filters mapfilters">
+          <label>Valsts
+            <select id="f-country"><option value="">Visa Eiropa</option>
+              <optgroup label="Tagad"><option value="NO">Norvēģija</option><option value="SE">Zviedrija</option><option value="DK">Dānija</option><option value="FI">Somija</option><option value="IS">Islande</option></optgroup>
+              <optgroup label="Tālāk"><option value="PL">Polija</option><option value="DE">Vācija</option></optgroup>
+              <optgroup label="Pēc tam"><option value="AL">Albānija</option><option value="AD">Andora</option><option value="GB">Apvienotā Karaliste</option><option value="AT">Austrija</option><option value="BE">Beļģija</option><option value="BA">Bosnija un Hercegovina</option><option value="BG">Bulgārija</option><option value="CZ">Čehija</option><option value="FR">Francija</option><option value="GR">Grieķija</option><option value="HR">Horvātija</option><option value="EE">Igaunija</option><option value="IT">Itālija</option><option value="IE">Īrija</option><option value="CY">Kipra</option><option value="XK">Kosova</option><option value="LV">Latvija</option><option value="LT">Lietuva</option><option value="LU">Luksemburga</option><option value="ME">Melnkalne</option><option value="MD">Moldova</option><option value="NL">Nīderlande</option><option value="PT">Portugāle</option><option value="RO">Rumānija</option><option value="RS">Serbija</option><option value="SK">Slovākija</option><option value="SI">Slovēnija</option><option value="ES">Spānija</option><option value="CH">Šveice</option><option value="UA">Ukraina</option><option value="HU">Ungārija</option><option value="MK">Ziemeļmaķedonija</option></optgroup></select>
+          </label>
+          <label>Nozare
+            <select id="f-trade"><option value="">Visas nozares</option><option value="electrical">Elektrība</option><option value="plumbing">Santehnika</option><option value="hvac">Ventilācija</option><option value="painting">Krāsošana</option><option value="building">Būvniecība</option><option value="cleaning">Uzkopšana</option></select>
+          </label>
+          <p class="fcount" id="f-count" aria-live="polite"></p>
+        </div>
+        <div class="mapstage" id="mapstage" data-level="overview" data-src="/countries.geojson" data-names='{"GB":"Apvienotā Karaliste","UA":"Ukraina","CH":"Šveice","SE":"Zviedrija","ES":"Spānija","SK":"Slovākija","SI":"Slovēnija","RS":"Serbija","RO":"Rumānija","PT":"Portugāle","PL":"Polija","NO":"Norvēģija","NL":"Nīderlande","ME":"Melnkalne","MD":"Moldova","MK":"Ziemeļmaķedonija","LU":"Luksemburga","LT":"Lietuva","LV":"Latvija","XK":"Kosova","IT":"Itālija","IE":"Īrija","IS":"Islande","HU":"Ungārija","GR":"Grieķija","DE":"Vācija","FR":"Francija","FI":"Somija","EE":"Igaunija","DK":"Dānija","CZ":"Čehija","CY":"Kipra","HR":"Horvātija","BG":"Bulgārija","BA":"Bosnija un Hercegovina","BE":"Beļģija","AT":"Austrija","AD":"Andora","AL":"Albānija"}' data-tenders="/tenders.lv.json" data-none-filter="Valstij “{country}” šobrīd nekas neder šai nozarei. Izmēģiniet citu nozari."
              data-back-all="Visas valstis" data-back-country="Atpakaļ uz: {country}" data-none="Valstij “{country}” pagaidām nav ierakstu. Sākam Ziemeļvalstīs un valstis pievienojam solis pa solim."
              data-open-page="Lasīt lapu vietējā valodā" data-deadline="Termiņš" data-days-left="atlikušas dienas: {n}" data-value="Vērtība / veids" data-where="Vieta"
              data-fit="Labi der" data-original="Skatīt oriģinālo paziņojumu" data-sample="Piemērs. Saite uz oriģinālo paziņojumu būs īstajā sarakstā." data-count-one="{n} ieraksts" data-count-many="ierakstu: {n}">
@@ -114,9 +126,11 @@
               <ul class="legend">
                 <li data-wave="1"><b>Tagad</b> Norvēģija, Dānija, Zviedrija, Somija un Islande</li>
                 <li data-wave="2"><b>Tālāk</b> Polija un Vācija</li>
-                <li data-wave="3"><b>Pēc tam</b> kaimiņvalstis</li>
+                <li data-wave="3"><b>Pēc tam</b> pārējā Eiropa</li>
               </ul>
-              <p class="ms-hint">Izvēlieties valsti, lai tuvinātu. Krāsainie punkti ir parauga iepirkumi, viens punkts uz iepirkumu.</p>
+              <p class="ms-hint">Izvēlieties valsti, lai tuvinātu. Katrs punkts ir viens parauga iepirkums, iekrāsots pēc nozares.</p>
+              <ul class="tlist"></ul>
+              <p class="ms-empty empty" hidden>Šai nozarei pagaidām nekas neder.</p>
             </div>
             <div data-view="country" hidden tabindex="-1">
               <button type="button" class="back" data-back="overview"></button>
@@ -153,45 +167,6 @@
             <h3>Tieši no avota</h3>
             <p>Viss nāk no TED un valstu paziņojumiem, un katrs ieraksts ved uz oriģinālu. Izlasiet to pirms piedāvājuma iesniegšanas — mēs vienmēr jūs tur nosūtīsim.</p>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="examples" class="alt">
-      <div class="wrap">
-        <h2>Ieskats vienā izdevumā</h2>
-        <p class="note">Tie ir tikai piemēri. Īstas saites uz oficiālajiem paziņojumiem parādīsies, kad saraksts sāks darboties — un oriģinālais paziņojums vienmēr ir pirmajā vietā.</p>
-        <div class="filters">
-          <label>Valsts
-            <select id="f-country"><option value="">Visas valstis</option><option value="NO">Norge</option><option value="DK">Danmark</option><option value="SE">Sverige</option><option value="FI">Suomi</option><option value="IS">Ísland</option><option value="PL">Polska</option><option value="DE">Deutschland</option></select>
-          </label>
-          <label>Nozare
-            <select id="f-trade"><option value="">Visas nozares</option><option value="electrical">Elektrība</option><option value="plumbing">Santehnika</option><option value="hvac">Ventilācija</option><option value="painting">Krāsošana</option><option value="building">Būvniecība</option><option value="cleaning">Uzkopšana</option></select>
-          </label>
-          <p class="fcount" id="f-count" aria-live="polite"></p>
-        </div>
-        <div class="cards" id="tenders" data-src="/tenders.lv.json" data-fit="Labi der" data-original="Skatīt oriģinālo paziņojumu" data-sample="Piemērs. Saite uz oriģinālo paziņojumu būs īstajā sarakstā." data-empty="Pēc šiem filtriem pagaidām nekas neder." data-one="{n} ieraksts" data-many="ierakstu: {n}" data-days-left="atlikušas dienas: {n}">
-          <article class="tcard">
-            <div class="tc-top"><span class="chip">Krāsošana</span><span class="tc-cc">Norvēģija</span></div>
-            <h3>Krāsošana, pašvaldības ēkas</h3>
-            <p class="tc-where">Innlandet</p>
-            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>atlikušas 18 dienas</span><span class="badge">zem 150 000 €</span></div>
-            <p class="fitbox"><b>Labi der</b> krāsošanas uzņēmumam ar 3–10 darbiniekiem, īpaši, ja jau strādājat ar publiskajiem pasūtītājiem.</p>
-          </article>
-          <article class="tcard">
-            <div class="tc-top"><span class="chip">Ventilācija</span><span class="tc-cc">Polija</span></div>
-            <h3>Ventilācijas apkope, skolu ēkas</h3>
-            <p class="tc-where">Mazovija</p>
-            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>atlikušas 24 dienas</span><span class="badge">Veids: Vispārīgā vienošanās</span></div>
-            <p class="fitbox"><b>Labi der</b> ja vēlaties stabilu, atkārtotu darbu un jums jau ir servisa automašīnas.</p>
-          </article>
-          <article class="tcard">
-            <div class="tc-top"><span class="chip">Elektrība</span><span class="tc-cc">Vācija</span></div>
-            <h3>Sadalņu nomaiņa</h3>
-            <p class="tc-where">reģionāls</p>
-            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>atlikušas 12 dienas</span><span class="badge">Apjoms: Skaidri norobežots</span></div>
-            <p class="fitbox"><b>Labi der</b> augošam uzņēmumam: skaidrs apjoms, lielāks nekā viena cilvēka uzņēmumam, bet mazāks nekā valsts mēroga tīkliem.</p>
-          </article>
         </div>
       </div>
     </section>

@@ -48,7 +48,7 @@
         <p class="lead">Czytamy ogłoszenia publiczne za Ciebie i wysyłamy te, które pasują. Na razie to ręcznie redagowana lista e-mailem — najpierw kraje nordyckie, potem Polska, Niemcy i sąsiedzi. Bez AI i jeszcze bez wyszukiwarki.</p>
         <div class="actions">
           <a class="btn lg" href="#form">Odbierz listę próbną</a>
-          <a class="btn ghost lg" href="#examples">Zobacz przykłady</a>
+          <a class="btn ghost lg" href="#coverage">Zobacz mapę</a>
         </div>
         <p class="hero-price"><span data-site="price">€29</span> / miesiąc · 14 dni darmowej próbki · <a href="#pricing">Zobacz cennik</a></p>
         <ul class="trust">
@@ -79,9 +79,21 @@
     <section id="coverage" class="alt">
       <div class="wrap">
         <p class="label">Gdzie szukamy</p>
-        <h2>Piętnaście krajów, krok po kroku</h2>
-        <p class="note">Kliknij kraj na mapie, aby zobaczyć, co tam mamy, a potem wybierz przetarg, by poznać szczegóły.</p>
-        <div class="mapstage" id="mapstage" data-level="overview" data-src="/countries.geojson" data-names='{"IS":"Ísland","NO":"Norge","SE":"Sverige","FI":"Suomi","DK":"Danmark","EE":"Eesti","LV":"Latvija","NL":"Nederland","DE":"Deutschland","PL":"Polska","LT":"Lietuva","BE":"België","CZ":"Česko","SK":"Slovensko","AT":"Österreich"}'
+        <h2>Cała Europa, krok po kroku</h2>
+        <p class="note">Kliknij kraj, aby zobaczyć, co tam mamy, albo filtruj według kraju i branży. Wybierz przetarg, by poznać szczegóły.</p>
+        <div class="filters mapfilters">
+          <label>Kraj
+            <select id="f-country"><option value="">Cała Europa</option>
+              <optgroup label="Teraz"><option value="NO">Norwegia</option><option value="SE">Szwecja</option><option value="DK">Dania</option><option value="FI">Finlandia</option><option value="IS">Islandia</option></optgroup>
+              <optgroup label="Dalej"><option value="PL">Polska</option><option value="DE">Niemcy</option></optgroup>
+              <optgroup label="Potem"><option value="AL">Albania</option><option value="AD">Andora</option><option value="AT">Austria</option><option value="BE">Belgia</option><option value="BA">Bośnia i Hercegowina</option><option value="BG">Bułgaria</option><option value="HR">Chorwacja</option><option value="CY">Cypr</option><option value="ME">Czarnogóra</option><option value="CZ">Czechy</option><option value="EE">Estonia</option><option value="FR">Francja</option><option value="GR">Grecja</option><option value="ES">Hiszpania</option><option value="NL">Holandia</option><option value="IE">Irlandia</option><option value="XK">Kosowo</option><option value="LT">Litwa</option><option value="LU">Luksemburg</option><option value="LV">Łotwa</option><option value="MK">Macedonia Północna</option><option value="MD">Mołdawia</option><option value="PT">Portugalia</option><option value="RO">Rumunia</option><option value="RS">Serbia</option><option value="SK">Słowacja</option><option value="SI">Słowenia</option><option value="CH">Szwajcaria</option><option value="UA">Ukraina</option><option value="HU">Węgry</option><option value="GB">Wielka Brytania</option><option value="IT">Włochy</option></optgroup></select>
+          </label>
+          <label>Branża
+            <select id="f-trade"><option value="">Wszystkie branże</option><option value="electrical">Elektryka</option><option value="plumbing">Hydraulika</option><option value="hvac">Wentylacja</option><option value="painting">Malowanie</option><option value="building">Budownictwo</option><option value="cleaning">Sprzątanie</option></select>
+          </label>
+          <p class="fcount" id="f-count" aria-live="polite"></p>
+        </div>
+        <div class="mapstage" id="mapstage" data-level="overview" data-src="/countries.geojson" data-names='{"GB":"Wielka Brytania","UA":"Ukraina","CH":"Szwajcaria","SE":"Szwecja","ES":"Hiszpania","SK":"Słowacja","SI":"Słowenia","RS":"Serbia","RO":"Rumunia","PT":"Portugalia","PL":"Polska","NO":"Norwegia","NL":"Holandia","ME":"Czarnogóra","MD":"Mołdawia","MK":"Macedonia Północna","LU":"Luksemburg","LT":"Litwa","LV":"Łotwa","XK":"Kosowo","IT":"Włochy","IE":"Irlandia","IS":"Islandia","HU":"Węgry","GR":"Grecja","DE":"Niemcy","FR":"Francja","FI":"Finlandia","EE":"Estonia","DK":"Dania","CZ":"Czechy","CY":"Cypr","HR":"Chorwacja","BG":"Bułgaria","BA":"Bośnia i Hercegowina","BE":"Belgia","AT":"Austria","AD":"Andora","AL":"Albania"}' data-tenders="/tenders.pl.json" data-none-filter="Nic w kraju {country} nie pasuje teraz do tej branży. Spróbuj innej branży."
              data-back-all="Wszystkie kraje" data-back-country="Wróć: {country}" data-none="Brak wpisów dla: {country}. Zaczynamy w krajach nordyckich i dodajemy kolejne kraje krok po kroku."
              data-open-page="Przeczytaj stronę w języku lokalnym" data-deadline="Termin" data-days-left="pozostało dni: {n}" data-value="Wartość / rodzaj" data-where="Miejsce"
              data-fit="Dobre dopasowanie" data-original="Zobacz oryginalne ogłoszenie" data-sample="Przykład. Link do oryginalnego ogłoszenia pojawi się w prawdziwej liście." data-count-one="{n} wpis" data-count-many="wpisy: {n}">
@@ -114,9 +126,11 @@
               <ul class="legend">
                 <li data-wave="1"><b>Teraz</b> Norwegia, Dania, Szwecja, Finlandia i Islandia</li>
                 <li data-wave="2"><b>Dalej</b> Polska i Niemcy</li>
-                <li data-wave="3"><b>Potem</b> kraje sąsiednie</li>
+                <li data-wave="3"><b>Potem</b> reszta Europy</li>
               </ul>
-              <p class="ms-hint">Wybierz kraj, aby przybliżyć mapę. Kolorowe punkty to przykładowe przetargi, jeden punkt na przetarg.</p>
+              <p class="ms-hint">Wybierz kraj, aby przybliżyć mapę. Każdy punkt to jeden przykładowy przetarg, oznaczony kolorem branży.</p>
+              <ul class="tlist"></ul>
+              <p class="ms-empty empty" hidden>Nic jeszcze nie pasuje do tej branży.</p>
             </div>
             <div data-view="country" hidden tabindex="-1">
               <button type="button" class="back" data-back="overview"></button>
@@ -153,45 +167,6 @@
             <h3>Prosto ze źródła</h3>
             <p>Wszystko pochodzi z TED i krajowych ogłoszeń, a każdy wpis prowadzi do oryginału. Przeczytaj go przed złożeniem oferty — zawsze Cię tam odeślemy.</p>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="examples" class="alt">
-      <div class="wrap">
-        <h2>Zajrzyj do jednego wydania</h2>
-        <p class="note">To tylko przykłady. Prawdziwe linki do oficjalnych ogłoszeń pojawią się wraz ze startem listy — a oryginalne ogłoszenie zawsze jest na pierwszym miejscu.</p>
-        <div class="filters">
-          <label>Kraj
-            <select id="f-country"><option value="">Wszystkie kraje</option><option value="NO">Norge</option><option value="DK">Danmark</option><option value="SE">Sverige</option><option value="FI">Suomi</option><option value="IS">Ísland</option><option value="PL">Polska</option><option value="DE">Deutschland</option></select>
-          </label>
-          <label>Branża
-            <select id="f-trade"><option value="">Wszystkie branże</option><option value="electrical">Elektryka</option><option value="plumbing">Hydraulika</option><option value="hvac">Wentylacja</option><option value="painting">Malowanie</option><option value="building">Budownictwo</option><option value="cleaning">Sprzątanie</option></select>
-          </label>
-          <p class="fcount" id="f-count" aria-live="polite"></p>
-        </div>
-        <div class="cards" id="tenders" data-src="/tenders.pl.json" data-fit="Dobre dopasowanie" data-original="Zobacz oryginalne ogłoszenie" data-sample="Przykład. Link do oryginalnego ogłoszenia pojawi się w prawdziwej liście." data-empty="Nic jeszcze nie pasuje do filtrów." data-one="{n} wpis" data-many="wpisy: {n}" data-days-left="pozostało dni: {n}">
-          <article class="tcard">
-            <div class="tc-top"><span class="chip">Malowanie</span><span class="tc-cc">Norwegia</span></div>
-            <h3>Malowanie, budynki komunalne</h3>
-            <p class="tc-where">Innlandet</p>
-            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>18 dni do terminu</span><span class="badge">poniżej 150 tys. €</span></div>
-            <p class="fitbox"><b>Dobre dopasowanie</b> dla firmy malarskiej zatrudniającej 3–10 osób, zwłaszcza jeśli macie już doświadczenie w zamówieniach publicznych.</p>
-          </article>
-          <article class="tcard">
-            <div class="tc-top"><span class="chip">Wentylacja</span><span class="tc-cc">Polska</span></div>
-            <h3>Serwis wentylacji, budynki szkolne</h3>
-            <p class="tc-where">Mazowsze</p>
-            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>24 dni do terminu</span><span class="badge">Rodzaj: Umowa ramowa</span></div>
-            <p class="fitbox"><b>Dobre dopasowanie</b> jeśli szukasz stałej, powtarzalnej pracy i masz już busy serwisowe.</p>
-          </article>
-          <article class="tcard">
-            <div class="tc-top"><span class="chip">Elektryka</span><span class="tc-cc">Niemcy</span></div>
-            <h3>Wymiana rozdzielnic elektrycznych</h3>
-            <p class="tc-where">regionalnie</p>
-            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>12 dni do terminu</span><span class="badge">Zakres: Jasno określony</span></div>
-            <p class="fitbox"><b>Dobre dopasowanie</b> dla rozwijającej się firmy: czytelny zakres, więcej niż dla jednoosobowej działalności, a mniej niż dla ogólnokrajowych sieci.</p>
-          </article>
         </div>
       </div>
     </section>

@@ -322,3 +322,7 @@ footer .wrap { align-items: flex-start; }
 @media (max-width: 760px) { .plan-main { padding: 22px; box-shadow: 4px 4px 0 var(--line); } .plan-price { font-size: 48px; } }
 
 .foot-company { flex-basis: 100%; font-size: 12px; }
+
+.mapfilters { margin: 0 0 18px; }
+.ms-empty { margin: 12px 0 0; }
+.mapside .tlist { margin-top: 14px; }

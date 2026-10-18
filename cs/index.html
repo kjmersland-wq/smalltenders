@@ -48,7 +48,7 @@
         <p class="lead">Veřejná oznámení čteme za vás a posíláme vám ta, která se hodí. Zatím jde o ručně sestavený seznam e-mailem — nejdřív Sever, pak Polsko, Německo a sousední země. Žádná umělá inteligence a zatím ani vyhledávač.</p>
         <div class="actions">
           <a class="btn lg" href="#form">Získat ukázkový seznam</a>
-          <a class="btn ghost lg" href="#examples">Prohlédnout ukázky</a>
+          <a class="btn ghost lg" href="#coverage">Prozkoumat mapu</a>
         </div>
         <p class="hero-price"><span data-site="price">€29</span> / měsíc · 14 dní bezplatné ukázky · <a href="#pricing">Zobrazit ceník</a></p>
         <ul class="trust">
@@ -79,9 +79,21 @@
     <section id="coverage" class="alt">
       <div class="wrap">
         <p class="label">Kde hledáme</p>
-        <h2>Patnáct zemí, krok za krokem</h2>
-        <p class="note">Klikněte na zemi na mapě, abyste viděli, co tam máme, a potom vyberte zakázku pro podrobnosti.</p>
-        <div class="mapstage" id="mapstage" data-level="overview" data-src="/countries.geojson" data-names='{"IS":"Ísland","NO":"Norge","SE":"Sverige","FI":"Suomi","DK":"Danmark","EE":"Eesti","LV":"Latvija","NL":"Nederland","DE":"Deutschland","PL":"Polska","LT":"Lietuva","BE":"België","CZ":"Česko","SK":"Slovensko","AT":"Österreich"}'
+        <h2>Celá Evropa, krok za krokem</h2>
+        <p class="note">Klikněte na zemi, abyste viděli, co tam máme, nebo filtrujte podle země a oboru. Vyberte zakázku pro podrobnosti.</p>
+        <div class="filters mapfilters">
+          <label>Země
+            <select id="f-country"><option value="">Celá Evropa</option>
+              <optgroup label="Nyní"><option value="NO">Norsko</option><option value="SE">Švédsko</option><option value="DK">Dánsko</option><option value="FI">Finsko</option><option value="IS">Island</option></optgroup>
+              <optgroup label="Dále"><option value="PL">Polsko</option><option value="DE">Německo</option></optgroup>
+              <optgroup label="Poté"><option value="AL">Albánie</option><option value="AD">Andorra</option><option value="BE">Belgie</option><option value="BA">Bosna a Hercegovina</option><option value="BG">Bulharsko</option><option value="ME">Černá Hora</option><option value="CZ">Česko</option><option value="EE">Estonsko</option><option value="FR">Francie</option><option value="HR">Chorvatsko</option><option value="IE">Irsko</option><option value="IT">Itálie</option><option value="XK">Kosovo</option><option value="CY">Kypr</option><option value="LT">Litva</option><option value="LV">Lotyšsko</option><option value="LU">Lucembursko</option><option value="HU">Maďarsko</option><option value="MD">Moldavsko</option><option value="NL">Nizozemsko</option><option value="PT">Portugalsko</option><option value="AT">Rakousko</option><option value="RO">Rumunsko</option><option value="GR">Řecko</option><option value="MK">Severní Makedonie</option><option value="SK">Slovensko</option><option value="SI">Slovinsko</option><option value="GB">Spojené království</option><option value="RS">Srbsko</option><option value="ES">Španělsko</option><option value="CH">Švýcarsko</option><option value="UA">Ukrajina</option></optgroup></select>
+          </label>
+          <label>Obor
+            <select id="f-trade"><option value="">Všechny obory</option><option value="electrical">Elektro</option><option value="plumbing">Instalatérství</option><option value="hvac">Vzduchotechnika</option><option value="painting">Malování</option><option value="building">Stavba</option><option value="cleaning">Úklid</option></select>
+          </label>
+          <p class="fcount" id="f-count" aria-live="polite"></p>
+        </div>
+        <div class="mapstage" id="mapstage" data-level="overview" data-src="/countries.geojson" data-names='{"GB":"Spojené království","UA":"Ukrajina","CH":"Švýcarsko","SE":"Švédsko","ES":"Španělsko","SK":"Slovensko","SI":"Slovinsko","RS":"Srbsko","RO":"Rumunsko","PT":"Portugalsko","PL":"Polsko","NO":"Norsko","NL":"Nizozemsko","ME":"Černá Hora","MD":"Moldavsko","MK":"Severní Makedonie","LU":"Lucembursko","LT":"Litva","LV":"Lotyšsko","XK":"Kosovo","IT":"Itálie","IE":"Irsko","IS":"Island","HU":"Maďarsko","GR":"Řecko","DE":"Německo","FR":"Francie","FI":"Finsko","EE":"Estonsko","DK":"Dánsko","CZ":"Česko","CY":"Kypr","HR":"Chorvatsko","BG":"Bulharsko","BA":"Bosna a Hercegovina","BE":"Belgie","AT":"Rakousko","AD":"Andorra","AL":"Albánie"}' data-tenders="/tenders.cs.json" data-none-filter="V zemi {country} teď nic neodpovídá tomuto oboru. Zkuste jiný obor."
              data-back-all="Všechny země" data-back-country="Zpět: {country}" data-none="Pro zemi {country} zatím nejsou žádné položky. Začínáme na Severu a země přidáváme krok za krokem."
              data-open-page="Číst stránku v místním jazyce" data-deadline="Termín" data-days-left="zbývá dní: {n}" data-value="Hodnota / druh" data-where="Místo"
              data-fit="Dobrá shoda" data-original="Zobrazit původní oznámení" data-sample="Ukázka. Odkaz na původní oznámení přibude se skutečným seznamem." data-count-one="{n} položka" data-count-many="položky: {n}">
@@ -114,9 +126,11 @@
               <ul class="legend">
                 <li data-wave="1"><b>Nyní</b> Norsko, Dánsko, Švédsko, Finsko a Island</li>
                 <li data-wave="2"><b>Dále</b> Polsko a Německo</li>
-                <li data-wave="3"><b>Poté</b> sousední země</li>
+                <li data-wave="3"><b>Poté</b> zbytek Evropy</li>
               </ul>
-              <p class="ms-hint">Vyberte zemi a přiblížíte ji. Barevné body jsou ukázkové zakázky, jeden bod na zakázku.</p>
+              <p class="ms-hint">Vyberte zemi a přiblížíte ji. Každý bod je jedna ukázková zakázka, obarvená podle oboru.</p>
+              <ul class="tlist"></ul>
+              <p class="ms-empty empty" hidden>Tomuto oboru zatím nic neodpovídá.</p>
             </div>
             <div data-view="country" hidden tabindex="-1">
               <button type="button" class="back" data-back="overview"></button>
@@ -153,45 +167,6 @@
             <h3>Přímo od zdroje</h3>
             <p>Vše pochází z TED a národních oznámení a každá položka odkazuje na originál. Přečtěte si ho, než podáte nabídku — vždy vás tam nasměrujeme.</p>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="examples" class="alt">
-      <div class="wrap">
-        <h2>Nahlédněte do jednoho vydání</h2>
-        <p class="note">Jsou to jen ukázky. Skutečné odkazy na oficiální oznámení přibudou, až seznam odstartuje — a původní oznámení je vždy na prvním místě.</p>
-        <div class="filters">
-          <label>Země
-            <select id="f-country"><option value="">Všechny země</option><option value="NO">Norge</option><option value="DK">Danmark</option><option value="SE">Sverige</option><option value="FI">Suomi</option><option value="IS">Ísland</option><option value="PL">Polska</option><option value="DE">Deutschland</option></select>
-          </label>
-          <label>Obor
-            <select id="f-trade"><option value="">Všechny obory</option><option value="electrical">Elektro</option><option value="plumbing">Instalatérství</option><option value="hvac">Vzduchotechnika</option><option value="painting">Malování</option><option value="building">Stavba</option><option value="cleaning">Úklid</option></select>
-          </label>
-          <p class="fcount" id="f-count" aria-live="polite"></p>
-        </div>
-        <div class="cards" id="tenders" data-src="/tenders.cs.json" data-fit="Dobrá shoda" data-original="Zobrazit původní oznámení" data-sample="Ukázka. Odkaz na původní oznámení přibude se skutečným seznamem." data-empty="Filtrům zatím nic neodpovídá." data-one="{n} položka" data-many="položky: {n}" data-days-left="zbývá dní: {n}">
-          <article class="tcard">
-            <div class="tc-top"><span class="chip">Malování</span><span class="tc-cc">Norsko</span></div>
-            <h3>Malování, obecní budovy</h3>
-            <p class="tc-where">Innlandet</p>
-            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>zbývá 18 dní</span><span class="badge">pod 150 000 €</span></div>
-            <p class="fitbox"><b>Dobrá shoda</b> pro malířskou firmu se 3–10 zaměstnanci, zvlášť pokud už děláte veřejné zakázky.</p>
-          </article>
-          <article class="tcard">
-            <div class="tc-top"><span class="chip">Vzduchotechnika</span><span class="tc-cc">Polsko</span></div>
-            <h3>Servis vzduchotechniky, školní budovy</h3>
-            <p class="tc-where">Mazovsko</p>
-            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>zbývá 24 dní</span><span class="badge">Druh: Rámcová smlouva</span></div>
-            <p class="fitbox"><b>Dobrá shoda</b> pokud chcete stálou, opakující se práci a už máte servisní vozy.</p>
-          </article>
-          <article class="tcard">
-            <div class="tc-top"><span class="chip">Elektro</span><span class="tc-cc">Německo</span></div>
-            <h3>Výměna rozvaděčů</h3>
-            <p class="tc-where">regionální</p>
-            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>zbývá 12 dní</span><span class="badge">Rozsah: Jasně vymezený</span></div>
-            <p class="fitbox"><b>Dobrá shoda</b> pro rostoucí firmu: jasný rozsah, větší než pro jednoho živnostníka, menší než pro celostátní řetězce.</p>
-          </article>
         </div>
       </div>
     </section>
