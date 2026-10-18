@@ -1,5 +1,5 @@
 {
- "_note": "SAMPLE entries only. Real entries are picked by hand from TED and national portals. 'deadlineDays' is for samples; real entries use an ISO 'deadline' date and a 'link' to the original notice. 'lat'/'lng' are approximate (city or region centre). 'publishedDaysAgo' is for samples; real entries use an ISO 'published' date.",
+ "_note": "SAMPLE entries only. Real entries are picked by hand from TED and national portals. 'deadlineDays' is for samples; real entries use an ISO 'deadline' date and a 'link' to the original notice. 'lat'/'lng' are approximate (city or region centre). 'publishedDaysAgo' is for samples; real entries use an ISO 'published' date. 'link' is the URL of the original notice. While 'linkPlaceholder' is true it is only the portal's address: replace it with the notice URL and remove the flag.",
  "tenders": [
   {
    "id": "s1",
@@ -17,8 +17,9 @@
    "value": "under €150k",
    "source": "Doffin",
    "fit": "for a painting firm with 3–10 people, especially if you already do public work.",
-   "link": null,
-   "publishedDaysAgo": 15
+   "link": "https://www.doffin.no",
+   "publishedDaysAgo": 15,
+   "linkPlaceholder": true
   },
   {
    "id": "n2",
@@ -36,8 +37,9 @@
    "value": "under €180k",
    "source": "Doffin",
    "fit": "for an electrical firm that likes school jobs planned around the holidays.",
-   "link": null,
-   "publishedDaysAgo": 16
+   "link": "https://www.doffin.no",
+   "publishedDaysAgo": 16,
+   "linkPlaceholder": true
   },
   {
    "id": "n3",
@@ -55,8 +57,9 @@
    "value": "around €140k",
    "source": "Doffin",
    "fit": "for a building firm used to northern weather and tight seasonal windows.",
-   "link": null,
-   "publishedDaysAgo": 26
+   "link": "https://www.doffin.no",
+   "publishedDaysAgo": 26,
+   "linkPlaceholder": true
   },
   {
    "id": "n4",
@@ -74,8 +77,9 @@
    "value": "Framework agreement",
    "source": "Doffin",
    "fit": "for a service firm that wants steady work with a public buyer.",
-   "link": null,
-   "publishedDaysAgo": 29
+   "link": "https://www.doffin.no",
+   "publishedDaysAgo": 29,
+   "linkPlaceholder": true
   },
   {
    "id": "s4",
@@ -93,8 +97,9 @@
    "value": "around €120k a year",
    "source": "TED",
    "fit": "for a cleaning firm that wants a steady local contract and can staff early mornings.",
-   "link": null,
-   "publishedDaysAgo": 18
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 18,
+   "linkPlaceholder": true
   },
   {
    "id": "e2",
@@ -112,8 +117,9 @@
    "value": "under €200k",
    "source": "TED",
    "fit": "for a plumbing firm with two or three crews and room to plan ahead.",
-   "link": null,
-   "publishedDaysAgo": 1
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 1,
+   "linkPlaceholder": true
   },
   {
    "id": "e3",
@@ -131,8 +137,9 @@
    "value": "around €110k",
    "source": "TED",
    "fit": "for a painting firm with scaffolding of its own.",
-   "link": null,
-   "publishedDaysAgo": 24
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 24,
+   "linkPlaceholder": true
   },
   {
    "id": "e4",
@@ -150,8 +157,9 @@
    "value": "under €90k",
    "source": "TED",
    "fit": "for a small electrical firm that likes a clearly defined job.",
-   "link": null,
-   "publishedDaysAgo": 14
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 14,
+   "linkPlaceholder": true
   },
   {
    "id": "s5",
@@ -169,8 +177,9 @@
    "value": "under €200k",
    "source": "TED",
    "fit": "for a plumbing firm with a small team, especially if you know the area.",
-   "link": null,
-   "publishedDaysAgo": 8
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 8,
+   "linkPlaceholder": true
   },
   {
    "id": "d2",
@@ -188,8 +197,9 @@
    "value": "Framework agreement",
    "source": "TED",
    "fit": "for an HVAC firm that wants recurring work close to home.",
-   "link": null,
-   "publishedDaysAgo": 28
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 28,
+   "linkPlaceholder": true
   },
   {
    "id": "d3",
@@ -207,8 +217,9 @@
    "value": "around €160k",
    "source": "TED",
    "fit": "for a carpentry firm that does careful work in listed buildings.",
-   "link": null,
-   "publishedDaysAgo": 5
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 5,
+   "linkPlaceholder": true
   },
   {
    "id": "d4",
@@ -226,8 +237,9 @@
    "value": "around €80k a year",
    "source": "TED",
    "fit": "for a cleaning firm with a local team and flexible hours.",
-   "link": null,
-   "publishedDaysAgo": 1
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 1,
+   "linkPlaceholder": true
   },
   {
    "id": "s6",
@@ -245,8 +257,9 @@
    "value": "around €180k",
    "source": "Hilma",
    "fit": "for a building firm that likes clearly defined repair jobs with a fixed deadline.",
-   "link": null,
-   "publishedDaysAgo": 5
+   "link": "https://www.hankintailmoitukset.fi",
+   "publishedDaysAgo": 5,
+   "linkPlaceholder": true
   },
   {
    "id": "f2",
@@ -264,8 +277,9 @@
    "value": "under €170k",
    "source": "Hilma",
    "fit": "for an HVAC firm comfortable with cold-climate systems.",
-   "link": null,
-   "publishedDaysAgo": 31
+   "link": "https://www.hankintailmoitukset.fi",
+   "publishedDaysAgo": 31,
+   "linkPlaceholder": true
   },
   {
    "id": "f3",
@@ -283,8 +297,9 @@
    "value": "under €100k",
    "source": "Hilma",
    "fit": "for a painting firm that can start quickly and work flat by flat.",
-   "link": null,
-   "publishedDaysAgo": 8
+   "link": "https://www.hankintailmoitukset.fi",
+   "publishedDaysAgo": 8,
+   "linkPlaceholder": true
   },
   {
    "id": "f4",
@@ -302,8 +317,9 @@
    "value": "around €190k",
    "source": "Hilma",
    "fit": "for an electrical firm with experience in public buildings.",
-   "link": null,
-   "publishedDaysAgo": 11
+   "link": "https://www.hankintailmoitukset.fi",
+   "publishedDaysAgo": 11,
+   "linkPlaceholder": true
   },
   {
    "id": "s7",
@@ -321,8 +337,9 @@
    "value": "under €100k",
    "source": "TED",
    "fit": "for a small electrical firm that likes well-defined jobs close to home.",
-   "link": null,
-   "publishedDaysAgo": 28
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 28,
+   "linkPlaceholder": true
   },
   {
    "id": "i2",
@@ -340,8 +357,9 @@
    "value": "under €120k",
    "source": "TED",
    "fit": "for a plumbing firm used to geothermal systems.",
-   "link": null,
-   "publishedDaysAgo": 10
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 10,
+   "linkPlaceholder": true
   },
   {
    "id": "s2",
@@ -359,8 +377,9 @@
    "value": "Framework agreement",
    "source": "TED",
    "fit": "if you want steady, recurring work and already have service vans on the road.",
-   "link": null,
-   "publishedDaysAgo": 12
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 12,
+   "linkPlaceholder": true
   },
   {
    "id": "p2",
@@ -378,8 +397,9 @@
    "value": "under €110k",
    "source": "TED",
    "fit": "for a painting firm that can work around term time.",
-   "link": null,
-   "publishedDaysAgo": 32
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 32,
+   "linkPlaceholder": true
   },
   {
    "id": "p3",
@@ -397,8 +417,9 @@
    "value": "under €130k",
    "source": "TED",
    "fit": "for an electrical firm with a small crew and a clear scope.",
-   "link": null,
-   "publishedDaysAgo": 9
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 9,
+   "linkPlaceholder": true
   },
   {
    "id": "p4",
@@ -416,8 +437,9 @@
    "value": "around €90k a year",
    "source": "TED",
    "fit": "for a cleaning firm that wants a stable city contract.",
-   "link": null,
-   "publishedDaysAgo": 19
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 19,
+   "linkPlaceholder": true
   },
   {
    "id": "s3",
@@ -435,8 +457,9 @@
    "value": "Bounded scope",
    "source": "TED",
    "fit": "for a growing firm: a clear scope, bigger than a one-person shop, smaller than the national chains.",
-   "link": null,
-   "publishedDaysAgo": 2
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 2,
+   "linkPlaceholder": true
   },
   {
    "id": "g2",
@@ -454,8 +477,9 @@
    "value": "under €190k",
    "source": "TED",
    "fit": "for a plumbing firm that likes repeatable jobs in several flats.",
-   "link": null,
-   "publishedDaysAgo": 18
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 18,
+   "linkPlaceholder": true
   },
   {
    "id": "g3",
@@ -473,8 +497,9 @@
    "value": "around €170k",
    "source": "TED",
    "fit": "for a roofing and building firm with its own crew.",
-   "link": null,
-   "publishedDaysAgo": 8
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 8,
+   "linkPlaceholder": true
   },
   {
    "id": "g4",
@@ -492,8 +517,9 @@
    "value": "Framework agreement",
    "source": "TED",
    "fit": "for an HVAC firm that wants recurring service work.",
-   "link": null,
-   "publishedDaysAgo": 5
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 5,
+   "linkPlaceholder": true
   },
   {
    "id": "x1",
@@ -511,8 +537,9 @@
    "value": "around €100k a year",
    "source": "TED",
    "fit": "for a cleaning firm with a local team.",
-   "link": null,
-   "publishedDaysAgo": 10
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 10,
+   "linkPlaceholder": true
   },
   {
    "id": "x2",
@@ -530,8 +557,9 @@
    "value": "under €120k",
    "source": "TED",
    "fit": "for a painting firm used to humid interiors.",
-   "link": null,
-   "publishedDaysAgo": 20
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 20,
+   "linkPlaceholder": true
   },
   {
    "id": "x3",
@@ -549,8 +577,9 @@
    "value": "under €200k",
    "source": "TED",
    "fit": "for an HVAC firm with experience in public buildings.",
-   "link": null,
-   "publishedDaysAgo": 30
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 30,
+   "linkPlaceholder": true
   },
   {
    "id": "x4",
@@ -568,8 +597,9 @@
    "value": "under €150k",
    "source": "TED",
    "fit": "for a building firm that likes a clearly defined facade job.",
-   "link": null,
-   "publishedDaysAgo": 7
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 7,
+   "linkPlaceholder": true
   },
   {
    "id": "x5",
@@ -587,8 +617,9 @@
    "value": "under €110k",
    "source": "TED",
    "fit": "for an electrical firm with a small, experienced team.",
-   "link": null,
-   "publishedDaysAgo": 17
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 17,
+   "linkPlaceholder": true
   },
   {
    "id": "x6",
@@ -606,8 +637,9 @@
    "value": "under €140k",
    "source": "TED",
    "fit": "for a plumbing firm that can work during the school break.",
-   "link": null,
-   "publishedDaysAgo": 27
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 27,
+   "linkPlaceholder": true
   },
   {
    "id": "x7",
@@ -625,8 +657,9 @@
    "value": "under €60k",
    "source": "TED",
    "fit": "for a small painting firm that likes jobs close to home.",
-   "link": null,
-   "publishedDaysAgo": 4
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 4,
+   "linkPlaceholder": true
   },
   {
    "id": "x8",
@@ -644,8 +677,9 @@
    "value": "under €90k",
    "source": "TED",
    "fit": "for an electrical firm that likes careful work in older buildings.",
-   "link": null,
-   "publishedDaysAgo": 19
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 19,
+   "linkPlaceholder": true
   },
   {
    "id": "x9",
@@ -663,8 +697,9 @@
    "value": "Framework agreement",
    "source": "TED",
    "fit": "for an HVAC firm that wants steady maintenance work.",
-   "link": null,
-   "publishedDaysAgo": 29
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 29,
+   "linkPlaceholder": true
   },
   {
    "id": "y1",
@@ -682,8 +717,9 @@
    "value": "around €130k a year",
    "source": "TED",
    "fit": "for a cleaning firm that can cover evenings and weekends.",
-   "link": null,
-   "publishedDaysAgo": 0
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 0,
+   "linkPlaceholder": true
   },
   {
    "id": "y2",
@@ -701,8 +737,9 @@
    "value": "under €180k",
    "source": "TED",
    "fit": "for a building firm with a small mason crew.",
-   "link": null,
-   "publishedDaysAgo": 23
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 23,
+   "linkPlaceholder": true
   },
   {
    "id": "y3",
@@ -720,8 +757,9 @@
    "value": "around €95k",
    "source": "TED",
    "fit": "for a painting firm used to coastal weather.",
-   "link": null,
-   "publishedDaysAgo": 13
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 13,
+   "linkPlaceholder": true
   },
   {
    "id": "y4",
@@ -739,8 +777,9 @@
    "value": "under €100k",
    "source": "TED",
    "fit": "for a plumbing firm that likes a tidy, single-site job.",
-   "link": null,
-   "publishedDaysAgo": 17
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 17,
+   "linkPlaceholder": true
   },
   {
    "id": "r1",
@@ -758,8 +797,9 @@
    "value": "under €170k",
    "source": "Doffin",
    "fit": "for a roofing firm used to felt and bitumen work on flat roofs.",
-   "link": null,
-   "publishedDaysAgo": 22
+   "link": "https://www.doffin.no",
+   "publishedDaysAgo": 22,
+   "linkPlaceholder": true
   },
   {
    "id": "r2",
@@ -777,8 +817,9 @@
    "value": "around €130k",
    "source": "TED",
    "fit": "for a roofer with a small crew and a clear flat-roof scope.",
-   "link": null,
-   "publishedDaysAgo": 25
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 25,
+   "linkPlaceholder": true
   },
   {
    "id": "fl1",
@@ -796,8 +837,9 @@
    "value": "under €90k",
    "source": "TED",
    "fit": "for a flooring firm that can work around opening hours.",
-   "link": null,
-   "publishedDaysAgo": 2
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 2,
+   "linkPlaceholder": true
   },
   {
    "id": "fl2",
@@ -815,8 +857,9 @@
    "value": "under €120k",
    "source": "Hilma",
    "fit": "for a flooring firm that does careful work in care homes.",
-   "link": null,
-   "publishedDaysAgo": 12
+   "link": "https://www.hankintailmoitukset.fi",
+   "publishedDaysAgo": 12,
+   "linkPlaceholder": true
   },
   {
    "id": "wd1",
@@ -834,8 +877,9 @@
    "value": "around €150k",
    "source": "TED",
    "fit": "for a joinery firm that measures, supplies and fits.",
-   "link": null,
-   "publishedDaysAgo": 10
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 10,
+   "linkPlaceholder": true
   },
   {
    "id": "wd2",
@@ -853,8 +897,9 @@
    "value": "under €160k",
    "source": "Doffin",
    "fit": "for a window and door firm with its own fitters.",
-   "link": null,
-   "publishedDaysAgo": 7
+   "link": "https://www.doffin.no",
+   "publishedDaysAgo": 7,
+   "linkPlaceholder": true
   },
   {
    "id": "in1",
@@ -872,8 +917,9 @@
    "value": "around €140k",
    "source": "TED",
    "fit": "for an insulation firm that likes repeatable jobs across several buildings.",
-   "link": null,
-   "publishedDaysAgo": 10
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 10,
+   "linkPlaceholder": true
   },
   {
    "id": "in2",
@@ -891,8 +937,9 @@
    "value": "under €180k",
    "source": "TED",
    "fit": "for an insulation crew that can work during the school break.",
-   "link": null,
-   "publishedDaysAgo": 7
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 7,
+   "linkPlaceholder": true
   },
   {
    "id": "fa1",
@@ -910,8 +957,9 @@
    "value": "around €170k",
    "source": "Hilma",
    "fit": "for a cladding firm with experience in timber and board facades.",
-   "link": null,
-   "publishedDaysAgo": 6
+   "link": "https://www.hankintailmoitukset.fi",
+   "publishedDaysAgo": 6,
+   "linkPlaceholder": true
   },
   {
    "id": "fa2",
@@ -929,8 +977,9 @@
    "value": "under €200k",
    "source": "TED",
    "fit": "for a facade firm with scaffolding access and a clear scope.",
-   "link": null,
-   "publishedDaysAgo": 29
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 29,
+   "linkPlaceholder": true
   },
   {
    "id": "gw1",
@@ -948,8 +997,9 @@
    "value": "around €190k",
    "source": "Doffin",
    "fit": "for a groundworks firm with its own excavator and a short season to plan for.",
-   "link": null,
-   "publishedDaysAgo": 15
+   "link": "https://www.doffin.no",
+   "publishedDaysAgo": 15,
+   "linkPlaceholder": true
   },
   {
    "id": "gw2",
@@ -967,8 +1017,9 @@
    "value": "under €150k",
    "source": "TED",
    "fit": "for a small groundworks firm that likes well-defined site jobs.",
-   "link": null,
-   "publishedDaysAgo": 25
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 25,
+   "linkPlaceholder": true
   },
   {
    "id": "dm1",
@@ -986,8 +1037,9 @@
    "value": "under €160k",
    "source": "TED",
    "fit": "for a demolition firm that handles careful strip-out in occupied areas.",
-   "link": null,
-   "publishedDaysAgo": 17
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 17,
+   "linkPlaceholder": true
   },
   {
    "id": "dm2",
@@ -1005,8 +1057,9 @@
    "value": "around €120k",
    "source": "Hilma",
    "fit": "for a demolition crew with sorting and waste handling in place.",
-   "link": null,
-   "publishedDaysAgo": 14
+   "link": "https://www.hankintailmoitukset.fi",
+   "publishedDaysAgo": 14,
+   "linkPlaceholder": true
   },
   {
    "id": "sc1",
@@ -1024,8 +1077,9 @@
    "value": "Framework agreement",
    "source": "TED",
    "fit": "for a scaffolding firm that wants repeat work with a public buyer.",
-   "link": null,
-   "publishedDaysAgo": 29
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 29,
+   "linkPlaceholder": true
   },
   {
    "id": "sc2",
@@ -1043,8 +1097,9 @@
    "value": "under €100k",
    "source": "TED",
    "fit": "for a scaffolding firm with a ready crew and certified equipment.",
-   "link": null,
-   "publishedDaysAgo": 6
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 6,
+   "linkPlaceholder": true
   }
  ]
 }

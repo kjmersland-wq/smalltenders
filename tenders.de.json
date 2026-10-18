@@ -1,5 +1,5 @@
 {
- "_note": "SAMPLE entries only. 'publishedDaysAgo' is for samples; real entries use an ISO 'published' date.",
+ "_note": "SAMPLE entries only. 'publishedDaysAgo' is for samples; real entries use an ISO 'published' date. 'link' is the URL of the original notice. While 'linkPlaceholder' is true it is only the portal's address: replace it with the notice URL and remove the flag.",
  "tenders": [
   {
    "id": "s1",
@@ -17,8 +17,9 @@
    "value": "unter 150.000 €",
    "source": "Doffin",
    "fit": "für einen Malerbetrieb, der gut auf einen festen Termin hin planen kann.",
-   "link": null,
-   "publishedDaysAgo": 15
+   "link": "https://www.doffin.no",
+   "publishedDaysAgo": 15,
+   "linkPlaceholder": true
   },
   {
    "id": "n2",
@@ -36,8 +37,9 @@
    "value": "unter 180.000 €",
    "source": "Doffin",
    "fit": "für einen kleinen Elektrobetrieb, der klare Aufträge in der Nähe mag.",
-   "link": null,
-   "publishedDaysAgo": 16
+   "link": "https://www.doffin.no",
+   "publishedDaysAgo": 16,
+   "linkPlaceholder": true
   },
   {
    "id": "n3",
@@ -55,8 +57,9 @@
    "value": "rund 140.000 €",
    "source": "Doffin",
    "fit": "für einen Baubetrieb, der klar umrissene Reparaturen mag.",
-   "link": null,
-   "publishedDaysAgo": 26
+   "link": "https://www.doffin.no",
+   "publishedDaysAgo": 26,
+   "linkPlaceholder": true
   },
   {
    "id": "n4",
@@ -74,8 +77,9 @@
    "value": "Rahmenvertrag",
    "source": "Doffin",
    "fit": "für einen Lüftungs- und Heizungsbetrieb, der regelmäßige, wiederkehrende Aufträge möchte.",
-   "link": null,
-   "publishedDaysAgo": 29
+   "link": "https://www.doffin.no",
+   "publishedDaysAgo": 29,
+   "linkPlaceholder": true
   },
   {
    "id": "s4",
@@ -93,8 +97,9 @@
    "value": "rund 120.000 € pro Jahr",
    "source": "TED",
    "fit": "für einen Reinigungsbetrieb, der einen verlässlichen Auftrag vor Ort möchte.",
-   "link": null,
-   "publishedDaysAgo": 18
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 18,
+   "linkPlaceholder": true
   },
   {
    "id": "e2",
@@ -112,8 +117,9 @@
    "value": "unter 200.000 €",
    "source": "TED",
    "fit": "für einen Sanitärbetrieb mit kleinem Team, der planbare, wiederkehrende Arbeiten mag.",
-   "link": null,
-   "publishedDaysAgo": 1
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 1,
+   "linkPlaceholder": true
   },
   {
    "id": "e3",
@@ -131,8 +137,9 @@
    "value": "rund 110.000 €",
    "source": "TED",
    "fit": "für einen Malerbetrieb, der gut auf einen festen Termin hin planen kann.",
-   "link": null,
-   "publishedDaysAgo": 24
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 24,
+   "linkPlaceholder": true
   },
   {
    "id": "e4",
@@ -150,8 +157,9 @@
    "value": "unter 90.000 €",
    "source": "TED",
    "fit": "für einen kleinen Elektrobetrieb, der klare Aufträge in der Nähe mag.",
-   "link": null,
-   "publishedDaysAgo": 14
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 14,
+   "linkPlaceholder": true
   },
   {
    "id": "s5",
@@ -169,8 +177,9 @@
    "value": "unter 200.000 €",
    "source": "TED",
    "fit": "für einen Sanitärbetrieb mit kleinem Team, der planbare, wiederkehrende Arbeiten mag.",
-   "link": null,
-   "publishedDaysAgo": 8
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 8,
+   "linkPlaceholder": true
   },
   {
    "id": "d2",
@@ -188,8 +197,9 @@
    "value": "Rahmenvertrag",
    "source": "TED",
    "fit": "für einen Lüftungs- und Heizungsbetrieb, der regelmäßige, wiederkehrende Aufträge möchte.",
-   "link": null,
-   "publishedDaysAgo": 28
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 28,
+   "linkPlaceholder": true
   },
   {
    "id": "d3",
@@ -207,8 +217,9 @@
    "value": "rund 160.000 €",
    "source": "TED",
    "fit": "für einen Baubetrieb, der klar umrissene Reparaturen mag.",
-   "link": null,
-   "publishedDaysAgo": 5
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 5,
+   "linkPlaceholder": true
   },
   {
    "id": "d4",
@@ -226,8 +237,9 @@
    "value": "rund 80.000 € pro Jahr",
    "source": "TED",
    "fit": "für einen Reinigungsbetrieb, der einen verlässlichen Auftrag vor Ort möchte.",
-   "link": null,
-   "publishedDaysAgo": 1
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 1,
+   "linkPlaceholder": true
   },
   {
    "id": "s6",
@@ -245,8 +257,9 @@
    "value": "rund 180.000 €",
    "source": "Hilma",
    "fit": "für einen Baubetrieb, der klar umrissene Reparaturen mag.",
-   "link": null,
-   "publishedDaysAgo": 5
+   "link": "https://www.hankintailmoitukset.fi",
+   "publishedDaysAgo": 5,
+   "linkPlaceholder": true
   },
   {
    "id": "f2",
@@ -264,8 +277,9 @@
    "value": "unter 170.000 €",
    "source": "Hilma",
    "fit": "für einen Lüftungs- und Heizungsbetrieb, der regelmäßige, wiederkehrende Aufträge möchte.",
-   "link": null,
-   "publishedDaysAgo": 31
+   "link": "https://www.hankintailmoitukset.fi",
+   "publishedDaysAgo": 31,
+   "linkPlaceholder": true
   },
   {
    "id": "f3",
@@ -283,8 +297,9 @@
    "value": "unter 100.000 €",
    "source": "Hilma",
    "fit": "für einen Malerbetrieb, der gut auf einen festen Termin hin planen kann.",
-   "link": null,
-   "publishedDaysAgo": 8
+   "link": "https://www.hankintailmoitukset.fi",
+   "publishedDaysAgo": 8,
+   "linkPlaceholder": true
   },
   {
    "id": "f4",
@@ -302,8 +317,9 @@
    "value": "rund 190.000 €",
    "source": "Hilma",
    "fit": "für einen kleinen Elektrobetrieb, der klare Aufträge in der Nähe mag.",
-   "link": null,
-   "publishedDaysAgo": 11
+   "link": "https://www.hankintailmoitukset.fi",
+   "publishedDaysAgo": 11,
+   "linkPlaceholder": true
   },
   {
    "id": "s7",
@@ -321,8 +337,9 @@
    "value": "unter 100.000 €",
    "source": "TED",
    "fit": "für einen kleinen Elektrobetrieb, der klare Aufträge in der Nähe mag.",
-   "link": null,
-   "publishedDaysAgo": 28
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 28,
+   "linkPlaceholder": true
   },
   {
    "id": "i2",
@@ -340,8 +357,9 @@
    "value": "unter 120.000 €",
    "source": "TED",
    "fit": "für einen Sanitärbetrieb mit kleinem Team, der planbare, wiederkehrende Arbeiten mag.",
-   "link": null,
-   "publishedDaysAgo": 10
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 10,
+   "linkPlaceholder": true
   },
   {
    "id": "s2",
@@ -359,8 +377,9 @@
    "value": "Rahmenvertrag",
    "source": "TED",
    "fit": "für einen Lüftungs- und Heizungsbetrieb, der regelmäßige, wiederkehrende Aufträge möchte.",
-   "link": null,
-   "publishedDaysAgo": 12
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 12,
+   "linkPlaceholder": true
   },
   {
    "id": "p2",
@@ -378,8 +397,9 @@
    "value": "unter 110.000 €",
    "source": "TED",
    "fit": "für einen Malerbetrieb, der gut auf einen festen Termin hin planen kann.",
-   "link": null,
-   "publishedDaysAgo": 32
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 32,
+   "linkPlaceholder": true
   },
   {
    "id": "p3",
@@ -397,8 +417,9 @@
    "value": "unter 130.000 €",
    "source": "TED",
    "fit": "für einen kleinen Elektrobetrieb, der klare Aufträge in der Nähe mag.",
-   "link": null,
-   "publishedDaysAgo": 9
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 9,
+   "linkPlaceholder": true
   },
   {
    "id": "p4",
@@ -416,8 +437,9 @@
    "value": "rund 90.000 € pro Jahr",
    "source": "TED",
    "fit": "für einen Reinigungsbetrieb, der einen verlässlichen Auftrag vor Ort möchte.",
-   "link": null,
-   "publishedDaysAgo": 19
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 19,
+   "linkPlaceholder": true
   },
   {
    "id": "s3",
@@ -435,8 +457,9 @@
    "value": "Klar abgegrenzt",
    "source": "TED",
    "fit": "für einen kleinen Elektrobetrieb, der klare Aufträge in der Nähe mag.",
-   "link": null,
-   "publishedDaysAgo": 2
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 2,
+   "linkPlaceholder": true
   },
   {
    "id": "g2",
@@ -454,8 +477,9 @@
    "value": "unter 190.000 €",
    "source": "TED",
    "fit": "für einen Sanitärbetrieb mit kleinem Team, der planbare, wiederkehrende Arbeiten mag.",
-   "link": null,
-   "publishedDaysAgo": 18
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 18,
+   "linkPlaceholder": true
   },
   {
    "id": "g3",
@@ -473,8 +497,9 @@
    "value": "rund 170.000 €",
    "source": "TED",
    "fit": "für einen Baubetrieb, der klar umrissene Reparaturen mag.",
-   "link": null,
-   "publishedDaysAgo": 8
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 8,
+   "linkPlaceholder": true
   },
   {
    "id": "g4",
@@ -492,8 +517,9 @@
    "value": "Rahmenvertrag",
    "source": "TED",
    "fit": "für einen Lüftungs- und Heizungsbetrieb, der regelmäßige, wiederkehrende Aufträge möchte.",
-   "link": null,
-   "publishedDaysAgo": 5
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 5,
+   "linkPlaceholder": true
   },
   {
    "id": "x1",
@@ -511,8 +537,9 @@
    "value": "rund 100.000 € pro Jahr",
    "source": "TED",
    "fit": "für einen Reinigungsbetrieb, der einen verlässlichen Auftrag vor Ort möchte.",
-   "link": null,
-   "publishedDaysAgo": 10
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 10,
+   "linkPlaceholder": true
   },
   {
    "id": "x2",
@@ -530,8 +557,9 @@
    "value": "unter 120.000 €",
    "source": "TED",
    "fit": "für einen Malerbetrieb, der gut auf einen festen Termin hin planen kann.",
-   "link": null,
-   "publishedDaysAgo": 20
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 20,
+   "linkPlaceholder": true
   },
   {
    "id": "x3",
@@ -549,8 +577,9 @@
    "value": "unter 200.000 €",
    "source": "TED",
    "fit": "für einen Lüftungs- und Heizungsbetrieb, der regelmäßige, wiederkehrende Aufträge möchte.",
-   "link": null,
-   "publishedDaysAgo": 30
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 30,
+   "linkPlaceholder": true
   },
   {
    "id": "x4",
@@ -568,8 +597,9 @@
    "value": "unter 150.000 €",
    "source": "TED",
    "fit": "für einen Baubetrieb, der klar umrissene Reparaturen mag.",
-   "link": null,
-   "publishedDaysAgo": 7
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 7,
+   "linkPlaceholder": true
   },
   {
    "id": "x5",
@@ -587,8 +617,9 @@
    "value": "unter 110.000 €",
    "source": "TED",
    "fit": "für einen kleinen Elektrobetrieb, der klare Aufträge in der Nähe mag.",
-   "link": null,
-   "publishedDaysAgo": 17
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 17,
+   "linkPlaceholder": true
   },
   {
    "id": "x6",
@@ -606,8 +637,9 @@
    "value": "unter 140.000 €",
    "source": "TED",
    "fit": "für einen Sanitärbetrieb mit kleinem Team, der planbare, wiederkehrende Arbeiten mag.",
-   "link": null,
-   "publishedDaysAgo": 27
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 27,
+   "linkPlaceholder": true
   },
   {
    "id": "x7",
@@ -625,8 +657,9 @@
    "value": "unter 60.000 €",
    "source": "TED",
    "fit": "für einen Malerbetrieb, der gut auf einen festen Termin hin planen kann.",
-   "link": null,
-   "publishedDaysAgo": 4
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 4,
+   "linkPlaceholder": true
   },
   {
    "id": "x8",
@@ -644,8 +677,9 @@
    "value": "unter 90.000 €",
    "source": "TED",
    "fit": "für einen kleinen Elektrobetrieb, der klare Aufträge in der Nähe mag.",
-   "link": null,
-   "publishedDaysAgo": 19
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 19,
+   "linkPlaceholder": true
   },
   {
    "id": "x9",
@@ -663,8 +697,9 @@
    "value": "Rahmenvertrag",
    "source": "TED",
    "fit": "für einen Lüftungs- und Heizungsbetrieb, der regelmäßige, wiederkehrende Aufträge möchte.",
-   "link": null,
-   "publishedDaysAgo": 29
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 29,
+   "linkPlaceholder": true
   },
   {
    "id": "y1",
@@ -682,8 +717,9 @@
    "value": "rund 130.000 € pro Jahr",
    "source": "TED",
    "fit": "für einen Reinigungsbetrieb, der einen verlässlichen Auftrag vor Ort möchte.",
-   "link": null,
-   "publishedDaysAgo": 0
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 0,
+   "linkPlaceholder": true
   },
   {
    "id": "y2",
@@ -701,8 +737,9 @@
    "value": "unter 180.000 €",
    "source": "TED",
    "fit": "für einen Baubetrieb, der klar umrissene Reparaturen mag.",
-   "link": null,
-   "publishedDaysAgo": 23
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 23,
+   "linkPlaceholder": true
   },
   {
    "id": "y3",
@@ -720,8 +757,9 @@
    "value": "rund 95.000 €",
    "source": "TED",
    "fit": "für einen Malerbetrieb, der gut auf einen festen Termin hin planen kann.",
-   "link": null,
-   "publishedDaysAgo": 13
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 13,
+   "linkPlaceholder": true
   },
   {
    "id": "y4",
@@ -739,8 +777,9 @@
    "value": "unter 100.000 €",
    "source": "TED",
    "fit": "für einen Sanitärbetrieb mit kleinem Team, der planbare, wiederkehrende Arbeiten mag.",
-   "link": null,
-   "publishedDaysAgo": 17
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 17,
+   "linkPlaceholder": true
   },
   {
    "id": "r1",
@@ -758,8 +797,9 @@
    "value": "unter 170.000 €",
    "source": "Doffin",
    "fit": "für einen Dachdeckerbetrieb, der Dachpappe und Bitumen auf Flachdächern kennt.",
-   "link": null,
-   "publishedDaysAgo": 22
+   "link": "https://www.doffin.no",
+   "publishedDaysAgo": 22,
+   "linkPlaceholder": true
   },
   {
    "id": "r2",
@@ -777,8 +817,9 @@
    "value": "rund 130.000 €",
    "source": "TED",
    "fit": "für einen Dachdeckerbetrieb, der Dachpappe und Bitumen auf Flachdächern kennt.",
-   "link": null,
-   "publishedDaysAgo": 25
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 25,
+   "linkPlaceholder": true
   },
   {
    "id": "fl1",
@@ -796,8 +837,9 @@
    "value": "unter 90.000 €",
    "source": "TED",
    "fit": "für einen Bodenlegerbetrieb, der auch außerhalb der Öffnungszeiten arbeiten kann.",
-   "link": null,
-   "publishedDaysAgo": 2
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 2,
+   "linkPlaceholder": true
   },
   {
    "id": "fl2",
@@ -815,8 +857,9 @@
    "value": "unter 120.000 €",
    "source": "Hilma",
    "fit": "für einen Bodenlegerbetrieb, der auch außerhalb der Öffnungszeiten arbeiten kann.",
-   "link": null,
-   "publishedDaysAgo": 12
+   "link": "https://www.hankintailmoitukset.fi",
+   "publishedDaysAgo": 12,
+   "linkPlaceholder": true
   },
   {
    "id": "wd1",
@@ -834,8 +877,9 @@
    "value": "rund 150.000 €",
    "source": "TED",
    "fit": "für einen Fenster- und Türenbetrieb mit eigenen Monteuren.",
-   "link": null,
-   "publishedDaysAgo": 10
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 10,
+   "linkPlaceholder": true
   },
   {
    "id": "wd2",
@@ -853,8 +897,9 @@
    "value": "unter 160.000 €",
    "source": "Doffin",
    "fit": "für einen Fenster- und Türenbetrieb mit eigenen Monteuren.",
-   "link": null,
-   "publishedDaysAgo": 7
+   "link": "https://www.doffin.no",
+   "publishedDaysAgo": 7,
+   "linkPlaceholder": true
   },
   {
    "id": "in1",
@@ -872,8 +917,9 @@
    "value": "rund 140.000 €",
    "source": "TED",
    "fit": "für einen Dämmbetrieb, der wiederholbare Arbeiten in mehreren Gebäuden mag.",
-   "link": null,
-   "publishedDaysAgo": 10
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 10,
+   "linkPlaceholder": true
   },
   {
    "id": "in2",
@@ -891,8 +937,9 @@
    "value": "unter 180.000 €",
    "source": "TED",
    "fit": "für einen Dämmbetrieb, der wiederholbare Arbeiten in mehreren Gebäuden mag.",
-   "link": null,
-   "publishedDaysAgo": 7
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 7,
+   "linkPlaceholder": true
   },
   {
    "id": "fa1",
@@ -910,8 +957,9 @@
    "value": "rund 170.000 €",
    "source": "Hilma",
    "fit": "für einen Fassadenbetrieb mit Erfahrung bei Verkleidungen und klarem Umfang.",
-   "link": null,
-   "publishedDaysAgo": 6
+   "link": "https://www.hankintailmoitukset.fi",
+   "publishedDaysAgo": 6,
+   "linkPlaceholder": true
   },
   {
    "id": "fa2",
@@ -929,8 +977,9 @@
    "value": "unter 200.000 €",
    "source": "TED",
    "fit": "für einen Fassadenbetrieb mit Erfahrung bei Verkleidungen und klarem Umfang.",
-   "link": null,
-   "publishedDaysAgo": 29
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 29,
+   "linkPlaceholder": true
   },
   {
    "id": "gw1",
@@ -948,8 +997,9 @@
    "value": "rund 190.000 €",
    "source": "Doffin",
    "fit": "für einen Tiefbaubetrieb mit eigenem Bagger und klaren Aufgaben.",
-   "link": null,
-   "publishedDaysAgo": 15
+   "link": "https://www.doffin.no",
+   "publishedDaysAgo": 15,
+   "linkPlaceholder": true
   },
   {
    "id": "gw2",
@@ -967,8 +1017,9 @@
    "value": "unter 150.000 €",
    "source": "TED",
    "fit": "für einen Tiefbaubetrieb mit eigenem Bagger und klaren Aufgaben.",
-   "link": null,
-   "publishedDaysAgo": 25
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 25,
+   "linkPlaceholder": true
   },
   {
    "id": "dm1",
@@ -986,8 +1037,9 @@
    "value": "unter 160.000 €",
    "source": "TED",
    "fit": "für einen Abbruchbetrieb, der sorgfältigen Rückbau und Abfallentsorgung beherrscht.",
-   "link": null,
-   "publishedDaysAgo": 17
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 17,
+   "linkPlaceholder": true
   },
   {
    "id": "dm2",
@@ -1005,8 +1057,9 @@
    "value": "rund 120.000 €",
    "source": "Hilma",
    "fit": "für einen Abbruchbetrieb, der sorgfältigen Rückbau und Abfallentsorgung beherrscht.",
-   "link": null,
-   "publishedDaysAgo": 14
+   "link": "https://www.hankintailmoitukset.fi",
+   "publishedDaysAgo": 14,
+   "linkPlaceholder": true
   },
   {
    "id": "sc1",
@@ -1024,8 +1077,9 @@
    "value": "Rahmenvertrag",
    "source": "TED",
    "fit": "für einen Gerüstbaubetrieb, der wiederkehrende Aufträge bei einem öffentlichen Auftraggeber möchte.",
-   "link": null,
-   "publishedDaysAgo": 29
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 29,
+   "linkPlaceholder": true
   },
   {
    "id": "sc2",
@@ -1043,8 +1097,9 @@
    "value": "unter 100.000 €",
    "source": "TED",
    "fit": "für einen Gerüstbaubetrieb, der wiederkehrende Aufträge bei einem öffentlichen Auftraggeber möchte.",
-   "link": null,
-   "publishedDaysAgo": 6
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 6,
+   "linkPlaceholder": true
   }
  ]
 }

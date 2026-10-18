@@ -120,6 +120,10 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
     svg.setAttribute('viewBox', '0 0 24 24'); svg.setAttribute('aria-hidden', 'true'); svg.setAttribute('class', 'tl-ico'); svg.style.color = color;
     p.setAttribute('d', d); svg.appendChild(p); return svg;
   }
+  // link to the original notice. Real notices carry their own URL in tenders.json (t.link);
+  // until then the portal's address is used as an easy-to-replace placeholder.
+  var PORTAL = { Doffin: 'https://www.doffin.no', TED: 'https://ted.europa.eu', Hilma: 'https://www.hankintailmoitukset.fi' };
+  function noticeUrl(t) { return t.link || PORTAL[t.source] || ''; }
   function matches(t) {
     if (state.newOnly && !(window.stTenders && window.stTenders.isNew && window.stTenders.isNew(t))) return false;
     return !state.trade || t.trade === state.trade;
@@ -144,7 +148,7 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
   function fillList(ul, list, withCountry) {
     ul.textContent = '';
     list.forEach(function (t) {
-      var li = el('li'), b = el('button'); b.type = 'button'; b.dataset.id = t.id; b.style.setProperty('--tc', TRADE[t.trade] || '#cdbd9c');
+      var li = el('li'), b = el('button'); b.type = 'button'; b.dataset.id = t.id; li.style.setProperty('--tc', TRADE[t.trade] || '#cdbd9c');
       var top = el('span', 'tl-top');
       top.appendChild(tradeIcon(t.trade)); top.appendChild(el('b', '', withCountry ? t.city + ' · ' + cname(t.country) : t.city + ' · ' + t.region));
       b.appendChild(top);
@@ -155,7 +159,14 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
       b.addEventListener('mouseleave', function () { hot(t.id, false); });
       b.addEventListener('focus', function () { hot(t.id, true); });
       b.addEventListener('blur', function () { hot(t.id, false); });
-      li.appendChild(b); ul.appendChild(li);
+      li.appendChild(b);
+      var url = noticeUrl(t);
+      if (url) {
+        var a = el('a', 'tl-link', D.original + ' · ' + (t.source || '') + ' ↗');
+        a.href = url; a.target = '_blank'; a.rel = 'noopener';
+        li.appendChild(a);
+      }
+      ul.appendChild(li);
     });
   }
 
@@ -213,10 +224,11 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
     d.appendChild(dl);
     var fit = el('p', 'fitbox'); fit.appendChild(el('b', '', D.fit)); fit.appendChild(document.createTextNode(' ' + t.fit)); d.appendChild(fit);
     var foot = el('p', 'td-link');
-    if (t.link) {
-      var l = el('a', 'btn', D.original + ' ↗'); l.href = t.link; l.target = '_blank'; l.rel = 'noopener'; foot.appendChild(l);
+    var url = noticeUrl(t);
+    if (url) {
+      var l = el('a', 'btn', D.original + ' ↗'); l.href = url; l.target = '_blank'; l.rel = 'noopener'; foot.appendChild(l);
     }
-    if (t.source) foot.appendChild(el('span', 'tc-from', (t.link ? ' · ' : '') + t.source));
+    if (t.source) foot.appendChild(el('span', 'tc-from', (url ? ' ' : '') + t.source));
     d.appendChild(foot);
   }
 
@@ -247,7 +259,7 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
   // marker hover lights up the matching list item and brings it into view (inside the panel only)
   function listHot(id, on) {
     var b = side.querySelector('.tlist button[data-id="' + id + '"]'); if (!b) return;
-    b.classList.toggle('on', on);
+    b.classList.toggle('on', on); if (b.parentNode) b.parentNode.classList.toggle('on', on);
     if (on && b.offsetParent) {
       var r = b.getBoundingClientRect(), br = side.getBoundingClientRect();
       if (r.top < br.top + 8 || r.bottom > br.bottom - 8) side.scrollTo({ top: side.scrollTop + (r.top - br.top) - side.clientHeight / 3, behavior: 'smooth' });

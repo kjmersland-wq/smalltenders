@@ -1,5 +1,5 @@
 {
- "_note": "SAMPLE entries only. 'publishedDaysAgo' is for samples; real entries use an ISO 'published' date.",
+ "_note": "SAMPLE entries only. 'publishedDaysAgo' is for samples; real entries use an ISO 'published' date. 'link' is the URL of the original notice. While 'linkPlaceholder' is true it is only the portal's address: replace it with the notice URL and remove the flag.",
  "tenders": [
   {
    "id": "s1",
@@ -17,8 +17,9 @@
    "value": "onder € 150.000",
    "source": "Doffin",
    "fit": "voor een schildersbedrijf dat kan plannen naar een vaste deadline.",
-   "link": null,
-   "publishedDaysAgo": 15
+   "link": "https://www.doffin.no",
+   "publishedDaysAgo": 15,
+   "linkPlaceholder": true
   },
   {
    "id": "n2",
@@ -36,8 +37,9 @@
    "value": "onder € 180.000",
    "source": "Doffin",
    "fit": "voor een klein elektrabedrijf dat van duidelijke klussen dicht bij huis houdt.",
-   "link": null,
-   "publishedDaysAgo": 16
+   "link": "https://www.doffin.no",
+   "publishedDaysAgo": 16,
+   "linkPlaceholder": true
   },
   {
    "id": "n3",
@@ -55,8 +57,9 @@
    "value": "ongeveer € 140.000",
    "source": "Doffin",
    "fit": "voor een bouwbedrijf dat houdt van duidelijk afgebakende reparaties.",
-   "link": null,
-   "publishedDaysAgo": 26
+   "link": "https://www.doffin.no",
+   "publishedDaysAgo": 26,
+   "linkPlaceholder": true
   },
   {
    "id": "n4",
@@ -74,8 +77,9 @@
    "value": "Raamovereenkomst",
    "source": "Doffin",
    "fit": "voor een installatiebedrijf voor ventilatie en verwarming dat vast, terugkerend werk wil.",
-   "link": null,
-   "publishedDaysAgo": 29
+   "link": "https://www.doffin.no",
+   "publishedDaysAgo": 29,
+   "linkPlaceholder": true
   },
   {
    "id": "s4",
@@ -93,8 +97,9 @@
    "value": "ongeveer € 120.000 per jaar",
    "source": "TED",
    "fit": "voor een schoonmaakbedrijf dat een vast contract in de buurt wil.",
-   "link": null,
-   "publishedDaysAgo": 18
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 18,
+   "linkPlaceholder": true
   },
   {
    "id": "e2",
@@ -112,8 +117,9 @@
    "value": "onder € 200.000",
    "source": "TED",
    "fit": "voor een loodgietersbedrijf met een klein team dat van geplande, terugkerende klussen houdt.",
-   "link": null,
-   "publishedDaysAgo": 1
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 1,
+   "linkPlaceholder": true
   },
   {
    "id": "e3",
@@ -131,8 +137,9 @@
    "value": "ongeveer € 110.000",
    "source": "TED",
    "fit": "voor een schildersbedrijf dat kan plannen naar een vaste deadline.",
-   "link": null,
-   "publishedDaysAgo": 24
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 24,
+   "linkPlaceholder": true
   },
   {
    "id": "e4",
@@ -150,8 +157,9 @@
    "value": "onder € 90.000",
    "source": "TED",
    "fit": "voor een klein elektrabedrijf dat van duidelijke klussen dicht bij huis houdt.",
-   "link": null,
-   "publishedDaysAgo": 14
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 14,
+   "linkPlaceholder": true
   },
   {
    "id": "s5",
@@ -169,8 +177,9 @@
    "value": "onder € 200.000",
    "source": "TED",
    "fit": "voor een loodgietersbedrijf met een klein team dat van geplande, terugkerende klussen houdt.",
-   "link": null,
-   "publishedDaysAgo": 8
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 8,
+   "linkPlaceholder": true
   },
   {
    "id": "d2",
@@ -188,8 +197,9 @@
    "value": "Raamovereenkomst",
    "source": "TED",
    "fit": "voor een installatiebedrijf voor ventilatie en verwarming dat vast, terugkerend werk wil.",
-   "link": null,
-   "publishedDaysAgo": 28
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 28,
+   "linkPlaceholder": true
   },
   {
    "id": "d3",
@@ -207,8 +217,9 @@
    "value": "ongeveer € 160.000",
    "source": "TED",
    "fit": "voor een bouwbedrijf dat houdt van duidelijk afgebakende reparaties.",
-   "link": null,
-   "publishedDaysAgo": 5
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 5,
+   "linkPlaceholder": true
   },
   {
    "id": "d4",
@@ -226,8 +237,9 @@
    "value": "ongeveer € 80.000 per jaar",
    "source": "TED",
    "fit": "voor een schoonmaakbedrijf dat een vast contract in de buurt wil.",
-   "link": null,
-   "publishedDaysAgo": 1
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 1,
+   "linkPlaceholder": true
   },
   {
    "id": "s6",
@@ -245,8 +257,9 @@
    "value": "ongeveer € 180.000",
    "source": "Hilma",
    "fit": "voor een bouwbedrijf dat houdt van duidelijk afgebakende reparaties.",
-   "link": null,
-   "publishedDaysAgo": 5
+   "link": "https://www.hankintailmoitukset.fi",
+   "publishedDaysAgo": 5,
+   "linkPlaceholder": true
   },
   {
    "id": "f2",
@@ -264,8 +277,9 @@
    "value": "onder € 170.000",
    "source": "Hilma",
    "fit": "voor een installatiebedrijf voor ventilatie en verwarming dat vast, terugkerend werk wil.",
-   "link": null,
-   "publishedDaysAgo": 31
+   "link": "https://www.hankintailmoitukset.fi",
+   "publishedDaysAgo": 31,
+   "linkPlaceholder": true
   },
   {
    "id": "f3",
@@ -283,8 +297,9 @@
    "value": "onder € 100.000",
    "source": "Hilma",
    "fit": "voor een schildersbedrijf dat kan plannen naar een vaste deadline.",
-   "link": null,
-   "publishedDaysAgo": 8
+   "link": "https://www.hankintailmoitukset.fi",
+   "publishedDaysAgo": 8,
+   "linkPlaceholder": true
   },
   {
    "id": "f4",
@@ -302,8 +317,9 @@
    "value": "ongeveer € 190.000",
    "source": "Hilma",
    "fit": "voor een klein elektrabedrijf dat van duidelijke klussen dicht bij huis houdt.",
-   "link": null,
-   "publishedDaysAgo": 11
+   "link": "https://www.hankintailmoitukset.fi",
+   "publishedDaysAgo": 11,
+   "linkPlaceholder": true
   },
   {
    "id": "s7",
@@ -321,8 +337,9 @@
    "value": "onder € 100.000",
    "source": "TED",
    "fit": "voor een klein elektrabedrijf dat van duidelijke klussen dicht bij huis houdt.",
-   "link": null,
-   "publishedDaysAgo": 28
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 28,
+   "linkPlaceholder": true
   },
   {
    "id": "i2",
@@ -340,8 +357,9 @@
    "value": "onder € 120.000",
    "source": "TED",
    "fit": "voor een loodgietersbedrijf met een klein team dat van geplande, terugkerende klussen houdt.",
-   "link": null,
-   "publishedDaysAgo": 10
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 10,
+   "linkPlaceholder": true
   },
   {
    "id": "s2",
@@ -359,8 +377,9 @@
    "value": "Raamovereenkomst",
    "source": "TED",
    "fit": "voor een installatiebedrijf voor ventilatie en verwarming dat vast, terugkerend werk wil.",
-   "link": null,
-   "publishedDaysAgo": 12
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 12,
+   "linkPlaceholder": true
   },
   {
    "id": "p2",
@@ -378,8 +397,9 @@
    "value": "onder € 110.000",
    "source": "TED",
    "fit": "voor een schildersbedrijf dat kan plannen naar een vaste deadline.",
-   "link": null,
-   "publishedDaysAgo": 32
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 32,
+   "linkPlaceholder": true
   },
   {
    "id": "p3",
@@ -397,8 +417,9 @@
    "value": "onder € 130.000",
    "source": "TED",
    "fit": "voor een klein elektrabedrijf dat van duidelijke klussen dicht bij huis houdt.",
-   "link": null,
-   "publishedDaysAgo": 9
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 9,
+   "linkPlaceholder": true
   },
   {
    "id": "p4",
@@ -416,8 +437,9 @@
    "value": "ongeveer € 90.000 per jaar",
    "source": "TED",
    "fit": "voor een schoonmaakbedrijf dat een vast contract in de buurt wil.",
-   "link": null,
-   "publishedDaysAgo": 19
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 19,
+   "linkPlaceholder": true
   },
   {
    "id": "s3",
@@ -435,8 +457,9 @@
    "value": "Duidelijk afgebakend",
    "source": "TED",
    "fit": "voor een klein elektrabedrijf dat van duidelijke klussen dicht bij huis houdt.",
-   "link": null,
-   "publishedDaysAgo": 2
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 2,
+   "linkPlaceholder": true
   },
   {
    "id": "g2",
@@ -454,8 +477,9 @@
    "value": "onder € 190.000",
    "source": "TED",
    "fit": "voor een loodgietersbedrijf met een klein team dat van geplande, terugkerende klussen houdt.",
-   "link": null,
-   "publishedDaysAgo": 18
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 18,
+   "linkPlaceholder": true
   },
   {
    "id": "g3",
@@ -473,8 +497,9 @@
    "value": "ongeveer € 170.000",
    "source": "TED",
    "fit": "voor een bouwbedrijf dat houdt van duidelijk afgebakende reparaties.",
-   "link": null,
-   "publishedDaysAgo": 8
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 8,
+   "linkPlaceholder": true
   },
   {
    "id": "g4",
@@ -492,8 +517,9 @@
    "value": "Raamovereenkomst",
    "source": "TED",
    "fit": "voor een installatiebedrijf voor ventilatie en verwarming dat vast, terugkerend werk wil.",
-   "link": null,
-   "publishedDaysAgo": 5
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 5,
+   "linkPlaceholder": true
   },
   {
    "id": "x1",
@@ -511,8 +537,9 @@
    "value": "ongeveer € 100.000 per jaar",
    "source": "TED",
    "fit": "voor een schoonmaakbedrijf dat een vast contract in de buurt wil.",
-   "link": null,
-   "publishedDaysAgo": 10
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 10,
+   "linkPlaceholder": true
   },
   {
    "id": "x2",
@@ -530,8 +557,9 @@
    "value": "onder € 120.000",
    "source": "TED",
    "fit": "voor een schildersbedrijf dat kan plannen naar een vaste deadline.",
-   "link": null,
-   "publishedDaysAgo": 20
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 20,
+   "linkPlaceholder": true
   },
   {
    "id": "x3",
@@ -549,8 +577,9 @@
    "value": "onder € 200.000",
    "source": "TED",
    "fit": "voor een installatiebedrijf voor ventilatie en verwarming dat vast, terugkerend werk wil.",
-   "link": null,
-   "publishedDaysAgo": 30
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 30,
+   "linkPlaceholder": true
   },
   {
    "id": "x4",
@@ -568,8 +597,9 @@
    "value": "onder € 150.000",
    "source": "TED",
    "fit": "voor een bouwbedrijf dat houdt van duidelijk afgebakende reparaties.",
-   "link": null,
-   "publishedDaysAgo": 7
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 7,
+   "linkPlaceholder": true
   },
   {
    "id": "x5",
@@ -587,8 +617,9 @@
    "value": "onder € 110.000",
    "source": "TED",
    "fit": "voor een klein elektrabedrijf dat van duidelijke klussen dicht bij huis houdt.",
-   "link": null,
-   "publishedDaysAgo": 17
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 17,
+   "linkPlaceholder": true
   },
   {
    "id": "x6",
@@ -606,8 +637,9 @@
    "value": "onder € 140.000",
    "source": "TED",
    "fit": "voor een loodgietersbedrijf met een klein team dat van geplande, terugkerende klussen houdt.",
-   "link": null,
-   "publishedDaysAgo": 27
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 27,
+   "linkPlaceholder": true
   },
   {
    "id": "x7",
@@ -625,8 +657,9 @@
    "value": "onder € 60.000",
    "source": "TED",
    "fit": "voor een schildersbedrijf dat kan plannen naar een vaste deadline.",
-   "link": null,
-   "publishedDaysAgo": 4
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 4,
+   "linkPlaceholder": true
   },
   {
    "id": "x8",
@@ -644,8 +677,9 @@
    "value": "onder € 90.000",
    "source": "TED",
    "fit": "voor een klein elektrabedrijf dat van duidelijke klussen dicht bij huis houdt.",
-   "link": null,
-   "publishedDaysAgo": 19
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 19,
+   "linkPlaceholder": true
   },
   {
    "id": "x9",
@@ -663,8 +697,9 @@
    "value": "Raamovereenkomst",
    "source": "TED",
    "fit": "voor een installatiebedrijf voor ventilatie en verwarming dat vast, terugkerend werk wil.",
-   "link": null,
-   "publishedDaysAgo": 29
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 29,
+   "linkPlaceholder": true
   },
   {
    "id": "y1",
@@ -682,8 +717,9 @@
    "value": "ongeveer € 130.000 per jaar",
    "source": "TED",
    "fit": "voor een schoonmaakbedrijf dat een vast contract in de buurt wil.",
-   "link": null,
-   "publishedDaysAgo": 0
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 0,
+   "linkPlaceholder": true
   },
   {
    "id": "y2",
@@ -701,8 +737,9 @@
    "value": "onder € 180.000",
    "source": "TED",
    "fit": "voor een bouwbedrijf dat houdt van duidelijk afgebakende reparaties.",
-   "link": null,
-   "publishedDaysAgo": 23
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 23,
+   "linkPlaceholder": true
   },
   {
    "id": "y3",
@@ -720,8 +757,9 @@
    "value": "ongeveer € 95.000",
    "source": "TED",
    "fit": "voor een schildersbedrijf dat kan plannen naar een vaste deadline.",
-   "link": null,
-   "publishedDaysAgo": 13
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 13,
+   "linkPlaceholder": true
   },
   {
    "id": "y4",
@@ -739,8 +777,9 @@
    "value": "onder € 100.000",
    "source": "TED",
    "fit": "voor een loodgietersbedrijf met een klein team dat van geplande, terugkerende klussen houdt.",
-   "link": null,
-   "publishedDaysAgo": 17
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 17,
+   "linkPlaceholder": true
   },
   {
    "id": "r1",
@@ -758,8 +797,9 @@
    "value": "onder € 170.000",
    "source": "Doffin",
    "fit": "voor een dakdekkersbedrijf dat gewend is aan dakleer en bitumen op platte daken.",
-   "link": null,
-   "publishedDaysAgo": 22
+   "link": "https://www.doffin.no",
+   "publishedDaysAgo": 22,
+   "linkPlaceholder": true
   },
   {
    "id": "r2",
@@ -777,8 +817,9 @@
    "value": "ongeveer € 130.000",
    "source": "TED",
    "fit": "voor een dakdekkersbedrijf dat gewend is aan dakleer en bitumen op platte daken.",
-   "link": null,
-   "publishedDaysAgo": 25
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 25,
+   "linkPlaceholder": true
   },
   {
    "id": "fl1",
@@ -796,8 +837,9 @@
    "value": "onder € 90.000",
    "source": "TED",
    "fit": "voor een vloerenbedrijf dat buiten openingstijden kan werken.",
-   "link": null,
-   "publishedDaysAgo": 2
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 2,
+   "linkPlaceholder": true
   },
   {
    "id": "fl2",
@@ -815,8 +857,9 @@
    "value": "onder € 120.000",
    "source": "Hilma",
    "fit": "voor een vloerenbedrijf dat buiten openingstijden kan werken.",
-   "link": null,
-   "publishedDaysAgo": 12
+   "link": "https://www.hankintailmoitukset.fi",
+   "publishedDaysAgo": 12,
+   "linkPlaceholder": true
   },
   {
    "id": "wd1",
@@ -834,8 +877,9 @@
    "value": "ongeveer € 150.000",
    "source": "TED",
    "fit": "voor een kozijnenbedrijf met eigen monteurs.",
-   "link": null,
-   "publishedDaysAgo": 10
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 10,
+   "linkPlaceholder": true
   },
   {
    "id": "wd2",
@@ -853,8 +897,9 @@
    "value": "onder € 160.000",
    "source": "Doffin",
    "fit": "voor een kozijnenbedrijf met eigen monteurs.",
-   "link": null,
-   "publishedDaysAgo": 7
+   "link": "https://www.doffin.no",
+   "publishedDaysAgo": 7,
+   "linkPlaceholder": true
   },
   {
    "id": "in1",
@@ -872,8 +917,9 @@
    "value": "ongeveer € 140.000",
    "source": "TED",
    "fit": "voor een isolatiebedrijf dat van herhaalbare klussen in meerdere gebouwen houdt.",
-   "link": null,
-   "publishedDaysAgo": 10
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 10,
+   "linkPlaceholder": true
   },
   {
    "id": "in2",
@@ -891,8 +937,9 @@
    "value": "onder € 180.000",
    "source": "TED",
    "fit": "voor een isolatiebedrijf dat van herhaalbare klussen in meerdere gebouwen houdt.",
-   "link": null,
-   "publishedDaysAgo": 7
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 7,
+   "linkPlaceholder": true
   },
   {
    "id": "fa1",
@@ -910,8 +957,9 @@
    "value": "ongeveer € 170.000",
    "source": "Hilma",
    "fit": "voor een gevelbedrijf met ervaring in bekleding en een duidelijke omvang.",
-   "link": null,
-   "publishedDaysAgo": 6
+   "link": "https://www.hankintailmoitukset.fi",
+   "publishedDaysAgo": 6,
+   "linkPlaceholder": true
   },
   {
    "id": "fa2",
@@ -929,8 +977,9 @@
    "value": "onder € 200.000",
    "source": "TED",
    "fit": "voor een gevelbedrijf met ervaring in bekleding en een duidelijke omvang.",
-   "link": null,
-   "publishedDaysAgo": 29
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 29,
+   "linkPlaceholder": true
   },
   {
    "id": "gw1",
@@ -948,8 +997,9 @@
    "value": "ongeveer € 190.000",
    "source": "Doffin",
    "fit": "voor een grondverzetbedrijf met eigen graafmachine en duidelijke opdrachten.",
-   "link": null,
-   "publishedDaysAgo": 15
+   "link": "https://www.doffin.no",
+   "publishedDaysAgo": 15,
+   "linkPlaceholder": true
   },
   {
    "id": "gw2",
@@ -967,8 +1017,9 @@
    "value": "onder € 150.000",
    "source": "TED",
    "fit": "voor een grondverzetbedrijf met eigen graafmachine en duidelijke opdrachten.",
-   "link": null,
-   "publishedDaysAgo": 25
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 25,
+   "linkPlaceholder": true
   },
   {
    "id": "dm1",
@@ -986,8 +1037,9 @@
    "value": "onder € 160.000",
    "source": "TED",
    "fit": "voor een sloopbedrijf dat zorgvuldig sloopt en afval netjes afvoert.",
-   "link": null,
-   "publishedDaysAgo": 17
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 17,
+   "linkPlaceholder": true
   },
   {
    "id": "dm2",
@@ -1005,8 +1057,9 @@
    "value": "ongeveer € 120.000",
    "source": "Hilma",
    "fit": "voor een sloopbedrijf dat zorgvuldig sloopt en afval netjes afvoert.",
-   "link": null,
-   "publishedDaysAgo": 14
+   "link": "https://www.hankintailmoitukset.fi",
+   "publishedDaysAgo": 14,
+   "linkPlaceholder": true
   },
   {
    "id": "sc1",
@@ -1024,8 +1077,9 @@
    "value": "Raamovereenkomst",
    "source": "TED",
    "fit": "voor een steigerbouwer die terugkerend werk wil bij een openbare opdrachtgever.",
-   "link": null,
-   "publishedDaysAgo": 29
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 29,
+   "linkPlaceholder": true
   },
   {
    "id": "sc2",
@@ -1043,8 +1097,9 @@
    "value": "onder € 100.000",
    "source": "TED",
    "fit": "voor een steigerbouwer die terugkerend werk wil bij een openbare opdrachtgever.",
-   "link": null,
-   "publishedDaysAgo": 6
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 6,
+   "linkPlaceholder": true
   }
  ]
 }

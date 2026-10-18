@@ -715,3 +715,21 @@ footer a:hover { color: var(--accent); }
 .off-links { list-style: none; padding: 0; margin: 4px 0 14px; display: grid; gap: 8px; font-family: var(--sans); }
 .off-links a { font-weight: 600; }
 @media (max-width: 760px) { .r-rows > div { grid-template-columns: 1fr; gap: 2px; } .legal .basics { padding: 6px 18px 18px; } .legal .region { padding: 20px 18px 8px; } }
+
+/* original-notice links: list items, hero cards, country cards */
+.tlist li { position: relative; background: #fffefb; border: 1px solid var(--line); border-left: 4px solid var(--tc, var(--line)); border-radius: 14px; transition: transform .18s var(--ease), box-shadow .18s var(--ease), border-color .18s; }
+.tlist li:hover, .tlist li.on, .tlist li:focus-within { background: #fff; border-color: #cdbd9c; border-left-color: var(--tc, #cdbd9c); box-shadow: var(--shadow-s); transform: translateY(-1px); }
+.tlist li button { width: 100%; background: transparent; border: 0; border-radius: 14px 14px 0 0; box-shadow: none; transform: none; padding: 13px 16px 8px 14px; }
+.tlist li button:hover, .tlist li button.on, .tlist li button:focus-visible { background: transparent; box-shadow: none; transform: none; border: 0; }
+.tl-link { display: block; padding: 0 16px 13px 14px; font: 600 13px var(--sans); color: var(--accent); text-decoration: none; }
+.tl-link:hover { text-decoration: underline; }
+.tc-orig { display: inline-block; margin-top: 2px; font: 600 12px var(--sans); color: var(--accent); text-decoration: none; }
+.tc-orig:hover { text-decoration: underline; }
+.hero-cards .tcard.compact { gap: 8px; }
+.c-title { color: var(--ink); text-decoration: none; }
+.c-title:hover { color: var(--accent); }
+.c-links { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; margin-top: auto; padding-top: 12px; border-top: 1px solid var(--line); font: 600 14px var(--sans); }
+.c-links a { color: var(--accent); text-decoration: none; }
+.c-links a:hover { text-decoration: underline; }
+.td-link .btn { font-size: 14px; padding: 11px 18px; }
+.td-link .tc-from { margin-left: 6px; font-weight: 600; color: var(--ink); }

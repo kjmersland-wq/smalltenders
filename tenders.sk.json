@@ -1,5 +1,5 @@
 {
- "_note": "SAMPLE entries only. 'publishedDaysAgo' is for samples; real entries use an ISO 'published' date.",
+ "_note": "SAMPLE entries only. 'publishedDaysAgo' is for samples; real entries use an ISO 'published' date. 'link' is the URL of the original notice. While 'linkPlaceholder' is true it is only the portal's address: replace it with the notice URL and remove the flag.",
  "tenders": [
   {
    "id": "s1",
@@ -17,8 +17,9 @@
    "value": "pod 150 000 €",
    "source": "Doffin",
    "fit": "pre maliarsku firmu, ktorá vie plánovať podľa pevného termínu.",
-   "link": null,
-   "publishedDaysAgo": 15
+   "link": "https://www.doffin.no",
+   "publishedDaysAgo": 15,
+   "linkPlaceholder": true
   },
   {
    "id": "n2",
@@ -36,8 +37,9 @@
    "value": "pod 180 000 €",
    "source": "Doffin",
    "fit": "pre malú elektrikársku firmu, ktorá má rada jasné zákazky blízko domova.",
-   "link": null,
-   "publishedDaysAgo": 16
+   "link": "https://www.doffin.no",
+   "publishedDaysAgo": 16,
+   "linkPlaceholder": true
   },
   {
    "id": "n3",
@@ -55,8 +57,9 @@
    "value": "okolo 140 000 €",
    "source": "Doffin",
    "fit": "pre stavebnú firmu, ktorá má rada jasne vymedzené opravy.",
-   "link": null,
-   "publishedDaysAgo": 26
+   "link": "https://www.doffin.no",
+   "publishedDaysAgo": 26,
+   "linkPlaceholder": true
   },
   {
    "id": "n4",
@@ -74,8 +77,9 @@
    "value": "Rámcová zmluva",
    "source": "Doffin",
    "fit": "pre firmu na vzduchotechniku a vykurovanie, ktorá chce stálu, opakujúcu sa prácu.",
-   "link": null,
-   "publishedDaysAgo": 29
+   "link": "https://www.doffin.no",
+   "publishedDaysAgo": 29,
+   "linkPlaceholder": true
   },
   {
    "id": "s4",
@@ -93,8 +97,9 @@
    "value": "okolo 120 000 € ročne",
    "source": "TED",
    "fit": "pre upratovaciu firmu, ktorá chce stálu miestnu zákazku.",
-   "link": null,
-   "publishedDaysAgo": 18
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 18,
+   "linkPlaceholder": true
   },
   {
    "id": "e2",
@@ -112,8 +117,9 @@
    "value": "pod 200 000 €",
    "source": "TED",
    "fit": "pre inštalatérsku firmu s malým tímom, ktorá má rada plánovanú, opakujúcu sa prácu.",
-   "link": null,
-   "publishedDaysAgo": 1
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 1,
+   "linkPlaceholder": true
   },
   {
    "id": "e3",
@@ -131,8 +137,9 @@
    "value": "okolo 110 000 €",
    "source": "TED",
    "fit": "pre maliarsku firmu, ktorá vie plánovať podľa pevného termínu.",
-   "link": null,
-   "publishedDaysAgo": 24
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 24,
+   "linkPlaceholder": true
   },
   {
    "id": "e4",
@@ -150,8 +157,9 @@
    "value": "pod 90 000 €",
    "source": "TED",
    "fit": "pre malú elektrikársku firmu, ktorá má rada jasné zákazky blízko domova.",
-   "link": null,
-   "publishedDaysAgo": 14
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 14,
+   "linkPlaceholder": true
   },
   {
    "id": "s5",
@@ -169,8 +177,9 @@
    "value": "pod 200 000 €",
    "source": "TED",
    "fit": "pre inštalatérsku firmu s malým tímom, ktorá má rada plánovanú, opakujúcu sa prácu.",
-   "link": null,
-   "publishedDaysAgo": 8
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 8,
+   "linkPlaceholder": true
   },
   {
    "id": "d2",
@@ -188,8 +197,9 @@
    "value": "Rámcová zmluva",
    "source": "TED",
    "fit": "pre firmu na vzduchotechniku a vykurovanie, ktorá chce stálu, opakujúcu sa prácu.",
-   "link": null,
-   "publishedDaysAgo": 28
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 28,
+   "linkPlaceholder": true
   },
   {
    "id": "d3",
@@ -207,8 +217,9 @@
    "value": "okolo 160 000 €",
    "source": "TED",
    "fit": "pre stavebnú firmu, ktorá má rada jasne vymedzené opravy.",
-   "link": null,
-   "publishedDaysAgo": 5
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 5,
+   "linkPlaceholder": true
   },
   {
    "id": "d4",
@@ -226,8 +237,9 @@
    "value": "okolo 80 000 € ročne",
    "source": "TED",
    "fit": "pre upratovaciu firmu, ktorá chce stálu miestnu zákazku.",
-   "link": null,
-   "publishedDaysAgo": 1
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 1,
+   "linkPlaceholder": true
   },
   {
    "id": "s6",
@@ -245,8 +257,9 @@
    "value": "okolo 180 000 €",
    "source": "Hilma",
    "fit": "pre stavebnú firmu, ktorá má rada jasne vymedzené opravy.",
-   "link": null,
-   "publishedDaysAgo": 5
+   "link": "https://www.hankintailmoitukset.fi",
+   "publishedDaysAgo": 5,
+   "linkPlaceholder": true
   },
   {
    "id": "f2",
@@ -264,8 +277,9 @@
    "value": "pod 170 000 €",
    "source": "Hilma",
    "fit": "pre firmu na vzduchotechniku a vykurovanie, ktorá chce stálu, opakujúcu sa prácu.",
-   "link": null,
-   "publishedDaysAgo": 31
+   "link": "https://www.hankintailmoitukset.fi",
+   "publishedDaysAgo": 31,
+   "linkPlaceholder": true
   },
   {
    "id": "f3",
@@ -283,8 +297,9 @@
    "value": "pod 100 000 €",
    "source": "Hilma",
    "fit": "pre maliarsku firmu, ktorá vie plánovať podľa pevného termínu.",
-   "link": null,
-   "publishedDaysAgo": 8
+   "link": "https://www.hankintailmoitukset.fi",
+   "publishedDaysAgo": 8,
+   "linkPlaceholder": true
   },
   {
    "id": "f4",
@@ -302,8 +317,9 @@
    "value": "okolo 190 000 €",
    "source": "Hilma",
    "fit": "pre malú elektrikársku firmu, ktorá má rada jasné zákazky blízko domova.",
-   "link": null,
-   "publishedDaysAgo": 11
+   "link": "https://www.hankintailmoitukset.fi",
+   "publishedDaysAgo": 11,
+   "linkPlaceholder": true
   },
   {
    "id": "s7",
@@ -321,8 +337,9 @@
    "value": "pod 100 000 €",
    "source": "TED",
    "fit": "pre malú elektrikársku firmu, ktorá má rada jasné zákazky blízko domova.",
-   "link": null,
-   "publishedDaysAgo": 28
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 28,
+   "linkPlaceholder": true
   },
   {
    "id": "i2",
@@ -340,8 +357,9 @@
    "value": "pod 120 000 €",
    "source": "TED",
    "fit": "pre inštalatérsku firmu s malým tímom, ktorá má rada plánovanú, opakujúcu sa prácu.",
-   "link": null,
-   "publishedDaysAgo": 10
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 10,
+   "linkPlaceholder": true
   },
   {
    "id": "s2",
@@ -359,8 +377,9 @@
    "value": "Rámcová zmluva",
    "source": "TED",
    "fit": "pre firmu na vzduchotechniku a vykurovanie, ktorá chce stálu, opakujúcu sa prácu.",
-   "link": null,
-   "publishedDaysAgo": 12
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 12,
+   "linkPlaceholder": true
   },
   {
    "id": "p2",
@@ -378,8 +397,9 @@
    "value": "pod 110 000 €",
    "source": "TED",
    "fit": "pre maliarsku firmu, ktorá vie plánovať podľa pevného termínu.",
-   "link": null,
-   "publishedDaysAgo": 32
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 32,
+   "linkPlaceholder": true
   },
   {
    "id": "p3",
@@ -397,8 +417,9 @@
    "value": "pod 130 000 €",
    "source": "TED",
    "fit": "pre malú elektrikársku firmu, ktorá má rada jasné zákazky blízko domova.",
-   "link": null,
-   "publishedDaysAgo": 9
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 9,
+   "linkPlaceholder": true
   },
   {
    "id": "p4",
@@ -416,8 +437,9 @@
    "value": "okolo 90 000 € ročne",
    "source": "TED",
    "fit": "pre upratovaciu firmu, ktorá chce stálu miestnu zákazku.",
-   "link": null,
-   "publishedDaysAgo": 19
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 19,
+   "linkPlaceholder": true
   },
   {
    "id": "s3",
@@ -435,8 +457,9 @@
    "value": "Jasne vymedzený",
    "source": "TED",
    "fit": "pre malú elektrikársku firmu, ktorá má rada jasné zákazky blízko domova.",
-   "link": null,
-   "publishedDaysAgo": 2
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 2,
+   "linkPlaceholder": true
   },
   {
    "id": "g2",
@@ -454,8 +477,9 @@
    "value": "pod 190 000 €",
    "source": "TED",
    "fit": "pre inštalatérsku firmu s malým tímom, ktorá má rada plánovanú, opakujúcu sa prácu.",
-   "link": null,
-   "publishedDaysAgo": 18
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 18,
+   "linkPlaceholder": true
   },
   {
    "id": "g3",
@@ -473,8 +497,9 @@
    "value": "okolo 170 000 €",
    "source": "TED",
    "fit": "pre stavebnú firmu, ktorá má rada jasne vymedzené opravy.",
-   "link": null,
-   "publishedDaysAgo": 8
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 8,
+   "linkPlaceholder": true
   },
   {
    "id": "g4",
@@ -492,8 +517,9 @@
    "value": "Rámcová zmluva",
    "source": "TED",
    "fit": "pre firmu na vzduchotechniku a vykurovanie, ktorá chce stálu, opakujúcu sa prácu.",
-   "link": null,
-   "publishedDaysAgo": 5
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 5,
+   "linkPlaceholder": true
   },
   {
    "id": "x1",
@@ -511,8 +537,9 @@
    "value": "okolo 100 000 € ročne",
    "source": "TED",
    "fit": "pre upratovaciu firmu, ktorá chce stálu miestnu zákazku.",
-   "link": null,
-   "publishedDaysAgo": 10
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 10,
+   "linkPlaceholder": true
   },
   {
    "id": "x2",
@@ -530,8 +557,9 @@
    "value": "pod 120 000 €",
    "source": "TED",
    "fit": "pre maliarsku firmu, ktorá vie plánovať podľa pevného termínu.",
-   "link": null,
-   "publishedDaysAgo": 20
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 20,
+   "linkPlaceholder": true
   },
   {
    "id": "x3",
@@ -549,8 +577,9 @@
    "value": "pod 200 000 €",
    "source": "TED",
    "fit": "pre firmu na vzduchotechniku a vykurovanie, ktorá chce stálu, opakujúcu sa prácu.",
-   "link": null,
-   "publishedDaysAgo": 30
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 30,
+   "linkPlaceholder": true
   },
   {
    "id": "x4",
@@ -568,8 +597,9 @@
    "value": "pod 150 000 €",
    "source": "TED",
    "fit": "pre stavebnú firmu, ktorá má rada jasne vymedzené opravy.",
-   "link": null,
-   "publishedDaysAgo": 7
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 7,
+   "linkPlaceholder": true
   },
   {
    "id": "x5",
@@ -587,8 +617,9 @@
    "value": "pod 110 000 €",
    "source": "TED",
    "fit": "pre malú elektrikársku firmu, ktorá má rada jasné zákazky blízko domova.",
-   "link": null,
-   "publishedDaysAgo": 17
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 17,
+   "linkPlaceholder": true
   },
   {
    "id": "x6",
@@ -606,8 +637,9 @@
    "value": "pod 140 000 €",
    "source": "TED",
    "fit": "pre inštalatérsku firmu s malým tímom, ktorá má rada plánovanú, opakujúcu sa prácu.",
-   "link": null,
-   "publishedDaysAgo": 27
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 27,
+   "linkPlaceholder": true
   },
   {
    "id": "x7",
@@ -625,8 +657,9 @@
    "value": "pod 60 000 €",
    "source": "TED",
    "fit": "pre maliarsku firmu, ktorá vie plánovať podľa pevného termínu.",
-   "link": null,
-   "publishedDaysAgo": 4
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 4,
+   "linkPlaceholder": true
   },
   {
    "id": "x8",
@@ -644,8 +677,9 @@
    "value": "pod 90 000 €",
    "source": "TED",
    "fit": "pre malú elektrikársku firmu, ktorá má rada jasné zákazky blízko domova.",
-   "link": null,
-   "publishedDaysAgo": 19
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 19,
+   "linkPlaceholder": true
   },
   {
    "id": "x9",
@@ -663,8 +697,9 @@
    "value": "Rámcová zmluva",
    "source": "TED",
    "fit": "pre firmu na vzduchotechniku a vykurovanie, ktorá chce stálu, opakujúcu sa prácu.",
-   "link": null,
-   "publishedDaysAgo": 29
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 29,
+   "linkPlaceholder": true
   },
   {
    "id": "y1",
@@ -682,8 +717,9 @@
    "value": "okolo 130 000 € ročne",
    "source": "TED",
    "fit": "pre upratovaciu firmu, ktorá chce stálu miestnu zákazku.",
-   "link": null,
-   "publishedDaysAgo": 0
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 0,
+   "linkPlaceholder": true
   },
   {
    "id": "y2",
@@ -701,8 +737,9 @@
    "value": "pod 180 000 €",
    "source": "TED",
    "fit": "pre stavebnú firmu, ktorá má rada jasne vymedzené opravy.",
-   "link": null,
-   "publishedDaysAgo": 23
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 23,
+   "linkPlaceholder": true
   },
   {
    "id": "y3",
@@ -720,8 +757,9 @@
    "value": "okolo 95 000 €",
    "source": "TED",
    "fit": "pre maliarsku firmu, ktorá vie plánovať podľa pevného termínu.",
-   "link": null,
-   "publishedDaysAgo": 13
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 13,
+   "linkPlaceholder": true
   },
   {
    "id": "y4",
@@ -739,8 +777,9 @@
    "value": "pod 100 000 €",
    "source": "TED",
    "fit": "pre inštalatérsku firmu s malým tímom, ktorá má rada plánovanú, opakujúcu sa prácu.",
-   "link": null,
-   "publishedDaysAgo": 17
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 17,
+   "linkPlaceholder": true
   },
   {
    "id": "r1",
@@ -758,8 +797,9 @@
    "value": "pod 170 000 €",
    "source": "Doffin",
    "fit": "pre firmu na strechy, ktorá pozná lepenku a asfalt na plochých strechách.",
-   "link": null,
-   "publishedDaysAgo": 22
+   "link": "https://www.doffin.no",
+   "publishedDaysAgo": 22,
+   "linkPlaceholder": true
   },
   {
    "id": "r2",
@@ -777,8 +817,9 @@
    "value": "okolo 130 000 €",
    "source": "TED",
    "fit": "pre firmu na strechy, ktorá pozná lepenku a asfalt na plochých strechách.",
-   "link": null,
-   "publishedDaysAgo": 25
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 25,
+   "linkPlaceholder": true
   },
   {
    "id": "fl1",
@@ -796,8 +837,9 @@
    "value": "pod 90 000 €",
    "source": "TED",
    "fit": "pre podlahársku firmu, ktorá vie pracovať mimo prevádzkových hodín.",
-   "link": null,
-   "publishedDaysAgo": 2
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 2,
+   "linkPlaceholder": true
   },
   {
    "id": "fl2",
@@ -815,8 +857,9 @@
    "value": "pod 120 000 €",
    "source": "Hilma",
    "fit": "pre podlahársku firmu, ktorá vie pracovať mimo prevádzkových hodín.",
-   "link": null,
-   "publishedDaysAgo": 12
+   "link": "https://www.hankintailmoitukset.fi",
+   "publishedDaysAgo": 12,
+   "linkPlaceholder": true
   },
   {
    "id": "wd1",
@@ -834,8 +877,9 @@
    "value": "okolo 150 000 €",
    "source": "TED",
    "fit": "pre firmu na okná a dvere s vlastnými montérmi.",
-   "link": null,
-   "publishedDaysAgo": 10
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 10,
+   "linkPlaceholder": true
   },
   {
    "id": "wd2",
@@ -853,8 +897,9 @@
    "value": "pod 160 000 €",
    "source": "Doffin",
    "fit": "pre firmu na okná a dvere s vlastnými montérmi.",
-   "link": null,
-   "publishedDaysAgo": 7
+   "link": "https://www.doffin.no",
+   "publishedDaysAgo": 7,
+   "linkPlaceholder": true
   },
   {
    "id": "in1",
@@ -872,8 +917,9 @@
    "value": "okolo 140 000 €",
    "source": "TED",
    "fit": "pre izolatérsku firmu, ktorá má rada opakovateľné práce vo viacerých budovách.",
-   "link": null,
-   "publishedDaysAgo": 10
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 10,
+   "linkPlaceholder": true
   },
   {
    "id": "in2",
@@ -891,8 +937,9 @@
    "value": "pod 180 000 €",
    "source": "TED",
    "fit": "pre izolatérsku firmu, ktorá má rada opakovateľné práce vo viacerých budovách.",
-   "link": null,
-   "publishedDaysAgo": 7
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 7,
+   "linkPlaceholder": true
   },
   {
    "id": "fa1",
@@ -910,8 +957,9 @@
    "value": "okolo 170 000 €",
    "source": "Hilma",
    "fit": "pre fasádnu firmu so skúsenosťami s obkladmi a jasným rozsahom.",
-   "link": null,
-   "publishedDaysAgo": 6
+   "link": "https://www.hankintailmoitukset.fi",
+   "publishedDaysAgo": 6,
+   "linkPlaceholder": true
   },
   {
    "id": "fa2",
@@ -929,8 +977,9 @@
    "value": "pod 200 000 €",
    "source": "TED",
    "fit": "pre fasádnu firmu so skúsenosťami s obkladmi a jasným rozsahom.",
-   "link": null,
-   "publishedDaysAgo": 29
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 29,
+   "linkPlaceholder": true
   },
   {
    "id": "gw1",
@@ -948,8 +997,9 @@
    "value": "okolo 190 000 €",
    "source": "Doffin",
    "fit": "pre firmu na zemné práce s vlastným bagrom a jasnými úlohami.",
-   "link": null,
-   "publishedDaysAgo": 15
+   "link": "https://www.doffin.no",
+   "publishedDaysAgo": 15,
+   "linkPlaceholder": true
   },
   {
    "id": "gw2",
@@ -967,8 +1017,9 @@
    "value": "pod 150 000 €",
    "source": "TED",
    "fit": "pre firmu na zemné práce s vlastným bagrom a jasnými úlohami.",
-   "link": null,
-   "publishedDaysAgo": 25
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 25,
+   "linkPlaceholder": true
   },
   {
    "id": "dm1",
@@ -986,8 +1037,9 @@
    "value": "pod 160 000 €",
    "source": "TED",
    "fit": "pre demolačnú firmu, ktorá zvládne opatrné búranie a nakladanie s odpadom.",
-   "link": null,
-   "publishedDaysAgo": 17
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 17,
+   "linkPlaceholder": true
   },
   {
    "id": "dm2",
@@ -1005,8 +1057,9 @@
    "value": "okolo 120 000 €",
    "source": "Hilma",
    "fit": "pre demolačnú firmu, ktorá zvládne opatrné búranie a nakladanie s odpadom.",
-   "link": null,
-   "publishedDaysAgo": 14
+   "link": "https://www.hankintailmoitukset.fi",
+   "publishedDaysAgo": 14,
+   "linkPlaceholder": true
   },
   {
    "id": "sc1",
@@ -1024,8 +1077,9 @@
    "value": "Rámcová zmluva",
    "source": "TED",
    "fit": "pre firmu na lešenie, ktorá chce opakované zákazky od verejného obstarávateľa.",
-   "link": null,
-   "publishedDaysAgo": 29
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 29,
+   "linkPlaceholder": true
   },
   {
    "id": "sc2",
@@ -1043,8 +1097,9 @@
    "value": "pod 100 000 €",
    "source": "TED",
    "fit": "pre firmu na lešenie, ktorá chce opakované zákazky od verejného obstarávateľa.",
-   "link": null,
-   "publishedDaysAgo": 6
+   "link": "https://ted.europa.eu",
+   "publishedDaysAgo": 6,
+   "linkPlaceholder": true
   }
  ]
 }

@@ -14,21 +14,26 @@
   }
   var CLOCK = 'M12 7v5l3 2';
 
+  var PORTAL = { Doffin: 'https://www.doffin.no', TED: 'https://ted.europa.eu', Hilma: 'https://www.hankintailmoitukset.fi' };
+
   function card(t) {
-    var a = el('a', 'tcard linkcard'); a.href = '/#map=' + cc + '/' + t.id;
+    var a = el('article', 'tcard');
     var top = el('div', 'tc-top'); top.appendChild(el('span', 'chip', t.tradeName)); top.appendChild(el('span', 'tc-cc', t.city));
     a.appendChild(top);
-    a.appendChild(el('h3', '', t.title));
+    var h = el('h3'); var hl = el('a', 'c-title', t.title); hl.href = '/#map=' + cc + '/' + t.id; h.appendChild(hl); a.appendChild(h);
     a.appendChild(el('p', 'tc-where', t.city + ' · ' + t.region));
     var b = el('div', 'badges');
     b.appendChild(el('span', 'badge dl', daysLeft(t) + ' days left'));
     if (t.value) b.appendChild(el('span', 'badge', t.value));
     a.appendChild(b);
     var fit = el('p', 'fitbox'); fit.appendChild(el('b', '', 'Good fit')); fit.appendChild(document.createTextNode(' ' + t.fit)); a.appendChild(fit);
-    a.appendChild(el('span', 'c-open', 'Open on the map →'));
+    var row = el('div', 'c-links');
+    var url = t.link || PORTAL[t.source];                       // placeholder until the real notice URL is in tenders.json
+    if (url) { var o = el('a', 'c-orig', 'Original notice · ' + (t.source || '') + ' ↗'); o.href = url; o.target = '_blank'; o.rel = 'noopener'; row.appendChild(o); }
+    var m = el('a', 'c-open', 'Open on the map →'); m.href = '/#map=' + cc + '/' + t.id; row.appendChild(m);
+    a.appendChild(row);
     return a;
   }
-
   fetch('/tenders.json').then(function (r) { return r.json(); }).then(function (j) {
     var list = (j.tenders || []).filter(function (t) { return t.country === cc; }).sort(function (a, b) { return deadline(a) - deadline(b); });
     if (!list.length) { cards.appendChild(el('p', 'empty', 'No entries for ' + name + ' right now. We add notices as we find them.')); return; }
