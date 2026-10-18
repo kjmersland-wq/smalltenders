@@ -91,7 +91,7 @@
       list.forEach(function (t) { grid.appendChild(card(t)); });
       panel.appendChild(grid);
     } else {
-      panel.appendChild(el('p', 'empty', (P.none || 'No entries for {country} yet. We start in the Nordics and add countries step by step.').replace('{country}', name)));
+      panel.appendChild(el('p', 'empty', (P.none || 'No entries for {country} right now. We add notices as we find them.').replace('{country}', name)));
     }
     if (tileHref[cc]) {
       var more = el('p', 'cp-more');
@@ -147,7 +147,6 @@
     box.appendChild(stat(open.length, L[0], function () { if (window.stMap) window.stMap.reset(); }));
     box.appendChild(el('i', 'stat-sep'));
     box.appendChild(stat(fresh.length, L[1], function () { if (window.stMap) window.stMap.setNew(true); }));
-    if (open.length && open.every(function (t) { return t.sample; })) box.appendChild(el('small', 'stat-note', L[2]));
     host.appendChild(box);
   }
 

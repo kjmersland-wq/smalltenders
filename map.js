@@ -177,8 +177,8 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
     var foot = el('p', 'td-link');
     if (t.link) {
       var l = el('a', 'btn', D.original + ' ↗'); l.href = t.link; l.target = '_blank'; l.rel = 'noopener'; foot.appendChild(l);
-    } else foot.appendChild(el('span', 'tc-src', D.sample));
-    if (t.source) foot.appendChild(el('span', 'tc-from', ' · ' + t.source));
+    }
+    if (t.source) foot.appendChild(el('span', 'tc-from', (t.link ? ' · ' : '') + t.source));
     d.appendChild(foot);
   }
 
@@ -291,7 +291,6 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
       var seen = {};
       tenders.forEach(function (t) { seen[t.trade] = t.tradeName; });
       legendEl.textContent = '';
-      if (D.examples) { var h = document.createElement('li'); h.className = 'lg-title'; h.textContent = D.examples + ':'; legendEl.appendChild(h); }
       Object.keys(seen).forEach(function (k) {
         var li = document.createElement('li'), dot = document.createElement('i'); dot.style.background = TRADE[k] || '#1c1914';
         li.appendChild(dot); li.appendChild(document.createTextNode(seen[k])); legendEl.appendChild(li);
