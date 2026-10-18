@@ -40,69 +40,147 @@
   </nav>
 
   <header class="hero">
-    <div class="wrap">
-      <p class="kicker">Offentlige udbud · kommuneniveau · alle fag</p>
-      <h1>Small Tenders</h1>
-      <p class="lead">Vi starter i Norden, derefter Polen og Tyskland, så nabolandene. Ingen AI. Ingen søgemaskine endnu — indtil videre en redigeret liste på e-mail.</p>
-      <div class="actions">
-        <a class="btn" href="#form">Få prøvelisten</a>
-        <a class="btn ghost" href="#examples">Se eksempel</a>
+    <div class="wrap hero-grid">
+      <div>
+        <p class="kicker">Offentlige udbud · kommuneniveau · alle fag</p>
+        <h1>Offentlige udbud, som en lille virksomhed kan vinde.</h1>
+        <p class="lead">Vi læser de offentlige udbudsbekendtgørelser for dig og sender dig dem, der passer. Indtil videre er det en håndredigeret liste på mail — først i Norden, så Polen, Tyskland og nabolandene. Ingen AI og endnu ingen søgemaskine.</p>
+        <div class="actions">
+          <a class="btn lg" href="#form">Få prøvelisten</a>
+          <a class="btn ghost lg" href="#examples">Se eksempler</a>
+        </div>
+        <ul class="trust">
+          <li>Redigeret af rigtige mennesker</li>
+          <li>Officielle, åbne kilder</li>
+          <li>Ingen konto nødvendig</li>
+        </ul>
       </div>
+      <aside class="hero-card" aria-hidden="true">
+        <p class="hc-head">Udgave · eksempel</p>
+        <div class="hc-row"><span class="chip">Maling</span><span class="hc-d">om 18 dage</span></div>
+        <p class="hc-t">Maling, kommunale bygninger</p>
+        <p class="hc-m">Norge · Innlandet</p>
+        <div class="hc-row"><span class="chip">Ventilation</span><span class="hc-d">om 24 dage</span></div>
+        <p class="hc-t">Ventilationsservice, skolebygninger</p>
+        <p class="hc-m">Polen · Mazowsze</p>
+        <p class="hc-foot">Hvert opslag linker til den oprindelige bekendtgørelse.</p>
+      </aside>
     </div>
   </header>
 
   <main>
+    <section id="coverage" class="alt">
+      <div class="wrap">
+        <p class="label">Hvor vi leder</p>
+        <h2>Femten lande, ét skridt ad gangen</h2>
+        <p class="note">Hver flise er et land, placeret nogenlunde der, hvor det ligger. Klik på dit for at læse siden på dit eget sprog.</p>
+        <div class="coverage">
+          <ul class="tilemap">
+            <li style="grid-area:1/1" data-wave="1"><a href="/is/"><b>IS</b><span>Ísland</span></a></li>
+            <li style="grid-area:1/3" data-wave="1"><a href="/no/"><b>NO</b><span>Norge</span></a></li>
+            <li style="grid-area:1/4" data-wave="1"><a href="/sv/"><b>SE</b><span>Sverige</span></a></li>
+            <li style="grid-area:1/5" data-wave="1"><a href="/fi/"><b>FI</b><span>Suomi</span></a></li>
+            <li style="grid-area:2/3" data-wave="1"><a href="/da/"><b>DK</b><span>Danmark</span></a></li>
+            <li style="grid-area:2/5" data-wave="3"><a href="/ee/"><b>EE</b><span>Eesti</span></a></li>
+            <li style="grid-area:3/5" data-wave="3"><a href="/lv/"><b>LV</b><span>Latvija</span></a></li>
+            <li style="grid-area:4/2" data-wave="3"><a href="/nl/"><b>NL</b><span>Nederland</span></a></li>
+            <li style="grid-area:4/3" data-wave="2"><a href="/de/"><b>DE</b><span>Deutschland</span></a></li>
+            <li style="grid-area:4/4" data-wave="2"><a href="/pl/"><b>PL</b><span>Polska</span></a></li>
+            <li style="grid-area:4/5" data-wave="3"><a href="/lt/"><b>LT</b><span>Lietuva</span></a></li>
+            <li style="grid-area:5/2" data-wave="3"><a href="/be/"><b>BE</b><span>België</span></a></li>
+            <li style="grid-area:5/3" data-wave="3"><a href="/cs/"><b>CZ</b><span>Česko</span></a></li>
+            <li style="grid-area:5/4" data-wave="3"><a href="/sk/"><b>SK</b><span>Slovensko</span></a></li>
+            <li style="grid-area:6/3" data-wave="3"><a href="/at/"><b>AT</b><span>Österreich</span></a></li>
+          </ul>
+          <ul class="legend">
+            <li data-wave="1"><b>Nu</b> Norge, Danmark, Sverige, Finland og Island</li>
+            <li data-wave="2"><b>Næste</b> Polen og Tyskland</li>
+            <li data-wave="3"><b>Bagefter</b> nabolandene</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <section>
       <div class="wrap">
         <p class="label">Det får du</p>
         <div class="tiles">
           <div class="tile">
-            <span class="n">01</span>
-            <h3>Helt ned til kommunen</h3>
-            <p>Udbud fra kommuner og andre offentlige indkøbere, for alle fag — el, VVS, ventilation, maling, byggeri, rengøring.</p>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg>
+            <h3>Tæt på dig</h3>
+            <p>Udbud fra kommuner og andre offentlige indkøbere, for alle fag — elektrikere, vvs’ere, ventilation, malere, håndværkere og rengøring.</p>
           </div>
           <div class="tile">
-            <span class="n">02</span>
-            <h3>Norden først</h3>
-            <p>Norge, Danmark, Sverige, Finland og Island først, derefter Polen og Tyskland, så nabolandene.</p>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+            <h3>Vi starter i Norden</h3>
+            <p>Vi begynder med Norge, Danmark, Sverige, Finland og Island og vokser videre til Polen, Tyskland og nabolandene.</p>
           </div>
           <div class="tile">
-            <span class="n">03</span>
-            <h3>Åbne kilder, links til originalen</h3>
-            <p>TED og nationale annoncer. Hver post linker til den oprindelige annonce — læs den altid, før du byder.</p>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3A4 4 0 0 0 11 18.7l1-1"/></svg>
+            <h3>Direkte fra kilden</h3>
+            <p>Alt kommer fra TED og nationale bekendtgørelser, og hvert opslag linker til originalen. Læs den, før du byder — vi peger dig altid derhen.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="examples">
+    <section id="examples" class="alt">
       <div class="wrap">
-        <h2>Sådan ser en udgave ud</h2>
-        <p class="note">Eksempelrækker — erstattes af rigtige officielle links, når listen sendes. Altid den oprindelige annonce først.</p>
-        <div class="rows">
-          <article class="row">
-            <div class="t">Maling, kommunale bygninger</div>
-            <div class="m">Norge · Innlandet · frist om 18 dage · under €150.000</div>
-            <div class="w">Passer til et malerfirma med 3–10 ansatte. Lokalt, hvis I allerede har offentlige opgaver.</div>
+        <h2>Et kig ind i en udgave</h2>
+        <p class="note">Det her er eksempler. Rigtige links til de officielle bekendtgørelser kommer, når listen går i gang — og originalen kommer altid først.</p>
+        <div class="cards">
+          <article class="card">
+            <span class="chip">Maling</span>
+            <h3>Maling, kommunale bygninger</h3>
+            <dl>
+              <div><dt>Sted</dt><dd>Norge · Innlandet</dd></div>
+              <div><dt>Frist</dt><dd>om 18 dage</dd></div>
+              <div><dt>Værdi</dt><dd>under €150.000</dd></div>
+            </dl>
+            <p class="fits"><b>Passer godt</b> til et malerfirma med 3–10 ansatte, især hvis I allerede løser offentlige opgaver.</p>
           </article>
-          <article class="row">
-            <div class="t">Ventilationsservice, skolebygninger</div>
-            <div class="m">Polen · Mazovien · frist om 24 dage · rammeaftale</div>
-            <div class="w">Tilbagevendende arbejde, ikke en enkeltopgave. Godt, hvis I allerede har servicebiler.</div>
+          <article class="card">
+            <span class="chip">Ventilation</span>
+            <h3>Ventilationsservice, skolebygninger</h3>
+            <dl>
+              <div><dt>Sted</dt><dd>Polen · Mazowsze</dd></div>
+              <div><dt>Frist</dt><dd>om 24 dage</dd></div>
+              <div><dt>Type</dt><dd>Rammeaftale</dd></div>
+            </dl>
+            <p class="fits"><b>Passer godt</b> hvis du vil have jævnt, tilbagevendende arbejde og allerede har servicebiler på vejen.</p>
           </article>
-          <article class="row">
-            <div class="t">Udskiftning af elektriske tavler</div>
-            <div class="m">Tyskland · regionalt · frist om 12 dage</div>
-            <div class="w">Afgrænset omfang. For stort til en enmandsvirksomhed, for lille til de landsdækkende kæder.</div>
+          <article class="card">
+            <span class="chip">El</span>
+            <h3>Udskiftning af koblingsanlæg</h3>
+            <dl>
+              <div><dt>Sted</dt><dd>Tyskland · regionalt</dd></div>
+              <div><dt>Frist</dt><dd>om 12 dage</dd></div>
+              <div><dt>Omfang</dt><dd>Afgrænset</dd></div>
+            </dl>
+            <p class="fits"><b>Passer godt</b> til en voksende virksomhed: klart omfang, større end en enmandsvirksomhed, men mindre end de nationale kæder.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="form">
+    <section>
+      <div class="wrap">
+        <p class="label">Sådan fungerer det</p>
+        <ol class="steps">
+          <li><span class="n">1</span><h3>Fortæl os dit fag</h3><p>Bare din mailadresse og dit fag. Ingen konto, ingen adgangskode.</p></li>
+          <li><span class="n">2</span><h3>Vi sætter listen sammen</h3><p>I hånden, fra officielle, åbne bekendtgørelser — uden AI.</p></li>
+          <li><span class="n">3</span><h3>Du læser originalen og beslutter</h3><p>Hvert opslag linker til bekendtgørelsen, så du kan se detaljerne og vælge, hvad der er et tilbud værd.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="form" class="alt">
       <div class="wrap form-wrap">
-        <h2>Få prøvelisten</h2>
-        <p>Ingen konto. E-mail + fag. Sammensat i hånden fra officielle, åbne annoncer — ingen AI, ingen søgemaskine endnu.</p>
+        <div class="price">
+          <p class="amount">Gratis prøveliste<small>, derefter melder vi prisen ud</small></p>
+        </div>
+        <h2>Få din gratis prøveliste</h2>
+        <p>Bare din mailadresse og dit fag. Vi sammensætter den i hånden ud fra officielle, åbne bekendtgørelser — ingen AI, endnu ingen søgemaskine.</p>
         <form action="mailto:hello@smalltenders.com" method="post" enctype="text/plain">
           <input type="email" name="email" placeholder="E-mail" required />
           <select name="trade" required>
@@ -114,7 +192,7 @@
             <option>Tømrer / byggeri</option>
             <option>Rengøring</option>
           </select>
-          <button type="submit">Send</button>
+          <button type="submit">Send mig listen</button>
         </form>
       </div>
     </section>

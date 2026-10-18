@@ -40,69 +40,147 @@
   </nav>
 
   <header class="hero">
-    <div class="wrap">
-      <p class="kicker">Verejné zákazky · úroveň obcí · všetky odbory</p>
-      <h1>Small Tenders</h1>
-      <p class="lead">Začíname na severe Európy, potom Poľsko a Nemecko, následne susedné krajiny. Žiadna AI. Zatiaľ žiadny vyhľadávač — zatiaľ redigovaný zoznam e-mailom.</p>
-      <div class="actions">
-        <a class="btn" href="#form">Získať ukážkový zoznam</a>
-        <a class="btn ghost" href="#examples">Zobraziť príklady</a>
+    <div class="wrap hero-grid">
+      <div>
+        <p class="kicker">Verejné zákazky · úroveň obcí · všetky odbory</p>
+        <h1>Verejné zákazky, ktoré môže vyhrať aj malá firma.</h1>
+        <p class="lead">Verejné oznámenia čítame za vás a posielame vám tie, ktoré sa hodia. Zatiaľ ide o ručne zostavený zoznam e-mailom — najprv Sever, potom Poľsko, Nemecko a susedné krajiny. Žiadna umelá inteligencia a zatiaľ ani vyhľadávač.</p>
+        <div class="actions">
+          <a class="btn lg" href="#form">Získať ukážkový zoznam</a>
+          <a class="btn ghost lg" href="#examples">Pozrieť ukážky</a>
+        </div>
+        <ul class="trust">
+          <li>Zostavujú skutoční ľudia</li>
+          <li>Oficiálne, otvorené zdroje</li>
+          <li>Bez zakladania účtu</li>
+        </ul>
       </div>
+      <aside class="hero-card" aria-hidden="true">
+        <p class="hc-head">Vydanie · ukážka</p>
+        <div class="hc-row"><span class="chip">Maľovanie</span><span class="hc-d">o 18 dní</span></div>
+        <p class="hc-t">Maľovanie, obecné budovy</p>
+        <p class="hc-m">Nórsko · Innlandet</p>
+        <div class="hc-row"><span class="chip">Vzduchotechnika</span><span class="hc-d">o 24 dní</span></div>
+        <p class="hc-t">Servis vzduchotechniky, školské budovy</p>
+        <p class="hc-m">Poľsko · Mazovsko</p>
+        <p class="hc-foot">Každá položka odkazuje na pôvodné oznámenie.</p>
+      </aside>
     </div>
   </header>
 
   <main>
+    <section id="coverage" class="alt">
+      <div class="wrap">
+        <p class="label">Kde hľadáme</p>
+        <h2>Pätnásť krajín, krok za krokom</h2>
+        <p class="note">Každá dlaždica je jedna krajina, umiestnená približne tam, kde leží. Kliknite na svoju a prečítajte si stránku vo svojom jazyku.</p>
+        <div class="coverage">
+          <ul class="tilemap">
+            <li style="grid-area:1/1" data-wave="1"><a href="/is/"><b>IS</b><span>Ísland</span></a></li>
+            <li style="grid-area:1/3" data-wave="1"><a href="/no/"><b>NO</b><span>Norge</span></a></li>
+            <li style="grid-area:1/4" data-wave="1"><a href="/sv/"><b>SE</b><span>Sverige</span></a></li>
+            <li style="grid-area:1/5" data-wave="1"><a href="/fi/"><b>FI</b><span>Suomi</span></a></li>
+            <li style="grid-area:2/3" data-wave="1"><a href="/da/"><b>DK</b><span>Danmark</span></a></li>
+            <li style="grid-area:2/5" data-wave="3"><a href="/ee/"><b>EE</b><span>Eesti</span></a></li>
+            <li style="grid-area:3/5" data-wave="3"><a href="/lv/"><b>LV</b><span>Latvija</span></a></li>
+            <li style="grid-area:4/2" data-wave="3"><a href="/nl/"><b>NL</b><span>Nederland</span></a></li>
+            <li style="grid-area:4/3" data-wave="2"><a href="/de/"><b>DE</b><span>Deutschland</span></a></li>
+            <li style="grid-area:4/4" data-wave="2"><a href="/pl/"><b>PL</b><span>Polska</span></a></li>
+            <li style="grid-area:4/5" data-wave="3"><a href="/lt/"><b>LT</b><span>Lietuva</span></a></li>
+            <li style="grid-area:5/2" data-wave="3"><a href="/be/"><b>BE</b><span>België</span></a></li>
+            <li style="grid-area:5/3" data-wave="3"><a href="/cs/"><b>CZ</b><span>Česko</span></a></li>
+            <li style="grid-area:5/4" data-wave="3"><a href="/sk/"><b>SK</b><span>Slovensko</span></a></li>
+            <li style="grid-area:6/3" data-wave="3"><a href="/at/"><b>AT</b><span>Österreich</span></a></li>
+          </ul>
+          <ul class="legend">
+            <li data-wave="1"><b>Teraz</b> Nórsko, Dánsko, Švédsko, Fínsko a Island</li>
+            <li data-wave="2"><b>Ďalej</b> Poľsko a Nemecko</li>
+            <li data-wave="3"><b>Potom</b> susedné krajiny</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <section>
       <div class="wrap">
         <p class="label">Čo získate</p>
         <div class="tiles">
           <div class="tile">
-            <span class="n">01</span>
-            <h3>Až na úroveň obce</h3>
-            <p>Zákazky obcí a ďalších verejných obstarávateľov pre všetky odbory — elektro, inštalácie, vzduchotechnika, maľovanie, stavba, upratovanie.</p>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg>
+            <h3>Blízko vás</h3>
+            <p>Zákazky od obcí a ďalších verejných obstarávateľov pre všetky odbory — elektrikárov, inštalatérov, vzduchotechniku, maliarov, stavbárov aj upratovanie.</p>
           </div>
           <div class="tile">
-            <span class="n">02</span>
-            <h3>Najprv sever Európy</h3>
-            <p>Najprv Nórsko, Dánsko, Švédsko, Fínsko a Island, potom Poľsko a Nemecko, následne susedné krajiny.</p>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+            <h3>Začíname na Severe</h3>
+            <p>Začíname v Nórsku, Dánsku, Švédsku, Fínsku a na Islande a postupne sa rozšírime do Poľska, Nemecka a susedných krajín.</p>
           </div>
           <div class="tile">
-            <span class="n">03</span>
-            <h3>Otvorené zdroje, odkazy na originál</h3>
-            <p>TED a národné oznámenia. Každá položka odkazuje na pôvodné oznámenie — pred podaním ponuky si ho vždy prečítajte.</p>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3A4 4 0 0 0 11 18.7l1-1"/></svg>
+            <h3>Priamo od zdroja</h3>
+            <p>Všetko pochádza z TED a národných oznámení a každá položka odkazuje na originál. Prečítajte si ho skôr, než podáte ponuku — vždy vás tam nasmerujeme.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="examples">
+    <section id="examples" class="alt">
       <div class="wrap">
-        <h2>Ako vyzerá jedno vydanie</h2>
-        <p class="note">Ukážkové riadky — po spustení zoznamu ich nahradia skutočné oficiálne odkazy. Vždy najprv pôvodné oznámenie.</p>
-        <div class="rows">
-          <article class="row">
-            <div class="t">Maľovanie, obecné budovy</div>
-            <div class="m">Nórsko · Innlandet · lehota o 18 dní · pod 150 000 €</div>
-            <div class="w">Vhodné pre maliarsku firmu s 3–10 zamestnancami. Lokálne, ak už robíte verejné zákazky.</div>
+        <h2>Nahliadnite do jedného vydania</h2>
+        <p class="note">Sú to len ukážky. Skutočné odkazy na oficiálne oznámenia pribudnú, keď zoznam odštartuje — a pôvodné oznámenie je vždy na prvom mieste.</p>
+        <div class="cards">
+          <article class="card">
+            <span class="chip">Maľovanie</span>
+            <h3>Maľovanie, obecné budovy</h3>
+            <dl>
+              <div><dt>Kde</dt><dd>Nórsko · Innlandet</dd></div>
+              <div><dt>Termín</dt><dd>o 18 dní</dd></div>
+              <div><dt>Hodnota</dt><dd>pod 150 000 €</dd></div>
+            </dl>
+            <p class="fits"><b>Dobrá zhoda</b> pre maliarsku firmu s 3–10 zamestnancami, najmä ak už robíte verejné zákazky.</p>
           </article>
-          <article class="row">
-            <div class="t">Servis vzduchotechniky, školské budovy</div>
-            <div class="m">Poľsko · Mazovsko · lehota o 24 dní · rámcová dohoda</div>
-            <div class="w">Opakovaná práca, nie jednorazová. Dobré, ak už máte servisné vozidlá.</div>
+          <article class="card">
+            <span class="chip">Vzduchotechnika</span>
+            <h3>Servis vzduchotechniky, školské budovy</h3>
+            <dl>
+              <div><dt>Kde</dt><dd>Poľsko · Mazovsko</dd></div>
+              <div><dt>Termín</dt><dd>o 24 dní</dd></div>
+              <div><dt>Druh</dt><dd>Rámcová zmluva</dd></div>
+            </dl>
+            <p class="fits"><b>Dobrá zhoda</b> ak chcete stálu, opakujúcu sa prácu a už máte servisné autá.</p>
           </article>
-          <article class="row">
-            <div class="t">Výmena elektrických rozvádzačov</div>
-            <div class="m">Nemecko · regionálne · lehota o 12 dní</div>
-            <div class="w">Obmedzený rozsah. Príliš veľké pre jednu osobu, príliš malé pre celoštátne reťazce.</div>
+          <article class="card">
+            <span class="chip">Elektro</span>
+            <h3>Výmena rozvádzačov</h3>
+            <dl>
+              <div><dt>Kde</dt><dd>Nemecko · regionálne</dd></div>
+              <div><dt>Termín</dt><dd>o 12 dní</dd></div>
+              <div><dt>Rozsah</dt><dd>Jasne vymedzený</dd></div>
+            </dl>
+            <p class="fits"><b>Dobrá zhoda</b> pre rastúcu firmu: jasný rozsah, väčší ako pre jedného živnostníka, menší ako pre celoštátne reťazce.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="form">
+    <section>
+      <div class="wrap">
+        <p class="label">Ako to funguje</p>
+        <ol class="steps">
+          <li><span class="n">1</span><h3>Povedzte nám svoj odbor</h3><p>Stačí e-mail a odbor. Žiadny účet, žiadne heslo.</p></li>
+          <li><span class="n">2</span><h3>Zoznam zostavíme</h3><p>Ručne, z oficiálnych otvorených oznámení — bez umelej inteligencie.</p></li>
+          <li><span class="n">3</span><h3>Prečítate si originál a rozhodnete sa</h3><p>Každá položka odkazuje na oznámenie, takže vidíte podrobnosti a sami si vyberiete, čo stojí za ponuku.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="form" class="alt">
       <div class="wrap form-wrap">
-        <h2>Získať ukážkový zoznam</h2>
-        <p>Bez účtu. E-mail + odbor. Zostavované ručne z oficiálnych otvorených oznámení — bez AI, zatiaľ bez vyhľadávača.</p>
+        <div class="price">
+          <p class="amount">Ukážkový zoznam zdarma<small>, cenu oznámime neskôr</small></p>
+        </div>
+        <h2>Získajte ukážkový zoznam zdarma</h2>
+        <p>Stačí váš e-mail a odbor. Zoznam zostavujeme ručne z oficiálnych, otvorených oznámení — bez umelej inteligencie a zatiaľ bez vyhľadávača.</p>
         <form action="mailto:hello@smalltenders.com" method="post" enctype="text/plain">
           <input type="email" name="email" placeholder="E-mail" required />
           <select name="trade" required>
@@ -114,7 +192,7 @@
             <option>Tesárstvo / stavba</option>
             <option>Upratovanie</option>
           </select>
-          <button type="submit">Odoslať</button>
+          <button type="submit">Pošlite mi zoznam</button>
         </form>
       </div>
     </section>

@@ -40,69 +40,147 @@
   </nav>
 
   <header class="hero">
-    <div class="wrap">
-      <p class="kicker">Offentliga upphandlingar · kommunnivå · alla yrken</p>
-      <h1>Small Tenders</h1>
-      <p class="lead">Vi börjar i Norden, sedan Polen och Tyskland, därefter grannländerna. Ingen AI. Ingen sökmotor än — tills vidare en redigerad lista via e-post.</p>
-      <div class="actions">
-        <a class="btn" href="#form">Få provlistan</a>
-        <a class="btn ghost" href="#examples">Se exempel</a>
+    <div class="wrap hero-grid">
+      <div>
+        <p class="kicker">Offentliga upphandlingar · kommunnivå · alla yrken</p>
+        <h1>Offentliga upphandlingar som ett litet företag kan vinna.</h1>
+        <p class="lead">Vi läser de offentliga annonserna åt dig och skickar dem som passar. Just nu är det en handredigerad lista via e-post — först i Norden, sedan Polen, Tyskland och grannländerna. Ingen AI, och ännu ingen sökmotor.</p>
+        <div class="actions">
+          <a class="btn lg" href="#form">Få provlistan</a>
+          <a class="btn ghost lg" href="#examples">Se exempel</a>
+        </div>
+        <ul class="trust">
+          <li>Redigerad av riktiga människor</li>
+          <li>Officiella, öppna källor</li>
+          <li>Inget konto behövs</li>
+        </ul>
       </div>
+      <aside class="hero-card" aria-hidden="true">
+        <p class="hc-head">Utgåva · exempel</p>
+        <div class="hc-row"><span class="chip">Målning</span><span class="hc-d">om 18 dagar</span></div>
+        <p class="hc-t">Målning, kommunala byggnader</p>
+        <p class="hc-m">Norge · Innlandet</p>
+        <div class="hc-row"><span class="chip">Ventilation</span><span class="hc-d">om 24 dagar</span></div>
+        <p class="hc-t">Ventilationsservice, skolbyggnader</p>
+        <p class="hc-m">Polen · Masovien</p>
+        <p class="hc-foot">Varje post länkar till den ursprungliga annonsen.</p>
+      </aside>
     </div>
   </header>
 
   <main>
+    <section id="coverage" class="alt">
+      <div class="wrap">
+        <p class="label">Var vi letar</p>
+        <h2>Femton länder, ett steg i taget</h2>
+        <p class="note">Varje ruta är ett land, placerat ungefär där det ligger. Klicka på ditt för att läsa sidan på ditt eget språk.</p>
+        <div class="coverage">
+          <ul class="tilemap">
+            <li style="grid-area:1/1" data-wave="1"><a href="/is/"><b>IS</b><span>Ísland</span></a></li>
+            <li style="grid-area:1/3" data-wave="1"><a href="/no/"><b>NO</b><span>Norge</span></a></li>
+            <li style="grid-area:1/4" data-wave="1"><a href="/sv/"><b>SE</b><span>Sverige</span></a></li>
+            <li style="grid-area:1/5" data-wave="1"><a href="/fi/"><b>FI</b><span>Suomi</span></a></li>
+            <li style="grid-area:2/3" data-wave="1"><a href="/da/"><b>DK</b><span>Danmark</span></a></li>
+            <li style="grid-area:2/5" data-wave="3"><a href="/ee/"><b>EE</b><span>Eesti</span></a></li>
+            <li style="grid-area:3/5" data-wave="3"><a href="/lv/"><b>LV</b><span>Latvija</span></a></li>
+            <li style="grid-area:4/2" data-wave="3"><a href="/nl/"><b>NL</b><span>Nederland</span></a></li>
+            <li style="grid-area:4/3" data-wave="2"><a href="/de/"><b>DE</b><span>Deutschland</span></a></li>
+            <li style="grid-area:4/4" data-wave="2"><a href="/pl/"><b>PL</b><span>Polska</span></a></li>
+            <li style="grid-area:4/5" data-wave="3"><a href="/lt/"><b>LT</b><span>Lietuva</span></a></li>
+            <li style="grid-area:5/2" data-wave="3"><a href="/be/"><b>BE</b><span>België</span></a></li>
+            <li style="grid-area:5/3" data-wave="3"><a href="/cs/"><b>CZ</b><span>Česko</span></a></li>
+            <li style="grid-area:5/4" data-wave="3"><a href="/sk/"><b>SK</b><span>Slovensko</span></a></li>
+            <li style="grid-area:6/3" data-wave="3"><a href="/at/"><b>AT</b><span>Österreich</span></a></li>
+          </ul>
+          <ul class="legend">
+            <li data-wave="1"><b>Nu</b> Norge, Danmark, Sverige, Finland och Island</li>
+            <li data-wave="2"><b>Nästa</b> Polen och Tyskland</li>
+            <li data-wave="3"><b>Sedan</b> grannländerna</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <section>
       <div class="wrap">
         <p class="label">Det här får du</p>
         <div class="tiles">
           <div class="tile">
-            <span class="n">01</span>
-            <h3>Ner till kommunen</h3>
-            <p>Upphandlingar från kommuner och andra offentliga köpare, för alla yrken — el, VVS, ventilation, målning, bygg, städ.</p>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg>
+            <h3>Nära dig</h3>
+            <p>Upphandlingar från kommuner och andra offentliga köpare, för alla yrken — elektriker, rörmokare, ventilation, målare, byggare och städning.</p>
           </div>
           <div class="tile">
-            <span class="n">02</span>
-            <h3>Norden först</h3>
-            <p>Norge, Danmark, Sverige, Finland och Island först, sedan Polen och Tyskland, därefter grannländerna.</p>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+            <h3>Vi börjar i Norden</h3>
+            <p>Vi börjar med Norge, Danmark, Sverige, Finland och Island och växer sedan vidare till Polen, Tyskland och grannländerna.</p>
           </div>
           <div class="tile">
-            <span class="n">03</span>
-            <h3>Öppna källor, länkar till originalet</h3>
-            <p>TED och nationella annonser. Varje post länkar till den ursprungliga annonsen — läs den alltid innan du lämnar anbud.</p>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3A4 4 0 0 0 11 18.7l1-1"/></svg>
+            <h3>Direkt från källan</h3>
+            <p>Allt kommer från TED och nationella annonser, och varje post länkar till originalet. Läs det innan du lämnar anbud — vi pekar dig alltid dit.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="examples">
+    <section id="examples" class="alt">
       <div class="wrap">
-        <h2>Så ser ett utskick ut</h2>
-        <p class="note">Exempelrader — ersätts med riktiga officiella länkar när listan skickas. Alltid den ursprungliga annonsen först.</p>
-        <div class="rows">
-          <article class="row">
-            <div class="t">Målning, kommunala byggnader</div>
-            <div class="m">Norge · Innlandet · sista dag om 18 dagar · under €150 000</div>
-            <div class="w">Passar ett målerifirma med 3–10 anställda. Lokalt om ni redan tar offentliga uppdrag.</div>
+        <h2>En titt på ett nummer</h2>
+        <p class="note">Det här är exempel. Riktiga länkar till de officiella annonserna kommer när listan startar — och originalet kommer alltid först.</p>
+        <div class="cards">
+          <article class="card">
+            <span class="chip">Målning</span>
+            <h3>Målning, kommunala byggnader</h3>
+            <dl>
+              <div><dt>Plats</dt><dd>Norge · Innlandet</dd></div>
+              <div><dt>Sista dag</dt><dd>om 18 dagar</dd></div>
+              <div><dt>Värde</dt><dd>under €150 000</dd></div>
+            </dl>
+            <p class="fits"><b>Passar bra</b> för ett målerifirma med 3–10 anställda, särskilt om ni redan tar offentliga uppdrag.</p>
           </article>
-          <article class="row">
-            <div class="t">Ventilationsservice, skolbyggnader</div>
-            <div class="m">Polen · Masovien · sista dag om 24 dagar · ramavtal</div>
-            <div class="w">Återkommande arbete, inte ett engångsuppdrag. Bra om ni redan har servicebilar.</div>
+          <article class="card">
+            <span class="chip">Ventilation</span>
+            <h3>Ventilationsservice, skolbyggnader</h3>
+            <dl>
+              <div><dt>Plats</dt><dd>Polen · Masovien</dd></div>
+              <div><dt>Sista dag</dt><dd>om 24 dagar</dd></div>
+              <div><dt>Typ</dt><dd>Ramavtal</dd></div>
+            </dl>
+            <p class="fits"><b>Passar bra</b> om du vill ha jämnt, återkommande arbete och redan har servicebilar på vägarna.</p>
           </article>
-          <article class="row">
-            <div class="t">Byte av elcentraler</div>
-            <div class="m">Tyskland · regionalt · sista dag om 12 dagar</div>
-            <div class="w">Avgränsat omfång. För stort för ett enmansföretag, för litet för de nationella kedjorna.</div>
+          <article class="card">
+            <span class="chip">El</span>
+            <h3>Byte av ställverk</h3>
+            <dl>
+              <div><dt>Plats</dt><dd>Tyskland · regionalt</dd></div>
+              <div><dt>Sista dag</dt><dd>om 12 dagar</dd></div>
+              <div><dt>Omfattning</dt><dd>Avgränsad</dd></div>
+            </dl>
+            <p class="fits"><b>Passar bra</b> för ett växande företag: tydlig omfattning, större än ett enmansföretag men mindre än de nationella kedjorna.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="form">
+    <section>
+      <div class="wrap">
+        <p class="label">Så fungerar det</p>
+        <ol class="steps">
+          <li><span class="n">1</span><h3>Berätta vilket yrke du har</h3><p>Bara din e-postadress och ditt yrke. Inget konto, inget lösenord.</p></li>
+          <li><span class="n">2</span><h3>Vi sätter ihop listan</h3><p>För hand, från officiella, öppna annonser — utan AI.</p></li>
+          <li><span class="n">3</span><h3>Du läser originalet och bestämmer</h3><p>Varje post länkar till annonsen, så du ser detaljerna och väljer vad som är värt ett anbud.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="form" class="alt">
       <div class="wrap form-wrap">
-        <h2>Få provlistan</h2>
-        <p>Inget konto. E-post + yrke. Sammanställd för hand från officiella, öppna annonser — ingen AI, ingen sökmotor än.</p>
+        <div class="price">
+          <p class="amount">Gratis provlista<small>, sedan meddelar vi priset</small></p>
+        </div>
+        <h2>Få din kostnadsfria provlista</h2>
+        <p>Bara din e-postadress och ditt yrke. Vi sammanställer den för hand från officiella, öppna annonser — ingen AI, ännu ingen sökmotor.</p>
         <form action="mailto:hello@smalltenders.com" method="post" enctype="text/plain">
           <input type="email" name="email" placeholder="E-post" required />
           <select name="trade" required>
@@ -114,7 +192,7 @@
             <option>Snickeri / bygg</option>
             <option>Städning</option>
           </select>
-          <button type="submit">Skicka</button>
+          <button type="submit">Skicka listan till mig</button>
         </form>
       </div>
     </section>

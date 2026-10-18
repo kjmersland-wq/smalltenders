@@ -40,69 +40,147 @@
   </nav>
 
   <header class="hero">
-    <div class="wrap">
-      <p class="kicker">Przetargi publiczne · poziom gminy · wszystkie branże</p>
-      <h1>Small Tenders</h1>
-      <p class="lead">Zaczynamy od krajów nordyckich, potem Polska i Niemcy, następnie kraje sąsiednie. Bez AI. Na razie bez wyszukiwarki — na start redagowana lista e-mailem.</p>
-      <div class="actions">
-        <a class="btn" href="#form">Odbierz listę próbną</a>
-        <a class="btn ghost" href="#examples">Zobacz przykład</a>
+    <div class="wrap hero-grid">
+      <div>
+        <p class="kicker">Przetargi publiczne · poziom gminy · wszystkie branże</p>
+        <h1>Przetargi publiczne, które może wygrać mała firma.</h1>
+        <p class="lead">Czytamy ogłoszenia publiczne za Ciebie i wysyłamy te, które pasują. Na razie to ręcznie redagowana lista e-mailem — najpierw kraje nordyckie, potem Polska, Niemcy i sąsiedzi. Bez AI i jeszcze bez wyszukiwarki.</p>
+        <div class="actions">
+          <a class="btn lg" href="#form">Odbierz listę próbną</a>
+          <a class="btn ghost lg" href="#examples">Zobacz przykłady</a>
+        </div>
+        <ul class="trust">
+          <li>Redagowane przez prawdziwych ludzi</li>
+          <li>Oficjalne, otwarte źródła</li>
+          <li>Bez zakładania konta</li>
+        </ul>
       </div>
+      <aside class="hero-card" aria-hidden="true">
+        <p class="hc-head">Wydanie · przykład</p>
+        <div class="hc-row"><span class="chip">Malowanie</span><span class="hc-d">za 18 dni</span></div>
+        <p class="hc-t">Malowanie, budynki komunalne</p>
+        <p class="hc-m">Norwegia · Innlandet</p>
+        <div class="hc-row"><span class="chip">Wentylacja</span><span class="hc-d">za 24 dni</span></div>
+        <p class="hc-t">Serwis wentylacji, budynki szkolne</p>
+        <p class="hc-m">Polska · Mazowsze</p>
+        <p class="hc-foot">Każdy wpis prowadzi do oryginalnego ogłoszenia.</p>
+      </aside>
     </div>
   </header>
 
   <main>
+    <section id="coverage" class="alt">
+      <div class="wrap">
+        <p class="label">Gdzie szukamy</p>
+        <h2>Piętnaście krajów, krok po kroku</h2>
+        <p class="note">Każdy kafelek to kraj, ułożony mniej więcej tam, gdzie leży. Kliknij swój, aby przeczytać stronę w swoim języku.</p>
+        <div class="coverage">
+          <ul class="tilemap">
+            <li style="grid-area:1/1" data-wave="1"><a href="/is/"><b>IS</b><span>Ísland</span></a></li>
+            <li style="grid-area:1/3" data-wave="1"><a href="/no/"><b>NO</b><span>Norge</span></a></li>
+            <li style="grid-area:1/4" data-wave="1"><a href="/sv/"><b>SE</b><span>Sverige</span></a></li>
+            <li style="grid-area:1/5" data-wave="1"><a href="/fi/"><b>FI</b><span>Suomi</span></a></li>
+            <li style="grid-area:2/3" data-wave="1"><a href="/da/"><b>DK</b><span>Danmark</span></a></li>
+            <li style="grid-area:2/5" data-wave="3"><a href="/ee/"><b>EE</b><span>Eesti</span></a></li>
+            <li style="grid-area:3/5" data-wave="3"><a href="/lv/"><b>LV</b><span>Latvija</span></a></li>
+            <li style="grid-area:4/2" data-wave="3"><a href="/nl/"><b>NL</b><span>Nederland</span></a></li>
+            <li style="grid-area:4/3" data-wave="2"><a href="/de/"><b>DE</b><span>Deutschland</span></a></li>
+            <li style="grid-area:4/4" data-wave="2"><a href="/pl/"><b>PL</b><span>Polska</span></a></li>
+            <li style="grid-area:4/5" data-wave="3"><a href="/lt/"><b>LT</b><span>Lietuva</span></a></li>
+            <li style="grid-area:5/2" data-wave="3"><a href="/be/"><b>BE</b><span>België</span></a></li>
+            <li style="grid-area:5/3" data-wave="3"><a href="/cs/"><b>CZ</b><span>Česko</span></a></li>
+            <li style="grid-area:5/4" data-wave="3"><a href="/sk/"><b>SK</b><span>Slovensko</span></a></li>
+            <li style="grid-area:6/3" data-wave="3"><a href="/at/"><b>AT</b><span>Österreich</span></a></li>
+          </ul>
+          <ul class="legend">
+            <li data-wave="1"><b>Teraz</b> Norwegia, Dania, Szwecja, Finlandia i Islandia</li>
+            <li data-wave="2"><b>Dalej</b> Polska i Niemcy</li>
+            <li data-wave="3"><b>Potem</b> kraje sąsiednie</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <section>
       <div class="wrap">
         <p class="label">Co dostajesz</p>
         <div class="tiles">
           <div class="tile">
-            <span class="n">01</span>
-            <h3>Aż do poziomu gminy</h3>
-            <p>Ogłoszenia gmin i innych zamawiających publicznych dla wszystkich branż — elektryka, hydraulika, wentylacja, malowanie, budownictwo, sprzątanie.</p>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg>
+            <h3>Blisko Ciebie</h3>
+            <p>Przetargi gmin i innych zamawiających publicznych, dla każdej branży — elektryków, hydraulików, wentylacji, malarzy, budowlańców i firm sprzątających.</p>
           </div>
           <div class="tile">
-            <span class="n">02</span>
-            <h3>Najpierw kraje nordyckie</h3>
-            <p>Najpierw Norwegia, Dania, Szwecja, Finlandia i Islandia, potem Polska i Niemcy, następnie kraje sąsiednie.</p>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+            <h3>Zaczynamy w krajach nordyckich</h3>
+            <p>Zaczynamy od Norwegii, Danii, Szwecji, Finlandii i Islandii, a potem rozszerzamy się na Polskę, Niemcy i sąsiadów.</p>
           </div>
           <div class="tile">
-            <span class="n">03</span>
-            <h3>Otwarte źródła, linki do oryginału</h3>
-            <p>TED i ogłoszenia krajowe. Każda pozycja prowadzi do oryginalnego ogłoszenia — zawsze je przeczytaj, zanim złożysz ofertę.</p>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3A4 4 0 0 0 11 18.7l1-1"/></svg>
+            <h3>Prosto ze źródła</h3>
+            <p>Wszystko pochodzi z TED i krajowych ogłoszeń, a każdy wpis prowadzi do oryginału. Przeczytaj go przed złożeniem oferty — zawsze Cię tam odeślemy.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="examples">
+    <section id="examples" class="alt">
       <div class="wrap">
-        <h2>Tak wygląda wydanie</h2>
-        <p class="note">Przykładowe wiersze — zostaną zastąpione prawdziwymi, oficjalnymi linkami, gdy lista ruszy. Zawsze najpierw oryginalne ogłoszenie.</p>
-        <div class="rows">
-          <article class="row">
-            <div class="t">Malowanie, budynki komunalne</div>
-            <div class="m">Norwegia · Innlandet · termin za 18 dni · poniżej 150 tys. €</div>
-            <div class="w">Pasuje do firmy malarskiej zatrudniającej 3–10 osób. Lokalnie, jeśli już realizujesz zlecenia publiczne.</div>
+        <h2>Zajrzyj do jednego wydania</h2>
+        <p class="note">To tylko przykłady. Prawdziwe linki do oficjalnych ogłoszeń pojawią się wraz ze startem listy — a oryginalne ogłoszenie zawsze jest na pierwszym miejscu.</p>
+        <div class="cards">
+          <article class="card">
+            <span class="chip">Malowanie</span>
+            <h3>Malowanie, budynki komunalne</h3>
+            <dl>
+              <div><dt>Gdzie</dt><dd>Norwegia · Innlandet</dd></div>
+              <div><dt>Termin</dt><dd>za 18 dni</dd></div>
+              <div><dt>Wartość</dt><dd>poniżej 150 tys. €</dd></div>
+            </dl>
+            <p class="fits"><b>Dobre dopasowanie</b> dla firmy malarskiej zatrudniającej 3–10 osób, zwłaszcza jeśli macie już doświadczenie w zamówieniach publicznych.</p>
           </article>
-          <article class="row">
-            <div class="t">Serwis wentylacji, budynki szkolne</div>
-            <div class="m">Polska · Mazowsze · termin za 24 dni · umowa ramowa</div>
-            <div class="w">Prace cykliczne, nie jednorazowe. Dobre, jeśli masz już samochody serwisowe.</div>
+          <article class="card">
+            <span class="chip">Wentylacja</span>
+            <h3>Serwis wentylacji, budynki szkolne</h3>
+            <dl>
+              <div><dt>Gdzie</dt><dd>Polska · Mazowsze</dd></div>
+              <div><dt>Termin</dt><dd>za 24 dni</dd></div>
+              <div><dt>Rodzaj</dt><dd>Umowa ramowa</dd></div>
+            </dl>
+            <p class="fits"><b>Dobre dopasowanie</b> jeśli szukasz stałej, powtarzalnej pracy i masz już busy serwisowe.</p>
           </article>
-          <article class="row">
-            <div class="t">Wymiana rozdzielnic elektrycznych</div>
-            <div class="m">Niemcy · regionalnie · termin za 12 dni</div>
-            <div class="w">Ograniczony zakres. Za duże dla jednoosobowej firmy, za małe dla ogólnokrajowych sieci.</div>
+          <article class="card">
+            <span class="chip">Elektryka</span>
+            <h3>Wymiana rozdzielnic elektrycznych</h3>
+            <dl>
+              <div><dt>Gdzie</dt><dd>Niemcy · regionalnie</dd></div>
+              <div><dt>Termin</dt><dd>za 12 dni</dd></div>
+              <div><dt>Zakres</dt><dd>Jasno określony</dd></div>
+            </dl>
+            <p class="fits"><b>Dobre dopasowanie</b> dla rozwijającej się firmy: czytelny zakres, więcej niż dla jednoosobowej działalności, a mniej niż dla ogólnokrajowych sieci.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="form">
+    <section>
+      <div class="wrap">
+        <p class="label">Jak to działa</p>
+        <ol class="steps">
+          <li><span class="n">1</span><h3>Powiedz nam, jaką masz branżę</h3><p>Wystarczy adres e-mail i branża. Bez konta, bez hasła.</p></li>
+          <li><span class="n">2</span><h3>Układamy listę</h3><p>Ręcznie, z oficjalnych, otwartych ogłoszeń — bez AI.</p></li>
+          <li><span class="n">3</span><h3>Czytasz oryginał i decydujesz</h3><p>Każdy wpis prowadzi do ogłoszenia, więc widzisz szczegóły i wybierasz to, co warto spróbować wygrać.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="form" class="alt">
       <div class="wrap form-wrap">
-        <h2>Odbierz listę próbną</h2>
-        <p>Bez konta. E-mail + branża. Lista układana ręcznie z oficjalnych, otwartych ogłoszeń — bez AI, na razie bez wyszukiwarki.</p>
+        <div class="price">
+          <p class="amount">Bezpłatna lista próbna<small>, potem ogłosimy cennik</small></p>
+        </div>
+        <h2>Odbierz bezpłatną listę próbną</h2>
+        <p>Wystarczy adres e-mail i branża. Listę układamy ręcznie z oficjalnych, otwartych ogłoszeń — bez AI i jeszcze bez wyszukiwarki.</p>
         <form action="mailto:hello@smalltenders.com" method="post" enctype="text/plain">
           <input type="email" name="email" placeholder="E-mail" required />
           <select name="trade" required>
@@ -114,7 +192,7 @@
             <option>Ciesielka / budownictwo</option>
             <option>Sprzątanie</option>
           </select>
-          <button type="submit">Wyślij</button>
+          <button type="submit">Wyślij mi listę</button>
         </form>
       </div>
     </section>
