@@ -910,5 +910,25 @@
   "lat": 62.568,
   "lng": 7.111,
   "region": "Møre og Romsdal"
+ },
+ "NO|mosjøen": {
+  "lat": 65.838,
+  "lng": 13.189,
+  "region": "Nordland"
+ },
+ "NO|leikanger": {
+  "lat": 62.248,
+  "lng": 5.781,
+  "region": "Møre og Romsdal"
+ },
+ "NO|kristiansand s": {
+  "lat": 58.086,
+  "lng": 7.932,
+  "region": "Agder"
+ },
+ "NO|tonstad": {
+  "lat": 58.665,
+  "lng": 6.716,
+  "region": "Agder"
  }
 }

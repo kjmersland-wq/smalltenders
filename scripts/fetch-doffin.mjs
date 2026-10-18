@@ -59,6 +59,12 @@ const pick = (h, ...names) => { for (const n of names) if (h[n] != null && h[n] 
 const str = (v) => (v == null ? '' : typeof v === 'string' ? v : Array.isArray(v) ? str(v[0]) : v.name || v.title || v.text || v.city || v.value || Object.values(v).find((x) => typeof x === 'string') || '');
 const day = (s) => (s ? String(s).slice(0, 10) : null);
 
+function shortText(s, max = 320) {
+  s = String(s || '').replace(/^\s*(Bakgrunn|Background|Beskrivelse av oppdraget)\s*\n+/i, '').replace(/\s+/g, ' ').trim();
+  if (s.length <= max) return s;
+  const cut = s.slice(0, max), dot = cut.lastIndexOf('. ');
+  return dot > max * 0.5 ? cut.slice(0, dot + 1) : cut.replace(/\s+\S*$/, '') + '…';
+}
 function tradeOf(cpvs, title) {
   for (const [t, ps] of CPV) if ((cpvs || []).some((c) => ps.some((p) => String(c).startsWith(p)))) return t;
   const low = String(title || '').toLowerCase();
@@ -92,13 +98,10 @@ for (const [trade, terms] of Object.entries(PER_TRADE_TERMS).slice(0, +(process.
         const cpv = [].concat(pick(h, 'cpvCodes', 'cpv', 'cpvCode') || []).map((c) => (typeof c === 'object' ? c.code || c.id : c)).filter(Boolean);
         const t = tradeOf(cpv, title) || trade;
         if (!title || !deadline || new Date(deadline) < new Date(Date.now() + 3 * 864e5)) continue;
-        // the API gives only NUTS codes, so the place is taken from the buyer when it is a municipality ("Tønsberg kommune")
-        const buyer = str(pick(h, 'buyer'));
-        const mk = /^(.+?)\s+(kommune|fylkeskommune)\b/i.exec(buyer);
-        const place = mk ? mk[1].trim() : '';
+        const buyer = str(pick(h, 'buyer')), place = '';
         const ev = pick(h, 'estimatedValue', 'value');
         const amount = ev && typeof ev === 'object' ? Number(ev.amount ?? ev.value) : Number(ev);
-        found.set(id, { id, title, deadline, trade: t, place, published: day(pick(h, 'issueDate', 'publicationDate', 'publishedDate')), value: amount > 0 ? { amount, cur: (ev && ev.currencyCode) || 'NOK' } : null });
+        found.set(id, { id, title, deadline, trade: t, place, buyer: buyer, description: str(pick(h, 'description')), published: day(pick(h, 'issueDate', 'publicationDate', 'publishedDate')), value: amount > 0 ? { amount, cur: (ev && ev.currencyCode) || 'NOK' } : null });
       }
       console.log(term, '->', found.size, 'tenders so far');
     } catch (e) { console.log(term, 'skipped:', e.message); }
@@ -106,7 +109,7 @@ for (const [trade, terms] of Object.entries(PER_TRADE_TERMS).slice(0, +(process.
   }
 }
 
-// ---- geocode (shared cache with fetch-tenders.mjs)
+// ---- pick candidates, then read each notice's XML (buyer city, contact person) and geocode the buyer's city
 const GEO_FILE = join(ROOT, 'scripts/geocache.json');
 const geo = existsSync(GEO_FILE) ? JSON.parse(readFileSync(GEO_FILE, 'utf8')) : {};
 async function geocode(city) {
@@ -119,16 +122,34 @@ async function geocode(city) {
   geo[key] = res; writeFileSync(GEO_FILE, JSON.stringify(geo, null, 1));
   return res;
 }
-console.log('with place:', [...found.values()].filter((t) => t.place).length, 'of', found.size);
-const list = [];
-for (const t of found.values()) {
-  if (!t.place) continue;
-  const g = await geocode(t.place.split(/[,/]/)[0].trim());
-  if (g) list.push({ ...t, g, city: t.place.split(/[,/]/)[0].trim() });
+const unxml = (s) => s.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&apos;/g, "'");
+const tag = (xml, name) => { const m = new RegExp('<cbc:' + name + '[^>]*>([^<]*)</cbc:' + name + '>').exec(xml); return m ? unxml(m[1]).trim() : ''; };
+const tidyCity = (c) => (c === c.toUpperCase() && c.length > 3 ? c.toLowerCase().replace(/(^|[\s\-])\p{L}/gu, (m) => m.toUpperCase()) : c);
+async function notice(id) {   // eForms XML of the notice: the first organisation is the buyer
+  const r = await fetch(`${BASE}/download/${id}`, { headers: { 'Ocp-Apim-Subscription-Key': KEY } });
+  if (!r.ok) return null;
+  const xml = await r.text(), o = /<efac:Company>([\s\S]*?)<\/efac:Company>/.exec(xml);
+  if (!o) return null;
+  const co = /<cac:Contact>([\s\S]*?)<\/cac:Contact>/.exec(o[1]);
+  const c = co ? { name: tag(co[1], 'Name'), email: tag(co[1], 'ElectronicMail'), phone: tag(co[1], 'Telephone') } : {};
+  for (const k of Object.keys(c)) if (!c[k]) delete c[k];
+  const web = tag(o[1], 'WebsiteURI'); if (web) c.web = web;
+  return { city: tidyCity(tag(/<cac:PostalAddress>([\s\S]*?)<\/cac:PostalAddress>/.exec(o[1])?.[1] || '', 'CityName')), contact: Object.keys(c).length ? c : null };
 }
-const picked = [], perTrade = {};
-list.sort((a, b) => (b.published || '').localeCompare(a.published || ''));
-for (const t of list) { if (picked.length >= 14 || (perTrade[t.trade] || 0) >= 2) continue; perTrade[t.trade] = (perTrade[t.trade] || 0) + 1; picked.push(t); }
+const ranked = [...found.values()].sort((a, b) => (b.published || '').localeCompare(a.published || ''));
+const perTrade = {}, candidates = [];
+for (const t of ranked) { if (candidates.length >= 24 || (perTrade[t.trade] || 0) >= 3) continue; perTrade[t.trade] = (perTrade[t.trade] || 0) + 1; candidates.push(t); }
+const picked = [];
+for (const t of candidates) {
+  await sleep(4000);
+  try {
+    const n = await notice(t.id);
+    const city = (n && n.city) || t.place;
+    if (!city) continue;
+    const g = await geocode(city);
+    if (g) picked.push({ ...t, g, city, contact: n && n.contact });
+  } catch (e) { console.log(t.id, 'skipped:', e.message); }
+}
 console.log('Doffin tenders kept:', picked.length);
 
 // ---- merge: Doffin replaces Norwegian TED entries when it has any
@@ -138,7 +159,7 @@ for (const [code, file] of Object.entries(FILES)) {
   const doffin = picked.map((t) => {
     let value = NOT_STATED[vk(code)] || NOT_STATED.en;
     if (t.value) { try { value = new Intl.NumberFormat(loc, { style: 'currency', currency: t.value.cur, notation: 'compact', maximumFractionDigits: 1 }).format(t.value.amount); } catch { /* keep default */ } }
-    return { id: 'doffin-' + t.id, country: 'NO', countryName: names, city: t.city, region: t.g.region || t.city, lat: t.g.lat, lng: t.g.lng, trade: t.trade, tradeName: V.tradeName[t.trade], title: t.title, deadline: t.deadline, value, source: 'Doffin', fit: FIT[vk(code)] || FIT.en, link: `https://www.doffin.no/notices/${t.id}`, published: t.published };
+    return { id: 'doffin-' + t.id, country: 'NO', countryName: names, city: t.city, region: t.g.region || t.city, lat: t.g.lat, lng: t.g.lng, trade: t.trade, tradeName: V.tradeName[t.trade], title: t.title, buyer: t.buyer, description: shortText(t.description), contact: t.contact || undefined, deadline: t.deadline, value, source: 'Doffin', fit: FIT[vk(code)] || FIT.en, link: `https://www.doffin.no/notices/${t.id}`, published: t.published };
   });
   if (picked.length) j.tenders = [...doffin, ...j.tenders.filter((t) => t.country !== 'NO')];
   writeFileSync(p, JSON.stringify(j, null, 1));

@@ -6,13 +6,21 @@
    "id": "doffin-2026-116124",
    "country": "NO",
    "countryName": "Norway",
-   "city": "Vefsn",
+   "city": "Mosjøen",
    "region": "Nordland",
-   "lat": 65.821,
-   "lng": 13.179,
+   "lat": 65.838,
+   "lng": 13.189,
    "trade": "plumbing",
    "tradeName": "Plumbing",
    "title": "Utskifting ventilasjon og varme ved Grane barne - og ungdomsskole  Vegset",
+   "buyer": "Vefsn Kommune",
+   "description": "Regionalt innkjøpssamarbeid (RIH) inviterer på vegne av Grane kommune til åpen anbudskonkurranse for utskifting av ventilasjon og oppvarming ved Grane barne- og ungdomsskole (GBU) Vegset.Oppdraget gjennomføres som en totalentreprise iht NS 8407.Anbudsbefaring gjennomføres på GBU Vegset torsdag 24. september 2026.",
+   "contact": {
+    "name": "Eskil Larsen",
+    "email": "eskil.larsen@vefsn.kommune.no",
+    "phone": "+47 75101000",
+    "web": "http://www.vefsn.kommune.no/"
+   },
    "deadline": "2026-10-22",
    "value": "Value not stated",
    "source": "Doffin",
@@ -31,6 +39,11 @@
    "trade": "plumbing",
    "tradeName": "Plumbing",
    "title": "Skadedyrkontroll og bekjempelse - Rammeavtale",
+   "buyer": "Tønsberg kommune",
+   "description": "Tønsberg kommune har et løpende behov for tjenester og materiell knyttet til kontroll, forebygging og bekjempelse av skadedyr i kommunens bygningsmasse og tilknyttede anlegg.",
+   "contact": {
+    "name": "VESTFOLD TINGRETT"
+   },
    "deadline": "2026-11-19",
    "value": "NOK 6M",
    "source": "Doffin",
@@ -42,13 +55,21 @@
    "id": "doffin-2026-116106",
    "country": "NO",
    "countryName": "Norway",
-   "city": "Guovdageainnu Suohkan - Kautokeino",
+   "city": "Vadsø",
    "region": "Finnmark",
-   "lat": 69.012,
-   "lng": 23.044,
+   "lat": 70.227,
+   "lng": 29.783,
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "Feiing og tilsyn Kautokeino kommune 2026 - 2030",
+   "buyer": "Guovdageainnu Suohkan - Kautokeino kommune",
+   "description": "Oppdragsgiver i denne anskaffelsen er Kautokeino kommune. K-nr: 5612",
+   "contact": {
+    "name": "Preben Hågensen",
+    "email": "ph@finnut.no",
+    "phone": "+47 45891213",
+    "web": "http://www.finnut.no"
+   },
    "deadline": "2026-11-16",
    "value": "Value not stated",
    "source": "Doffin",
@@ -67,6 +88,11 @@
    "trade": "flooring",
    "tradeName": "Flooring",
    "title": "Maler- og beleggstjenester",
+   "buyer": "Tønsberg kommune",
+   "description": "Tønsberg kommune har behov for å etablere en ny rammeavtale for maler- og beleggstjenester fordi eksisterende avtale er utløpt og må erstattes. Anskaffelsen skal sikre at kommunen fortsatt har tilgang til nødvendige tjenester for løpende vedlikehold og planlagte oppgraderinger i kommunens bygg og anlegg.",
+   "contact": {
+    "name": "VESTFOLD TINGRETT"
+   },
    "deadline": "2026-11-19",
    "value": "NOK 35M",
    "source": "Doffin",
@@ -78,19 +104,77 @@
    "id": "doffin-2026-116094",
    "country": "NO",
    "countryName": "Norway",
-   "city": "Vestland",
-   "region": "Vestland",
-   "lat": 60.929,
-   "lng": 6.108,
+   "city": "Leikanger",
+   "region": "Møre og Romsdal",
+   "lat": 62.248,
+   "lng": 5.781,
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "Rammeavtale for kjøp av utstyr til realfagsundervisning",
+   "buyer": "Vestland fylkeskommune",
+   "description": "Vestland fylkeskommune treng en rammeavtale for undervisningsmateriell til realfag i vidaregåande skuler. Avtalens omfang vil inkludere utstyr til undervisning innan fysikk, kjemi og biologi. For oppdraget skal det bli inngått rammeavtale med ein leverandør. Rammeavtalen si lengd vil vere 2 år.",
+   "contact": {
+    "name": "Andrea Celeste Jensen",
+    "email": "andrea.celeste.jensen@vlfk.no",
+    "phone": "+47 05557"
+   },
    "deadline": "2026-11-16",
    "value": "Value not stated",
    "source": "Doffin",
    "fit": "for a small firm in this trade that can meet the scope and the deadline in the notice.",
    "link": "https://www.doffin.no/notices/2026-116094",
    "published": "2026-10-15"
+  },
+  {
+   "id": "doffin-2026-116004",
+   "country": "NO",
+   "countryName": "Norway",
+   "city": "Trondheim",
+   "region": "Trøndelag",
+   "lat": 63.43,
+   "lng": 10.395,
+   "trade": "building",
+   "tradeName": "Building",
+   "title": "Anskaffelse av Byggherrens rådgiver, arkitekt og rådgivende ingeniørtjenester,  for prosjekt Mjøssykehuset (MJS) på vegne av Helse Sør-Øst RHF",
+   "buyer": "Sykehusbygg HF",
+   "description": "Sykehusbygg HF inviterer på vegne av Helse Sør-Øst RHF til konkurranse om anskaffelse av byggherrens rådgivertjenester innen delområdene - arkitektur - bygg - teknikk og - prosessledelse i forbindelse med prosjektet Mjøssykehuset (forkortes MJS-prosjektet).",
+   "contact": {
+    "name": "Lillian Slåtsve",
+    "email": "lillian.slatsve@sykehusbygg.no",
+    "phone": "93009644"
+   },
+   "deadline": "2026-11-09",
+   "value": "Value not stated",
+   "source": "Doffin",
+   "fit": "for a small firm in this trade that can meet the scope and the deadline in the notice.",
+   "link": "https://www.doffin.no/notices/2026-116004",
+   "published": "2026-10-14"
+  },
+  {
+   "id": "doffin-2026-116030",
+   "country": "NO",
+   "countryName": "Norway",
+   "city": "Oslo",
+   "region": "Oslo",
+   "lat": 59.913,
+   "lng": 10.739,
+   "trade": "building",
+   "tradeName": "Building",
+   "title": "540501 Rehabilitering av Persaunet leir - Trondheim",
+   "buyer": "Forsvarsbygg",
+   "description": "Forsvarsbygg inviterer leverandøren til å inngi søknad om prekvalifisering på følgende oppdrag: oppdrag rehabilitering Persaunet.",
+   "contact": {
+    "name": "Geir Haugen",
+    "email": "geir.haugen@forsvarsbygg.no",
+    "phone": "+47 46870400",
+    "web": "http://www.forsvarsbygg.no"
+   },
+   "deadline": "2026-11-13",
+   "value": "Value not stated",
+   "source": "Doffin",
+   "fit": "for a small firm in this trade that can meet the scope and the deadline in the notice.",
+   "link": "https://www.doffin.no/notices/2026-116030",
+   "published": "2026-10-14"
   },
   {
    "id": "doffin-2026-115985",
@@ -103,6 +187,14 @@
    "trade": "electrical",
    "tradeName": "Electrical",
    "title": "Rammeavtale varsling og kommunikasjon på skoler og barnehagebygg i Stavanger kommune",
+   "buyer": "Stavanger kommune",
+   "description": "Stavanger kommune ved BMU eiendom inviterer med dette til konkurranse om rammeavtale om levering av kommunikasjon og varslingssystemer til skoler og barnehagebygg i Stavanger iht.",
+   "contact": {
+    "name": "Randi Viste Solheim",
+    "email": "randi.viste.solheim@stavanger.kommune.no",
+    "phone": "+47 51507090",
+    "web": "https://www.stavanger.kommune.no/"
+   },
    "deadline": "2026-11-04",
    "value": "NOK 45M",
    "source": "Doffin",
@@ -111,22 +203,80 @@
    "published": "2026-10-13"
   },
   {
+   "id": "doffin-2026-116023",
+   "country": "NO",
+   "countryName": "Norway",
+   "city": "Bergen",
+   "region": "Vestland",
+   "lat": 60.394,
+   "lng": 5.326,
+   "trade": "hvac",
+   "tradeName": "HVAC",
+   "title": "Ny konkurranse: Rammeavtale fyringsolje - kvalifikasjonsfase",
+   "buyer": "Oslofjord Varme AS",
+   "description": "Oppdragsgiver for denne konkurransen er Oslofjord Varme (heretter omtalt som«Oppdragsgiver»).Oslofjord Varme er et norsk fjernvarmeselskap som bygger, eier og driver systemer for fjernvarme og -kjøling i områdene Fornebu, Lysaker og Sandvika i Stor-Oslo-regionen.",
+   "contact": {
+    "name": "Lars Samuelsberg",
+    "email": "lars.samuelsberg@inventura.no",
+    "phone": "+47 55134480",
+    "web": "https://www.inventura.no"
+   },
+   "deadline": "2026-11-18",
+   "value": "NOK 100M",
+   "source": "Doffin",
+   "fit": "for a small firm in this trade that can meet the scope and the deadline in the notice.",
+   "link": "https://www.doffin.no/notices/2026-116023",
+   "published": "2026-10-13"
+  },
+  {
    "id": "doffin-2026-116056",
    "country": "NO",
    "countryName": "Norway",
-   "city": "Vefsn",
+   "city": "Mosjøen",
    "region": "Nordland",
-   "lat": 65.821,
-   "lng": 13.179,
+   "lat": 65.838,
+   "lng": 13.189,
    "trade": "insulation",
    "tradeName": "Insulation",
    "title": "Totalentreprise Strykjernshjørnet, Kirkegata 53-63, Vefsn kommune",
+   "buyer": "Vefsn Kommune",
+   "description": "Tiltakshaver, Vefsn kommune, har som et energitiltak planer om utvendig restaureringav boligene i Kirkegata 53-63, Strykjernshjørnet. Tiltaket innbefatter ny utvendigkledning, nye vinduer også etterisolering av yttervegger og himling mot kaldtloft.Tiltaket ansees av tiltakshaver som ikke søknadspliktigRestaureringen…",
+   "contact": {
+    "name": "Hans-Rune Haugen",
+    "email": "hans-rune.haugen@vefsn.kommune.no",
+    "phone": "+47 75101000",
+    "web": "http://www.vefsn.kommune.no/"
+   },
    "deadline": "2026-11-11",
    "value": "Value not stated",
    "source": "Doffin",
    "fit": "for a small firm in this trade that can meet the scope and the deadline in the notice.",
    "link": "https://www.doffin.no/notices/2026-116056",
    "published": "2026-10-13"
+  },
+  {
+   "id": "doffin-2026-115923",
+   "country": "NO",
+   "countryName": "Norway",
+   "city": "Vadsø",
+   "region": "Finnmark",
+   "lat": 70.227,
+   "lng": 29.783,
+   "trade": "roofing",
+   "tradeName": "Roofing",
+   "title": "Leker, lekemøbler, hobby- og formingsmateriell til helseforetakene i Helse Sør-Øst (NY KONKURRANSE)",
+   "buyer": "SYKEHUSINNKJØP HF",
+   "description": "Formålet med anskaffelsen er å inngå en regional rammeavtale på leker og hobbyutstyr for helseforetakene i Helse Sør-Øst. Rammeavtalen er delt i to delkontrakter: 1) Leker og pedagogisk materiell, lekemøbler og pedagogisk innredning og 2) Hobby- og formingsmateriell.",
+   "contact": {
+    "email": "post@sykehusinnkjop.no",
+    "phone": "78950700"
+   },
+   "deadline": "2026-11-15",
+   "value": "Value not stated",
+   "source": "Doffin",
+   "fit": "for a small firm in this trade that can meet the scope and the deadline in the notice.",
+   "link": "https://www.doffin.no/notices/2026-115923",
+   "published": "2026-10-12"
   },
   {
    "id": "doffin-2026-115925",
@@ -139,6 +289,11 @@
    "trade": "scaffolding",
    "tradeName": "Scaffolding",
    "title": "Annonsetjenester",
+   "buyer": "Harstad Kommune",
+   "description": "Harstad kommune skal på vegne av deltakende samarbeidskommuner inngå en rammeavtale for annonsetjenester. Formålet med anskaffelsen er å etablere en mer helhetlig, effektiv og forutsigbar prosess for bestilling, produksjon, publisering og oppfølging av annonser.",
+   "contact": {
+    "name": "MIDTRE HÅLOGALAND TINGRETT"
+   },
    "deadline": "2026-11-16",
    "value": "NOK 4.5M",
    "source": "Doffin",
@@ -147,40 +302,30 @@
    "published": "2026-10-12"
   },
   {
-   "id": "doffin-2026-115860",
+   "id": "doffin-2026-115865",
    "country": "NO",
    "countryName": "Norway",
-   "city": "Frøya",
-   "region": "Trøndelag",
-   "lat": 64.071,
-   "lng": 8.89,
-   "trade": "scaffolding",
-   "tradeName": "Scaffolding",
-   "title": "Hovedprosjekt sitkagran etappe 2 — avvirkning av sitkagran, Valen–Flatval",
-   "deadline": "2026-10-27",
-   "value": "Value not stated",
+   "city": "Oslo",
+   "region": "Oslo",
+   "lat": 59.913,
+   "lng": 10.739,
+   "trade": "insulation",
+   "tradeName": "Insulation",
+   "title": "R02084 - Rørleggertjenester Region Øst - Rena, Elverum, Hamar",
+   "buyer": "Forsvarsbygg",
+   "description": "Rammeavtalen gjelder levering av rørleggertjenester, i hovedsak timebaserte tjenester, materiell, og en kombinasjon av disse, i Innlandet, hovedsakelig Rena, Elverum og Hamar.Oppdragsgiver vil avholde tilbudskonferanse for interesserte leverandører 21. oktober kl. 09:00.",
+   "contact": {
+    "name": "Jørgen Larsgaard",
+    "email": "jorgen.larsgaard@forsvarsbygg.no",
+    "phone": "+47 46870400",
+    "web": "http://www.forsvarsbygg.no"
+   },
+   "deadline": "2026-11-12",
+   "value": "NOK 90M",
    "source": "Doffin",
    "fit": "for a small firm in this trade that can meet the scope and the deadline in the notice.",
-   "link": "https://www.doffin.no/notices/2026-115860",
-   "published": "2026-10-12"
-  },
-  {
-   "id": "doffin-2026-115838",
-   "country": "NO",
-   "countryName": "Norway",
-   "city": "Alta",
-   "region": "Finnmark",
-   "lat": 69.967,
-   "lng": 23.273,
-   "trade": "electrical",
-   "tradeName": "Electrical",
-   "title": "Felles anskaffelse EPJ - Elektronisk pasientjournalsystem",
-   "deadline": "2026-11-09",
-   "value": "NOK 103.5M",
-   "source": "Doffin",
-   "fit": "for a small firm in this trade that can meet the scope and the deadline in the notice.",
-   "link": "https://www.doffin.no/notices/2026-115838",
-   "published": "2026-10-09"
+   "link": "https://www.doffin.no/notices/2026-115865",
+   "published": "2026-10-11"
   },
   {
    "id": "doffin-2026-115851",
@@ -193,6 +338,13 @@
    "trade": "roofing",
    "tradeName": "Roofing",
    "title": "Snørydding, takmåking og isfjerning",
+   "buyer": "Tromsø kommune",
+   "description": "Snørydding, takmåking og isfjerning",
+   "contact": {
+    "name": "Mads Bratteng Stagrum",
+    "email": "Mads.Bratteng.Stagrum@tromso.kommune.no",
+    "phone": "+47 77 79 00 00"
+   },
    "deadline": "2026-11-16",
    "value": "Value not stated",
    "source": "Doffin",
@@ -204,13 +356,18 @@
    "id": "doffin-2026-115794",
    "country": "NO",
    "countryName": "Norway",
-   "city": "Arendal",
+   "city": "Kristiansand S",
    "region": "Agder",
-   "lat": 58.427,
-   "lng": 8.947,
+   "lat": 58.086,
+   "lng": 7.932,
    "trade": "flooring",
    "tradeName": "Flooring",
    "title": "Rammeavtale for malertjenester og malerprodukter",
+   "buyer": "Arendal kommune",
+   "description": "Arendal kommune skal etablere en ny rammeavtale for malerfaglige tjenester og malerprodukter til bruk i kommunale bygg og eiendommer. Avtalen skal primært dekke behovene til Arendal Eiendom, og skal også kunne benyttes av Arendal kirkelige fellesråd og Arendal Havn.",
+   "contact": {
+    "name": "AGDER TINGRETT"
+   },
    "deadline": "2026-11-09",
    "value": "NOK 30M",
    "source": "Doffin",
@@ -219,40 +376,55 @@
    "published": "2026-10-09"
   },
   {
-   "id": "doffin-2026-115811",
-   "country": "NO",
-   "countryName": "Norway",
-   "city": "Steigen",
-   "region": "Nordland",
-   "lat": 67.854,
-   "lng": 14.802,
-   "trade": "building",
-   "tradeName": "Building",
-   "title": "Asfaltering Eldridhågen",
-   "deadline": "2026-10-23",
-   "value": "NOK 1.2M",
-   "source": "Doffin",
-   "fit": "for a small firm in this trade that can meet the scope and the deadline in the notice.",
-   "link": "https://www.doffin.no/notices/2026-115811",
-   "published": "2026-10-09"
-  },
-  {
    "id": "doffin-2026-115861",
    "country": "NO",
    "countryName": "Norway",
-   "city": "Sirdal",
+   "city": "Tonstad",
    "region": "Agder",
-   "lat": 58.845,
-   "lng": 6.822,
+   "lat": 58.665,
+   "lng": 6.716,
    "trade": "windows",
    "tradeName": "Windows & doors",
    "title": "Løpende service og vedlikehold av porter",
+   "buyer": "Sirdal kommune",
+   "description": "Anskaffelsens formål er å dekke oppdragsgivers behov for service og vedlikehold av kommunens porter. Sirdal kommune skal inngå en avtale på service og sakkyndig kontroll, samt mindre reparasjoner (Inntil 30 000 kr eks. mva pr reperasjonstilfelle). Kommunen har per nå omkring 50 porter fordelt på ulike lokasjoner.",
+   "contact": {
+    "name": "Ingrid Vehusheia",
+    "email": "ingrid.vehusheia@odinprosjekt.no",
+    "phone": "+47 47681035"
+   },
    "deadline": "2026-11-13",
    "value": "NOK 5M",
    "source": "Doffin",
    "fit": "for a small firm in this trade that can meet the scope and the deadline in the notice.",
    "link": "https://www.doffin.no/notices/2026-115861",
    "published": "2026-10-09"
+  },
+  {
+   "id": "doffin-2026-115729",
+   "country": "NO",
+   "countryName": "Norway",
+   "city": "Hamar",
+   "region": "Innlandet",
+   "lat": 61.001,
+   "lng": 11.165,
+   "trade": "flooring",
+   "tradeName": "Flooring",
+   "title": "Rammeavtale på malertjenester for gamle Oppland fylke",
+   "buyer": "INNLANDET FYLKESKOMMUNE",
+   "description": "Formålet med anskaffelsen er å inngå rammeavtaler for å dekke Innlandet fylkeskommune sitt løpende behov for vedlikeholdsarbeid og mindre til mellomstore prosjekter, innenfor fagområdet malertjenester.",
+   "contact": {
+    "name": "Thomas Øiestad",
+    "email": "thooie@innlandetfylke.no",
+    "phone": "62000880",
+    "web": "http://www.innlandetfylke.no"
+   },
+   "deadline": "2026-11-13",
+   "value": "Value not stated",
+   "source": "Doffin",
+   "fit": "for a small firm in this trade that can meet the scope and the deadline in the notice.",
+   "link": "https://www.doffin.no/notices/2026-115729",
+   "published": "2026-10-07"
   },
   {
    "id": "683510-2026",
@@ -265,6 +437,14 @@
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "Lokalvård avseende kontor i Visby",
+   "buyer": "AB Svenska Spel",
+   "description": "Upphandlingen avser lokalvård för Svenska Spels huvudkontor i Visby. De huvudsakliga tjänsterna som omfattas av upphandlingen är: - Kontorsstädning, - Fönsterputsning, - Underhåll av ytskikt - Matt- och textiltvätt",
+   "contact": {
+    "name": "Andreas von Vegesack",
+    "email": "Andreas.vonVegesack@svenskaspel.se",
+    "phone": "0770-11 11 11",
+    "web": "https://www.svenskaspel.se"
+   },
    "deadline": "2026-11-16",
    "value": "SEK 5.6M",
    "source": "TED",
@@ -283,6 +463,12 @@
    "trade": "electrical",
    "tradeName": "Electrical",
    "title": "Service och installation av gatubelysning Vadstena, Ödeshög",
+   "buyer": "Inköpssamverkan Motala",
+   "description": "Upphandlingen avser service, installation och underhåll av gatubelysning i Vadstena kommun, Ödeshögs kommun.",
+   "contact": {
+    "email": "iks@motala.se",
+    "phone": "0141225000"
+   },
    "deadline": "2026-10-31",
    "value": "SEK 2.5M",
    "source": "TED",
@@ -301,6 +487,14 @@
    "trade": "painting",
    "tradeName": "Painting",
    "title": "Invändigt måleri 2027",
+   "buyer": "Skolfastigheter i Stockholm Aktiebolag (SISAB)",
+   "description": "Invändigt måleri 2027",
+   "contact": {
+    "name": "Julia Mclaughlin",
+    "email": "julia.mclaughlin@sisab.se",
+    "phone": "076-1242231",
+    "web": "https://sisab.se/"
+   },
    "deadline": "2026-10-25",
    "value": "SEK 28M",
    "source": "TED",
@@ -319,6 +513,14 @@
    "trade": "plumbing",
    "tradeName": "Plumbing",
    "title": "Ramavtal VS-arbeten (värme, vatten och avlopp)",
+   "buyer": "Stiftelsen Svenska Filminstitutet",
+   "description": "Upphandlingen avser ramavtal för entreprenadarbeten inom området VS (värme, vatten och avlopp). Arbetena kommer att utföras efter avrop hos Filminstitutets lokaler Filmhuset på Gärdet och Filmarkivet i Rotebro. Se Allmänna föreskrifter för mer information.",
+   "contact": {
+    "name": "Edvin Erkenborn",
+    "email": "edvin.erkenborn@filminstitutet.se",
+    "phone": "08-665 12 20",
+    "web": "http://www.filminstitutet.se/"
+   },
    "deadline": "2026-10-23",
    "value": "SEK 4M",
    "source": "TED",
@@ -337,6 +539,14 @@
    "trade": "hvac",
    "tradeName": "HVAC",
    "title": "Ramavtal ventilationsservice",
+   "buyer": "Stiftelsen Svenska Filminstitutet",
+   "description": "Upphandlingen avser ramavtal för entreprenadarbeten inom området ventilationsservice. Arbetena kommer att utföras efter avrop hos Filminstitutets lokaler Filmhuset på Gärdet och Filmarkivet i Rotebro. Se Allmänna föreskrifter för mer information.",
+   "contact": {
+    "name": "Edvin Erkenborn",
+    "email": "edvin.erkenborn@filminstitutet.se",
+    "phone": "08-665 12 20",
+    "web": "http://www.filminstitutet.se/"
+   },
    "deadline": "2026-10-23",
    "value": "SEK 4M",
    "source": "TED",
@@ -355,6 +565,14 @@
    "trade": "building",
    "tradeName": "Building",
    "title": "Skyddsrumsåtgärder",
+   "buyer": "Hyresbostäder i Norrköping Aktiebolag",
+   "description": "Ramavtal gällande skyddsrumsåtgärder. Se omfattning i AFD.1, AFA.21. Detta ramavtal kommer ersätta Hyresbostäders befintliga DIS gällande skyddsrumsåtgärder med Unr 14/2023.",
+   "contact": {
+    "name": "Karin Höglund",
+    "email": "karin.hoglund@hyresbostader.se",
+    "phone": "+4611211600",
+    "web": "https://www.hyresbostader.se"
+   },
    "deadline": "2026-10-26",
    "value": "SEK 12M",
    "source": "TED",
@@ -373,6 +591,14 @@
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "Lägenhetsstädning- distrikt Öst och Väst",
+   "buyer": "Bostads AB Mimer",
+   "description": "Upphandlingen avser flyttstädning och byggstädning för Mimers distrikt Öst och Väst under avtalsperioden. Mimer har löpande behov av flyttstäd och byggstäd.",
+   "contact": {
+    "name": "Bilal Lassri",
+    "email": "bilal.lassri@mimer.nu",
+    "phone": "+46 (0)21 39 70 00",
+    "web": "https://www.mimer.nu"
+   },
    "deadline": "2026-10-30",
    "value": "SEK 19M",
    "source": "TED",
@@ -391,6 +617,13 @@
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "Udbud på Facility management - Kerteminde Forsyning",
+   "buyer": "Kerteminde forsyning a/s",
+   "description": "Udbuddet vedrører rengøring, planteservice, kantineservice og vinduespudsning på Kerteminde Forsynings hovedkontor, samt primært rengøring på Kerteminde Renovation, Kerteminde Spildevand, Kerteminde Vand og Kerteminde Varmes lokationer.",
+   "contact": {
+    "name": "Dorthe Nørregaard Hansen",
+    "email": "dnh@samaqua.dk",
+    "phone": "40739395"
+   },
    "deadline": "2026-11-13",
    "value": "DKK 6M",
    "source": "TED",
@@ -409,6 +642,13 @@
    "trade": "building",
    "tradeName": "Building",
    "title": "Hinnerup Fjernvarme - Teknikbygning",
+   "buyer": "Hinnerup Fjernvarme",
+   "description": "Den udbudte opgave udbydes som en totalentreprisekontrakt. Udbuddet omfatter etablering af en ca. 360 m2 stor teknikbygning, samt terræn og anlægsarbejder. Ordregiver ønsker at indgå en totalentreprisekontrakt omhandlende projektering, levering, montering og idriftsættelse af bygningen indenfor de angivne…",
+   "contact": {
+    "email": "info@hinnerupfjernvarme.dk",
+    "phone": "86985340",
+    "web": "https://www.hinnerupfjernvarme.dk/"
+   },
    "deadline": "2026-11-09",
    "value": "DKK 8M",
    "source": "TED",
@@ -427,6 +667,13 @@
    "trade": "windows",
    "tradeName": "Windows & doors",
    "title": "Håndværkerydelser til drift og vedligeholdelse-glarmesterarbejder 0-5 mio. kr.",
+   "buyer": "Københavns Kommune - Økonomiforvaltningen",
+   "description": "Nærværende Rammeaftale omfatter: fagentreprise vedr. glarmesterarbejde.",
+   "contact": {
+    "name": "Sofie Ørsted",
+    "email": "fw6j@kk.dk",
+    "phone": "+45 51778722"
+   },
    "deadline": "2026-11-10",
    "value": "Value not stated",
    "source": "TED",
@@ -445,6 +692,13 @@
    "trade": "electrical",
    "tradeName": "Electrical",
    "title": "EU-udbud vedr. levering, installation og drift af ladepunkter til egen flåde i Sønderborg Kommune",
+   "buyer": "Sønderborg Kommune",
+   "description": "Sønderborg Kommune, herefter benævnt ”Bygherre”, er i gang med en løbende udskiftning af den nuværende fossildrevne personbilflåde til elbiler. Bygherre ønsker derfor at etablere en række ladepunkter dedikeret til disse køretøjer på forskellige lokationer i kommunen.",
+   "contact": {
+    "email": "post@sonderborg.dk",
+    "phone": "+45 88 72 64 00",
+    "web": "https://sonderborgkommune.dk/"
+   },
    "deadline": "2026-11-11",
    "value": "DKK 10.5M",
    "source": "TED",
@@ -463,6 +717,13 @@
    "trade": "groundworks",
    "tradeName": "Groundworks",
    "title": "Service og vedligehold af udvendige arealer på campus København (Aalborg Universitet)",
+   "buyer": "Aalborg Universitet",
+   "description": "Dette udbud vedrører en rammeaftale om service og vedligehold af udvendige arealer. Udbuddet relaterer sig til udbud med offentliggørelse ID Offentliggørelse 285128-2026, hvor der for delaftalen Campus København alene blev modtaget ét konditionsmæssigt tilbud, og der var således ikke tilstrækkelig konkurrence til at…",
+   "contact": {
+    "name": "Anne Kielgast Andersen",
+    "email": "anneka@adm.aau.dk",
+    "phone": "99402630"
+   },
    "deadline": "2026-11-13",
    "value": "DKK 3.4M",
    "source": "TED",
@@ -481,6 +742,12 @@
    "trade": "flooring",
    "tradeName": "Flooring",
    "title": "Rødovre Kommune - Borgerhuset. Gulventreprisen",
+   "buyer": "A. Enggaard A/S",
+   "description": "I forbindelse med Rødovre Kommunes udvikling af Gartnerbyen, besluttede Rødovre Kommune at opføre et borgerhus i tilknytning til Rødovre Rådhus (Borgerhuset). Opførelse af Borgerhuset indgik i Rødovre Kommunes udbud af byggeretter i Gartnerbyen, således den vindende tilbudsgiver også skal udbyde og opføre…",
+   "contact": {
+    "email": "ismail.h@enggaard.dk",
+    "phone": "+4528298012"
+   },
    "deadline": "2026-10-27",
    "value": "DKK 6.5M",
    "source": "TED",
@@ -499,6 +766,14 @@
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "Vinduespolering (genudbud)",
+   "buyer": "Odense Kommune",
+   "description": "Udbuddet omhandler vinduespolering af Odense Kommunes bygninger. Odense Kommune har valgt at opdele udbuddet i delaftaler: Delaftale 1: Omfatter vinduespolering af administrationsbygninger. Delaftale 2: Omfatter vinduespolering af børnehaver, vuggestuer og legestuer i øst.",
+   "contact": {
+    "name": "Sarah Lindberg",
+    "email": "salin@odense.dk",
+    "phone": "+45 66131372",
+    "web": "https://www.odense.dk"
+   },
    "deadline": "2026-11-05",
    "value": "DKK 8.7M",
    "source": "TED",
@@ -517,6 +792,14 @@
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "Siivouspalvelut 2026",
+   "buyer": "Varsinais-Suomen hyvinvointialue",
+   "description": "Hankinnan kohteena on tarjouspyynnössä ja sen liitteissä mainittu palvelu tarjouspyynnössä ja sen liitteissä määritetyllä tavalla. Hankinnan kohteena ovat siivouspalvelut Varsinais-Suomen hyvinvointialueen sijaitseviin kohteisiin. Kohteiden tarkemmat kuvaukset on kuvattu tarjouspyynnöllä sekä sen liitteissä.",
+   "contact": {
+    "name": "Palveluhankinnat",
+    "email": "palveluhankinnat@varha.fi",
+    "phone": "+358 23132989",
+    "web": "https://www.varha.fi/fi"
+   },
    "deadline": "2026-11-20",
    "value": "Value not stated",
    "source": "TED",
@@ -535,6 +818,12 @@
    "trade": "roofing",
    "tradeName": "Roofing",
    "title": "Pienurakat ja korjaustyöt, puitesopimus",
+   "buyer": "Kaarinan kaupunki",
+   "description": "Kaarinan kaupunki (jäljempänä \"Tilaaja\") hakee pienurakoiden ja -korjaustöiden puitesopimuskumppaneita sopimuskaudelle 1.1.2027 – 31.12.2027. Sopimukseen sisältyy lisäksi kaksi (2) kahden (2) vuoden optiokautta (1.1.2028-31.12.2029 ja 1.1.2030-31.12.2031), mikäli Tilaaja päättää ottaa optiot käyttöön.",
+   "contact": {
+    "email": "hankinnat@kaarina.fi",
+    "phone": "25884000"
+   },
    "deadline": "2026-11-16",
    "value": "Value not stated",
    "source": "TED",
@@ -553,6 +842,14 @@
    "trade": "building",
    "tradeName": "Building",
    "title": "KVR-urakka, asumisyksikkö (KEVA)",
+   "buyer": "Alajärven kaupunki",
+   "description": "Alajärven kaupunki kilpailuttaa kehitysvammaisten henkilöiden 25-paikkaisen asumispalveluyksikön suunnittelun ja rakentamisen kokonaisvastuurakentamisena (KVR-urakka). Kohde sijaitsee osoitteessa Lääkärintie 5b, Alajärvi.",
+   "contact": {
+    "name": "Alajärven kaupunki",
+    "email": "kirjaamo@alajarvi.fi",
+    "phone": "+358 406619533",
+    "web": "https://alajarvi.fi/"
+   },
    "deadline": "2026-11-09",
    "value": "Value not stated",
    "source": "TED",
@@ -571,6 +868,14 @@
    "trade": "electrical",
    "tradeName": "Electrical",
    "title": "Mastojen hankinta ja niihin liittyvät elinkaarihallintapalvelut",
+   "buyer": "Liikenteenohjausyhtiö Fintraffic Oy",
+   "description": "Hankinnan kohteena on puitejärjestely Fintrafficin käyttämien tai hallinnoimien mastojen toimituksille sekä mastoihin tai niiden laitetiloihin liittyvien asennus-, siirto-, tarkastus- ja huoltopalveluiden hankinnalle.",
+   "contact": {
+    "name": "Hankintapalvelut",
+    "email": "hankinnat@fintraffic.fi",
+    "phone": "+358 294507000",
+    "web": "https://www.fintraffic.fi"
+   },
    "deadline": "2026-11-16",
    "value": "€3M",
    "source": "TED",
@@ -589,6 +894,13 @@
    "trade": "demolition",
    "tradeName": "Demolition",
    "title": "Kerrostalon ”KLOCKBERGA B” purku-urakka",
+   "buyer": "Fastighets Ab Kimitoöns Bostäder - Kiinteistö Oy Kemiönsaaren Asunnot",
+   "description": "Hankinnan kohteena on Klockberga B -rakennuksen kokonaispurku perustuksineen.Purku-urakka sisältää rakennuksen ja sen rakenteiden purkamisen, purkujätteiden lajittelun, poiskuljetuksen ja asianmukaisen käsittelyn sekä purkutyön edellyttämät muut työt tarjouspyynnön ja sen liiteasiakirjojen mukaisesti.",
+   "contact": {
+    "email": "roger.sjoqvist@kimitoon.fi",
+    "phone": "040 530 3584",
+    "web": "https://www.kimitobacken.fi"
+   },
    "deadline": "2026-11-02",
    "value": "€230K",
    "source": "TED",
@@ -607,6 +919,14 @@
    "trade": "groundworks",
    "tradeName": "Groundworks",
    "title": "Huhkolan päiväkoti ja perhekeskus sekä väestönsuoja",
+   "buyer": "Huittisten kaupunki, tekniset palvelut",
+   "description": "Hankinnan kohteena on väistökoulurakennuksen peruskorjaus ja muutostyö, jossa rakennus muutetaan viisiryhmäiseksi päiväkodiksi sekä Satakunnan hyvinvointialueen käyttöön tulevaksi perhekeskukseksi. Hankkeessa toteutetaan rakennuksen käyttötarkoituksen edellyttämät korjaus- ja muutostyöt.",
+   "contact": {
+    "name": "Huittisten kaupunki tekniset palvelut",
+    "email": "tekninen@huittinen.fi",
+    "phone": "+358 445604344",
+    "web": "https://www.pori.fi/tyo-ja-yrittaminen/hankinnat"
+   },
    "deadline": "2026-11-16",
    "value": "Value not stated",
    "source": "TED",
@@ -625,6 +945,14 @@
    "trade": "plumbing",
    "tradeName": "Plumbing",
    "title": "Kiinteistöjen rakennuspalveluita koskeva puitejärjestely OSA-ALUE 1 RU, OSA-ALUE 2 SÄH, OSA-ALUE 3 LVIA",
+   "buyer": "Kokkolan kaupunki",
+   "description": "Kokkolan kaupunki (jäljempänä myös \"tilaaja\", \"hankintayksikkö\" tai \"rakennuttaja\") pyytää tarjouksia tämän tarjouspyynnön ja sen liitteiden mukaisesti tilaajan rakennuspalveluiden (\"rakentamispalvelu(t)\") puitesopimuksen hankintaan.",
+   "contact": {
+    "name": "Kaupunkiympäristö",
+    "email": "tarjoukset.kaupunkiymparisto@kokkola.fi",
+    "phone": "+358 68289111",
+    "web": "http://www.kokkola.fi"
+   },
    "deadline": "2026-10-23",
    "value": "Value not stated",
    "source": "TED",
@@ -643,6 +971,14 @@
    "trade": "building",
    "tradeName": "Building",
    "title": "Kaup og uppsetning færanlegra húseininga við Suðurvelli",
+   "buyer": "Consensa",
+   "description": "Consensa, a procurement service provider acting on behalf of the Municipality of Vogar, invites tenders for the project “Purchase and Installation of Relocatable Modular Units at Suðurvellir”, to be carried out in accordance with the terms and requirements of the tender documents.",
+   "contact": {
+    "name": "Birgir Örn Birgisson",
+    "email": "consensa@consensa.is",
+    "phone": "+3546505040",
+    "web": "http://www.consensa.is"
+   },
    "deadline": "2026-11-05",
    "value": "Value not stated",
    "source": "TED",
@@ -661,6 +997,14 @@
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "Ræstiþjónusta fyrir Kópavogsbæ - Rammasamningur",
+   "buyer": "Kópavogsbær",
+   "description": "Framwork for cleaning services in Kopavogur Municipality",
+   "contact": {
+    "name": "Hjalti Jón Pálsson",
+    "email": "hjalti.jon.palsson@kopavogur.is",
+    "phone": "00 354 441 1255",
+    "web": "https://www.kopavogur.is"
+   },
    "deadline": "2026-11-03",
    "value": "Value not stated",
    "source": "TED",
@@ -679,6 +1023,14 @@
    "trade": "electrical",
    "tradeName": "Electrical",
    "title": "Framework Agreement for Fault Response Services, Maintenance and Installation of Mechanical and Electrical Equipment",
+   "buyer": "Veitur ohf.",
+   "description": "Veitur ohf. intends to establish a multi-supplier framework agreement for fault response services, maintenance, repair, installation and associated works relating to mechanical and electrical equipment across its utility infrastructure.",
+   "contact": {
+    "name": "Procurement department",
+    "email": "utbod@orkuveitan.is",
+    "phone": "5166100",
+    "web": "https://veitur.is/"
+   },
    "deadline": "2026-11-05",
    "value": "Value not stated",
    "source": "TED",
@@ -697,6 +1049,14 @@
    "trade": "building",
    "tradeName": "Building",
    "title": "Kaup og uppsetning færanlegra húseininga við Suðurvelli",
+   "buyer": "Consensa",
+   "description": "Consensa, a procurement service provider acting on behalf of the Municipality of Vogar, invites tenders for the project “Purchase and Installation of Relocatable Modular Units at Suðurvellir”, to be carried out in accordance with the terms and requirements of the tender documents.",
+   "contact": {
+    "name": "Birgir Örn Birgisson",
+    "email": "consensa@consensa.is",
+    "phone": "+3546505040",
+    "web": "http://www.consensa.is"
+   },
    "deadline": "2026-11-04",
    "value": "Value not stated",
    "source": "TED",
@@ -715,6 +1075,13 @@
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "Cleaning services for the Government Offices of Iceland",
+   "buyer": "Fjársýsla ríkisins",
+   "description": "Cleaning services for the Government Offices of Iceland",
+   "contact": {
+    "name": "Guðbjörg Matthíasdóttir",
+    "email": "gudbjorg.matthiasdottir@fjs.is",
+    "phone": "+3545457500"
+   },
    "deadline": "2026-11-02",
    "value": "Value not stated",
    "source": "TED",
@@ -733,6 +1100,14 @@
    "trade": "electrical",
    "tradeName": "Electrical",
    "title": "Uppsetning, Strengir og Tengingar (UST)",
+   "buyer": "NLSH ohf.",
+   "description": "Í þessu útboði er óskað tilboða í að útvega búnað, uppsetningu,útlagningu strengja og tenginga og skila útteknu grunn raforkudreifikerfi í nýbyggingum NLSH og lóð á milli þeirra.",
+   "contact": {
+    "name": "Jakob Valgeir Finnbogason",
+    "email": "jakob@nlsh.is",
+    "phone": "+354 5516010",
+    "web": "http://www.nlsh.is"
+   },
    "deadline": "2026-11-04",
    "value": "ISK 22M",
    "source": "TED",
@@ -751,6 +1126,14 @@
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "16338 - Ræsting stjórnsýsluhúsa Reykjavíkurborgar",
+   "buyer": "Reykjavik Procurement Office",
+   "description": "Skrifstofa fjármálaþjónustu og innkaupa, f.h. þjónustu- og nýsköpunarsviðs óskar eftir tilboðum í ræstingu á stjórnsýsluhúsum Reykjavíkurborgar samkvæmt þessum útboðsgögnum og í samræmi við staðalinn ÍST INSTA 800. Um er að ræða almennt útboð þar sem hvaða fyrirtæki sem er getur lagt fram tilboð.",
+   "contact": {
+    "name": "utbod@reykjavik.is",
+    "email": "utbod@reykjavik.is",
+    "phone": "+354 4111040",
+    "web": "http://reykjavik.is/utbod"
+   },
    "deadline": "2026-11-02",
    "value": "Value not stated",
    "source": "TED",
@@ -769,6 +1152,13 @@
    "trade": "building",
    "tradeName": "Building",
    "title": "„Wzmocnienie poziomu ambulatoryjnej opieki specjalistycznej...: prace termomodernizacyjne na budynku F, poprawa dostępności…",
+   "buyer": "Wojewódzki Szpital Specjalistyczny nr 5 im. Św. Barbary w Sosnowcu",
+   "description": "„Wzmocnienie poziomu ambulatoryjnej opieki specjalistycznej w Wojewódzkim Szpitalu Specjalistycznym nr 5 im. Św. Barbary w Sosnowcu: prace termomodernizacyjne na budynku F, poprawa dostępności wejścia głównego. Poprawa efektywności energetycznej Wojewódzkiego Szpitala Specjalistycznego nr 5 im. Św.",
+   "contact": {
+    "email": "zam.publ@wss5.pl",
+    "phone": "48 323682012",
+    "web": "www.wss5.pl"
+   },
    "deadline": "2026-10-30",
    "value": "Value not stated",
    "source": "TED",
@@ -787,6 +1177,13 @@
    "trade": "groundworks",
    "tradeName": "Groundworks",
    "title": "Rozbudowa i przebudowa budynku i jego adaptacja na cele kulturalne kinoteatr Włókniarz - Rewitalizacja terenów miasta.",
+   "buyer": "Gmina miasto tomaszów mazowiecki",
+   "description": "1. Nazwa zamówienia: Rozbudowa i przebudowa budynku i jego adaptacja na cele kulturalne kinoteatr Włókniarz - Rewitalizacja terenów miasta. 2. Przedmiotem zamówienia jest: przebudowa, rozbudowa, nadbudowa i adaptacji dawnego kinoteatru „Włókniarz” wraz z jego otoczeniem na cele kulturalne. 3.",
+   "contact": {
+    "email": "zam.pub@tomaszowmaz.pl",
+    "phone": "7242311",
+    "web": "http://bip.tomaszow.miasta.pl/public/"
+   },
    "deadline": "2026-10-30",
    "value": "Value not stated",
    "source": "TED",
@@ -805,6 +1202,13 @@
    "trade": "hvac",
    "tradeName": "HVAC",
    "title": "Budowa kotłów elektrodowych o mocy 300 MWt oraz akumulatora ciepła 52 tys. m3 netto wraz z infrastrukturą pomocniczą w PGE…",
+   "buyer": "PGE Energia Ciepła S.A.",
+   "description": "Budowa kotłów elektrodowych o mocy 300 MWt oraz akumulatora ciepła 52 tys. m3 netto wraz z infrastrukturą pomocniczą w PGE Energia Ciepła S.A. Oddział Wybrzeże w Gdańsku",
+   "contact": {
+    "email": "ewa.kosowska@gkpge.pl",
+    "phone": "+48 725 554 604",
+    "web": "www.pgeenergiaciepla.pl"
+   },
    "deadline": "2026-10-29",
    "value": "Value not stated",
    "source": "TED",
@@ -823,6 +1227,13 @@
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "Unterhalts- und Glasreinigung für das Justizgebäude in der Pacellistraße 5 in München",
+   "buyer": "Freistaat Bayern, vertreten durch den Präsidenten des Oberlandesgerichts München",
+   "description": "Die Unterhaltsreinigung in dem oben genannten Justizgebäud umfasst die textilen und nichttextilen Fußbodenbeläge, sanitären Anlagen sowie Gegenstände der Raumausstattung und Raumeinrichtung.",
+   "contact": {
+    "email": "vergabestelle@olg-m.bayern.de",
+    "phone": "+49 8955970",
+    "web": "https://www.justiz.bayern.de/gerichte-und-behoerden/oberlandesgerichte/muenchen/"
+   },
    "deadline": "2026-10-26",
    "value": "Value not stated",
    "source": "TED",
@@ -841,6 +1252,14 @@
    "trade": "roofing",
    "tradeName": "Roofing",
    "title": "078_Sportzentrum Stegersbach - Schwarzdecker, Bauspengler und Fassade",
+   "buyer": "PEB – Projektentwicklung Burgenland GmbH",
+   "description": "Neubau eines Sportzentrums für Rollsport in der Marktgemeinde Stegersbach",
+   "contact": {
+    "name": "PEB – Projektentwicklung Burgenland GmbH",
+    "email": "office@peb.at",
+    "phone": "+43 5901026760",
+    "web": "https://www.peb.at/"
+   },
    "deadline": "2026-11-02",
    "value": "Value not stated",
    "source": "TED",
@@ -859,6 +1278,13 @@
    "trade": "groundworks",
    "tradeName": "Groundworks",
    "title": "Straßenbau: Gussasphaltarbeiten in Wien (Rahmenvertrag)",
+   "buyer": "Magistrat der Stadt Wien - Magistratsabteilung 28",
+   "description": "Straßenbauarbeiten",
+   "contact": {
+    "email": "post@ma28.wien.gv.at",
+    "phone": "+43 1400049600",
+    "web": "https://www.wien.gv.at"
+   },
    "deadline": "2026-11-03",
    "value": "Value not stated",
    "source": "TED",
@@ -877,6 +1303,14 @@
    "trade": "hvac",
    "tradeName": "HVAC",
    "title": "301501-LSTP-BA09-MSR Anlage",
+   "buyer": "Lakeside Science & Technology Park GmbH",
+   "description": "Errichtung und Inbetriebnahme der MSR Anlage für die Gebäude B18 und B19",
+   "contact": {
+    "name": "Miksch Alois Michael",
+    "email": "office@lakeside-scitec.com",
+    "phone": "+43 664 49 67 478",
+    "web": "https://www.lakeside-scitec.com"
+   },
    "deadline": "2026-11-02",
    "value": "Value not stated",
    "source": "TED",
@@ -895,6 +1329,13 @@
    "trade": "electrical",
    "tradeName": "Electrical",
    "title": "LKH Hochsteiermark, Standort Leoben - Errichtung LINAC 2 / MRT-Provisorium_Gew. 7501 Gebäudeautomation - Vorgezogen",
+   "buyer": "Steiermärkische Krankenanstaltengesellschaft m.b.H.",
+   "description": "Errichtung von Mess-, Steuer- und Regelungstechnischen Anlagen sowie zugehörige Schalt- und Verteileranlagen für die haustechnischen Anlagen.Errichtung von Raumautomationsanlagen zur Steuerung und Regelung der haustechnischen Anlagen.",
+   "contact": {
+    "email": "fa.recht@kages.at",
+    "phone": "+43 3163400",
+    "web": "https://kages.vemap.com"
+   },
    "deadline": "2026-11-05",
    "value": "Value not stated",
    "source": "TED",
@@ -913,6 +1354,14 @@
    "trade": "building",
    "tradeName": "Building",
    "title": "08., Schlösselgasse 14 - Baumeisterarbeiten",
+   "buyer": "Stadt Wien - Wiener Wohnen",
+   "description": "Baumeisterarbeiten",
+   "contact": {
+    "name": "Dezernat Vergabewesen",
+    "email": "auftragswesen@wrw.wien.gv.at",
+    "phone": "+43 5757575",
+    "web": "https://www.wienerwohnen.at"
+   },
    "deadline": "2026-11-05",
    "value": "Value not stated",
    "source": "TED",
@@ -931,6 +1380,14 @@
    "trade": "windows",
    "tradeName": "Windows & doors",
    "title": "15., Wickhoffgasse 14 - Hufeisenhof - Fenster- und Fenstertürentauscharbeiten Holz-Alu",
+   "buyer": "Stadt Wien - Wiener Wohnen",
+   "description": "Fenster- und Fenstertürentauscharbeiten Holz-Alu",
+   "contact": {
+    "name": "Dezernat Vergabewesen",
+    "email": "auftragswesen@wrw.wien.gv.at",
+    "phone": "+43 5757575",
+    "web": "https://www.wienerwohnen.at"
+   },
    "deadline": "2026-10-29",
    "value": "Value not stated",
    "source": "TED",
@@ -949,6 +1406,13 @@
    "trade": "painting",
    "tradeName": "Painting",
    "title": "ST5, B33a.02, DB Stein-Mautern, Stahlbauarbeiten",
+   "buyer": "Land Niederösterreich, p.A. Amt der NÖ Landesregierung, Gruppe Straße - ST5 Brückenbau",
+   "description": "Stahlbau- und KO-Schutzarbeiten für die Ertüchtigung der DB Stein Mautern.",
+   "contact": {
+    "email": "post.st5@noel.gv.at",
+    "phone": "+43 2742900560510",
+    "web": "https://noe.vemap.com"
+   },
    "deadline": "2027-01-26",
    "value": "Value not stated",
    "source": "TED",
@@ -967,6 +1431,13 @@
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "Úklidové práce na kolejích Vltava a Blanice SÚZ VŠE v Praze",
+   "buyer": "Vysoká škola ekonomická v Praze",
+   "description": "Poskytování komplexních úklidových služeb v objektech kolejí Vltava a Blanice, včetně pravidelného denního, týdenního a měsíčního úklidu, sezonního úklidu při výměně ubytovaných, úklidu hotelových nebo krátkodobě ubytovacích kapacit, víkendového a svátečního úklidu, čištění oken, matrací a dalších objednaných…",
+   "contact": {
+    "email": "martin.lang@vse.cz",
+    "phone": "+420 224095866",
+    "web": "https://www.vse.cz/"
+   },
    "deadline": "2026-10-26",
    "value": "CZK 9.5M",
    "source": "TED",
@@ -985,6 +1456,12 @@
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "Upratovacie služby v Trnave",
+   "buyer": "Úrad pre verejné obstarávanie",
+   "description": "Predmetom zákazky je poskytovanie upratovacích a čistiacich služieb v administratívnych priestoroch verejného obstarávateľa v Trnave.",
+   "contact": {
+    "email": "info@uvo.gov.sk",
+    "phone": "+421250264111"
+   },
    "deadline": "2026-11-16",
    "value": "€29K",
    "source": "TED",
@@ -1003,6 +1480,12 @@
    "trade": "building",
    "tradeName": "Building",
    "title": "Stredná odborná škola Pod Bánošom - Modernizácia odborného vzdelávania",
+   "buyer": "Banskobystrický samosprávny kraj",
+   "description": "Predmetom zákazky je realizácia stavebných prác v rámci stavby „Stredná odborná škola Pod Bánošom – Modernizácia odborného vzdelávania“ v Banskej Bystrici. Predmet zákazky zahŕňa najmä vybudovanie a modernizáciu objektov určených na praktické vyučovanie žiakov školy, konkrétne cvičného pracoviska, ovčína, voštinárne,…",
+   "contact": {
+    "email": "beata.fulneckova@zdielanesluzby.sk",
+    "phone": "+421949014600"
+   },
    "deadline": "2026-11-16",
    "value": "€1.6M",
    "source": "TED",
@@ -1021,6 +1504,12 @@
    "trade": "groundworks",
    "tradeName": "Groundworks",
    "title": "Eko park Voderady",
+   "buyer": "Obec Voderady",
+   "description": "Predmetom zákazky je kompletná realizácia novostavby mestského parku „Eko park Voderady“. Hlavným cieľom tohto rozvojového projektu je zmiernenie dopadov zmeny klímy prostredníctvom implementácie moderných zelených a modrých opatrení, v rozsahu projektovej dokumentácie a výkazu výmer.",
+   "contact": {
+    "email": "jamsro001@gmail.com",
+    "phone": "+421915274799"
+   },
    "deadline": "2026-11-05",
    "value": "€968.6K",
    "source": "TED",
@@ -1039,6 +1528,13 @@
    "trade": "demolition",
    "tradeName": "Demolition",
    "title": "Viničky - Kráľovský Chlmec - Intenzifikácia zásobného potrubia II. etapa",
+   "buyer": "Východoslovenská vodárenská spoločnosť, a.s.",
+   "description": "Predmetom zákazky je rekonštrukcia 1.672 m zásobného vodovodného potrubia v zmysle projektovej dokumentácie mimo zastavaného územia medzi obcami Viničky a Ladmovce na pravom brehu vodného toku Bodrog.",
+   "contact": {
+    "name": "PROCESS MANAGEMENT, s.r.o.",
+    "email": "vvs@p-m.sk",
+    "phone": "+421254653904"
+   },
    "deadline": "2026-11-09",
    "value": "€1.2M",
    "source": "TED",
@@ -1057,6 +1553,12 @@
    "trade": "electrical",
    "tradeName": "Electrical",
    "title": "SVD G-N, Rekonštrukcia transformátorov v prevádzkovej budove vodohospodárskeho dispečingu (PBVH) Čunovo",
+   "buyer": "Vodohospodárska výstavba, štátny podnik",
+   "description": "Rekonštrukcia zahŕňa vypracovanie a dodanie projektovej dokumentácie na výmenu 3ks transformátorov, 3 ks rozvádzačov a výmenu elektroinštalácie v miestnosti NN rozvodne a transformátorov v prevádzkovej budove vodohospodárskeho dispečingu v Čunove a samotnú rekonštrukciu podľa projektu",
+   "contact": {
+    "email": "jaroslava.hruskovicova@vvb.sk",
+    "phone": "+421917331652"
+   },
    "deadline": "2026-11-16",
    "value": "€649.1K",
    "source": "TED",
@@ -1075,6 +1577,12 @@
    "trade": "hvac",
    "tradeName": "HVAC",
    "title": "Rekonštrukcia klimatizačných zariadení v SO639:V1",
+   "buyer": "Jadrová a vyraďovacia spoločnosť, a.s.; skrátený názov: JAVYS, a. s.",
+   "description": "Predmetom zákazky je rekonštrukcia klimatizačných zariadení, ktorá zahŕňa: - vypracovanie a dodanie realizačnej projektovej dokumentácie vrátane zapracovania pripomienok a schválenia dokumentácie verejným obstarávateľom, - dodávku chladiacich zariadení (vonkajšie a vnútorné jednotky), podľa schválenej projektovej…",
+   "contact": {
+    "email": "gbelska.dana@javys.sk",
+    "phone": "+421335315013"
+   },
    "deadline": "2026-10-23",
    "value": "€430K",
    "source": "TED",
@@ -1093,6 +1601,12 @@
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "„Poskytovanie upratovacích služieb v priestoroch Univerzity Mateja Bela v Banskej Bystrici a jej súčastí“",
+   "buyer": "Univerzita Mateja Bela v Banskej Bystrici",
+   "description": "Zabezpečenie poskytovania upratovacích služieb v priestoroch verejného obstarávateľa a na základe jeho požiadaviek, profesionálnym spôsobom, ekologickými čistiacimi prostriedkami s minimálnym vplyvom na znečistenie životného prostredia a kvalitným technickým vybavením, ktoré má úspešný uchádzač k dispozícií",
+   "contact": {
+    "email": "lucia.pevalova@umb.sk",
+    "phone": "0484461111"
+   },
    "deadline": "2026-10-23",
    "value": "€2.9M",
    "source": "TED",
@@ -1111,6 +1625,14 @@
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "Schoonmaakonderhoud, glasbewassing en sanitaire voorzieningen",
+   "buyer": "Gemeente Leidschendam-Voorburg",
+   "description": "De opdracht betreft het integraal verzorgen van schoonmaakonderhoud, glasbewassing en sanitaire voorzieningen voor de gemeente Leidschendam-Voorburg. De dienstverlening omvat resultaatgericht schoonmaakonderhoud, periodiek vloeronderhoud, tapijtreiniging, glasbewassing, additionele en regiewerkzaamheden, ondersteuning…",
+   "contact": {
+    "name": "Ewien Sayyid",
+    "email": "asayyid@leidschendam-voorburg.nl",
+    "phone": "+31639632518",
+    "web": "https://www.lv.nl/"
+   },
    "deadline": "2027-01-15",
    "value": "€841K",
    "source": "TED",
@@ -1129,6 +1651,14 @@
    "trade": "building",
    "tradeName": "Building",
    "title": "Preventief en correctief onderhoud zonwering",
+   "buyer": "Wageningen University & Research",
+   "description": "De Opdracht betreft het onderhoud van de zonwering. Met deze zonwering worden de beweegbare schermen aan de buitenzijde van de (kantoor)gebouwen van de WUR bedoeld. Het betreft hier de motorisch en handmatig bewogen buitenzonweging.",
+   "contact": {
+    "name": "Jasper van Kasteren",
+    "email": "jasper.vankasteren@wur.nl",
+    "phone": "+10317488962",
+    "web": "https://www.wur.nl"
+   },
    "deadline": "2026-11-24",
    "value": "€1M",
    "source": "TED",
@@ -1147,6 +1677,14 @@
    "trade": "electrical",
    "tradeName": "Electrical",
    "title": "ROK onderhoud, vervanging en storingen OVL 2027-2034",
+   "buyer": "Gemeente Berkelland",
+   "description": "Raamovereenkomst voor het uitvoeren van onderhoud, vervangingen en storingsafhandeling aan de gemeentelijke installatie(s) voor openbare verlichting. Circa 2 tot maximaal 8 miljoen euro.",
+   "contact": {
+    "name": "Rik Bruil",
+    "email": "inkoop@gemeenteberkelland.nl",
+    "phone": "+31 545250250",
+    "web": "http://www.gemeenteberkelland.nl"
+   },
    "deadline": "2026-12-04",
    "value": "Value not stated",
    "source": "TED",
@@ -1165,6 +1703,14 @@
    "trade": "groundworks",
    "tradeName": "Groundworks",
    "title": "EUROPESE OPENBARE AANBESTEDING VAN: Speeltoestellen en speelplaatsen",
+   "buyer": "Gemeente Almere",
+   "description": "Aanbestedende dienst wil overeenkomsten realiseren betrekking tot het ontwerpen, aanleggen, onderhouden van speelplaatsen inclusief speeltoestellen en valondergronden en het aanleggen en onderhouden van Skatebanen en inspectie van speelplaatsen en skatebanen. De aanbesteding kent drie percelen, te weten: 1.",
+   "contact": {
+    "name": "Rolf Pot",
+    "email": "inkoop@almere.nl",
+    "phone": "+31 365399911",
+    "web": "http://www.almere.nl"
+   },
    "deadline": "2026-12-13",
    "value": "Value not stated",
    "source": "TED",
@@ -1183,6 +1729,14 @@
    "trade": "hvac",
    "tradeName": "HVAC",
    "title": "Onderhoud en levering van airconditioninginstallaties ten behoeve van het Landelijk Meetnet Luchtkwaliteit",
+   "buyer": "Rijksinstituut voor Volksgezondheid en Milieu (RIVM)",
+   "description": "Binnen de afdeling Meten Luchtkwaliteit (MLK) van het centrum Milieukwaliteit (MIL) van het RIVM is behoefte ontstaan aan de voortzetting van een onderhoudscontract voor airconditioninginstallaties ten behoeve van het landelijk luchtmeetnet, en de levering van nieuwe airconditioninginstallaties wanneer huidige…",
+   "contact": {
+    "name": "Willemien Hoogenraad",
+    "email": "willemien.hoogenraad@rivm.nl",
+    "phone": "+31686559267",
+    "web": "https://www.rivm.nl"
+   },
    "deadline": "2026-11-18",
    "value": "€172K",
    "source": "TED",
@@ -1201,6 +1755,14 @@
    "trade": "painting",
    "tradeName": "Painting",
    "title": "Schilderwerk uitvoering van binnen- en buitenschilderwerk aan gebouwen en civiele objecten",
+   "buyer": "Waterschap Vallei en Veluwe",
+   "description": "Waterschap Vallei en Veluwe nodigt marktpartijen uit om samen te werken binnen de raamovereenkomst Uitvoering van binnen- en buitenschilderwerk aan gebouwen en civiele objecten.",
+   "contact": {
+    "name": "Wilco Habekotté",
+    "email": "whabekotte@vallei-veluwe.nl",
+    "phone": "+31 44110438",
+    "web": "http://www.vallei-veluwe.nl"
+   },
    "deadline": "2026-11-17",
    "value": "€2.4M",
    "source": "TED",
@@ -1219,6 +1781,14 @@
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "Schoonmaakdienstverlening en aanverwante leveringen en diensten",
+   "buyer": "Unie van Waterschappen",
+   "description": "De Unie van Waterschappen wenst een overeenkomst te sluiten met één opdrachtnemer voor het uitvoeren van schoonmaakdienstverlening en aanverwante leveringen en diensten. Alle ondernemers die aan de eisen voldoen worden uitgenodigd een inschrijving in te dienen.",
+   "contact": {
+    "name": "Floris-Jan Foet",
+    "email": "ea@pro10.nl",
+    "phone": "+31 703819724",
+    "web": "http://www.uvw.nl"
+   },
    "deadline": "2026-11-09",
    "value": "Value not stated",
    "source": "TED",
@@ -1237,6 +1807,13 @@
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "Marché public de services ayant pour objet le nettoyage (locaux et vitres) de logements étudiants à Bruxelles et Louvain-la-Neuve",
+   "buyer": "Université catholique de Louvain",
+   "description": "Marché public de services ayant pour objet le nettoyage (locaux et vitres) de logements étudiants à Bruxelles et Louvain-la-Neuve",
+   "contact": {
+    "email": "loge.mp@uclouvain.be",
+    "phone": "+32 10473758",
+    "web": "http://www.uclouvain.be"
+   },
    "deadline": "2026-10-22",
    "value": "Value not stated",
    "source": "TED",
@@ -1255,6 +1832,12 @@
    "trade": "electrical",
    "tradeName": "Electrical",
    "title": "Accord-cadre pour des travaux comprenant la fourniture et l’installation d’infrastructures de communication data dans les…",
+   "buyer": "Régie des Bâtiments",
+   "description": "L’accord-cadre concerne les travaux, les livraisons, les fournitures, les services, le transport, la main-d’œuvre et tous les moyens nécessaires à la réalisation (nouvelle, adaptation, démolition) d’installations de communications dans les bâtiments publics situés en Belgique, gérés, loués ou désignés par la Régie des…",
+   "contact": {
+    "email": "publication@buildingsagency.be",
+    "phone": "+32 25416511"
+   },
    "deadline": "2026-10-27",
    "value": "Value not stated",
    "source": "TED",
@@ -1273,6 +1856,13 @@
    "trade": "windows",
    "tradeName": "Windows & doors",
    "title": "Marché de travaux ayant pour objet la construction d'une maison de repos (Lot 1 – Architecture (lot PILOTE) - Lot 2 – HVAC…",
+   "buyer": "Association intercommunale générations thiérache sc",
+   "description": "Le présent marché est un marché de travaux qui comprend l’exécution des travaux suivants (description générale des travaux à réaliser) : Marché de travaux en 4 lots ayant pour objet la construction d'une maison de repos : - Lot 1 – Architecture - Lot 2 – HVAC - Lot 3 – Électricité - Lot 4 – Cuisine.",
+   "contact": {
+    "name": "NOM & Prénom : Jean-Marc POULLAIN\nAdresse : Place Joseph Meunier, 1 à 5640 METTET\n",
+    "email": "info@aigt.be",
+    "phone": "+32 (0)60 21 43 75"
+   },
    "deadline": "2026-11-05",
    "value": "Value not stated",
    "source": "TED",
@@ -1291,6 +1881,13 @@
    "trade": "building",
    "tradeName": "Building",
    "title": "Geschlossenen Rohbau für den Neubau der Servicestelle Kaleido in Eupen",
+   "buyer": "Ministerium der Deutschsprachigen Gemeinschaft Belgiens",
+   "description": "Öffentlicher Bauauftrag über einen geschlossenen Rohbau für den Neubau der Servicestelle Kaleido in Eupen. Gegenstand dieser Ausschreibung ist die Ausführung des geschlossenen Rohbaus inklusive aller hierfür erforderlichen Nebenleistungen.",
+   "contact": {
+    "email": "datenschutz@dgov.be",
+    "phone": "+32 87596300",
+    "web": "http://www.ostbelgienlive.be"
+   },
    "deadline": "2026-11-18",
    "value": "Value not stated",
    "source": "TED",
@@ -1309,6 +1906,13 @@
    "trade": "groundworks",
    "tradeName": "Groundworks",
    "title": "Sigma inrichtingswerken Zammelsbroek",
+   "buyer": "Vlaamse Overheid",
+   "description": "Het doel van de opdracht is de natuurtechnische inrichting van de vallei van de Grote Nete. Dit gebeurt door middel van de afgravingen en afvoer van grond, inclusief voorbereidende werken, het verwijderen van gebiedsvreemd materiaal en de aanleg van recreatieve infrastructuur.",
+   "contact": {
+    "email": "anb@vlaanderen.be",
+    "phone": "+32 25538102",
+    "web": "https://www.natuurenbos.be"
+   },
    "deadline": "2026-11-12",
    "value": "Value not stated",
    "source": "TED",
@@ -1327,6 +1931,14 @@
    "trade": "hvac",
    "tradeName": "HVAC",
    "title": "Marché de travaux pour la rénovation et l'extension de l'Administration communale ainsi que du centre sportif de la commune de…",
+   "buyer": "Administration Communale de Trooz",
+   "description": "Objet des travaux : Rénovation et extension de l’Administration communale ainsi que du centre sportif de la commune Situation et lieux d’exécution : Les bâtiments se situent : 22 rue de l’Eglise à 4870 TROOZ Parcelles: TROOZ B442s, B441m3, B442t, B442n et B452m.",
+   "contact": {
+    "name": "Bernard FOURNY",
+    "email": "bernard.fourny@trooz.be",
+    "phone": "+32 43519317",
+    "web": "http://www.trooz.be/"
+   },
    "deadline": "2026-10-28",
    "value": "Value not stated",
    "source": "TED",
@@ -1345,6 +1957,14 @@
    "trade": "demolition",
    "tradeName": "Demolition",
    "title": "PKEA - Marché 01 - organisation de la partie pharmacie / salle blanche",
+   "buyer": "Klinik Sankt Josef VoG",
+   "description": "Le présent marché est un marché public mixte ayant pour objet l’organisation, l’aménagement et l’équipement de la partie pharmacie / salle blanche, y compris les locaux techniques associés, au sein de la Klinik St. Josef à Saint-Vith. Il comprend deux lots de travaux et un lot principalement de fournitures.",
+   "contact": {
+    "name": "David Kirschvink",
+    "email": "david.kirschvink@klinik.st-vith.be",
+    "phone": "+32 80854402",
+    "web": "http://www.klinik.be/"
+   },
    "deadline": "2026-10-28",
    "value": "Value not stated",
    "source": "TED",
@@ -1363,6 +1983,12 @@
    "trade": "building",
    "tradeName": "Building",
    "title": "Sporto paskirties pastato (ledo arenos) Paryžiaus Komunos g. 5, Klaipėda, statybos darbai su darbo projekto parengimu.",
+   "buyer": "Klaipėdos miesto savivaldybės administracija",
+   "description": "Sporto paskirties pastato (ledo arenos) Paryžiaus Komunos g. 5, Klaipėda, statybos darbai su darbo projekto parengimu. Darbai ir paslaugos perkami pagal Užsakovo užduotį (techninę specifikaciją) ir Techninį projektą (UAB „Projektų rengimo centras“ parengtas techninis projektas Nr.",
+   "contact": {
+    "email": "aiste.valentukoniene@klaipeda.lt",
+    "phone": "+370 46 39 61 04"
+   },
    "deadline": "2026-11-05",
    "value": "Value not stated",
    "source": "TED",
@@ -1381,6 +2007,13 @@
    "trade": "electrical",
    "tradeName": "Electrical",
    "title": "Terminuotojo 7 MW įvado autobusų parkui Justiniškių g. 14, Vilniuje įrengimo rangos darbai su darbo projekto parengimu",
+   "buyer": "UAB Vilniaus viešasis transportas (PV)",
+   "description": "Tarptautinis konkursas. Terminuotojo 7 MW įvado autobusų parkui Justiniškių g. 14, Vilniuje įrengimo rangos darbai su darbo projekto parengimu",
+   "contact": {
+    "email": "info@vilniausvt.lt",
+    "phone": "+37052344444",
+    "web": "https://www.vilniausviesasistransportas.lt/"
+   },
    "deadline": "2026-11-17",
    "value": "Value not stated",
    "source": "TED",
@@ -1399,6 +2032,13 @@
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "Šilainių baseino patalpų ir lauko teritorijos valymo paslaugų pirkimas",
+   "buyer": "Kauno miesto savivaldybės administracija",
+   "description": "Perkančioji organizacija – Kauno plaukimo mokykla – numato įsigyti Šilainių baseino, esančio Baltų pr. 8, Kaune, administracinių patalpų, baseino zonų, sporto, persirengimo, sanitarinių ir kitų patalpų valymo, higienos palaikymo ir dezinfekcijos bei lauko teritorijos prie baseino valymo paslaugas.",
+   "contact": {
+    "email": "daiva.ceponiene@kaunas.lt",
+    "phone": "+370 37422793",
+    "web": "https://www.kaunas.lt/"
+   },
    "deadline": "2026-10-28",
    "value": "€735.5K",
    "source": "TED",
@@ -1417,6 +2057,13 @@
    "trade": "building",
    "tradeName": "Building",
    "title": "Sporto paskirties pastato (baseino), P. Mašioto g. 1, Pakruojyje, statybos darbų viešasis pirkimas",
+   "buyer": "Pakruojo rajono savivaldybės administracija",
+   "description": "Sporto paskirties pastato (baseino), P. Mašioto g. 1, Pakruojyje, statybos darbai",
+   "contact": {
+    "email": "egle.ilekyte@pakruojis.lt",
+    "phone": "+37060594960",
+    "web": "www.pakruojis.lt"
+   },
    "deadline": "2026-10-23",
    "value": "Value not stated",
    "source": "TED",
@@ -1435,6 +2082,13 @@
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "Valymo paslaugų ir teritoijų priežiūros paslaugos",
+   "buyer": "AB Lietuvos radijo ir televizijos centras",
+   "description": "Valymo paslaugų ir teritoijų priežiūros paslaugos. Pirkimo Nr. 358;",
+   "contact": {
+    "email": "l.simkonyte@telecentras.lt",
+    "phone": "069394322",
+    "web": "https://www.telecentras.lt/"
+   },
    "deadline": "2026-10-26",
    "value": "Value not stated",
    "source": "TED",
@@ -1453,6 +2107,14 @@
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "Par telpu uzkopšanu LOC objektos Liepājā",
+   "buyer": "Sabiedrība ar ierobežotu atbildību \"Liepājas Olimpiskais centrs\"",
+   "description": "Par telpu uzkopšanu LOC objektos Liepājā",
+   "contact": {
+    "name": "Sandis Vilsons",
+    "email": "sandis.vilsons@loc.lv",
+    "phone": "+37129193326",
+    "web": "https://loc.lv/lv"
+   },
    "deadline": "2026-11-16",
    "value": "Value not stated",
    "source": "TED",
@@ -1471,6 +2133,14 @@
    "trade": "roofing",
    "tradeName": "Roofing",
    "title": "Administratīvās ēkas energoefektivitātes paaugstināšana un atjaunošana Šveices ielā 12, Siguldā",
+   "buyer": "Valsts sabiedrība ar ierobežotu atbildību \"Šampētera nams\"",
+   "description": "Administratīvās ēkas energoefektivitātes paaugstināšana un atjaunošana Šveices ielā 12, Siguldā",
+   "contact": {
+    "name": "Valsts sabiedrība ar ierobežotu atbildību \"Šampētera nams\"",
+    "email": "info@sampeteranams.lv",
+    "phone": "+37167808824",
+    "web": "https://sampeteranams.lv/"
+   },
    "deadline": "2026-11-16",
    "value": "Value not stated",
    "source": "TED",
@@ -1489,6 +2159,14 @@
    "trade": "building",
    "tradeName": "Building",
    "title": "NATO šķēršļu joslas izbūve Liepājas Oskara Kalpaka vidusskolas teritorijā O.Kalpaka ielā 96, Liepājā",
+   "buyer": "Liepājas valstspilsētas pašvaldība",
+   "description": "NATO šķēršļu joslas izbūve Liepājas Oskara Kalpaka vidusskolas teritorijā O.Kalpaka ielā 96, Liepājā",
+   "contact": {
+    "name": "Publisko iepirkumu daļa",
+    "email": "iepirkumi@liepaja.lv",
+    "phone": "+37163422336",
+    "web": "https://www.liepaja.lv/"
+   },
    "deadline": "2026-11-16",
    "value": "Value not stated",
    "source": "TED",
@@ -1507,6 +2185,14 @@
    "trade": "groundworks",
    "tradeName": "Groundworks",
    "title": "Valsts nozīmes ūdensnotekas Pikstere, meliorācijas kadastra kods 4174:01, pik.72/24-204/50 atjaunošana Sēlpils pagastā,…",
+   "buyer": "Valsts sabiedrība ar ierobežotu atbildību “Zemkopības ministrijas nekustamie īpašumi”",
+   "description": "Valsts nozīmes ūdensnotekas Pikstere, meliorācijas kadastra kods 4174:01, pik.72/24-204/50 atjaunošana Sēlpils pagastā, Jēkabpils novadā, Staburaga un Sunākstes pagastā, Aizkraukles novadā",
+   "contact": {
+    "name": "910.kabinets, Republikas laukums 2, Rīga",
+    "email": "iepirkumi@zmni.lv",
+    "phone": "+37167027587",
+    "web": "https://www.zmni.lv"
+   },
    "deadline": "2026-11-16",
    "value": "€209.7K",
    "source": "TED",
@@ -1525,6 +2211,14 @@
    "trade": "demolition",
    "tradeName": "Demolition",
    "title": "Liepājas ostas piestātnes Nr. 46 pārbūves būvprojekta izstrāde, būvdarbi un autoruzraudzība",
+   "buyer": "Liepājas speciālās ekonomiskās zonas pārvalde",
+   "description": "Liepājas ostas piestātnes Nr. 46 pārbūves būvprojekta izstrāde, būvdarbi un autoruzraudzība",
+   "contact": {
+    "name": "Linda Saltone",
+    "email": "linda.saltone@lsez.lv",
+    "phone": "+37129109677",
+    "web": "https://liepaja-sez.lv/lv/parvalde/iepirkumi"
+   },
    "deadline": "2026-11-03",
    "value": "Value not stated",
    "source": "TED",
@@ -1543,6 +2237,14 @@
    "trade": "electrical",
    "tradeName": "Electrical",
    "title": "Apakšstacijas Nr.6 \"TEC - 1\" 110kV RAA un DVS pārbūve (būvprojekta izstrāde, būvdarbi un iekārtu piegāde)",
+   "buyer": "Akciju sabiedrība \"Augstsprieguma tīkls\"",
+   "description": "Apakšstacijas Nr.6 \"TEC - 1\" 110kV RAA un DVS pārbūve (būvprojekta izstrāde, būvdarbi un iekārtu piegāde)",
+   "contact": {
+    "name": "Dāvis Kalniņš",
+    "email": "iepirkumi@ast.lv",
+    "phone": "+37128315664",
+    "web": "https://www.ast.lv/"
+   },
    "deadline": "2026-11-03",
    "value": "Value not stated",
    "source": "TED",
@@ -1561,6 +2263,14 @@
    "trade": "windows",
    "tradeName": "Windows & doors",
    "title": "Iebūvējamo virtuves iekārtu ar sadzīves tehniku piegāde un uzstādīšana Lizuma pamatskolā",
+   "buyer": "Gulbenes novada pašvaldība",
+   "description": "Iebūvējamo virtuves iekārtu ar sadzīves tehniku piegāde un uzstādīšana Lizuma pamatskolā",
+   "contact": {
+    "name": "Gulbenes novada pašvaldība",
+    "email": "iepirkumi@gulbene.lv",
+    "phone": "+37164474913",
+    "web": "https://www.gulbene.lv/lv"
+   },
    "deadline": "2026-11-10",
    "value": "Value not stated",
    "source": "TED",
@@ -1579,6 +2289,14 @@
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "Enefit Industry OÜ tehnoloogiliste seadmete ja rajatiste puhastamise teenuse osutamine",
+   "buyer": "Enefit Industry OÜ",
+   "description": "Käesoleva hanke eesmärgiks on Enefit Power AS-i tehnoloogiliste seadmete ja rajatiste puhastamise teenuste tellimine. Vajaduse korral saab korraldada tutvumisvisiidi. / Kõrvaldamise alused ja kvalifitseerimistingimused: Vaata hanke alusdokumentidest",
+   "contact": {
+    "name": "MIHHAIL KONANÕHHIN",
+    "email": "hanked@energia.ee",
+    "phone": "+372 58654700",
+    "web": "http://www.energia.ee"
+   },
    "deadline": "2026-11-03",
    "value": "€2M",
    "source": "TED",
@@ -1597,6 +2315,14 @@
    "trade": "demolition",
    "tradeName": "Demolition",
    "title": "Kohtla-Järvel asuvate Tallinna Tehnikaülikooli hoonete ja rajatiste projekteerimis- ja ehitustööd",
+   "buyer": "Tallinna Tehnikaülikool",
+   "description": "Hanke eesmärgiks on sõlmida neljaks aastaks raamleping Tallinna Tehnikaülikooli Kohtla-Järvel asuvate hoonete ja rajatiste projekteerimis- ja ehitustööde teostamiseks.",
+   "contact": {
+    "name": "HELENA LEANA ŠINKONITE",
+    "email": "hanked@taltech.ee",
+    "phone": "+372 53629833",
+    "web": "http://www.taltech.ee"
+   },
    "deadline": "2026-11-27",
    "value": "€2M",
    "source": "TED",
@@ -1615,6 +2341,14 @@
    "trade": "building",
    "tradeName": "Building",
    "title": "Kuukivi tn 3 ja Kuukivi tn 5 ehitustööde kontsessioon",
+   "buyer": "Tallinna Linnavaraamet",
+   "description": "Kuukivi tn 3 ja Kuukivi tn 5 ehitustööde kontsessioon / Kõrvaldamise alused ja kvalifitseerimistingimused: Vaata hanke alusdokumentidest",
+   "contact": {
+    "name": "ENE ORGUSAAR",
+    "email": "linnavaraamet@tallinnlv.ee",
+    "phone": "+372 54800220",
+    "web": "http://www.tallinn.ee"
+   },
    "deadline": "2026-11-05",
    "value": "Value not stated",
    "source": "TED",
@@ -1633,6 +2367,14 @@
    "trade": "windows",
    "tradeName": "Windows & doors",
    "title": "Aknakatete ostmine koos lisateenustega",
+   "buyer": "Põllumajanduse Registrite ja Informatsiooni Amet",
+   "description": "1. Sõlmitava hankelepingu esemeks on vastavalt riigihanke alusdokumentides ja pakkumuses sätestatud tingimustele aknakatete ostmine koos nende transportimise, paigaldamise, müügigarantii ja muude lisateenuste osutamisega (sh hankija olemasolevate kardinasüsteemide/aknakatete eemaldamine ning utiliseerimine). 2.",
+   "contact": {
+    "name": "INDREK HEINSOO",
+    "email": "pria@pria.ee",
+    "phone": "+372 57442239",
+    "web": "http://www.pria.ee"
+   },
    "deadline": "2026-11-10",
    "value": "€151K",
    "source": "TED",
@@ -1651,6 +2393,14 @@
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "Enefit Industry OÜ tehnoloogiliste seadmete ja rajatiste puhastamise teenuse osutamine",
+   "buyer": "Enefit Industry OÜ",
+   "description": "Käesoleva hanke eesmärgiks on Enefit Power AS-i tehnoloogiliste seadmete ja rajatiste puhastamise teenuste tellimine. Vajaduse korral saab korraldada tutvumisvisiidi. / Kõrvaldamise alused ja kvalifitseerimistingimused: Vaata hanke alusdokumentidest",
+   "contact": {
+    "name": "MIHHAIL KONANÕHHIN",
+    "email": "hanked@energia.ee",
+    "phone": "+372 58654700",
+    "web": "http://www.energia.ee"
+   },
    "deadline": "2026-10-23",
    "value": "€2M",
    "source": "TED",
@@ -1669,6 +2419,14 @@
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "Sisekoristusteenuse ostmine Enefit Power OÜ ja Enefit Industry OÜ objektidel Ida-Virumaal",
+   "buyer": "Enefit Industry OÜ",
+   "description": "Hanke esemeks on sisekoristusteenuse ostmine Enefit Power OÜ ja Enefit Industry OÜ objektidel Ida-Virumaal vastavalt riigihanke alusdokumentides sätestatud tingimustele. Objektide ülevaatus toimub huvitatud isikutele 27.10.2026.",
+   "contact": {
+    "name": "ARNO AHU",
+    "email": "hanked@energia.ee",
+    "phone": "+372 5060011",
+    "web": "http://www.energia.ee"
+   },
    "deadline": "2026-11-17",
    "value": "€952K",
    "source": "TED",
@@ -1687,6 +2445,14 @@
    "trade": "electrical",
    "tradeName": "Electrical",
    "title": "Marché de maintenance des installations de chauffage, climatisation et ventilation (cicrp)",
+   "buyer": "CICRP",
+   "description": "L'exploitation comprend toutes les interventions de conduite et d'entretien courant des installations nécessaires au respect de l'obligation de résultats. Le titulaire devra assurer le bon fonctionnement, la continuité de service et la performance énergétique des installations.",
+   "contact": {
+    "name": "Ibticem Lamendour - Secrétaire générale",
+    "email": "ibticem.lamendour@cicrp.fr",
+    "phone": "+33 0491086305",
+    "web": "https://www.cicrp.fr"
+   },
    "deadline": "2026-10-30",
    "value": "Value not stated",
    "source": "TED",
@@ -1705,6 +2471,13 @@
    "trade": "groundworks",
    "tradeName": "Groundworks",
    "title": "Construction de la nouvelle plateforme de services pour les Séniors à Saint-Dié-des-Vosges",
+   "buyer": "Centre Hospitalier Emile Durkheim",
+   "description": "La présente consultation concerne l'opération de construction de la nouvelle plateforme de services pour les Séniors à Saint-Dié-des-Vosges.",
+   "contact": {
+    "email": "delphine.kientzy@ch-ed.fr",
+    "phone": "+33 329687568",
+    "web": "https://www.ch-emile-durkheim.fr/"
+   },
    "deadline": "2026-10-29",
    "value": "Value not stated",
    "source": "TED",
@@ -1723,6 +2496,14 @@
    "trade": "windows",
    "tradeName": "Windows & doors",
    "title": "Réalisation de prestations de service de restauration des dioramas pour répondre aux besoins de l’Epppd",
+   "buyer": "Palais de la Porte Dorée",
+   "description": "La consultation a pour objet de confier au titulaire un marché pour la réalisation de prestations de service de restauration des dioramas pour répondre aux besoins de l’Epppd",
+   "contact": {
+    "name": "Service des affaires juridiques et de la commande publique",
+    "email": "marchespublics@palais-portedoree.fr",
+    "phone": "0153595860",
+    "web": "https://www.palais-portedoree.fr/"
+   },
    "deadline": "2026-10-26",
    "value": "€270K",
    "source": "TED",
@@ -1741,6 +2522,13 @@
    "trade": "roofing",
    "tradeName": "Roofing",
    "title": "Travaux de réhabilitation énergétique du site DGA Tech de Castelnau-le-Lez",
+   "buyer": "France travail dga tech",
+   "description": "Le présent marché a pour objet la réalisation de travaux de réhabilitation énergétique sur l’ensemble des bâtiments tertiaires du site de la DGA Tech situé à Castelnau-le-Lez.Les cahiers des charges spécifiques viennent fixer les prestations attendues par lots.",
+   "contact": {
+    "name": "Emilie Soulie",
+    "email": "emilie.soulie@pole-emploi.fr",
+    "phone": "0600000000"
+   },
    "deadline": "2026-10-29",
    "value": "€2.6M",
    "source": "TED",
@@ -1759,6 +2547,13 @@
    "trade": "demolition",
    "tradeName": "Demolition",
    "title": "Travaux de mise en conformité des systèmes d'assainissement de Vertrieu et de La Balme-les-Grottes",
+   "buyer": "CC Les Balcons du Dauphiné",
+   "description": "Le projet de travaux porte sur: - La construction d'un poste de refoulement pneumatique sur la commune de Vertrieu ; - La démolition de la station d'épuration existante de Vertrieu ; - La création d'un réseau de refoulement des eaux usées ; - L'extension du réseau d'assainissement du secteur Stade de Vertrieu -…",
+   "contact": {
+    "email": "sylvie.bonafuente@balconsdudauphine.fr",
+    "phone": "+33 474802330",
+    "web": "https://www.balconsdudauphine.fr/"
+   },
    "deadline": "2026-10-23",
    "value": "Value not stated",
    "source": "TED",
@@ -1777,6 +2572,12 @@
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "Nettoyage industriel du Centre de Valorisation des Déchets",
+   "buyer": "Haganis",
+   "description": "Nettoyage industriel du Centre de Valorisation des Déchets",
+   "contact": {
+    "email": "marchespublics@haganis.fr",
+    "phone": "0355945041"
+   },
    "deadline": "2026-11-02",
    "value": "Value not stated",
    "source": "TED",
@@ -1795,6 +2596,13 @@
    "trade": "electrical",
    "tradeName": "Electrical",
    "title": "Travaux d'installation d'un poste de répartition préfabriqué PCCN au Poste de BOURNAND",
+   "buyer": "SRD - Energies (86)",
+   "description": "Travaux d'installation d'un poste de répartition préfabriqué PCCN au Poste de BOURNAND",
+   "contact": {
+    "email": "johanne.meunier@soregies.fr",
+    "phone": "+33 0549893488",
+    "web": "https://v2.marches-securises.fr/"
+   },
    "deadline": "2026-11-06",
    "value": "Value not stated",
    "source": "TED",
@@ -1813,6 +2621,14 @@
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "Servicio de limpieza de cinco viveros de empresas del Ayuntamiento de Madrid",
+   "buyer": "Área de Gobierno de Economía, Innovación y Hacienda del Ayuntamiento de Madrid",
+   "description": "El objeto del presente contrato administrativo es la prestación del servicio de limpieza de edificios, sus recintos, suministro y reposición de contenedores higiénicos, suministro y reposición de dispensadores de jabón de mano y secamanos, suministro y reposición de consumibles y materiales de limpieza y otros gastos,…",
+   "contact": {
+    "name": "Área de Gobierno de Economía, Innovación y Hacienda del Ayuntamiento de Madrid",
+    "email": "servcontratacionhac@madrid.es",
+    "phone": "914802240",
+    "web": "http://www.madrid.es"
+   },
    "deadline": "2026-10-28",
    "value": "€2.6M",
    "source": "TED",
@@ -1831,6 +2647,14 @@
    "trade": "roofing",
    "tradeName": "Roofing",
    "title": "Contratación de los servicios de conservación y mantenimiento integral de los edificios administrativos afectados a funciones…",
+   "buyer": "Consejería de Presidencia, Justicia, Seguridad y Simplificación Administrativa de la Comunidad Autónoma de Cantabria",
+   "description": "Contratación de los servicios de conservación y mantenimiento integral de los edificios administrativos afectados a funciones judiciales en la Comunidad Autónoma de Cantabria",
+   "contact": {
+    "name": "Consejería de Presidencia, Justicia, Seguridad y Simplificación Administrativa de la Comunidad Autónoma de Cantabria",
+    "email": "contratacionycompras@cantabria.es",
+    "phone": "942207122",
+    "web": "https://www.cantabria.es"
+   },
    "deadline": "2026-10-26",
    "value": "€1.3M",
    "source": "TED",
@@ -1849,6 +2673,14 @@
    "trade": "electrical",
    "tradeName": "Electrical",
    "title": "Contrato Mixto para el Suministro, Arrendamiento, Montaje, Desmontaje e Instalación del Alumbrado decorativo para la Navidad…",
+   "buyer": "Alcaldía del Ayuntamiento de Ronda",
+   "description": "Contrato Mixto que tiene por objeto el Suministro, Arrendamiento, Montaje, Desmontaje e Instalación del Alumbrado decorativo para la Navidad 2026-2027 de Ronda y sus pedanías.",
+   "contact": {
+    "name": "Alcaldía del Ayuntamiento de Ronda",
+    "email": "contratacion@ronda.es",
+    "phone": "952873240",
+    "web": "http://ronda.sedelectronica.es"
+   },
    "deadline": "2026-11-06",
    "value": "€298.2K",
    "source": "TED",
@@ -1867,6 +2699,13 @@
    "trade": "hvac",
    "tradeName": "HVAC",
    "title": "Suministro e instalación de climatización del CEIP Sa Garriga",
+   "buyer": "Junta de Gobierno del Ayuntamiento de Sant Lluís",
+   "description": "Se trata del desmontaje y posterior suministro, montaje, conexión, integración y puesta en marcha de los nuevos equipos de generación térmica y climatización en el CEIP Sa Garriga de Sant Lluís",
+   "contact": {
+    "name": "Junta de Gobierno del Ayuntamiento de Sant Lluís",
+    "email": "contractacio@ajsantlluis.org",
+    "phone": "971150950"
+   },
    "deadline": "2026-11-06",
    "value": "€246.6K",
    "source": "TED",
@@ -1885,6 +2724,14 @@
    "trade": "windows",
    "tradeName": "Windows & doors",
    "title": "Acuerdo Marco.- Mantenimiento, conservación y adecuación de infraestructuras e instalaciones en dependencias de la Armada en…",
+   "buyer": "Intendente de las Palmas",
+   "description": "Mantenimiento, conservación y adecuación de infraestructuras e instalaciones en dependencias de la Armada en Canarias",
+   "contact": {
+    "name": "Intendente de las Palmas",
+    "email": "uncopal@fn.mde.es",
+    "phone": "928443195",
+    "web": "http://www.armada.mde.es"
+   },
    "deadline": "2026-11-04",
    "value": "€610K",
    "source": "TED",
@@ -1903,6 +2750,14 @@
    "trade": "groundworks",
    "tradeName": "Groundworks",
    "title": "Suministro e instalación de diferentes elementos para la renovación de áreas de juegos infantiles.",
+   "buyer": "Junta de Gobierno del Ayuntamiento de Elche",
+   "description": "Suministro e instalación de diferentes elementos para la renovación de áreas de juegos infantiles.",
+   "contact": {
+    "name": "Junta de Gobierno del Ayuntamiento de Elche",
+    "email": "contratacion@elche.es",
+    "phone": "966658022",
+    "web": "http://www.elche.es"
+   },
    "deadline": "2026-10-28",
    "value": "€285.6K",
    "source": "TED",
@@ -1921,6 +2776,12 @@
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "Procedura telematica aperta per affidamento del servizio di pulizia e rifacimento letti, a ridotto impatto ambientale, presso…",
+   "buyer": "Direzione di commissariato marina militare - la spezia (maricommi la spezia)",
+   "description": "PROCEDURA TELEMATICA APERTA PER AFFIDAMENTO DEL SERVIZIO DI PULIZIA E RIFACIMENTO LETTI, A RIDOTTO IMPATTO AMBIENTALE, PRESSO I CIRCOLI MARIMA MILITARE DELLE SEDI DELLA SPEZIA, LIVORNO, CAGLIARI E LA MADDALENA, SUDDIVISO IN QUATTRO LOTTI",
+   "contact": {
+    "email": "maricommi.laspezia@postacert.difesa.it",
+    "phone": "+390187785268"
+   },
    "deadline": "2026-11-19",
    "value": "€2.7M",
    "source": "TED",
@@ -1939,6 +2800,12 @@
    "trade": "hvac",
    "tradeName": "HVAC",
    "title": "Avviso di sollecitazione per la presentazione di proposte di PPP, ex art. 193comma 16 del D.lgs. n. 36/2023 e s.m.i., per la…",
+   "buyer": "Roma capitale",
+   "description": "Avviso di sollecitazione per la presentazione di proposte di PPP, ex art. 193 comma 16 del D.lgs. n. 36/2023 e s.m.i., per la progettazione e la realizzazione di interventi di riqualificazione ed efficientamento energetico degli edifici scolastici di Roma Capitale e la gestione del servizio energia.",
+   "contact": {
+    "email": "protocollo.infrastrutture@pec.comune.roma.it",
+    "phone": "+3906671071887"
+   },
    "deadline": "2026-12-31",
    "value": "€0.1",
    "source": "TED",
@@ -1957,6 +2824,13 @@
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "Servizio pulizia in conformità ai CAM della APSP \"S. Lorenzo e S. Maria della Misericordia\" di Borgo Valsugana(TN)",
+   "buyer": "Provincia Autonoma di Trento",
+   "description": "AFFIDAMENTO SOPRA SOGLIA COMUNITARIA DEL SERVIZIO DI PULIZIA E SANIFICAZIONE AMBIENTALE, ORDINARIA E STRAORDINARIA/PERIODICA - NEL RISPETTO DEI VIGENTI CRITERI AMBIENTALI MINIMI PER L’AFFIDAMENTO DEL SERVIZIO DI PULIZIA E SANIFICAZIONE DI EDIFICI ED AMBIENTI AD USO CIVILE, SANITARIO E PER PRODOTTI DETERGENTI (DECRETO…",
+   "contact": {
+    "name": "Silvano Librera",
+    "email": "direzionegenerale@pec.provincia.tn.it",
+    "phone": "+390461495111"
+   },
    "deadline": "2026-11-26",
    "value": "€1.4M",
    "source": "TED",
@@ -1975,6 +2849,13 @@
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "Avviso di ulteriore proroga del termine di scadenza delle offerte_gara 24/2026/acq - procedura aperta per l’affidamento dei…",
+   "buyer": "MM S.p.A.",
+   "description": "AFFIDAMENTO DEI SERVIZI DI PULIZIA ORDINARIA E STRAORDINARIA DEGLI IMMOBILI DI PROPRIETÀ DI MM S.P.A., CON GESTIONE DELLE CHIAVI, SUDDIVISO IN DUE LOTTI NON CUMULABILI.",
+   "contact": {
+    "email": "info@pec.mmspa.eu",
+    "phone": "+39 0277471",
+    "web": "www.mmspa.eu"
+   },
    "deadline": "2026-11-06",
    "value": "€2.4M",
    "source": "TED",
@@ -1993,6 +2874,14 @@
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "Aquisição de serviços de limpeza para os Serviços Centrais e Locais do Instituto de Segurança Social da Madeira, IP-RAM,…",
+   "buyer": "Instituto de Segurança Social da Madeira, IP-RAM",
+   "description": "Aquisição de serviços de limpeza para os Serviços Centrais e Locais do Instituto de Segurança Social da Madeira, IP-RAM, Centros de Atividades e Capacitação para a Inclusão e Centro de Inclusão Social da Madeira",
+   "contact": {
+    "name": "Departamento de Património e Contratação Pública",
+    "email": "ISSMadeira@seg-social.pt",
+    "phone": "300 084 151",
+    "web": "https://www.seg-social.pt/instituto-de-seguranca-social-da-madeira"
+   },
    "deadline": "2026-11-13",
    "value": "€650.5K",
    "source": "TED",
@@ -2011,6 +2900,14 @@
    "trade": "roofing",
    "tradeName": "Roofing",
    "title": "Empreitada - campus do pragal - instalação de painéis fotovoltaicos para autoconsumo de energia elétrica",
+   "buyer": "Infraestruturas de Portugal, SA",
+   "description": "EMPREITADA - CAMPUS DO PRAGAL - INSTALAÇÃO DE PAINÉIS FOTOVOLTAICOS PARA AUTOCONSUMO DE ENERGIA ELÉTRICA",
+   "contact": {
+    "name": "Direção de Compras e Logística - Departamento de Compras - Edifício 2",
+    "email": "dcl@infraestruturasdeportugal.pt",
+    "phone": "212879000",
+    "web": "https://www.infraestruturasdeportugal.pt"
+   },
    "deadline": "2026-11-02",
    "value": "€750K",
    "source": "TED",
@@ -2029,6 +2926,14 @@
    "trade": "electrical",
    "tradeName": "Electrical",
    "title": "Empreitada para a instalação e configuração de uma rede em fibra ótica multiponto para o sistema de monitorização e alerta de…",
+   "buyer": "Secretaria Regional de Equipamentos e Infraestruturas",
+   "description": "EMPREITADA PARA A INSTALAÇÃO E CONFIGURAÇÃO DE UMA REDE EM FIBRA ÓTICA MULTIPONTO PARA O SISTEMA DE MONITORIZAÇÃO E ALERTA DE RISCOS NATURAIS (SIMARN)",
+   "contact": {
+    "name": "Conforme as peças do procedimento.",
+    "email": "gabinete.srei@madeira.gov.pt",
+    "phone": "291212100",
+    "web": "https://www.madeira.gov.pt/srei"
+   },
    "deadline": "2026-11-10",
    "value": "€280K",
    "source": "TED",
@@ -2047,6 +2952,14 @@
    "trade": "building",
    "tradeName": "Building",
    "title": "Empreitada de reabilitação do estabelecimento prisional  cadeia de apoio da horta",
+   "buyer": "Município da Horta",
+   "description": "EMPREITADA DE REABILITAÇÃO DO ESTABELECIMENTO PRISIONAL  CADEIA DE APOIO DA HORTA",
+   "contact": {
+    "name": "Divisão de Urbanismo e Obras Municipais",
+    "email": "geral@cmhorta.pt",
+    "phone": "292202000",
+    "web": "https://www.cmhorta.pt/"
+   },
    "deadline": "2026-10-25",
    "value": "€1M",
    "source": "TED",
@@ -2065,6 +2978,14 @@
    "trade": "roofing",
    "tradeName": "Roofing",
    "title": "Empreitada - campus do pragal - instalação de painéis fotovoltaicos para autoconsumo de energia elétrica",
+   "buyer": "Infraestruturas de Portugal, SA",
+   "description": "EMPREITADA - CAMPUS DO PRAGAL - INSTALAÇÃO DE PAINÉIS FOTOVOLTAICOS PARA AUTOCONSUMO DE ENERGIA ELÉTRICA",
+   "contact": {
+    "name": "Direção de Compras e Logística - Departamento de Compras - Edifício 2",
+    "email": "dcl@infraestruturasdeportugal.pt",
+    "phone": "212879000",
+    "web": "https://www.infraestruturasdeportugal.pt"
+   },
    "deadline": "2026-10-22",
    "value": "€750K",
    "source": "TED",
@@ -2083,6 +3004,14 @@
    "trade": "electrical",
    "tradeName": "Electrical",
    "title": "Empreitada - reparação e manutenção de equipamentos semafóricos 2026 - região sul - 3 lotes",
+   "buyer": "Infraestruturas de Portugal, SA",
+   "description": "EMPREITADA - REPARAÇÃO E MANUTENÇÃO DE EQUIPAMENTOS SEMAFÓRICOS 2026 - REGIÃO SUL - 3 LOTES",
+   "contact": {
+    "name": "Direção de Compras e Logística - Departamento de Compras - Edifício 2",
+    "email": "dcl@infraestruturasdeportugal.pt",
+    "phone": "212879300",
+    "web": "https://www.infraestruturasdeportugal.pt"
+   },
    "deadline": "2026-11-02",
    "value": "€660K",
    "source": "TED",
@@ -2101,6 +3030,13 @@
    "trade": "painting",
    "tradeName": "Painting",
    "title": "Invitation to Tender for the Painting of Tower Section of Passenger Walkway",
+   "buyer": "Port of Cork Company",
+   "description": "The Port of Cork Company (POCC) wishes to appoint a suitably qualified and experienced painting contractor to carry out painting of the tower section of the passenger walkway at the Port of Cork Ferry Port in Ringaskiddy County Cork.",
+   "contact": {
+    "email": "bormonde@portofcork.ie",
+    "phone": "0871205959",
+    "web": "www.portofcork.ie"
+   },
    "deadline": "2026-11-20",
    "value": "Value not stated",
    "source": "TED",
@@ -2119,6 +3055,13 @@
    "trade": "electrical",
    "tradeName": "Electrical",
    "title": "Fdas, els, esbl, wi-fi das, refuge area call points monaghan general hospital",
+   "buyer": "FCC Fire Cert Limited",
+   "description": "DESIGN, SUPPLY, INSTALLATION, COMMISSION, CERTIFICATION AND MAINTENANCE OF ACTIVE FIRE SAFETY SYSTEMS, WIFI-DAS AND REFUGE POINTS TO INCLUDE: (a) ADDRESSABLE FIRE DETECTION and ALARM SYSTEMS; AND (b) ADDRESSABLE EMERGENCY LIGHTING SYSTEMS; AND (c) STANDBY EMERGENCY LIGHTING SYSTEM INSTALLATION, AND (d) WI-FI and DAS…",
+   "contact": {
+    "email": "Stephen@fire-cert.com",
+    "phone": "0858702415",
+    "web": "www.fire-cert.com"
+   },
    "deadline": "2026-11-06",
    "value": "€1.9M",
    "source": "TED",
@@ -2137,6 +3080,13 @@
    "trade": "building",
    "tradeName": "Building",
    "title": "CFT 4022 - Replacement of existing Tallaght Stadium Floodlighting and Generator System with Modern LED Lights, HVO Generator…",
+   "buyer": "South Dublin County Council",
+   "description": "Tallaght Stadium intends to: • Replace all existing halogen/HID floodlighting equipment with a high-performance LED system and all associated site works. • Replace existing generator with an appropriate capacity HVO generator, all required electrical infrastructure and all associated site works.",
+   "contact": {
+    "email": "procurement@sdublincoco.ie",
+    "phone": "+3531 4149320",
+    "web": "https://www.sdcc.ie"
+   },
    "deadline": "2026-11-12",
    "value": "€950K",
    "source": "TED",
@@ -2155,6 +3105,13 @@
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "Dublin City Council Waste Management Services proposes to establish a Multi Party Framework for the Maintenance and Cleaning…",
+   "buyer": "Dublin City Council",
+   "description": "This Multi Party Framework Agreement will be established for the provision of routine maintenance and cleaning of DCC Waste Management Services public toilets. For the purpose of this tender, daily cleaning intervals must be used, however, intervals may need to be amended from time to time based on need.",
+   "contact": {
+    "email": "procurementunit@dublincity.ie",
+    "phone": "01 2222222",
+    "web": "https://www.dublincity.ie"
+   },
    "deadline": "2026-11-13",
    "value": "€1M",
    "source": "TED",
@@ -2173,6 +3130,13 @@
    "trade": "demolition",
    "tradeName": "Demolition",
    "title": "Ballynattin Office and Cottage Demolition",
+   "buyer": "IDA Ireland",
+   "description": "Demolition of two dilapidated buildings, disconnection of services and site clear",
+   "contact": {
+    "email": "procurement.ida@ida.ie",
+    "phone": "+353 1 6034000",
+    "web": "https://www.idaireland.com"
+   },
    "deadline": "2026-10-22",
    "value": "€140K",
    "source": "TED",
@@ -2191,6 +3155,12 @@
    "trade": "roofing",
    "tradeName": "Roofing",
    "title": "Refurbishment work to existing workshop consisting of Proposed extension to workshop (280m2) and replacement of existing roof…",
+   "buyer": "Greenes Forge",
+   "description": "The works comprise the extension of the existing Workshop 1 and Workshop 2 buildings by two additional structural bays to each workshop, together with all associated groundworks,structural steelwork, wall construction, roofing, cladding, drainage alterations, electrical works, fire protection, doors, finishes and…",
+   "contact": {
+    "email": "info@greenesforge.com",
+    "phone": "087 2111501"
+   },
    "deadline": "2026-11-04",
    "value": "€210K",
    "source": "TED",
@@ -2209,6 +3179,13 @@
    "trade": "groundworks",
    "tradeName": "Groundworks",
    "title": "Letterkenny IDA Landscape and Biodiversity enhancement project",
+   "buyer": "IDA Ireland",
+   "description": "Landscape and biodiversity enhancement project consisting of the treatment and removal of invasive species and scrub, planting of a Native woodland, the creation of a walkway and seating area together with biodiversity signage and enhancement features.",
+   "contact": {
+    "email": "procurement.ida@ida.ie",
+    "phone": "+353 1 6034000",
+    "web": "https://www.idaireland.com"
+   },
    "deadline": "2026-11-05",
    "value": "€187K",
    "source": "TED",
@@ -2227,6 +3204,12 @@
    "trade": "building",
    "tradeName": "Building",
    "title": "EPFL - Entreprise Totale - Assainissement et bouclage d'un réseau d'eaux industrielles, y.c. création d'une station de…",
+   "buyer": "Epfl vpf achats",
+   "description": "Le marché porte sur l’étude et la construction en Entreprise Totale des parties d’ouvrages suivantes : 1. Nouvelle station de découplage (SDD) y compris les adaptations hydrauliques dans les stations de pompage (SPP), les conduites de liaison SPP et SDD et les conduites de rejet au lac entre le bâtiment SDD et la…",
+   "contact": {
+    "email": "marc.piguet@epfl.ch",
+    "phone": "+41216933619"
+   },
    "deadline": "2027-01-11",
    "value": "Value not stated",
    "source": "TED",
@@ -2245,6 +3228,12 @@
    "trade": "windows",
    "tradeName": "Windows & doors",
    "title": "Spital Bülach, Erweiterung und Erneuerung Behandlungstrakt, SKP 273.04 Brandschutzschiebetüren, -tore",
+   "buyer": "Spital Bülach AG (Immopro)",
+   "description": "Lieferung und Montage von Brandschutzschiebetüren,-tore für die Erweiterung und Erneuerung des Behandlungstrakts D auf dem Spitalareal an der Spitalstrasse 24 in 8180 Bülach. Detaillierter Beschrieb gem. Submissionsunterlagen.",
+   "contact": {
+    "email": "spitalbuelach@immopro.ch",
+    "phone": "+41434884040"
+   },
    "deadline": "2026-10-23",
    "value": "Value not stated",
    "source": "TED",
@@ -2263,6 +3252,13 @@
    "trade": "roofing",
    "tradeName": "Roofing",
    "title": "Projet EMS de 51 lits complétés de la transformation du bâtiment existant en 21 appartements protégés à Charmey",
+   "buyer": "Réseau Santé et Social de la Gruyère (RSSG)",
+   "description": "Il est demandé un contracting sur une durée minimale de 25 ans. Cela signifie que l'adjudicataire devra assumer le financement, l'étude, les travaux, la maintenance, l'entretien, le dépannage et toutes démarches en lien avec l'installation sous sa propre et entière responsabilité.",
+   "contact": {
+    "email": "patrick.vallat@rssg.ch",
+    "phone": "+41792056077",
+    "web": "https://www.rssg.ch"
+   },
    "deadline": "2026-11-02",
    "value": "Value not stated",
    "source": "TED",
@@ -2281,6 +3277,13 @@
    "trade": "electrical",
    "tradeName": "Electrical",
    "title": "FVV Brücke Au - Lustenau Elektroarbeiten",
+   "buyer": "Politische Gemeinde Au",
+   "description": "Elektroarbeiten für Fussgänger- und Veloverbindung (FVV) Brücke Au-Lustenau und Passerelle L203 Lustenau (öffentliche Beleuchtung, Niederstromeinspeisung und Erdung)",
+   "contact": {
+    "email": "info@au.ch",
+    "phone": "+41582286210",
+    "web": "https://www.au.ch"
+   },
    "deadline": "2026-11-05",
    "value": "Value not stated",
    "source": "TED",
@@ -2299,6 +3302,13 @@
    "trade": "painting",
    "tradeName": "Painting",
    "title": "Hauterive/FR, Suisse / Protection anti-corrosion conduite forcée",
+   "buyer": "Groupe E SA - Service achat pour les Marchés publics",
+   "description": "Les travaux prévus comprennent le renouvellement complet du revêtement anti-corrosion d'une galerie blindée en acier de 180 m. linéaire et d'un diamètre de 4 m.",
+   "contact": {
+    "email": "marchepublic@groupe-e.ch",
+    "phone": "+41263525647",
+    "web": "https://www.groupe-e.ch"
+   },
    "deadline": "2026-11-10",
    "value": "Value not stated",
    "source": "TED",
@@ -2317,6 +3327,12 @@
    "trade": "hvac",
    "tradeName": "HVAC",
    "title": "PER10_CFC 242_Installations de chauffage et de froid",
+   "buyer": "DIME - SBat (Archipel Generalplanung AG)",
+   "description": "voir dossier",
+   "contact": {
+    "email": "sebastien.sterchi@fr.ch",
+    "phone": "+41263054484"
+   },
    "deadline": "2026-10-23",
    "value": "Value not stated",
    "source": "TED",
@@ -2335,6 +3351,12 @@
    "trade": "plumbing",
    "tradeName": "Plumbing",
    "title": "PER10_CFC 251_Installations sanitaires",
+   "buyer": "DIME - SBat (Archipel Generalplanung AG)",
+   "description": "voir dossier",
+   "contact": {
+    "email": "sebastien.sterchi@fr.ch",
+    "phone": "+41263054484"
+   },
    "deadline": "2026-10-23",
    "value": "Value not stated",
    "source": "TED",
@@ -2353,6 +3375,14 @@
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "Servicii de curatenie si igienizare",
+   "buyer": "Societatea Compania de Transport Public Iasi SA",
+   "description": "Obiectul procedurii il constituie achizitia Serviciilor de curatenie si igienizare in mijloacele de transport in comun, in ronduri, statii, garaj si depou, de curatare si spalare/degresare a pardoselilor si a pieselor metalice (boghiuri).",
+   "contact": {
+    "name": "Gina Petrovici",
+    "email": "achizitii@sctpiasi.ro",
+    "phone": "+40 372148651",
+    "web": "https://www.sctpiasi.ro"
+   },
    "deadline": "2026-11-20",
    "value": "RON 7.5M",
    "source": "TED",
@@ -2371,6 +3401,14 @@
    "trade": "electrical",
    "tradeName": "Electrical",
    "title": "Furnizare, montare, instalare, testare și punere în funcțiune a sistemului fotovoltaic aferent obiectivului „IMPLEMENTAREA…",
+   "buyer": "Comuna valea iasului (primaria comunei valea iasului)",
+   "description": "Sistemul fotovoltaic va fi compus din dintr-un total de 480 de panouri fotovoltaice, fiecare avand o putere nominala de 625W(watt). Panourile vor fi amplasate pe o strctura metalica ancorata in sol, orientate astfel incat sa maximizeze captarea radiatiei solare de-a lungul intregi zile.",
+   "contact": {
+    "name": "Cristian Enescu",
+    "email": "primaria_viasului@yahoo.com",
+    "phone": "+40 751769371",
+    "web": "https://comunavaleaiasului.ro/"
+   },
    "deadline": "2026-10-27",
    "value": "RON 1.1M",
    "source": "TED",
@@ -2389,6 +3427,14 @@
    "trade": "building",
    "tradeName": "Building",
    "title": "Contract de achiziţie publică constând în execuția lucrărilor suplimentare în cadrul proiectului Consolidare și reabilitare…",
+   "buyer": "Judetul iasi",
+   "description": "Contract de achiziţie publică constând în execuția lucrărilor suplimentare în cadrul proiectului Consolidare și reabilitare corp C1 Spitalul Clinic de Pneumoftiziologie Iași din str.Dr I.Cihac nr.30 - conform Caiet de sarcini. Termenul pentru realizarea lucrărilor de constructii este de max.",
+   "contact": {
+    "name": "Anca Muscheru",
+    "email": "achizitii.publice@icc.ro",
+    "phone": "+40 232214425",
+    "web": "https://www.icc.ro"
+   },
    "deadline": "2026-11-16",
    "value": "RON 8.3M",
    "source": "TED",
@@ -2407,6 +3453,14 @@
    "trade": "roofing",
    "tradeName": "Roofing",
    "title": "“Servicii elaborare proiect tehnic, DTAC, detalii de execuție, asistența tehnica proiectant, verificare tehnică si execuție…",
+   "buyer": "Judetul galati",
+   "description": "“Servicii elaborare proiect tehnic, DTAC, detalii de execuție, asistența tehnica proiectant, verificare tehnică si execuție lucrari pentru obiectivul de investiții “INFRASTRUCTURA DE PRODUCERE A ENERGIEI REGENERABILE PENTRU SPITALUL ORASENESC TARGU BUJOR” 1) Valoarea estimată conform devizului general din S.F.",
+   "contact": {
+    "name": "CARMEN DANIELA BOTEZ",
+    "email": "licitatii@cjgalati.ro",
+    "phone": "+40 236302519",
+    "web": "https://www.cjgalati.ro"
+   },
    "deadline": "2026-11-23",
    "value": "RON 2.4M",
    "source": "TED",
@@ -2425,6 +3479,14 @@
    "trade": "plumbing",
    "tradeName": "Plumbing",
    "title": "Servicii de proiectare, verificare tehnică, asistenţa tehnică din partea proiectantului pe durata execuţiei lucrărilor şi…",
+   "buyer": "Municipiul pitesti - consiliul local al municipiului pitesti",
+   "description": "Servicii de proiectare, verificare tehnică, asistență tehnică din partea proiectantului pe durata execuției lucrărilor și execuția lucrărilor de construcții-montaj aferente proiectului „Eficientizare energetică Grădinița cu program prelungit Floare de Colț”. Contractul nu este împărțit pe loturi.",
+   "contact": {
+    "name": "Ramona Elena Cîrjan",
+    "email": "primaria@primariapitesti.ro",
+    "phone": "+40729884710",
+    "web": "https://www.primariapitesti.ro"
+   },
    "deadline": "2026-11-11",
    "value": "RON 12.4M",
    "source": "TED",
@@ -2443,6 +3505,14 @@
    "trade": "hvac",
    "tradeName": "HVAC",
    "title": "Furnizare centrală termică nouă, inclusiv operațiunile de proiectare, montaj, instalare, racordare, punere în funcțiune și…",
+   "buyer": "Academia de studii economice bucuresti",
+   "description": "Obiectul contractului îl constituie furnizarea unei centrale termice noi/ansamblu de echipamente pentru Căminele Moxa, str. Mihail Moxa nr. 11, sector 1, București, complet instalat, integrat, racordat, pus în funcțiune și autorizat.",
+   "contact": {
+    "name": "Constantin Bejinariu",
+    "email": "constantin.bejinariu@ase.ro",
+    "phone": "+40 213191900",
+    "web": "https://www.ase.ro"
+   },
    "deadline": "2026-11-04",
    "value": "RON 2.1M",
    "source": "TED",
@@ -2461,6 +3531,14 @@
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "Acord cadru Servicii de curățenie și igienizare la obiectivele administrate de Serviciul Administrare Piețe, Clădiri și…",
+   "buyer": "Municipiul bacau",
+   "description": "Obiectul acordului-cadru îl reprezintă prestarea serviciilor de curățenie, igienizare și dezinfecție a spațiilor interioare și exterioare, împărțite pe 3 loturi: • Lotul 1 – Piețe municipale: Piața Centrală, Piața Sud, Piața de Gros, Bazar Milcov și Târgul Auto Șerbănești; • Lotul 2 – Sediu Administrativ: str.",
+   "contact": {
+    "name": "Mihaela Grosu",
+    "email": "mihaela.grosu@primariabacau.ro",
+    "phone": "+40 234581849",
+    "web": "https://www.primariabacau.ro"
+   },
    "deadline": "2026-11-16",
    "value": "RON 4M",
    "source": "TED",
@@ -2479,6 +3557,12 @@
    "trade": "building",
    "tradeName": "Building",
    "title": "Sanacija dijela mreže oborinske odvodnje, asfaltiranje pristupnih cesta i parkirališnih površina te betoniranje nogostupa.",
+   "buyer": "JZU GOB 8 mi Septemvri Skopje",
+   "description": "Sanacija dijela mreže oborinske odvodnje, asfaltiranje pristupnih cesta i parkirališnih površina te betoniranje nogostupa.",
+   "contact": {
+    "email": "saska.angelovska@bolnica.org.mk",
+    "phone": "+389023087400"
+   },
    "deadline": "2026-11-13",
    "value": "Value not stated",
    "source": "TED",
@@ -2497,6 +3581,12 @@
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "Prestations de nettoyage des bâtiments de l'Administration Communale d'Esch-sur-Sûre",
+   "buyer": "Administration Communale d'Esch-sur-Sûre",
+   "description": "Le présent marché concerne l’exécution des prestations de nettoyage récurrent et ponctuel des locaux et vitreries des bâtiments communaux de la commune d’Esch-sur-Sûre. La surface concernée représente environ 14.000 m².",
+   "contact": {
+    "email": "germain.mathay@esch-sur-sure.lu",
+    "phone": "83 91 12 41"
+   },
    "deadline": "2026-11-17",
    "value": "Value not stated",
    "source": "TED",
@@ -2515,6 +3605,13 @@
    "trade": "roofing",
    "tradeName": "Roofing",
    "title": "2427 - Nonnewisen Lot 6sE à Esch-sur-Alzette - Construction d’une résidence de 22 logements et 2 cellules commerciales -…",
+   "buyer": "Fonds du Logement",
+   "description": "2427 - Nonnewisen Lot 6sE à Esch-sur-Alzette - Construction d’une résidence de 22 logements et 2 cellules commerciales - Travaux de l’isolation thermique, d’étanchéité et de zinguerie",
+   "contact": {
+    "name": "Fonds du Logement",
+    "email": "soumissions@fondsdulogement.lu",
+    "phone": "262644525"
+   },
    "deadline": "2026-11-19",
    "value": "Value not stated",
    "source": "TED",
@@ -2533,6 +3630,13 @@
    "trade": "electrical",
    "tradeName": "Electrical",
    "title": "Travaux d’installation d’appareils de levage - ascenseurs - lot 10 à exécuter dans l'interêt des bâtiments administratifs pour…",
+   "buyer": "Administration des bâtiments publics",
+   "description": "Bâtiment ESM : 6 ascenseurs - 1 plateforme Bâtiment ADM : 9 ascenseurs Bâtiment LUX : 3 ascenseurs - 1 plateforme La durée des travaux est de 837 jours ouvrables (études comprises), à commencer pour le 1er semestre 2027. Les travaux sont adjugés à prix unitaires.",
+   "contact": {
+    "name": "Administration des bâtiments publics",
+    "email": "soumissions@bp.etat.lu",
+    "phone": "+352 461919-1"
+   },
    "deadline": "2026-11-20",
    "value": "Value not stated",
    "source": "TED",
@@ -2551,6 +3655,12 @@
    "trade": "windows",
    "tradeName": "Windows & doors",
    "title": "Travaux de menuiserie métallique extérieure à exécuter dans l'intérêt de l'Ancien laboratoire national - rénovation pour l'INPA",
+   "buyer": "Administration des bâtiments publics",
+   "description": "Démontage fenêtres existantes: 134 pièces Fenêtres profilés en acier: 128 pièces Stores solaires : 96 pièces Tablettes de fenêtres: 118 m1 Eléments vitrées avec portes en acier : 10 pièces Eléments vitrées avec portes en aluminium : 2 pièces La durée des travaux est de 155 jours ouvrables, à débuter le 1er semestre…",
+   "contact": {
+    "email": "soumissions@bp.etat.lu",
+    "phone": "+3524619191"
+   },
    "deadline": "2026-11-17",
    "value": "Value not stated",
    "source": "TED",
@@ -2569,6 +3679,13 @@
    "trade": "flooring",
    "tradeName": "Flooring",
    "title": "2512 - Cité CFL Pétange - Transformation et rénovation d'une maison - Travaux de chapes, carrelage et revêtement de sol",
+   "buyer": "Fonds du Logement",
+   "description": "2512 - Cité CFL Pétange - Transformation et rénovation d'une maison - Travaux de chapes, carrelage et revêtement de sol",
+   "contact": {
+    "name": "Fonds du Logement",
+    "email": "soumissions@fondsdulogement.lu",
+    "phone": "262644525"
+   },
    "deadline": "2026-11-12",
    "value": "Value not stated",
    "source": "TED",
@@ -2587,6 +3704,14 @@
    "trade": "groundworks",
    "tradeName": "Groundworks",
    "title": "Nouvelle Maison Communale de Kaërjeng",
+   "buyer": "Administration Communale de Käerjeng",
+   "description": "Travaux d'aménagements extérieurs",
+   "contact": {
+    "name": "Administration Communale Käerjeng",
+    "email": "info@kaerjeng.lu",
+    "phone": "500 552 1",
+    "web": "https://www.kaerjeng.lu"
+   },
    "deadline": "2026-11-11",
    "value": "Value not stated",
    "source": "TED",
@@ -2605,6 +3730,13 @@
    "trade": "painting",
    "tradeName": "Painting",
    "title": "2512 - Cité CFL Pétange - Transformation et rénovation d'une maison - Travaux de cloisons, plâtre et peinture",
+   "buyer": "Fonds du Logement",
+   "description": "2512_Cité CFL Pétange - Transformation et rénovation d'une maison - Travaux de cloisons, plâtre et peinture",
+   "contact": {
+    "name": "Fonds du Logement",
+    "email": "soumissions@fondsdulogement.lu",
+    "phone": "262644525"
+   },
    "deadline": "2026-11-12",
    "value": "Value not stated",
    "source": "TED",
@@ -2623,6 +3755,14 @@
    "trade": "building",
    "tradeName": "Building",
    "title": "Kerékpárút építése Villányban",
+   "buyer": "Villány Város Önkormányzata",
+   "description": "Kerékpárút építése Villány település területén. Megkötésre kerülő szerződés: kivitelezési szerződés. Szerződés teljes megnevezése az EKR űrlap cím mezőjének karakterkorlátozására tekintettel: „Kerékpáron a borutak mentén: kerékpárút építése Villány szakaszon a TOP_PLUSZ- 6.1.3-21-BA1-2022-00009 projekt keretében”",
+   "contact": {
+    "name": "Dr. Nagy-Hegedüs Brigitta",
+    "email": "hegedus.brigitta@villany.hu",
+    "phone": "+36 301803684",
+    "web": "https://villany.hu/"
+   },
    "deadline": "2026-10-26",
    "value": "Value not stated",
    "source": "TED",
@@ -2641,6 +3781,14 @@
    "trade": "groundworks",
    "tradeName": "Groundworks",
    "title": "Csongrádi sgt.közl.fejlesztés,kerékpárút építés",
+   "buyer": "Szeged Megyei Jogú Város Önkormányzata",
+   "description": "„Csongrádi sgt. fenntartható közlekedésfejlesztése, kerékpárút kiépítése\" projekt kivitelezési munkáinak teljeskörű ellátása átalányáras vállalkozási szerződés keretében",
+   "contact": {
+    "name": "Dr. Tapasztó Magdolna",
+    "email": "kozbeszcsop@szeged.eu",
+    "phone": "+36 62564363",
+    "web": "http://www.szegedvaros.hu"
+   },
    "deadline": "2026-11-19",
    "value": "Value not stated",
    "source": "TED",
@@ -2659,6 +3807,14 @@
    "trade": "demolition",
    "tradeName": "Demolition",
    "title": "Haller utca 54. szám alatti lakóépület felújítása",
+   "buyer": "Budapest Főváros IX. kerület Ferencváros Önkormányzata",
+   "description": "Budapest Fővaros IX. kerület Ferencvaros Önkormányzata tulajdonában álló Budapest, Haller utca 54. számú (Telepy utca 2., hrsz: 37786) telek \"Kivett lakóház, udvar, gazdasági épület megnevezésű\" besorolású terület, amelynek területe: 727 m2. Az épület 2026.",
+   "contact": {
+    "name": "Erdei Gábor",
+    "email": "kozbesz@fevix.hu",
+    "phone": "+36 12109258",
+    "web": "https://www.ferencvaros.hu"
+   },
    "deadline": "2026-10-27",
    "value": "Value not stated",
    "source": "TED",
@@ -2677,6 +3833,14 @@
    "trade": "roofing",
    "tradeName": "Roofing",
    "title": "Köznevelési intézmények_kivitelezés",
+   "buyer": "Nyíregyháza Megyei Jogú Város Önkormányzata",
+   "description": "Köznevelési intézmények fejlesztése (TOP_PLUSZ -3.4.1-23-NY1-2023-00003) projekt keretében az alábbi intézmények felújítási feladatainak ellátása: 1. Rész: Nyíregyházi Bem József Általános Iskola (4400 Nyíregyháza, Epreskert u. 10., hrsz: 1618/6) felújítása 2.",
+   "contact": {
+    "name": "Dr. Erdélyi-Mester Enikő",
+    "email": "mester.eniko@nyiregyhaza.hu",
+    "phone": "+36 42524524",
+    "web": "https://www.nyiregyhaza.hu"
+   },
    "deadline": "2026-10-29",
    "value": "Value not stated",
    "source": "TED",
@@ -2695,6 +3859,14 @@
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "Takarítás Sátoraljaújhely 2027-2028",
+   "buyer": "Magyar Nemzeti Múzeum Közgyűjteményi Központ",
+   "description": "Takarítási szolgáltatás Sátoraljaújhelyen, a Magyar Nemzeti Múzeum Közgyűjteményi Központ - Petőfi Irodalmi Múzeum két telephelyén. 1. A Magyar Nyelv Múzeuma (3988 Sátoraljaújhely-Széphalom, Kazinczy u.",
+   "contact": {
+    "name": "Vass Bottyán",
+    "email": "vass.bottyan@pim.hu",
+    "phone": "+36 302782868",
+    "web": "https://www.pim.hu"
+   },
    "deadline": "2026-11-10",
    "value": "Value not stated",
    "source": "TED",
@@ -2713,6 +3885,14 @@
    "trade": "electrical",
    "tradeName": "Electrical",
    "title": "LED technológiás közúti világítóberendezések",
+   "buyer": "Budakeszi Város Önkormányzat",
+   "description": "Adásvétellel vegyes, egyösszegű átalánydíjas vállalkozási szerződés keretében 2105 db LED technológiás közúti világítóberendezés szállítása és felszerelése, valamint a 2051 db meglévő közúti világítóberendezés bontása és elszállítása Budakeszi város közigazgatási területén a Kiviteli tervdokumentációban meghatározott…",
+   "contact": {
+    "name": "Sebestyén László",
+    "email": "sebestyen.laszlo@budakeszi.hu",
+    "phone": "+36 203568258",
+    "web": "https://varoshaza.budakeszi.hu/"
+   },
    "deadline": "2026-10-22",
    "value": "Value not stated",
    "source": "TED",
@@ -2731,6 +3911,14 @@
    "trade": "facade",
    "tradeName": "Facade / cladding",
    "title": "PV Kapuvári 500m3-es víztorony komplex felújítása",
+   "buyer": "Pannon-Víz Regionális Önkormányzati Víziközmű-szolgáltató Zártkörűen Működő Részvénytársaság",
+   "description": "1 db 500 m3 ivóvíz használati térfogatú vasbeton szerkezetű Kapuvári víztorony o építészeti-, (Meglévő nyílászárók bontása 27db, Belső felületek simítása cementes habarccsal 1102,6m2, 31db nyilászáró beépítése) o tartószerkezeti- o gépészeti-, o villamos-, (19 db Felületre szerelt por- és páramentes lámpatest,…",
+   "contact": {
+    "name": "Rácz Attila István",
+    "email": "attila.racz@pannon-viz.hu",
+    "phone": "+36 96522600",
+    "web": "https://www.pannon-viz.hu"
+   },
    "deadline": "2026-11-10",
    "value": "Value not stated",
    "source": "TED",
@@ -2749,6 +3937,14 @@
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "Συμβαση παροχης υπηρεσιων καθαρισμου της κεντρικης υπηρεσιας του υπουργειου τουρισμου",
+   "buyer": "Υπουργειο τουρισμου",
+   "description": "Αντικείμενο της σύμβασης είναι ανάθεση υπηρεσιών καθαρισμού χώρων των κτιρίων που στεγάζεται η Κεντρική Υπηρεσία (Λ. Αμαλίας 12 και Λ. Αμαλίας 14) και η Σχολή Ξεναγών Αθήνας (Μεγ.",
+   "contact": {
+    "name": "Χαρίλαος Σωτηρόπουλος",
+    "email": "sotiropoulos_ch@mintour.gr",
+    "phone": "+30 2103736019",
+    "web": "https://mintour.gov.gr"
+   },
    "deadline": "2026-11-17",
    "value": "€314.5K",
    "source": "TED",
@@ -2767,6 +3963,13 @@
    "trade": "building",
    "tradeName": "Building",
    "title": "Προμήθεια και εγκατάσταση συνθετικού χλοοτάπητα, αθλητικού και λοιπού εξοπλισμού στο Γήπεδο ποδοσφαίρου “Ηλιάδης Εμμανουήλ”…",
+   "buyer": "Δημοτικες επιχειρησεις ροδου μον/κη α.ε.",
+   "description": "Προμήθεια και εγκατάσταση συνθετικού χλοοτάπητα, αθλητικού και λοιπού εξοπλισμού στο Γήπεδο ποδοσφαίρου “Ηλιάδης Εμμανουήλ” Κοσκινού",
+   "contact": {
+    "email": "nafantenos@gmail.com",
+    "phone": "+302241037090",
+    "web": "www.kallitheasprings.gr"
+   },
    "deadline": "2026-11-18",
    "value": "Value not stated",
    "source": "TED",
@@ -2785,6 +3988,14 @@
    "trade": "hvac",
    "tradeName": "HVAC",
    "title": "Συντήρηση - αποκατάσταση βλαβών εγκαταστάσεων κλιματισμού (ψύξης / θέρμανσης), αυτόνομων κλιματιστικών μονάδων διαιρούμενου…",
+   "buyer": "Πανεπιστήμιο Πατρών",
+   "description": "Συντήρηση - αποκατάσταση βλαβών εγκαταστάσεων κλιματισμού (ψύξης / θέρμανσης), αυτόνομων κλιματιστικών μονάδων διαιρούμενου τύπου, ψυκτικών θαλάμων, υπερκαταψυκτών και λεβήτων των εγκαταστάσεων του Πανεπιστημίου Πατρών, 24-μηνης διάρκειας",
+   "contact": {
+    "name": "Σούλη Μηλιά",
+    "email": "oikonomiki@upatras.gr",
+    "phone": "+30 2610 969652",
+    "web": "https://www.upatras.gr/"
+   },
    "deadline": "2026-12-04",
    "value": "€645.2K",
    "source": "TED",
@@ -2803,6 +4014,14 @@
    "trade": "groundworks",
    "tradeName": "Groundworks",
    "title": "«προμηθεια και τοποθετηση αθλητικου δαπεδου και εξοπλισμου β΄ κλειστη αιθουσας ακδε»",
+   "buyer": "Δημος συρου ερμουπολης",
+   "description": "«ΠΡΟΜΗΘΕΙΑ ΚΑΙ ΤΟΠΟΘΕΤΗΣΗ ΑΘΛΗΤΙΚΟΥ ΔΑΠΕΔΟΥ ΚΑΙ ΕΞΟΠΛΙΣΜΟΥ Β΄ ΚΛΕΙΣΤΗ ΑΙΘΟΥΣΑΣ ΑΚΔΕ»",
+   "contact": {
+    "name": "ΠΟΠΗ ΚΟΥΜΟΥΤΣΑΚΟΥ",
+    "email": "p.koumoutsakou@syros-ermoupolis.gr",
+    "phone": "2281361008",
+    "web": "http://www.syros-ermoupolis.gr/"
+   },
    "deadline": "2026-11-20",
    "value": "€132K",
    "source": "TED",
@@ -2821,6 +4040,14 @@
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "Συμβαση παροχης υπηρεσιων καθαρισμου της κεντρικης υπηρεσιας του υπουργειου τουρισμου",
+   "buyer": "Υπουργειο τουρισμου",
+   "description": "Αντικείμενο της σύμβασης είναι ανάθεση υπηρεσιών καθαρισμού χώρων των κτιρίων που στεγάζεται η Κεντρική Υπηρεσία (Λ. Αμαλίας 12 και Λ. Αμαλίας 14) και η Σχολή Ξεναγών Αθήνας (Μεγ.",
+   "contact": {
+    "name": "Χαρίλαος Σωτηρόπουλος",
+    "email": "sotiropoulos_ch@mintour.gr",
+    "phone": "+30 2103736019",
+    "web": "https://mintour.gov.gr"
+   },
    "deadline": "2026-11-17",
    "value": "€314.5K",
    "source": "TED",
@@ -2839,6 +4066,14 @@
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "Παροχή υπηρεσιών καθαριότητας της Κεντρικής Υπηρεσίας του Υπουργείου Δικαιοσύνης και του «Σπιτιού του Παιδιού» Αθήνας και Πειραιά",
+   "buyer": "Υπουργειο δικαιοσυνης",
+   "description": "Αντικείμενο της σύμβασης είναι η παροχή υπηρεσιών καθαριότητας στους εσωτερικούς και εξωτερικούς χώρους του κτηρίου της Κεντρικής Υπηρεσίας του Υπουργείου Δικαιοσύνης, επί της Λεωφόρου Μεσογείων 96, Αθήνα, καθώς και στους χώρους του Αυτοτελούς Γραφείου Προστασίας Ανηλίκων Θυμάτων «Σπίτι του Παιδιού» Αθήνας και…",
+   "contact": {
+    "name": "ΒΑΣΙΛΕΙΟΣ ΣΤΑΘΟΠΟΥΛΟΣ",
+    "email": "vstathopoulos@justice.gov.gr",
+    "phone": "2131307677",
+    "web": "https://ministryofjustice.gr/"
+   },
    "deadline": "2026-11-16",
    "value": "€811.8K",
    "source": "TED",
@@ -2857,6 +4092,14 @@
    "trade": "building",
    "tradeName": "Building",
    "title": "494/2025 Συντήρηση κτιρίων Υποσταθμών Διανομής 11kV και άλλες οικοδομικές εργασίες στην Περιφέρεια Λάρνακας - Αμμοχώστου για…",
+   "buyer": "Αρχή Ηλεκτρισμού Κύπρου",
+   "description": "Συντήρηση κτιρίων Υποσταθμών Διανομής 11kV και άλλες οικοδομικές εργασίες στην Περιφέρεια Λάρνακας - Αμμοχώστου για περίοδο δυο χρόνων",
+   "contact": {
+    "name": "ΔΙΕΥΘΥΝΤΗΣ ΠΡΟΜΗΘΕΙΩΝ",
+    "email": "andreassavvides@eac.com.cy",
+    "phone": "+357 22201661",
+    "web": "www.eac.com.cy"
+   },
    "deadline": "2026-11-25",
    "value": "€1.5M",
    "source": "TED",
@@ -2875,6 +4118,14 @@
    "trade": "insulation",
    "tradeName": "Insulation",
    "title": "Ενεργειακή Αναβάθμιση της Σχολής Κωφών – Γεώργιος Μάρκου, στη Λευκωσία",
+   "buyer": "Ενεργειακο γραφειο κυπρου",
+   "description": "Ενεργειακή Αναβάθμιση της Σχολής Κωφών – Γεώργιος Μάρκου, στα πλαίσια του έργου Δημιουργία Σχολείων Μηδενικής Κατανάλωσης Ενέργειας του προγράμματος ΘΑλΕΙΑ 2021-2027 και του ευρωπαϊκού έργου Τεχνικής Βοήθειας PEDIA",
+   "contact": {
+    "name": "ΣΑΒΒΑΣ ΒΛΑΧΟΣ",
+    "email": "pedia@cea.org.cy",
+    "phone": "+357 22667840",
+    "web": "www.cea.org.cy"
+   },
    "deadline": "2026-11-06",
    "value": "€250K",
    "source": "TED",
@@ -2893,6 +4144,14 @@
    "trade": "insulation",
    "tradeName": "Insulation",
    "title": "Ενεργειακή Αναβάθμιση Δημοτικού Σχολείου Καϊμακλίου Γ και Περιφερειακού Γυμνασίου Ακακίου",
+   "buyer": "Ενεργειακο γραφειο κυπρου",
+   "description": "Ενεργειακή Αναβάθμιση δύο υφιστάμενων σχολείων, στα πλαίσια του έργου Δημιουργία Σχολείων Μηδενικής Κατανάλωσης Ενέργειας του προγράμματος ΘΑλΕΙΑ 2021-2027 και του ευρωπαϊκού έργου Τεχνικής Βοήθειας PEDIA (Προώθηση της Ενεργειακής Απόδοσης και Ανάπτυξη Καινοτόμων Προσεγγίσεων στα Σχολεία).",
+   "contact": {
+    "name": "Σάββας Βλάχος",
+    "email": "pedia@cea.org.cy",
+    "phone": "+357 22667840",
+    "web": "www.cea.org.cy"
+   },
    "deadline": "2026-10-22",
    "value": "€1.4M",
    "source": "TED",
@@ -2911,6 +4170,14 @@
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "Usluga čišćenja i dezinfekcije prostora niskog rizika Opće bolnice Pula",
+   "buyer": "Opća bolnica Pula - Ospedale Generale di Pola",
+   "description": "Predmet nabave je usluga čišćenja i dezinfekcije prostora niskog rizika Opće bolnice Pula, a sukladno troškovniku, tehničkoj specifikaciji, općim uputama o postupcima čišćenja i dezinfekcije i ostalim uvjetima navedenim u ovoj Dokumentaciji o nabavi.",
+   "contact": {
+    "name": "Ingrid Mužinić",
+    "email": "ingrid.muzinic@obpula.hr",
+    "phone": "+385 52376452",
+    "web": "https://www.obpula.hr"
+   },
    "deadline": "2026-11-16",
    "value": "€280K",
    "source": "TED",
@@ -2929,6 +4196,14 @@
    "trade": "building",
    "tradeName": "Building",
    "title": "Izvođenje radova rekonstrukcije i opremanje dv bajka - po ciglenica",
+   "buyer": "Grad zagreb",
+   "description": "Predmet nabave je IZVOĐENJE RADOVA REKONSTRUKCIJE I OPREMANJE DJEČJEG VRTIĆA „BAJKA“ – PO CIGLENICA. CPV oznaka i naziv: GRUPA 1 - izvođenje radova, CPV: 45214100-1 (glavni CPV) GRUPA 2 – opremanje, CPV: 39150000-8 Detalji u dokumentu Opći podaci o predmetu nabave i upute za ponuditelje-dodatno",
+   "contact": {
+    "name": "Javna nabava",
+    "email": "javna.nabava@zagreb.hr",
+    "phone": "+385 16506578",
+    "web": "https://www.zagreb.hr"
+   },
    "deadline": "2026-10-26",
    "value": "€3M",
    "source": "TED",
@@ -2947,6 +4222,14 @@
    "trade": "electrical",
    "tradeName": "Electrical",
    "title": "Izgradnja i opremanje kontejnerske automatske mjerne postaje u Vranjičko-solinskom bazenu Lučke uprave Split",
+   "buyer": "Lučka uprava split",
+   "description": "Predmet nabave je nabava, isporuka i ugradnja opreme za kontinuirano praćenje kvalitete zraka u području Lučke uprave Split – jedna automatska referentna mjerna postaja kontejnerskog tipa i tri senzorske stanice, s umjeravanjem, puštanjem u rad, održavanjem i validacijom podataka tijekom dvije godine.",
+   "contact": {
+    "name": "MIRANDA ŠABAN",
+    "email": "lusplit@portsplit.hr",
+    "phone": "+385 21390222",
+    "web": "https://www.portsplit.hr"
+   },
    "deadline": "2026-11-02",
    "value": "€262.5K",
    "source": "TED",
@@ -2965,6 +4248,14 @@
    "trade": "electrical",
    "tradeName": "Electrical",
    "title": "Nabava i ugradnja sustava tehničke zaštite i kontrole prolaza s ugradnjom na lokaciji dubrava",
+   "buyer": "Grad zagreb",
+   "description": "Predmet nabave je nabava i ugradnja sustava tehničke zaštite i kontrole prolaza s ugradnjom na lokaciji Dubrava na tri odvojena ulaza (dva kolna i dva pješačka ulaza).",
+   "contact": {
+    "name": "Javna nabava",
+    "email": "javna.nabava@zagreb.hr",
+    "phone": "+385 16506578",
+    "web": "https://www.zagreb.hr"
+   },
    "deadline": "2026-10-27",
    "value": "€720K",
    "source": "TED",
@@ -2983,6 +4274,13 @@
    "trade": "groundworks",
    "tradeName": "Groundworks",
    "title": "Изпълнение на инженеринг (проектиране, изграждане и авторски надзор) на асансьорна уредба на 9-ти учебен блок на ТУ-София",
+   "buyer": "Технически университет",
+   "description": "Предметът на поръчката е Изпълнение на инженеринг (проектиране, изграждане и авторски надзор) на асансьорна уредба на 9-ти учебен блок на ТУ-София. ​​​​При изпълнение на поръчката следва да се извърши ИНЖЕНЕРИНГ – Проектиране, Строителство и Авторски надзор за Обект: „Изграждане на асансьорна шахта, доставка и монтаж…",
+   "contact": {
+    "name": "Донка Симеонова",
+    "email": "dsimeonova@tu-sofia.bg",
+    "phone": "+359 29653906"
+   },
    "deadline": "2026-11-19",
    "value": "€162.5K",
    "source": "TED",
@@ -3001,6 +4299,13 @@
    "trade": "painting",
    "tradeName": "Painting",
    "title": "Възстановяване на антикорозионно покритие на стомано – решетъчни стълбове (СРС) на ВЛ 110кV „Светкавица“",
+   "buyer": "Мрежови експлоатационен район - шумен",
+   "description": "Възстановяване на компрометираното антикорозионно покритие, чрез прилагане на лаковобояджийски системи от защитни бои на съществуващи стомано-решетъчни стълбове на ВЛ 110kV „Светкавица“, в участъка от ст.№1 до ст.№10, плюс един брой стълб № 6А, отклонение от стълб № 6 за п/ст „Тягова“ /общо 11 бр./,, по система №02…",
+   "contact": {
+    "name": "Жани Илиева Велинова",
+    "email": "j.velinova@sh.eso.bg",
+    "phone": "054 856 117"
+   },
    "deadline": "2026-11-25",
    "value": "€29K",
    "source": "TED",
@@ -3019,6 +4324,13 @@
    "trade": "demolition",
    "tradeName": "Demolition",
    "title": "Ремонт покрив на учебен блок №2 (без крайни полета), при Технически университет – София",
+   "buyer": "Технически университет",
+   "description": "Предметът на поръчката е \"Ремонт покрив на учебен блок №2 (без крайни полета), при Технически университет – София\". Описание на строително-монтажните работи: 1.Демонтаж съществуващи улуци и водостоци 2. Демонтаж водосточни казанчета 3.Демонтаж съществуваща ламаринена обшивка по бордове, поли, улами, шапки и др., вкл.",
+   "contact": {
+    "name": "Донка Кирилова Симеонова",
+    "email": "dsimeonova@tu-sofia.bg",
+    "phone": "+359 29653906"
+   },
    "deadline": "2026-11-19",
    "value": "€199.8K",
    "source": "TED",
@@ -3037,6 +4349,14 @@
    "trade": "building",
    "tradeName": "Building",
    "title": "„Инженеринг – проектиране, изпълнение на строително-монтажни работи и осъществяване на авторски надзор обект, находящ се в гр.…",
+   "buyer": "Община бургас",
+   "description": "Предвижда се преустройство на съществуваща сграда и изграждане на пристройка с цел обособяване на две самостоятелни социални услуги за резидентна грижа за деца без увреждания, всяка с капацитет 10 места за постоянно настаняване и 2 места за спешно настаняване, или общо 24 места.",
+   "contact": {
+    "name": "Даниела Георгиева",
+    "email": "d.georgieva@burgas.bg",
+    "phone": "+359 56907242",
+    "web": "https://www.burgas.bg/"
+   },
    "deadline": "2026-11-19",
    "value": "€319K",
    "source": "TED",
@@ -3055,6 +4375,14 @@
    "trade": "electrical",
    "tradeName": "Electrical",
    "title": "„Демонтаж, преместване и монтаж на системи за видеонаблюдение от стар източен вълнолом по фасадите на сгради в Зона за…",
+   "buyer": "Пристанищна инфраструктура дп",
+   "description": "Предметът на настоящата поръчка е избор на изпълнител за „Демонтаж, преместване и монтаж на системи за видеонаблюдение от стар източен вълнолом по фасадите на сгради в Зона за обществен достъп – ПТ „Бургас-Изток 1“.",
+   "contact": {
+    "name": "Георги Георгиев",
+    "email": "office@bgports.bg",
+    "phone": "+359 28079999",
+    "web": "http://www.bgports.bg/"
+   },
    "deadline": "2026-11-11",
    "value": "€13K",
    "source": "TED",
@@ -3073,6 +4401,14 @@
    "trade": "flooring",
    "tradeName": "Flooring",
    "title": "„Вътрешно преустройство и ремонт на етажи четири и пет на Блок „Б” в сграда с идентификатор 10135.3513.148.9 (Сграда за…",
+   "buyer": "Община варна",
+   "description": "При изпълнение на поръчката следва да се извърши избор на изпълнител за строителни и монтажни работи на обект „Вътрешно преустройство и ремонт на етажи четири и пет на Блок „Б” в сграда с идентификатор 10135.3513.148.9 (Сграда за социални услуги), находящ се в УПИ IV – „УПП „ТРУД”, /10135.3513.148/, кв.",
+   "contact": {
+    "name": "Елена  Лукова",
+    "email": "op@varna.bg",
+    "phone": "+359 52820830",
+    "web": "https://www.varna.bg/"
+   },
    "deadline": "2026-11-05",
    "value": "€544.7K",
    "source": "TED",
@@ -3091,6 +4427,14 @@
    "trade": "windows",
    "tradeName": "Windows & doors",
    "title": "Основно обновяване, текущ ремонт и енергийно обновяване на сграда с идентификатор 68134.108.199.1 и 68134.108.199.2, УПИ II,…",
+   "buyer": "Българска телеграфна агенция",
+   "description": "Предметът на поръчката се отнася за строително-монтажни работи, включително доставка на необходимите суровини и материали, механизация, работна сила и всички дейности, необходими за изпълнение на строителството, в съответствие с техническата спецификация и одобрената техническа документация - инвестиционен проект.",
+   "contact": {
+    "name": "Надя Спасова Иванова",
+    "email": "kissis@abv.bg",
+    "phone": "+359 29262205",
+    "web": "https://bta.bg/"
+   },
    "deadline": "2026-11-03",
    "value": "€2.8M",
    "source": "TED",
@@ -3109,6 +4453,13 @@
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "Okolju prijazne storitve čiščenja prostorov v lasti Občine Mengeš",
+   "buyer": "Občina mengeš",
+   "description": "V okviru projekta je predvidena izvedba okolju prijaznih storitev čiščenja prostorov v lasti Občine Mengeš.",
+   "contact": {
+    "email": "mitja.dolinsek@menges.si",
+    "phone": "+386 17247105",
+    "web": "https://www.menges.si/"
+   },
    "deadline": "2026-11-04",
    "value": "Value not stated",
    "source": "TED",
@@ -3127,6 +4478,13 @@
    "trade": "building",
    "tradeName": "Building",
    "title": "Obnova cestninske postaje in izpostave Dob",
+   "buyer": "Družba za avtoceste v republiki sloveniji d.d.",
+   "description": "Obnova cestninske postaje in izpostave Dob",
+   "contact": {
+    "email": "javno.narocanje@dars.si",
+    "phone": "+3861 518 8304",
+    "web": "http://www.dars.si"
+   },
    "deadline": "2026-11-04",
    "value": "Value not stated",
    "source": "TED",
@@ -3145,6 +4503,13 @@
    "trade": "electrical",
    "tradeName": "Electrical",
    "title": "Obnova ESO opreme v predoru Cenkova in Vodole ter pokritih vkopov Močna in Malečnik",
+   "buyer": "Družba za avtoceste v republiki sloveniji d.d.",
+   "description": "Obnova ESO opreme v predoru Cenkova in Vodole ter pokritih vkopov Močna in Malečnik",
+   "contact": {
+    "email": "javno.narocanje@dars.si",
+    "phone": "+3861 518 8304",
+    "web": "http://www.dars.si"
+   },
    "deadline": "2026-10-29",
    "value": "Value not stated",
    "source": "TED",
@@ -3163,6 +4528,13 @@
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "JN za oddajo naročila storitev po odprtem postopku za čiščenje fasad in nadstrešnic na lokacijah bivših mejnih prehodov…",
+   "buyer": "Ministrstvo za notranje zadeve in javno upravo",
+   "description": "Čiščenje fasad in nadstrešnic na lokacijah bivših mejnih prehodov Republike Slovenije",
+   "contact": {
+    "email": "ujnn.mnz@gov.si",
+    "phone": "+386 14284434",
+    "web": "https://www.gov.si/drzavni-organi/ministrstva/ministrstvo-za-notranje-zadeve-in-javno-upravo"
+   },
    "deadline": "2026-11-05",
    "value": "Value not stated",
    "source": "TED",
@@ -3181,6 +4553,13 @@
    "trade": "building",
    "tradeName": "Building",
    "title": "Obnova cestninske postaje in izpostave Dob",
+   "buyer": "Družba za avtoceste v republiki sloveniji d.d.",
+   "description": "Obnova cestninske postaje in izpostave Dob",
+   "contact": {
+    "email": "javno.narocanje@dars.si",
+    "phone": "+3861 518 8304",
+    "web": "http://www.dars.si"
+   },
    "deadline": "2026-11-04",
    "value": "Value not stated",
    "source": "TED",
@@ -3199,6 +4578,13 @@
    "trade": "cleaning",
    "tradeName": "Cleaning",
    "title": "Okolju prijazne storitve čiščenja prostorov v lasti Občine Mengeš",
+   "buyer": "Občina mengeš",
+   "description": "V okviru projekta je predvidena izvedba okolju prijaznih storitev čiščenja prostorov v lasti Občine Mengeš.",
+   "contact": {
+    "email": "mitja.dolinsek@menges.si",
+    "phone": "+386 17247105",
+    "web": "https://www.menges.si/"
+   },
    "deadline": "2026-11-04",
    "value": "Value not stated",
    "source": "TED",
@@ -3217,6 +4603,13 @@
    "trade": "building",
    "tradeName": "Building",
    "title": "Dograditev objekta enote vrtca Dramlje _ GOI dela",
+   "buyer": "Občina šentjur",
+   "description": "Dograditev objekta enote vrtca Dramlje _ GOI dela",
+   "contact": {
+    "email": "marjeta.gajsek@sentjur.si",
+    "phone": "+3867471325",
+    "web": "https://www.sentjur.si"
+   },
    "deadline": "2026-11-12",
    "value": "Value not stated",
    "source": "TED",

@@ -237,6 +237,7 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
     }
     return printCache[code];
   }
+  function DET_L(code) { return DET[code] || DET[PAGE_PRINT[code]] || DET.en; }
   function printSheet(t, code) {
     var L = PRINT[code], loc = PRINT_LOCALE[code] || code;
     var country = t.countryName || t.country;
@@ -248,10 +249,12 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
     s.appendChild(el('p', 'ps-trade', t.tradeName));
     s.appendChild(el('h1', '', t.title));
     var dl = el('dl', 'ps-dl');
-    [[L[3], t.tradeName], [L[4], t.city + ', ' + t.region + ', ' + country], [L[5], when], [L[6], t.value]].forEach(function (r) {
+    [[DET_L(code)[0], t.buyer], [L[3], t.tradeName], [L[4], t.city + ', ' + t.region + ', ' + country], [L[5], when], [L[6], t.value]].forEach(function (r) {
       if (!r[1]) return; var row = el('div'); row.appendChild(el('dt', '', r[0])); row.appendChild(el('dd', '', r[1])); dl.appendChild(row);
     });
     s.appendChild(dl);
+    var cp = t.contact, parts = cp ? [cp.name, cp.email, cp.phone].filter(Boolean) : [];
+    if (parts.length) { var cr = el('div'); cr.appendChild(el('dt', '', DET_L(code)[2])); cr.appendChild(el('dd', '', parts.join(' · '))); dl.appendChild(cr); }
     var fit = el('p', 'ps-fit'); fit.appendChild(el('b', '', L[7])); fit.appendChild(document.createTextNode(' ' + t.fit)); s.appendChild(fit);
     var url = noticeUrl(t);
     if (url) {
@@ -287,6 +290,43 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
     return box;
   }
 
+  // detail-view labels: buyer, about, contact, shown when the notice has no contact details
+  var DET = {
+    en: ['Buyer', 'About this tender', 'Contact', 'Contact details in the original notice'],
+    no: ['Oppdragsgiver', 'Om anskaffelsen', 'Kontakt', 'Kontaktinformasjon finnes i den opprinnelige kunngjøringen'],
+    sv: ['Upphandlande myndighet', 'Om upphandlingen', 'Kontakt', 'Kontaktuppgifter finns i den ursprungliga annonsen'],
+    da: ['Ordregiver', 'Om udbuddet', 'Kontakt', 'Kontaktoplysninger findes i den oprindelige bekendtgørelse'],
+    fi: ['Hankintayksikkö', 'Tietoa hankinnasta', 'Yhteystiedot', 'Yhteystiedot löytyvät alkuperäisestä ilmoituksesta'],
+    is: ['Kaupandi', 'Um útboðið', 'Tengiliður', 'Tengiliðaupplýsingar eru í upprunalegu auglýsingunni'],
+    pl: ['Zamawiający', 'O przetargu', 'Kontakt', 'Dane kontaktowe znajdziesz w oryginalnym ogłoszeniu'],
+    de: ['Auftraggeber', 'Zur Ausschreibung', 'Kontakt', 'Kontaktdaten stehen in der Originalbekanntmachung'],
+    cs: ['Zadavatel', 'O zakázce', 'Kontakt', 'Kontaktní údaje jsou v původním oznámení'],
+    sk: ['Verejný obstarávateľ', 'O zákazke', 'Kontakt', 'Kontaktné údaje sú v pôvodnom oznámení'],
+    nl: ['Aanbestedende dienst', 'Over deze aanbesteding', 'Contact', 'Contactgegevens staan in de oorspronkelijke aankondiging'],
+    lt: ['Perkančioji organizacija', 'Apie pirkimą', 'Kontaktai', 'Kontaktinė informacija pateikiama originaliame skelbime'],
+    ee: ['Hankija', 'Hanke kohta', 'Kontakt', 'Kontaktandmed on algses teates'],
+    lv: ['Pasūtītājs', 'Par iepirkumu', 'Kontakti', 'Kontaktinformācija ir oriģinālajā paziņojumā'],
+    fr: ['Acheteur', 'À propos de cet appel d’offres', 'Contact', 'Les coordonnées figurent dans l’avis d’origine'],
+    es: ['Poder adjudicador', 'Sobre esta licitación', 'Contacto', 'Los datos de contacto están en el anuncio original'],
+    it: ['Stazione appaltante', 'Su questo appalto', 'Contatto', 'I recapiti sono nell’avviso originale']
+  };
+  function contactBlock(t, L, url) {
+    var c = t.contact, box = el('div', 'td-contact');
+    box.appendChild(el('h4', '', L[2]));
+    if (!c || !(c.name || c.email || c.phone || c.web)) {
+      var p = el('p', 'tc-missing');
+      if (url) { var a = el('a', '', L[3] + ' ↗'); a.href = url; a.target = '_blank'; a.rel = 'noopener'; p.appendChild(a); } else p.textContent = L[3];
+      box.appendChild(p); return box;
+    }
+    var dl = el('dl', 'td-dl');
+    function row(k, node) { var r = el('div'); r.appendChild(el('dt', '', k)); var dd = el('dd'); dd.appendChild(node); r.appendChild(dd); dl.appendChild(r); }
+    if (c.name) row('👤', document.createTextNode(c.name));
+    if (c.email) { var m = el('a', '', c.email); m.href = 'mailto:' + c.email; row('✉', m); }
+    if (c.phone) { var ph = el('a', '', c.phone); ph.href = 'tel:' + c.phone.replace(/[^\d+]/g, ''); row('☎', ph); }
+    if (c.web && /^https?:\/\//i.test(c.web)) { var w = el('a', '', c.web.replace(/^https?:\/\/(www\.)?/i, '').replace(/\/$/, '')); w.href = c.web; w.target = '_blank'; w.rel = 'noopener'; row('🌐', w); }
+    box.appendChild(dl); return box;
+  }
+
   function renderTender() {
     var t = byId[state.id], v = views.tender;
     if (!t) return go('country', state.cc);
@@ -298,15 +338,19 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
     d.appendChild(top);
     d.appendChild(el('h3', '', t.title));
     var dl = el('dl', 'td-dl');
-    [[D.where, t.city + ', ' + t.region + ', ' + cname(t.country)],
+    var L = DET[pageCode()] || DET.en, url = noticeUrl(t);
+    [t.buyer ? [L[0], t.buyer] : null,
+     [D.where, t.city + ', ' + t.region + ', ' + cname(t.country)],
      [D.deadline, fmt(t) + ' (' + fill(D.daysLeft, { n: daysLeft(t) }) + ')'],
      [D.value, t.value]].forEach(function (r) {
+      if (!r) return;
       var row = el('div'); row.appendChild(el('dt', '', r[0])); row.appendChild(el('dd', '', r[1])); dl.appendChild(row);
     });
     d.appendChild(dl);
+    if (t.description) { var ab = el('div', 'td-about'); ab.appendChild(el('h4', '', L[1])); ab.appendChild(el('p', '', t.description)); d.appendChild(ab); }
+    d.appendChild(contactBlock(t, L, url));
     var fit = el('p', 'fitbox'); fit.appendChild(el('b', '', D.fit)); fit.appendChild(document.createTextNode(' ' + t.fit)); d.appendChild(fit);
     var foot = el('p', 'td-link');
-    var url = noticeUrl(t);
     if (url) {
       var l = el('a', 'btn', D.original + ' ↗'); l.href = url; l.target = '_blank'; l.rel = 'noopener'; foot.appendChild(l);
     }

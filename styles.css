@@ -765,3 +765,13 @@ footer a:hover { color: var(--accent); }
 
 #print-sheet .ps-logo { height: 26px; width: auto; }
 @media print { #print-sheet .ps-head { align-items: center; padding-bottom: 10px; border-bottom-width: 1px; } #print-sheet .ps-site { font-size: 9pt; color: #666; letter-spacing: .02em; } }
+
+/* tender detail: buyer, about, contact */
+.td-about, .td-contact { margin: 14px 0 0; padding-top: 12px; border-top: 1px solid var(--line); }
+.td-about h4, .td-contact h4 { margin: 0 0 6px; font: 600 11px var(--mono, ui-monospace, monospace); letter-spacing: .08em; text-transform: uppercase; color: var(--muted, #6b6252); }
+.td-about p { margin: 0; font: 400 14px/1.55 var(--sans); color: var(--ink); }
+.td-contact .td-dl dt { flex: 0 0 auto; min-width: 1.6em; font-size: 15px; }
+.td-contact .td-dl a { color: var(--accent); text-decoration: none; word-break: break-all; }
+.td-contact .td-dl a:hover { text-decoration: underline; }
+.tc-missing { margin: 0; font: 400 14px/1.5 var(--sans); color: var(--muted, #6b6252); }
+.tc-missing a { color: var(--accent); font-weight: 600; text-decoration: none; }

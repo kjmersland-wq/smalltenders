@@ -99,10 +99,16 @@ async function ted(body, tries = 5) {
   }
   throw new Error('TED: too many retries');
 }
-const FIELDS = ['publication-number', 'title-proc', 'buyer-name', 'buyer-city', 'place-of-performance-city-lot', 'place-of-performance-country-lot', 'deadline-receipt-tender-date-lot', 'estimated-value-proc', 'estimated-value-lot', 'estimated-value-cur-proc', 'estimated-value-cur-lot', 'classification-cpv', 'publication-date', 'notice-type'];
+const FIELDS = ['publication-number', 'title-proc', 'buyer-name', 'buyer-city', 'place-of-performance-city-lot', 'place-of-performance-country-lot', 'deadline-receipt-tender-date-lot', 'estimated-value-proc', 'estimated-value-lot', 'estimated-value-cur-proc', 'estimated-value-cur-lot', 'classification-cpv', 'publication-date', 'notice-type', 'buyer-name', 'buyer-contact-point', 'organisation-email-buyer', 'organisation-tel-buyer', 'buyer-internet-address', 'description-proc'];
 const first = (v) => (Array.isArray(v) ? v.find(Boolean) : v);
 const day = (s) => (s ? String(s).slice(0, 10) : null);
 
+function contactOf(n) {
+  const email = [].concat(n['organisation-email-buyer'] || []).find((e) => /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e));
+  const c = { name: first(n['buyer-contact-point']), email, phone: first(n['organisation-tel-buyer']), web: first(n['buyer-internet-address']) };
+  for (const k of Object.keys(c)) if (!c[k]) delete c[k];
+  return Object.keys(c).length ? c : null;
+}
 function tradeOf(cpvs) {
   for (const [trade, prefixes] of TRADES) if ((cpvs || []).some((c) => prefixes.some((p) => String(c).startsWith(p)))) return trade;
   return null;
@@ -135,7 +141,7 @@ async function fetchCountry(cc) {
     if (v && toEur(v) > MAX_EUR) continue;
     const place = first(n['place-of-performance-city-lot']);
     const buyerCity = n['buyer-city'] && Object.values(n['buyer-city']).flat().find(Boolean);
-    ok.push({ id: n['publication-number'], cc, trade, deadline: dl, published: day(n['publication-date']), value: v, titles: title, city: (typeof place === 'string' ? place : buyerCity) || null });
+    ok.push({ id: n['publication-number'], cc, trade, deadline: dl, published: day(n['publication-date']), value: v, titles: title, buyer: n['buyer-name'], desc: n['description-proc'], contact: contactOf(n), city: (typeof place === 'string' ? place : buyerCity) || null });
   }
   // spread over trades, newest first, a few per trade at most
   ok.sort((a, b) => (b.published || '').localeCompare(a.published || ''));
@@ -178,6 +184,19 @@ function titleFor(titles, keys) {
   for (const k of keys) if (titles[k]) return tidy(Array.isArray(titles[k]) ? titles[k][0] : titles[k]);
   const e = titles.eng || Object.values(titles)[0];
   return tidy(Array.isArray(e) ? e[0] : e);
+}
+// text of a multilingual TED field in the page language, else English, else whatever there is
+function textFor(map, keys) {
+  if (!map) return '';
+  if (typeof map === 'string') return map;
+  for (const k of [...keys, 'eng']) if (map[k]) return [].concat(map[k]).find(Boolean) || '';
+  return [].concat(Object.values(map)[0] || []).find(Boolean) || '';
+}
+function shortText(s, max = 320) {
+  s = String(s || '').replace(/^\s*(Bakgrunn|Background|Beskrivelse av oppdraget)\s*\n+/i, '').replace(/\s+/g, ' ').trim();
+  if (s.length <= max) return s;
+  const cut = s.slice(0, max), dot = cut.lastIndexOf('. ');
+  return (dot > max * 0.5 ? cut.slice(0, dot + 1) : cut.replace(/\s+\S*$/, '') + '…');
 }
 function cityName(c) { const s = c.trim(); return s === s.toUpperCase() && s.length > 3 ? s.toLowerCase().replace(/(^|[\s\-])\p{L}/gu, (m) => m.toUpperCase()) : s; }
 function money(v, loc, code) {
@@ -225,6 +244,9 @@ for (const [code, L] of Object.entries(LANGS)) {
     trade: t.trade,
     tradeName: V.tradeName[t.trade],
     title: titleFor(t.titles, L.keys),
+    buyer: tidy(textFor(t.buyer, L.keys)),
+    description: shortText(textFor(t.desc, L.keys)),
+    contact: t.contact || undefined,
     deadline: t.deadline,
     value: money(t.value, L.loc, code),
     source: 'TED',
