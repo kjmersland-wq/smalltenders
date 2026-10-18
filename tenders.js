@@ -147,7 +147,8 @@
     box.appendChild(stat(open.length, L[0], function () { if (window.stMap) window.stMap.reset(); }));
     box.appendChild(el('i', 'stat-sep'));
     box.appendChild(stat(fresh.length, L[1], function () { if (window.stMap) window.stMap.setNew(true); }));
-    host.appendChild(box);
+    var actions = host.querySelector('.actions');   // right under the intro text, above the buttons
+    if (actions) host.insertBefore(box, actions); else host.appendChild(box);
   }
 
   var stage = document.getElementById('mapstage');
