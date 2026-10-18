@@ -78,9 +78,13 @@
       <div class="wrap">
         <p class="label">Kur meklējam</p>
         <h2>Piecpadsmit valstis, solis pa solim</h2>
-        <p class="note">Katra flīze ir valsts, novietota aptuveni tur, kur tā atrodas. Noklikšķiniet uz savas, lai lasītu lapu savā valodā.</p>
-        <div class="coverage">
-          <div class="mappanel" id="mappanel" data-src="/countries.geojson" data-btn="Rādīt interaktīvo karti" data-back="Rādīt vienkāršās flīzes"><ul class="tilemap">
+        <p class="note">Noklikšķiniet uz valsts kartē, lai redzētu, kas mums tur ir, un izvēlieties iepirkumu, lai redzētu detaļas.</p>
+        <div class="mapstage" id="mapstage" data-level="overview" data-src="/countries.geojson" data-names='{"IS":"Ísland","NO":"Norge","SE":"Sverige","FI":"Suomi","DK":"Danmark","EE":"Eesti","LV":"Latvija","NL":"Nederland","DE":"Deutschland","PL":"Polska","LT":"Lietuva","BE":"België","CZ":"Česko","SK":"Slovensko","AT":"Österreich"}'
+             data-back-all="Visas valstis" data-back-country="Atpakaļ uz: {country}" data-none="Valstij “{country}” pagaidām nav ierakstu. Sākam Ziemeļvalstīs un valstis pievienojam solis pa solim."
+             data-open-page="Lasīt lapu vietējā valodā" data-deadline="Termiņš" data-days-left="atlikušas dienas: {n}" data-value="Vērtība / veids" data-where="Vieta"
+             data-fit="Labi der" data-original="Skatīt oriģinālo paziņojumu" data-sample="Piemērs. Saite uz oriģinālo paziņojumu būs īstajā sarakstā." data-count-one="{n} ieraksts" data-count-many="ierakstu: {n}">
+          <div class="mappanel" id="mappanel" data-btn="Rādīt interaktīvo karti" data-back="Rādīt vienkāršās flīzes">
+            <ul class="tilemap" aria-label="Karte ar valstīm, kuras aptveram">
             <li style="grid-area:1/1" data-wave="1"><a href="/is/"><b>IS</b><span>Ísland</span></a></li>
             <li style="grid-area:1/3" data-wave="1"><a href="/no/"><b>NO</b><span>Norge</span></a></li>
             <li style="grid-area:1/4" data-wave="1"><a href="/sv/"><b>SE</b><span>Sverige</span></a></li>
@@ -96,16 +100,34 @@
             <li style="grid-area:5/3" data-wave="3"><a href="/cs/"><b>CZ</b><span>Česko</span></a></li>
             <li style="grid-area:5/4" data-wave="3"><a href="/sk/"><b>SK</b><span>Slovensko</span></a></li>
             <li style="grid-area:6/3" data-wave="3"><a href="/at/"><b>AT</b><span>Österreich</span></a></li>
-          </ul>
+            </ul>
             <div class="gmap" hidden role="region" aria-label="Karte ar valstīm, kuras aptveram"></div>
             <p class="maptip" hidden></p>
-            <div class="mapctl"><button type="button" class="mapload" hidden></button><p class="mapnote" hidden>Google Maps ielādējas tikai pēc klikšķa. Google var iestatīt sīkfailus.</p></div>
+            <div class="mapctl"><button type="button" class="mapload" hidden></button><p class="mapnote" hidden>Karti nodrošina Google Maps, kas var iestatīt sīkfailus. Vēlaties bez tā? Izvēlieties vienkāršās flīzes.</p></div>
+            <ul class="tradelegend" hidden aria-label="Nozaru krāsas"></ul>
           </div>
-          <ul class="legend">
-            <li data-wave="1"><b>Tagad</b> Norvēģija, Dānija, Zviedrija, Somija un Islande</li>
-            <li data-wave="2"><b>Tālāk</b> Polija un Vācija</li>
-            <li data-wave="3"><b>Pēc tam</b> kaimiņvalstis</li>
-          </ul>
+          <aside class="mapside" id="mapside" aria-live="polite">
+            <div data-view="overview">
+              <p class="ms-title">Kur meklējam</p>
+              <ul class="legend">
+                <li data-wave="1"><b>Tagad</b> Norvēģija, Dānija, Zviedrija, Somija un Islande</li>
+                <li data-wave="2"><b>Tālāk</b> Polija un Vācija</li>
+                <li data-wave="3"><b>Pēc tam</b> kaimiņvalstis</li>
+              </ul>
+              <p class="ms-hint">Izvēlieties valsti, lai tuvinātu. Krāsainie punkti ir parauga iepirkumi, viens punkts uz iepirkumu.</p>
+            </div>
+            <div data-view="country" hidden tabindex="-1">
+              <button type="button" class="back" data-back="overview"></button>
+              <h3 class="ms-country"></h3>
+              <p class="ms-count"></p>
+              <ul class="tlist"></ul>
+              <p class="cp-more"></p>
+            </div>
+            <div data-view="tender" hidden tabindex="-1">
+              <button type="button" class="back" data-back="country"></button>
+              <div class="tdetail"></div>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
@@ -137,7 +159,16 @@
       <div class="wrap">
         <h2>Ieskats vienā izdevumā</h2>
         <p class="note">Tie ir tikai piemēri. Īstas saites uz oficiālajiem paziņojumiem parādīsies, kad saraksts sāks darboties — un oriģinālais paziņojums vienmēr ir pirmajā vietā.</p>
-        <div class="cards">
+        <div class="filters">
+          <label>Valsts
+            <select id="f-country"><option value="">Visas valstis</option><option value="NO">Norge</option><option value="DK">Danmark</option><option value="SE">Sverige</option><option value="FI">Suomi</option><option value="IS">Ísland</option><option value="PL">Polska</option><option value="DE">Deutschland</option></select>
+          </label>
+          <label>Nozare
+            <select id="f-trade"><option value="">Visas nozares</option><option value="electrical">Elektrība</option><option value="plumbing">Santehnika</option><option value="hvac">Ventilācija</option><option value="painting">Krāsošana</option><option value="building">Būvniecība</option><option value="cleaning">Uzkopšana</option></select>
+          </label>
+          <p class="fcount" id="f-count" aria-live="polite"></p>
+        </div>
+        <div class="cards" id="tenders" data-src="/tenders.lv.json" data-fit="Labi der" data-original="Skatīt oriģinālo paziņojumu" data-sample="Piemērs. Saite uz oriģinālo paziņojumu būs īstajā sarakstā." data-empty="Pēc šiem filtriem pagaidām nekas neder." data-one="{n} ieraksts" data-many="ierakstu: {n}" data-days-left="atlikušas dienas: {n}">
           <article class="tcard">
             <div class="tc-top"><span class="chip">Krāsošana</span><span class="tc-cc">Norvēģija</span></div>
             <h3>Krāsošana, pašvaldības ēkas</h3>
@@ -204,6 +235,7 @@
       <p><strong>Valstis:</strong> <a href="/">English</a> · <a href="/no/">Norge</a> · <a href="/da/">Danmark</a> · <a href="/sv/">Sverige</a> · <a href="/fi/">Suomi</a> · <a href="/is/">Ísland</a> · <a href="/pl/">Polska</a> · <a href="/de/">Deutschland</a> · <a href="/cs/">Česko</a> · <a href="/sk/">Slovensko</a> · <a href="/at/">Österreich</a> · <a href="/nl/">Nederland</a> · <a href="/be/">België</a> · <a href="/lt/">Lietuva</a> · <a href="/ee/">Eesti</a> · <a href="/lv/" aria-current="page">Latvija</a></p>
     </div>
   </footer>
+  <script src="/tenders.js" defer></script>
   <script src="/map.js" defer></script>
 </body>
 </html>

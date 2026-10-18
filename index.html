@@ -78,9 +78,14 @@
       <div class="wrap">
         <p class="label">Where we look</p>
         <h2>Fifteen countries, one step at a time</h2>
-        <p class="note">Each tile is a country, placed roughly where it sits. Click yours to read the page in your own language.</p>
-        <div class="coverage">
-          <div class="mappanel" id="mappanel" data-src="/countries.geojson" data-btn="Show the interactive map" data-back="Show simple tiles"><ul class="tilemap" aria-label="Countries covered">
+        <p class="note">Click a country on the map to see what we have there, then pick a tender for the details.</p>
+        <div class="mapstage" id="mapstage" data-level="overview" data-src="/countries.geojson"
+             data-names='{"IS":"Iceland","NO":"Norway","SE":"Sweden","FI":"Finland","DK":"Denmark","EE":"Estonia","LV":"Latvia","LT":"Lithuania","NL":"Netherlands","BE":"Belgium","DE":"Germany","PL":"Poland","CZ":"Czechia","SK":"Slovakia","AT":"Austria"}'
+             data-back-all="All countries" data-back-country="Back to {country}" data-none="No entries for {country} yet. We start in the Nordics and add countries step by step."
+             data-open-page="Read this page in the local language" data-deadline="Deadline" data-days-left="{n} days left" data-value="Value / type" data-where="Location"
+             data-fit="Good fit" data-original="View the original notice" data-sample="Sample entry. The link to the original notice comes with the live list." data-count-one="entry" data-count-many="entries">
+          <div class="mappanel" id="mappanel" data-btn="Show the interactive map" data-back="Show simple tiles">
+            <ul class="tilemap" aria-label="Countries covered">
             <li style="grid-area:1/1"  data-wave="1"><a href="/is/"><b>IS</b><span>Ísland</span></a></li>
             <li style="grid-area:1/3"  data-wave="1"><a href="/no/"><b>NO</b><span>Norge</span></a></li>
             <li style="grid-area:1/4"  data-wave="1"><a href="/sv/"><b>SE</b><span>Sverige</span></a></li>
@@ -96,16 +101,34 @@
             <li style="grid-area:5/3"  data-wave="3"><a href="/cs/"><b>CZ</b><span>Česko</span></a></li>
             <li style="grid-area:5/4"  data-wave="3"><a href="/sk/"><b>SK</b><span>Slovensko</span></a></li>
             <li style="grid-area:6/3"  data-wave="3"><a href="/at/"><b>AT</b><span>Österreich</span></a></li>
-          </ul>
+            </ul>
             <div class="gmap" hidden role="region" aria-label="Map of the countries we cover"></div>
             <p class="maptip" hidden></p>
-            <div class="mapctl"><button type="button" class="mapload" hidden></button><p class="mapnote" hidden>Loads Google Maps when you click. Google may set cookies.</p></div>
+            <div class="mapctl"><button type="button" class="mapload" hidden></button><p class="mapnote" hidden>The map comes from Google Maps, which may set cookies. Prefer not? Choose the simple tiles.</p></div>
+            <ul class="tradelegend" hidden aria-label="Trade colours"></ul>
           </div>
-          <ul class="legend">
-            <li data-wave="1"><b>Now</b> Norway, Denmark, Sweden, Finland, Iceland</li>
-            <li data-wave="2"><b>Next</b> Poland and Germany</li>
-            <li data-wave="3"><b>After</b> our neighbouring countries</li>
-          </ul>
+          <aside class="mapside" id="mapside" aria-live="polite">
+            <div data-view="overview">
+              <p class="ms-title">Where we look</p>
+              <ul class="legend">
+                <li data-wave="1"><b>Now</b> Norway, Denmark, Sweden, Finland, Iceland</li>
+                <li data-wave="2"><b>Next</b> Poland and Germany</li>
+                <li data-wave="3"><b>After</b> our neighbouring countries</li>
+              </ul>
+              <p class="ms-hint">Pick a country to zoom in. The coloured dots are sample tenders, one dot per tender.</p>
+            </div>
+            <div data-view="country" hidden tabindex="-1">
+              <button type="button" class="back" data-back="overview"></button>
+              <h3 class="ms-country"></h3>
+              <p class="ms-count"></p>
+              <ul class="tlist"></ul>
+              <p class="cp-more"></p>
+            </div>
+            <div data-view="tender" hidden tabindex="-1">
+              <button type="button" class="back" data-back="country"></button>
+              <div class="tdetail"></div>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
@@ -137,8 +160,23 @@
       <div class="wrap">
         <h2>A peek at an issue</h2>
         <p class="note">These are samples. Live links to the official notices arrive when the list launches — and the source notice always comes first.</p>
-        <div class="cards">
-          <article class="tcard">
+        <div class="filters">
+          <label>Country
+            <select id="f-country">
+              <option value="">All countries</option>
+              <option value="NO">Norway</option><option value="DK">Denmark</option><option value="SE">Sweden</option><option value="FI">Finland</option><option value="IS">Iceland</option>
+              <option value="PL">Poland</option><option value="DE">Germany</option>
+            </select>
+          </label>
+          <label>Trade
+            <select id="f-trade">
+              <option value="">All trades</option>
+              <option value="electrical">Electrical</option><option value="plumbing">Plumbing</option><option value="hvac">HVAC</option><option value="painting">Painting</option><option value="building">Building</option><option value="cleaning">Cleaning</option>
+            </select>
+          </label>
+          <p class="fcount" id="f-count" aria-live="polite"></p>
+        </div>
+        <div class="cards" id="tenders" data-src="/tenders.json">          <article class="tcard">
             <div class="tc-top"><span class="chip">Painting</span><span class="tc-cc">Norway</span></div>
             <h3>Painting, municipal buildings</h3>
             <p class="tc-where">Inland</p>
@@ -202,6 +240,7 @@
       <p><strong>Countries:</strong> <a href="/" aria-current="page">English</a> · <a href="/no/">Norge</a> · <a href="/da/">Danmark</a> · <a href="/sv/">Sverige</a> · <a href="/fi/">Suomi</a> · <a href="/is/">Ísland</a> · <a href="/pl/">Polska</a> · <a href="/de/">Deutschland</a> · <a href="/cs/">Česko</a> · <a href="/sk/">Slovensko</a> · <a href="/at/">Österreich</a> · <a href="/nl/">Nederland</a> · <a href="/be/">België</a> · <a href="/lt/">Lietuva</a> · <a href="/ee/">Eesti</a> · <a href="/lv/">Latvija</a></p>
     </div>
   </footer>
+  <script src="/tenders.js" defer></script>
   <script src="/map.js" defer></script>
 </body>
 </html>

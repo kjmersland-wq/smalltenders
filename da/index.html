@@ -78,9 +78,13 @@
       <div class="wrap">
         <p class="label">Hvor vi leder</p>
         <h2>Femten lande, ét skridt ad gangen</h2>
-        <p class="note">Hver flise er et land, placeret nogenlunde der, hvor det ligger. Klik på dit for at læse siden på dit eget sprog.</p>
-        <div class="coverage">
-          <div class="mappanel" id="mappanel" data-src="/countries.geojson" data-btn="Vis det interaktive kort" data-back="Vis enkle fliser"><ul class="tilemap">
+        <p class="note">Klik på et land på kortet for at se, hvad vi har dér, og vælg så et udbud for detaljerne.</p>
+        <div class="mapstage" id="mapstage" data-level="overview" data-src="/countries.geojson" data-names='{"IS":"Ísland","NO":"Norge","SE":"Sverige","FI":"Suomi","DK":"Danmark","EE":"Eesti","LV":"Latvija","NL":"Nederland","DE":"Deutschland","PL":"Polska","LT":"Lietuva","BE":"België","CZ":"Česko","SK":"Slovensko","AT":"Österreich"}'
+             data-back-all="Alle lande" data-back-country="Tilbage til {country}" data-none="Ingen opslag for {country} endnu. Vi starter i Norden og tilføjer lande trin for trin."
+             data-open-page="Læs siden på det lokale sprog" data-deadline="Frist" data-days-left="{n} dage tilbage" data-value="Værdi / type" data-where="Sted"
+             data-fit="Passer godt" data-original="Se den oprindelige bekendtgørelse" data-sample="Eksempel. Linket til den oprindelige bekendtgørelse følger med den rigtige liste." data-count-one="opslag" data-count-many="opslag">
+          <div class="mappanel" id="mappanel" data-btn="Vis det interaktive kort" data-back="Vis enkle fliser">
+            <ul class="tilemap" aria-label="Kort over de lande, vi dækker">
             <li style="grid-area:1/1" data-wave="1"><a href="/is/"><b>IS</b><span>Ísland</span></a></li>
             <li style="grid-area:1/3" data-wave="1"><a href="/no/"><b>NO</b><span>Norge</span></a></li>
             <li style="grid-area:1/4" data-wave="1"><a href="/sv/"><b>SE</b><span>Sverige</span></a></li>
@@ -96,16 +100,34 @@
             <li style="grid-area:5/3" data-wave="3"><a href="/cs/"><b>CZ</b><span>Česko</span></a></li>
             <li style="grid-area:5/4" data-wave="3"><a href="/sk/"><b>SK</b><span>Slovensko</span></a></li>
             <li style="grid-area:6/3" data-wave="3"><a href="/at/"><b>AT</b><span>Österreich</span></a></li>
-          </ul>
+            </ul>
             <div class="gmap" hidden role="region" aria-label="Kort over de lande, vi dækker"></div>
             <p class="maptip" hidden></p>
-            <div class="mapctl"><button type="button" class="mapload" hidden></button><p class="mapnote" hidden>Henter Google Maps, når du klikker. Google kan sætte cookies.</p></div>
+            <div class="mapctl"><button type="button" class="mapload" hidden></button><p class="mapnote" hidden>Kortet leveres af Google Maps, som kan sætte cookies. Foretrækker du det uden? Vælg enkle fliser.</p></div>
+            <ul class="tradelegend" hidden aria-label="Fagfarver"></ul>
           </div>
-          <ul class="legend">
-            <li data-wave="1"><b>Nu</b> Norge, Danmark, Sverige, Finland og Island</li>
-            <li data-wave="2"><b>Næste</b> Polen og Tyskland</li>
-            <li data-wave="3"><b>Bagefter</b> nabolandene</li>
-          </ul>
+          <aside class="mapside" id="mapside" aria-live="polite">
+            <div data-view="overview">
+              <p class="ms-title">Hvor vi leder</p>
+              <ul class="legend">
+                <li data-wave="1"><b>Nu</b> Norge, Danmark, Sverige, Finland og Island</li>
+                <li data-wave="2"><b>Næste</b> Polen og Tyskland</li>
+                <li data-wave="3"><b>Bagefter</b> nabolandene</li>
+              </ul>
+              <p class="ms-hint">Vælg et land for at zoome ind. De farvede prikker er eksempeludbud, én prik pr. udbud.</p>
+            </div>
+            <div data-view="country" hidden tabindex="-1">
+              <button type="button" class="back" data-back="overview"></button>
+              <h3 class="ms-country"></h3>
+              <p class="ms-count"></p>
+              <ul class="tlist"></ul>
+              <p class="cp-more"></p>
+            </div>
+            <div data-view="tender" hidden tabindex="-1">
+              <button type="button" class="back" data-back="country"></button>
+              <div class="tdetail"></div>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
@@ -137,7 +159,16 @@
       <div class="wrap">
         <h2>Et kig ind i en udgave</h2>
         <p class="note">Det her er eksempler. Rigtige links til de officielle bekendtgørelser kommer, når listen går i gang — og originalen kommer altid først.</p>
-        <div class="cards">
+        <div class="filters">
+          <label>Land
+            <select id="f-country"><option value="">Alle lande</option><option value="NO">Norge</option><option value="DK">Danmark</option><option value="SE">Sverige</option><option value="FI">Suomi</option><option value="IS">Ísland</option><option value="PL">Polska</option><option value="DE">Deutschland</option></select>
+          </label>
+          <label>Fag
+            <select id="f-trade"><option value="">Alle fag</option><option value="electrical">El</option><option value="plumbing">VVS</option><option value="hvac">Ventilation</option><option value="painting">Maling</option><option value="building">Byggeri</option><option value="cleaning">Rengøring</option></select>
+          </label>
+          <p class="fcount" id="f-count" aria-live="polite"></p>
+        </div>
+        <div class="cards" id="tenders" data-src="/tenders.da.json" data-fit="Passer godt" data-original="Se den oprindelige bekendtgørelse" data-sample="Eksempel. Linket til den oprindelige bekendtgørelse følger med den rigtige liste." data-empty="Intet passer til filtrene endnu." data-one="opslag" data-many="opslag" data-days-left="{n} dage tilbage">
           <article class="tcard">
             <div class="tc-top"><span class="chip">Maling</span><span class="tc-cc">Norge</span></div>
             <h3>Maling, kommunale bygninger</h3>
@@ -204,6 +235,7 @@
       <p><strong>Lande:</strong> <a href="/">English</a> · <a href="/no/">Norge</a> · <a href="/da/" aria-current="page">Danmark</a> · <a href="/sv/">Sverige</a> · <a href="/fi/">Suomi</a> · <a href="/is/">Ísland</a> · <a href="/pl/">Polska</a> · <a href="/de/">Deutschland</a> · <a href="/cs/">Česko</a> · <a href="/sk/">Slovensko</a> · <a href="/at/">Österreich</a> · <a href="/nl/">Nederland</a> · <a href="/be/">België</a> · <a href="/lt/">Lietuva</a> · <a href="/ee/">Eesti</a> · <a href="/lv/">Latvija</a></p>
     </div>
   </footer>
+  <script src="/tenders.js" defer></script>
   <script src="/map.js" defer></script>
 </body>
 </html>

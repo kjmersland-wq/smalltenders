@@ -78,9 +78,13 @@
       <div class="wrap">
         <p class="label">Kde hledáme</p>
         <h2>Patnáct zemí, krok za krokem</h2>
-        <p class="note">Každá dlaždice je jedna země, umístěná zhruba tam, kde leží. Klikněte na svou a přečtěte si stránku ve svém jazyce.</p>
-        <div class="coverage">
-          <div class="mappanel" id="mappanel" data-src="/countries.geojson" data-btn="Zobrazit interaktivní mapu" data-back="Zobrazit jednoduché dlaždice"><ul class="tilemap">
+        <p class="note">Klikněte na zemi na mapě, abyste viděli, co tam máme, a potom vyberte zakázku pro podrobnosti.</p>
+        <div class="mapstage" id="mapstage" data-level="overview" data-src="/countries.geojson" data-names='{"IS":"Ísland","NO":"Norge","SE":"Sverige","FI":"Suomi","DK":"Danmark","EE":"Eesti","LV":"Latvija","NL":"Nederland","DE":"Deutschland","PL":"Polska","LT":"Lietuva","BE":"België","CZ":"Česko","SK":"Slovensko","AT":"Österreich"}'
+             data-back-all="Všechny země" data-back-country="Zpět: {country}" data-none="Pro zemi {country} zatím nejsou žádné položky. Začínáme na Severu a země přidáváme krok za krokem."
+             data-open-page="Číst stránku v místním jazyce" data-deadline="Termín" data-days-left="zbývá dní: {n}" data-value="Hodnota / druh" data-where="Místo"
+             data-fit="Dobrá shoda" data-original="Zobrazit původní oznámení" data-sample="Ukázka. Odkaz na původní oznámení přibude se skutečným seznamem." data-count-one="{n} položka" data-count-many="položky: {n}">
+          <div class="mappanel" id="mappanel" data-btn="Zobrazit interaktivní mapu" data-back="Zobrazit jednoduché dlaždice">
+            <ul class="tilemap" aria-label="Mapa zemí, které pokrýváme">
             <li style="grid-area:1/1" data-wave="1"><a href="/is/"><b>IS</b><span>Ísland</span></a></li>
             <li style="grid-area:1/3" data-wave="1"><a href="/no/"><b>NO</b><span>Norge</span></a></li>
             <li style="grid-area:1/4" data-wave="1"><a href="/sv/"><b>SE</b><span>Sverige</span></a></li>
@@ -96,16 +100,34 @@
             <li style="grid-area:5/3" data-wave="3"><a href="/cs/"><b>CZ</b><span>Česko</span></a></li>
             <li style="grid-area:5/4" data-wave="3"><a href="/sk/"><b>SK</b><span>Slovensko</span></a></li>
             <li style="grid-area:6/3" data-wave="3"><a href="/at/"><b>AT</b><span>Österreich</span></a></li>
-          </ul>
+            </ul>
             <div class="gmap" hidden role="region" aria-label="Mapa zemí, které pokrýváme"></div>
             <p class="maptip" hidden></p>
-            <div class="mapctl"><button type="button" class="mapload" hidden></button><p class="mapnote" hidden>Google Maps se načtou až po kliknutí. Google může ukládat cookies.</p></div>
+            <div class="mapctl"><button type="button" class="mapload" hidden></button><p class="mapnote" hidden>Mapu poskytuje Google Maps, které může ukládat cookies. Raději bez nich? Zvolte jednoduché dlaždice.</p></div>
+            <ul class="tradelegend" hidden aria-label="Barvy oborů"></ul>
           </div>
-          <ul class="legend">
-            <li data-wave="1"><b>Nyní</b> Norsko, Dánsko, Švédsko, Finsko a Island</li>
-            <li data-wave="2"><b>Dále</b> Polsko a Německo</li>
-            <li data-wave="3"><b>Poté</b> sousední země</li>
-          </ul>
+          <aside class="mapside" id="mapside" aria-live="polite">
+            <div data-view="overview">
+              <p class="ms-title">Kde hledáme</p>
+              <ul class="legend">
+                <li data-wave="1"><b>Nyní</b> Norsko, Dánsko, Švédsko, Finsko a Island</li>
+                <li data-wave="2"><b>Dále</b> Polsko a Německo</li>
+                <li data-wave="3"><b>Poté</b> sousední země</li>
+              </ul>
+              <p class="ms-hint">Vyberte zemi a přiblížíte ji. Barevné body jsou ukázkové zakázky, jeden bod na zakázku.</p>
+            </div>
+            <div data-view="country" hidden tabindex="-1">
+              <button type="button" class="back" data-back="overview"></button>
+              <h3 class="ms-country"></h3>
+              <p class="ms-count"></p>
+              <ul class="tlist"></ul>
+              <p class="cp-more"></p>
+            </div>
+            <div data-view="tender" hidden tabindex="-1">
+              <button type="button" class="back" data-back="country"></button>
+              <div class="tdetail"></div>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
@@ -137,7 +159,16 @@
       <div class="wrap">
         <h2>Nahlédněte do jednoho vydání</h2>
         <p class="note">Jsou to jen ukázky. Skutečné odkazy na oficiální oznámení přibudou, až seznam odstartuje — a původní oznámení je vždy na prvním místě.</p>
-        <div class="cards">
+        <div class="filters">
+          <label>Země
+            <select id="f-country"><option value="">Všechny země</option><option value="NO">Norge</option><option value="DK">Danmark</option><option value="SE">Sverige</option><option value="FI">Suomi</option><option value="IS">Ísland</option><option value="PL">Polska</option><option value="DE">Deutschland</option></select>
+          </label>
+          <label>Obor
+            <select id="f-trade"><option value="">Všechny obory</option><option value="electrical">Elektro</option><option value="plumbing">Instalatérství</option><option value="hvac">Vzduchotechnika</option><option value="painting">Malování</option><option value="building">Stavba</option><option value="cleaning">Úklid</option></select>
+          </label>
+          <p class="fcount" id="f-count" aria-live="polite"></p>
+        </div>
+        <div class="cards" id="tenders" data-src="/tenders.cs.json" data-fit="Dobrá shoda" data-original="Zobrazit původní oznámení" data-sample="Ukázka. Odkaz na původní oznámení přibude se skutečným seznamem." data-empty="Filtrům zatím nic neodpovídá." data-one="{n} položka" data-many="položky: {n}" data-days-left="zbývá dní: {n}">
           <article class="tcard">
             <div class="tc-top"><span class="chip">Malování</span><span class="tc-cc">Norsko</span></div>
             <h3>Malování, obecní budovy</h3>
@@ -204,6 +235,7 @@
       <p><strong>Země:</strong> <a href="/">English</a> · <a href="/no/">Norge</a> · <a href="/da/">Danmark</a> · <a href="/sv/">Sverige</a> · <a href="/fi/">Suomi</a> · <a href="/is/">Ísland</a> · <a href="/pl/">Polska</a> · <a href="/de/">Deutschland</a> · <a href="/cs/" aria-current="page">Česko</a> · <a href="/sk/">Slovensko</a> · <a href="/at/">Österreich</a> · <a href="/nl/">Nederland</a> · <a href="/be/">België</a> · <a href="/lt/">Lietuva</a> · <a href="/ee/">Eesti</a> · <a href="/lv/">Latvija</a></p>
     </div>
   </footer>
+  <script src="/tenders.js" defer></script>
   <script src="/map.js" defer></script>
 </body>
 </html>

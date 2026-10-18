@@ -78,9 +78,13 @@
       <div class="wrap">
         <p class="label">Waar we zoeken</p>
         <h2>Vijftien landen, stap voor stap</h2>
-        <p class="note">Elke tegel is een land, ongeveer geplaatst waar het ligt. Klik op jouw land om de pagina in je eigen taal te lezen.</p>
-        <div class="coverage">
-          <div class="mappanel" id="mappanel" data-src="/countries.geojson" data-btn="Toon de interactieve kaart" data-back="Toon eenvoudige tegels"><ul class="tilemap">
+        <p class="note">Klik op een land op de kaart om te zien wat we daar hebben en kies dan een aanbesteding voor de details.</p>
+        <div class="mapstage" id="mapstage" data-level="overview" data-src="/countries.geojson" data-names='{"IS":"Ísland","NO":"Norge","SE":"Sverige","FI":"Suomi","DK":"Danmark","EE":"Eesti","LV":"Latvija","NL":"Nederland","DE":"Deutschland","PL":"Polska","LT":"Lietuva","BE":"België","CZ":"Česko","SK":"Slovensko","AT":"Österreich"}'
+             data-back-all="Alle landen" data-back-country="Terug naar {country}" data-none="Nog geen items voor {country}. We beginnen in het Noorden en voegen stap voor stap landen toe."
+             data-open-page="Lees deze pagina in de lokale taal" data-deadline="Deadline" data-days-left="nog {n} dagen" data-value="Waarde / soort" data-where="Plaats"
+             data-fit="Past goed" data-original="Bekijk de oorspronkelijke aankondiging" data-sample="Voorbeeld. De link naar de oorspronkelijke aankondiging komt met de echte lijst." data-count-one="item" data-count-many="items">
+          <div class="mappanel" id="mappanel" data-btn="Toon de interactieve kaart" data-back="Toon eenvoudige tegels">
+            <ul class="tilemap" aria-label="Kaart van de landen die we dekken">
             <li style="grid-area:1/1" data-wave="1"><a href="/is/"><b>IS</b><span>Ísland</span></a></li>
             <li style="grid-area:1/3" data-wave="1"><a href="/no/"><b>NO</b><span>Norge</span></a></li>
             <li style="grid-area:1/4" data-wave="1"><a href="/sv/"><b>SE</b><span>Sverige</span></a></li>
@@ -96,16 +100,34 @@
             <li style="grid-area:5/3" data-wave="3"><a href="/cs/"><b>CZ</b><span>Česko</span></a></li>
             <li style="grid-area:5/4" data-wave="3"><a href="/sk/"><b>SK</b><span>Slovensko</span></a></li>
             <li style="grid-area:6/3" data-wave="3"><a href="/at/"><b>AT</b><span>Österreich</span></a></li>
-          </ul>
+            </ul>
             <div class="gmap" hidden role="region" aria-label="Kaart van de landen die we dekken"></div>
             <p class="maptip" hidden></p>
-            <div class="mapctl"><button type="button" class="mapload" hidden></button><p class="mapnote" hidden>Google Maps wordt pas geladen als je klikt. Google kan cookies plaatsen.</p></div>
+            <div class="mapctl"><button type="button" class="mapload" hidden></button><p class="mapnote" hidden>De kaart komt van Google Maps, dat cookies kan plaatsen. Liever zonder? Kies de eenvoudige tegels.</p></div>
+            <ul class="tradelegend" hidden aria-label="Kleuren per vakgebied"></ul>
           </div>
-          <ul class="legend">
-            <li data-wave="1"><b>Nu</b> Noorwegen, Denemarken, Zweden, Finland en IJsland</li>
-            <li data-wave="2"><b>Daarna</b> Polen en Duitsland</li>
-            <li data-wave="3"><b>Vervolgens</b> de buurlanden</li>
-          </ul>
+          <aside class="mapside" id="mapside" aria-live="polite">
+            <div data-view="overview">
+              <p class="ms-title">Waar we zoeken</p>
+              <ul class="legend">
+                <li data-wave="1"><b>Nu</b> Noorwegen, Denemarken, Zweden, Finland en IJsland</li>
+                <li data-wave="2"><b>Daarna</b> Polen en Duitsland</li>
+                <li data-wave="3"><b>Vervolgens</b> de buurlanden</li>
+              </ul>
+              <p class="ms-hint">Kies een land om in te zoomen. De gekleurde stippen zijn voorbeeldaanbestedingen, één stip per aanbesteding.</p>
+            </div>
+            <div data-view="country" hidden tabindex="-1">
+              <button type="button" class="back" data-back="overview"></button>
+              <h3 class="ms-country"></h3>
+              <p class="ms-count"></p>
+              <ul class="tlist"></ul>
+              <p class="cp-more"></p>
+            </div>
+            <div data-view="tender" hidden tabindex="-1">
+              <button type="button" class="back" data-back="country"></button>
+              <div class="tdetail"></div>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
@@ -137,7 +159,16 @@
       <div class="wrap">
         <h2>Een kijkje in één editie</h2>
         <p class="note">Dit zijn voorbeelden. Echte links naar de officiële aankondigingen volgen zodra de lijst van start gaat — en de oorspronkelijke aankondiging komt altijd eerst.</p>
-        <div class="cards">
+        <div class="filters">
+          <label>Land
+            <select id="f-country"><option value="">Alle landen</option><option value="NO">Norge</option><option value="DK">Danmark</option><option value="SE">Sverige</option><option value="FI">Suomi</option><option value="IS">Ísland</option><option value="PL">Polska</option><option value="DE">Deutschland</option></select>
+          </label>
+          <label>Vakgebied
+            <select id="f-trade"><option value="">Alle vakgebieden</option><option value="electrical">Elektra</option><option value="plumbing">Loodgieterswerk</option><option value="hvac">Ventilatie</option><option value="painting">Schilderwerk</option><option value="building">Bouw</option><option value="cleaning">Schoonmaak</option></select>
+          </label>
+          <p class="fcount" id="f-count" aria-live="polite"></p>
+        </div>
+        <div class="cards" id="tenders" data-src="/tenders.nl.json" data-fit="Past goed" data-original="Bekijk de oorspronkelijke aankondiging" data-sample="Voorbeeld. De link naar de oorspronkelijke aankondiging komt met de echte lijst." data-empty="Er past nog niets bij deze filters." data-one="item" data-many="items" data-days-left="nog {n} dagen">
           <article class="tcard">
             <div class="tc-top"><span class="chip">Schilderwerk</span><span class="tc-cc">Noorwegen</span></div>
             <h3>Schilderwerk, gemeentelijke gebouwen</h3>
@@ -204,6 +235,7 @@
       <p><strong>Landen:</strong> <a href="/">English</a> · <a href="/no/">Norge</a> · <a href="/da/">Danmark</a> · <a href="/sv/">Sverige</a> · <a href="/fi/">Suomi</a> · <a href="/is/">Ísland</a> · <a href="/pl/">Polska</a> · <a href="/de/">Deutschland</a> · <a href="/cs/">Česko</a> · <a href="/sk/">Slovensko</a> · <a href="/at/">Österreich</a> · <a href="/nl/" aria-current="page">Nederland</a> · <a href="/be/">België</a> · <a href="/lt/">Lietuva</a> · <a href="/ee/">Eesti</a> · <a href="/lv/">Latvija</a></p>
     </div>
   </footer>
+  <script src="/tenders.js" defer></script>
   <script src="/map.js" defer></script>
 </body>
 </html>

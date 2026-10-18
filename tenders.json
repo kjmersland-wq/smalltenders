@@ -1,0 +1,26 @@
+{
+  "_note": "SAMPLE entries only. Real entries are picked by hand from TED and national portals. 'deadlineDays' is for samples; real entries use an ISO 'deadline' date. 'lat'/'lng' are approximate (city or region centre). 'link' must point to the original notice.",
+  "tenders": [
+    { "id": "s1", "sample": true, "country": "NO", "countryName": "Norway", "city": "Hamar", "region": "Inland", "lat": 60.79, "lng": 11.07, "trade": "painting", "tradeName": "Painting",
+      "title": "Painting, municipal buildings", "deadlineDays": 18, "value": "under €150k", "source": "Doffin",
+      "fit": "for a painting firm with 3–10 people, especially if you already do public work.", "link": null },
+    { "id": "s5", "sample": true, "country": "DK", "countryName": "Denmark", "city": "Aarhus", "region": "Central Jutland", "lat": 56.16, "lng": 10.21, "trade": "plumbing", "tradeName": "Plumbing",
+      "title": "Plumbing renovation, care homes", "deadlineDays": 16, "value": "under €200k", "source": "TED",
+      "fit": "for a plumbing firm with a small team, especially if you know the area.", "link": null },
+    { "id": "s4", "sample": true, "country": "SE", "countryName": "Sweden", "city": "Malmö", "region": "Skåne", "lat": 55.6, "lng": 13.0, "trade": "cleaning", "tradeName": "Cleaning",
+      "title": "Cleaning, municipal preschools", "deadlineDays": 21, "value": "around €120k a year", "source": "TED",
+      "fit": "for a cleaning firm that wants a steady local contract and can staff early mornings.", "link": null },
+    { "id": "s6", "sample": true, "country": "FI", "countryName": "Finland", "city": "Tampere", "region": "Pirkanmaa", "lat": 61.5, "lng": 23.76, "trade": "building", "tradeName": "Building",
+      "title": "Roof repair, school building", "deadlineDays": 27, "value": "around €180k", "source": "Hilma",
+      "fit": "for a building firm that likes clearly defined repair jobs with a fixed deadline.", "link": null },
+    { "id": "s7", "sample": true, "country": "IS", "countryName": "Iceland", "city": "Reykjavík", "region": "Capital Region", "lat": 64.15, "lng": -21.94, "trade": "electrical", "tradeName": "Electrical",
+      "title": "Electrical upgrade, municipal swimming pool", "deadlineDays": 19, "value": "under €100k", "source": "TED",
+      "fit": "for a small electrical firm that likes well-defined jobs close to home.", "link": null },
+    { "id": "s2", "sample": true, "country": "PL", "countryName": "Poland", "city": "Płock", "region": "Mazovia", "lat": 52.55, "lng": 19.7, "trade": "hvac", "tradeName": "HVAC",
+      "title": "Ventilation service, school buildings", "deadlineDays": 24, "value": "Framework agreement", "source": "TED",
+      "fit": "if you want steady, recurring work and already have service vans on the road.", "link": null },
+    { "id": "s3", "sample": true, "country": "DE", "countryName": "Germany", "city": "Kassel", "region": "Hesse (regional)", "lat": 51.31, "lng": 9.48, "trade": "electrical", "tradeName": "Electrical",
+      "title": "Electrical switchgear replacement", "deadlineDays": 12, "value": "Bounded scope", "source": "TED",
+      "fit": "for a growing firm: a clear scope, bigger than a one-person shop, smaller than the national chains.", "link": null }
+  ]
+}

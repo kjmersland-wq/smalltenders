@@ -78,9 +78,13 @@
       <div class="wrap">
         <p class="label">Gdzie szukamy</p>
         <h2>Piętnaście krajów, krok po kroku</h2>
-        <p class="note">Każdy kafelek to kraj, ułożony mniej więcej tam, gdzie leży. Kliknij swój, aby przeczytać stronę w swoim języku.</p>
-        <div class="coverage">
-          <div class="mappanel" id="mappanel" data-src="/countries.geojson" data-btn="Pokaż interaktywną mapę" data-back="Pokaż proste kafelki"><ul class="tilemap">
+        <p class="note">Kliknij kraj na mapie, aby zobaczyć, co tam mamy, a potem wybierz przetarg, by poznać szczegóły.</p>
+        <div class="mapstage" id="mapstage" data-level="overview" data-src="/countries.geojson" data-names='{"IS":"Ísland","NO":"Norge","SE":"Sverige","FI":"Suomi","DK":"Danmark","EE":"Eesti","LV":"Latvija","NL":"Nederland","DE":"Deutschland","PL":"Polska","LT":"Lietuva","BE":"België","CZ":"Česko","SK":"Slovensko","AT":"Österreich"}'
+             data-back-all="Wszystkie kraje" data-back-country="Wróć: {country}" data-none="Brak wpisów dla: {country}. Zaczynamy w krajach nordyckich i dodajemy kolejne kraje krok po kroku."
+             data-open-page="Przeczytaj stronę w języku lokalnym" data-deadline="Termin" data-days-left="pozostało dni: {n}" data-value="Wartość / rodzaj" data-where="Miejsce"
+             data-fit="Dobre dopasowanie" data-original="Zobacz oryginalne ogłoszenie" data-sample="Przykład. Link do oryginalnego ogłoszenia pojawi się w prawdziwej liście." data-count-one="{n} wpis" data-count-many="wpisy: {n}">
+          <div class="mappanel" id="mappanel" data-btn="Pokaż interaktywną mapę" data-back="Pokaż proste kafelki">
+            <ul class="tilemap" aria-label="Mapa krajów, które obejmujemy">
             <li style="grid-area:1/1" data-wave="1"><a href="/is/"><b>IS</b><span>Ísland</span></a></li>
             <li style="grid-area:1/3" data-wave="1"><a href="/no/"><b>NO</b><span>Norge</span></a></li>
             <li style="grid-area:1/4" data-wave="1"><a href="/sv/"><b>SE</b><span>Sverige</span></a></li>
@@ -96,16 +100,34 @@
             <li style="grid-area:5/3" data-wave="3"><a href="/cs/"><b>CZ</b><span>Česko</span></a></li>
             <li style="grid-area:5/4" data-wave="3"><a href="/sk/"><b>SK</b><span>Slovensko</span></a></li>
             <li style="grid-area:6/3" data-wave="3"><a href="/at/"><b>AT</b><span>Österreich</span></a></li>
-          </ul>
+            </ul>
             <div class="gmap" hidden role="region" aria-label="Mapa krajów, które obejmujemy"></div>
             <p class="maptip" hidden></p>
-            <div class="mapctl"><button type="button" class="mapload" hidden></button><p class="mapnote" hidden>Mapa Google ładuje się dopiero po kliknięciu. Google może zapisać pliki cookie.</p></div>
+            <div class="mapctl"><button type="button" class="mapload" hidden></button><p class="mapnote" hidden>Mapę dostarcza Google Maps, które może zapisywać pliki cookie. Wolisz bez tego? Wybierz proste kafelki.</p></div>
+            <ul class="tradelegend" hidden aria-label="Kolory branż"></ul>
           </div>
-          <ul class="legend">
-            <li data-wave="1"><b>Teraz</b> Norwegia, Dania, Szwecja, Finlandia i Islandia</li>
-            <li data-wave="2"><b>Dalej</b> Polska i Niemcy</li>
-            <li data-wave="3"><b>Potem</b> kraje sąsiednie</li>
-          </ul>
+          <aside class="mapside" id="mapside" aria-live="polite">
+            <div data-view="overview">
+              <p class="ms-title">Gdzie szukamy</p>
+              <ul class="legend">
+                <li data-wave="1"><b>Teraz</b> Norwegia, Dania, Szwecja, Finlandia i Islandia</li>
+                <li data-wave="2"><b>Dalej</b> Polska i Niemcy</li>
+                <li data-wave="3"><b>Potem</b> kraje sąsiednie</li>
+              </ul>
+              <p class="ms-hint">Wybierz kraj, aby przybliżyć mapę. Kolorowe punkty to przykładowe przetargi, jeden punkt na przetarg.</p>
+            </div>
+            <div data-view="country" hidden tabindex="-1">
+              <button type="button" class="back" data-back="overview"></button>
+              <h3 class="ms-country"></h3>
+              <p class="ms-count"></p>
+              <ul class="tlist"></ul>
+              <p class="cp-more"></p>
+            </div>
+            <div data-view="tender" hidden tabindex="-1">
+              <button type="button" class="back" data-back="country"></button>
+              <div class="tdetail"></div>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
@@ -137,7 +159,16 @@
       <div class="wrap">
         <h2>Zajrzyj do jednego wydania</h2>
         <p class="note">To tylko przykłady. Prawdziwe linki do oficjalnych ogłoszeń pojawią się wraz ze startem listy — a oryginalne ogłoszenie zawsze jest na pierwszym miejscu.</p>
-        <div class="cards">
+        <div class="filters">
+          <label>Kraj
+            <select id="f-country"><option value="">Wszystkie kraje</option><option value="NO">Norge</option><option value="DK">Danmark</option><option value="SE">Sverige</option><option value="FI">Suomi</option><option value="IS">Ísland</option><option value="PL">Polska</option><option value="DE">Deutschland</option></select>
+          </label>
+          <label>Branża
+            <select id="f-trade"><option value="">Wszystkie branże</option><option value="electrical">Elektryka</option><option value="plumbing">Hydraulika</option><option value="hvac">Wentylacja</option><option value="painting">Malowanie</option><option value="building">Budownictwo</option><option value="cleaning">Sprzątanie</option></select>
+          </label>
+          <p class="fcount" id="f-count" aria-live="polite"></p>
+        </div>
+        <div class="cards" id="tenders" data-src="/tenders.pl.json" data-fit="Dobre dopasowanie" data-original="Zobacz oryginalne ogłoszenie" data-sample="Przykład. Link do oryginalnego ogłoszenia pojawi się w prawdziwej liście." data-empty="Nic jeszcze nie pasuje do filtrów." data-one="{n} wpis" data-many="wpisy: {n}" data-days-left="pozostało dni: {n}">
           <article class="tcard">
             <div class="tc-top"><span class="chip">Malowanie</span><span class="tc-cc">Norwegia</span></div>
             <h3>Malowanie, budynki komunalne</h3>
@@ -204,6 +235,7 @@
       <p><strong>Kraje:</strong> <a href="/">English</a> · <a href="/no/">Norge</a> · <a href="/da/">Danmark</a> · <a href="/sv/">Sverige</a> · <a href="/fi/">Suomi</a> · <a href="/is/">Ísland</a> · <a href="/pl/" aria-current="page">Polska</a> · <a href="/de/">Deutschland</a> · <a href="/cs/">Česko</a> · <a href="/sk/">Slovensko</a> · <a href="/at/">Österreich</a> · <a href="/nl/">Nederland</a> · <a href="/be/">België</a> · <a href="/lt/">Lietuva</a> · <a href="/ee/">Eesti</a> · <a href="/lv/">Latvija</a></p>
     </div>
   </footer>
+  <script src="/tenders.js" defer></script>
   <script src="/map.js" defer></script>
 </body>
 </html>
