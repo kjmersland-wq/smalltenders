@@ -113,6 +113,44 @@
     });
   });
 
+  // ---- live counters in the hero: open tenders and new this week
+  var LABELS = {
+    en: ['open tenders', 'new this week', 'example data'], nb: ['åpne anbud', 'nye denne uken', 'eksempeldata'], da: ['åbne udbud', 'nye denne uge', 'eksempeldata'],
+    sv: ['öppna upphandlingar', 'nya den här veckan', 'exempeldata'], fi: ['avointa hankintaa', 'uutta tällä viikolla', 'esimerkkitietoja'], is: ['opin útboð', 'ný í þessari viku', 'sýnigögn'],
+    pl: ['otwartych przetargów', 'nowych w tym tygodniu', 'dane przykładowe'], de: ['offene Ausschreibungen', 'neu diese Woche', 'Beispieldaten'], cs: ['otevřených zakázek', 'nových tento týden', 'ukázková data'],
+    sk: ['otvorených zákaziek', 'nových tento týždeň', 'ukážkové údaje'], nl: ['open aanbestedingen', 'nieuw deze week', 'voorbeeldgegevens'], lt: ['atvirų pirkimų', 'naujų šią savaitę', 'pavyzdiniai duomenys'],
+    et: ['avatud hanget', 'uut sel nädalal', 'näidisandmed'], lv: ['atvērti iepirkumi', 'jauni šonedēļ', 'parauga dati'], fr: ['marchés ouverts', 'nouveaux cette semaine', 'données d’exemple'],
+    es: ['licitaciones abiertas', 'nuevas esta semana', 'datos de ejemplo'], it: ['appalti aperti', 'nuovi questa settimana', 'dati di esempio']
+  };
+  var lang = (document.documentElement.lang || 'en').toLowerCase();
+  var L = LABELS[lang] || LABELS[lang.split('-')[0]] || LABELS.en;
+  api.labels = { open: L[0], fresh: L[1], example: L[2] };
+  window.stLabels = api.labels;
+
+  function ageDays(t) {
+    if (t.published) return Math.max(0, Math.floor((new Date() - new Date(t.published)) / 86400000));
+    return typeof t.publishedDaysAgo === 'number' ? t.publishedDaysAgo : 999;
+  }
+  api.isOpen = function (t) { return t.deadline ? new Date(t.deadline) >= new Date() : true; };
+  api.isNew = function (t) { return ageDays(t) <= 7; };
+
+  function buildStats() {
+    var host = document.querySelector('.hero .hero-grid > div'); if (!host || document.querySelector('.hero-stats')) return;
+    var open = all.filter(api.isOpen), fresh = open.filter(api.isNew);
+    var box = el('div', 'hero-stats');
+    function stat(n, label, onclick) {
+      var a = el('a', 'stat'); a.href = '#coverage';
+      a.appendChild(el('b', '', String(n))); a.appendChild(el('span', '', label));
+      a.addEventListener('click', function (e) { e.preventDefault(); onclick(); var c = document.getElementById('coverage'); if (c) c.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
+      return a;
+    }
+    box.appendChild(stat(open.length, L[0], function () { if (window.stMap) window.stMap.reset(); }));
+    box.appendChild(el('i', 'stat-sep'));
+    box.appendChild(stat(fresh.length, L[1], function () { if (window.stMap) window.stMap.setNew(true); }));
+    if (open.length && open.every(function (t) { return t.sample; })) box.appendChild(el('small', 'stat-note', L[2]));
+    host.appendChild(box);
+  }
+
   var stage = document.getElementById('mapstage');
   fetch((stage && stage.dataset.tenders) || (box && box.dataset.src) || (panel && panel.dataset.src) || '/tenders.json').then(function (r) { return r.json(); }).then(function (j) {
     var list = j.tenders || [];
@@ -122,6 +160,7 @@
       selT.addEventListener('change', render);
       render();
     }
+    buildStats();
     resolveReady(all);
   }).catch(function () { resolveReady([]); /* keep the server-rendered cards */ });
 })();

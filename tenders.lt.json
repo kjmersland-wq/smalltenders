@@ -1,5 +1,5 @@
 {
- "_note": "SAMPLE entries only.",
+ "_note": "SAMPLE entries only. 'publishedDaysAgo' is for samples; real entries use an ISO 'published' date.",
  "tenders": [
   {
    "id": "s1",
@@ -17,7 +17,8 @@
    "value": "iki 150 000 €",
    "source": "Doffin",
    "fit": "dažymo įmonei, kuri gali planuoti pagal nustatytą terminą.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 15
   },
   {
    "id": "n2",
@@ -35,7 +36,8 @@
    "value": "iki 180 000 €",
    "source": "Doffin",
    "fit": "mažai elektros įmonei, kuriai patinka aiškūs darbai arti namų.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 16
   },
   {
    "id": "n3",
@@ -53,7 +55,8 @@
    "value": "apie 140 000 €",
    "source": "Doffin",
    "fit": "statybos įmonei, kuriai patinka aiškiai apibrėžti remonto darbai.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 26
   },
   {
    "id": "n4",
@@ -71,7 +74,8 @@
    "value": "Preliminarioji sutartis",
    "source": "Doffin",
    "fit": "vėdinimo ir šildymo įmonei, kuri nori pastovaus, pasikartojančio darbo.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 29
   },
   {
    "id": "s4",
@@ -89,7 +93,8 @@
    "value": "apie 120 000 € per metus",
    "source": "TED",
    "fit": "valymo įmonei, kuri nori pastovios vietinės sutarties.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 18
   },
   {
    "id": "e2",
@@ -107,7 +112,8 @@
    "value": "iki 200 000 €",
    "source": "TED",
    "fit": "santechnikos įmonei su nedidele komanda, kuriai patinka planuojami, pasikartojantys darbai.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 1
   },
   {
    "id": "e3",
@@ -125,7 +131,8 @@
    "value": "apie 110 000 €",
    "source": "TED",
    "fit": "dažymo įmonei, kuri gali planuoti pagal nustatytą terminą.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 24
   },
   {
    "id": "e4",
@@ -143,7 +150,8 @@
    "value": "iki 90 000 €",
    "source": "TED",
    "fit": "mažai elektros įmonei, kuriai patinka aiškūs darbai arti namų.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 14
   },
   {
    "id": "s5",
@@ -161,7 +169,8 @@
    "value": "iki 200 000 €",
    "source": "TED",
    "fit": "santechnikos įmonei su nedidele komanda, kuriai patinka planuojami, pasikartojantys darbai.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 8
   },
   {
    "id": "d2",
@@ -179,7 +188,8 @@
    "value": "Preliminarioji sutartis",
    "source": "TED",
    "fit": "vėdinimo ir šildymo įmonei, kuri nori pastovaus, pasikartojančio darbo.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 28
   },
   {
    "id": "d3",
@@ -197,7 +207,8 @@
    "value": "apie 160 000 €",
    "source": "TED",
    "fit": "statybos įmonei, kuriai patinka aiškiai apibrėžti remonto darbai.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 5
   },
   {
    "id": "d4",
@@ -215,7 +226,8 @@
    "value": "apie 80 000 € per metus",
    "source": "TED",
    "fit": "valymo įmonei, kuri nori pastovios vietinės sutarties.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 1
   },
   {
    "id": "s6",
@@ -233,7 +245,8 @@
    "value": "apie 180 000 €",
    "source": "Hilma",
    "fit": "statybos įmonei, kuriai patinka aiškiai apibrėžti remonto darbai.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 5
   },
   {
    "id": "f2",
@@ -251,7 +264,8 @@
    "value": "iki 170 000 €",
    "source": "Hilma",
    "fit": "vėdinimo ir šildymo įmonei, kuri nori pastovaus, pasikartojančio darbo.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 31
   },
   {
    "id": "f3",
@@ -269,7 +283,8 @@
    "value": "iki 100 000 €",
    "source": "Hilma",
    "fit": "dažymo įmonei, kuri gali planuoti pagal nustatytą terminą.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 8
   },
   {
    "id": "f4",
@@ -287,7 +302,8 @@
    "value": "apie 190 000 €",
    "source": "Hilma",
    "fit": "mažai elektros įmonei, kuriai patinka aiškūs darbai arti namų.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 11
   },
   {
    "id": "s7",
@@ -305,7 +321,8 @@
    "value": "iki 100 000 €",
    "source": "TED",
    "fit": "mažai elektros įmonei, kuriai patinka aiškūs darbai arti namų.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 28
   },
   {
    "id": "i2",
@@ -323,7 +340,8 @@
    "value": "iki 120 000 €",
    "source": "TED",
    "fit": "santechnikos įmonei su nedidele komanda, kuriai patinka planuojami, pasikartojantys darbai.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 10
   },
   {
    "id": "s2",
@@ -341,7 +359,8 @@
    "value": "Preliminarioji sutartis",
    "source": "TED",
    "fit": "vėdinimo ir šildymo įmonei, kuri nori pastovaus, pasikartojančio darbo.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 12
   },
   {
    "id": "p2",
@@ -359,7 +378,8 @@
    "value": "iki 110 000 €",
    "source": "TED",
    "fit": "dažymo įmonei, kuri gali planuoti pagal nustatytą terminą.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 32
   },
   {
    "id": "p3",
@@ -377,7 +397,8 @@
    "value": "iki 130 000 €",
    "source": "TED",
    "fit": "mažai elektros įmonei, kuriai patinka aiškūs darbai arti namų.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 9
   },
   {
    "id": "p4",
@@ -395,7 +416,8 @@
    "value": "apie 90 000 € per metus",
    "source": "TED",
    "fit": "valymo įmonei, kuri nori pastovios vietinės sutarties.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 19
   },
   {
    "id": "s3",
@@ -413,7 +435,8 @@
    "value": "Aiškiai apribota",
    "source": "TED",
    "fit": "mažai elektros įmonei, kuriai patinka aiškūs darbai arti namų.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 2
   },
   {
    "id": "g2",
@@ -431,7 +454,8 @@
    "value": "iki 190 000 €",
    "source": "TED",
    "fit": "santechnikos įmonei su nedidele komanda, kuriai patinka planuojami, pasikartojantys darbai.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 18
   },
   {
    "id": "g3",
@@ -449,7 +473,8 @@
    "value": "apie 170 000 €",
    "source": "TED",
    "fit": "statybos įmonei, kuriai patinka aiškiai apibrėžti remonto darbai.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 8
   },
   {
    "id": "g4",
@@ -467,7 +492,8 @@
    "value": "Preliminarioji sutartis",
    "source": "TED",
    "fit": "vėdinimo ir šildymo įmonei, kuri nori pastovaus, pasikartojančio darbo.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 5
   },
   {
    "id": "x1",
@@ -485,7 +511,8 @@
    "value": "apie 100 000 € per metus",
    "source": "TED",
    "fit": "valymo įmonei, kuri nori pastovios vietinės sutarties.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 10
   },
   {
    "id": "x2",
@@ -503,7 +530,8 @@
    "value": "iki 120 000 €",
    "source": "TED",
    "fit": "dažymo įmonei, kuri gali planuoti pagal nustatytą terminą.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 20
   },
   {
    "id": "x3",
@@ -521,7 +549,8 @@
    "value": "iki 200 000 €",
    "source": "TED",
    "fit": "vėdinimo ir šildymo įmonei, kuri nori pastovaus, pasikartojančio darbo.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 30
   },
   {
    "id": "x4",
@@ -539,7 +568,8 @@
    "value": "iki 150 000 €",
    "source": "TED",
    "fit": "statybos įmonei, kuriai patinka aiškiai apibrėžti remonto darbai.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 7
   },
   {
    "id": "x5",
@@ -557,7 +587,8 @@
    "value": "iki 110 000 €",
    "source": "TED",
    "fit": "mažai elektros įmonei, kuriai patinka aiškūs darbai arti namų.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 17
   },
   {
    "id": "x6",
@@ -575,7 +606,8 @@
    "value": "iki 140 000 €",
    "source": "TED",
    "fit": "santechnikos įmonei su nedidele komanda, kuriai patinka planuojami, pasikartojantys darbai.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 27
   },
   {
    "id": "x7",
@@ -593,7 +625,8 @@
    "value": "iki 60 000 €",
    "source": "TED",
    "fit": "dažymo įmonei, kuri gali planuoti pagal nustatytą terminą.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 4
   },
   {
    "id": "x8",
@@ -611,7 +644,8 @@
    "value": "iki 90 000 €",
    "source": "TED",
    "fit": "mažai elektros įmonei, kuriai patinka aiškūs darbai arti namų.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 19
   },
   {
    "id": "x9",
@@ -629,7 +663,8 @@
    "value": "Preliminarioji sutartis",
    "source": "TED",
    "fit": "vėdinimo ir šildymo įmonei, kuri nori pastovaus, pasikartojančio darbo.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 29
   },
   {
    "id": "y1",
@@ -647,7 +682,8 @@
    "value": "apie 130 000 € per metus",
    "source": "TED",
    "fit": "valymo įmonei, kuri nori pastovios vietinės sutarties.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 0
   },
   {
    "id": "y2",
@@ -665,7 +701,8 @@
    "value": "iki 180 000 €",
    "source": "TED",
    "fit": "statybos įmonei, kuriai patinka aiškiai apibrėžti remonto darbai.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 23
   },
   {
    "id": "y3",
@@ -683,7 +720,8 @@
    "value": "apie 95 000 €",
    "source": "TED",
    "fit": "dažymo įmonei, kuri gali planuoti pagal nustatytą terminą.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 13
   },
   {
    "id": "y4",
@@ -701,7 +739,8 @@
    "value": "iki 100 000 €",
    "source": "TED",
    "fit": "santechnikos įmonei su nedidele komanda, kuriai patinka planuojami, pasikartojantys darbai.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 17
   },
   {
    "id": "r1",
@@ -719,7 +758,8 @@
    "value": "iki 170 000 €",
    "source": "Doffin",
    "fit": "stogdengių įmonei, kuri pažįsta ruberoidą ir bitumą ant plokščių stogų.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 22
   },
   {
    "id": "r2",
@@ -737,7 +777,8 @@
    "value": "apie 130 000 €",
    "source": "TED",
    "fit": "stogdengių įmonei, kuri pažįsta ruberoidą ir bitumą ant plokščių stogų.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 25
   },
   {
    "id": "fl1",
@@ -755,7 +796,8 @@
    "value": "iki 90 000 €",
    "source": "TED",
    "fit": "grindų įmonei, kuri gali dirbti ne darbo valandomis.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 2
   },
   {
    "id": "fl2",
@@ -773,7 +815,8 @@
    "value": "iki 120 000 €",
    "source": "Hilma",
    "fit": "grindų įmonei, kuri gali dirbti ne darbo valandomis.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 12
   },
   {
    "id": "wd1",
@@ -791,7 +834,8 @@
    "value": "apie 150 000 €",
    "source": "TED",
    "fit": "langų ir durų įmonei su savo montuotojais.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 10
   },
   {
    "id": "wd2",
@@ -809,7 +853,8 @@
    "value": "iki 160 000 €",
    "source": "Doffin",
    "fit": "langų ir durų įmonei su savo montuotojais.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 7
   },
   {
    "id": "in1",
@@ -827,7 +872,8 @@
    "value": "apie 140 000 €",
    "source": "TED",
    "fit": "izoliavimo įmonei, kuriai patinka pasikartojantys darbai keliuose pastatuose.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 10
   },
   {
    "id": "in2",
@@ -845,7 +891,8 @@
    "value": "iki 180 000 €",
    "source": "TED",
    "fit": "izoliavimo įmonei, kuriai patinka pasikartojantys darbai keliuose pastatuose.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 7
   },
   {
    "id": "fa1",
@@ -863,7 +910,8 @@
    "value": "apie 170 000 €",
    "source": "Hilma",
    "fit": "fasadų įmonei, turinčiai patirties su apdaila ir aiškią apimtį.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 6
   },
   {
    "id": "fa2",
@@ -881,7 +929,8 @@
    "value": "iki 200 000 €",
    "source": "TED",
    "fit": "fasadų įmonei, turinčiai patirties su apdaila ir aiškią apimtį.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 29
   },
   {
    "id": "gw1",
@@ -899,7 +948,8 @@
    "value": "apie 190 000 €",
    "source": "Doffin",
    "fit": "žemės darbų įmonei su savo ekskavatoriumi ir aiškiomis užduotimis.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 15
   },
   {
    "id": "gw2",
@@ -917,7 +967,8 @@
    "value": "iki 150 000 €",
    "source": "TED",
    "fit": "žemės darbų įmonei su savo ekskavatoriumi ir aiškiomis užduotimis.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 25
   },
   {
    "id": "dm1",
@@ -935,7 +986,8 @@
    "value": "iki 160 000 €",
    "source": "TED",
    "fit": "griovimo įmonei, kuri tvarko atsargų griovimą ir atliekų tvarkymą.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 17
   },
   {
    "id": "dm2",
@@ -953,7 +1005,8 @@
    "value": "apie 120 000 €",
    "source": "Hilma",
    "fit": "griovimo įmonei, kuri tvarko atsargų griovimą ir atliekų tvarkymą.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 14
   },
   {
    "id": "sc1",
@@ -971,7 +1024,8 @@
    "value": "Preliminarioji sutartis",
    "source": "TED",
    "fit": "pastolių įmonei, kuri nori pasikartojančių užsakymų iš viešojo užsakovo.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 29
   },
   {
    "id": "sc2",
@@ -989,7 +1043,8 @@
    "value": "iki 100 000 €",
    "source": "TED",
    "fit": "pastolių įmonei, kuri nori pasikartojančių užsakymų iš viešojo užsakovo.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 6
   }
  ]
 }

@@ -483,3 +483,16 @@ h1 { font-size: clamp(40px, 5.8vw, 72px); line-height: 1.04; letter-spacing: -.0
 .src-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 14px; }
 .src-end { margin-top: 44px; font-family: var(--sans); }
 @media (max-width: 760px) { .src-search { grid-template-columns: 1fr; } }
+
+/* hero counters */
+.hero-stats { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 22px; margin-top: 30px; padding-top: 22px; border-top: 1px solid var(--line); font-family: var(--sans); }
+.stat { display: inline-flex; align-items: baseline; gap: 9px; text-decoration: none; color: var(--ink); padding: 4px 0; border-bottom: 1px solid transparent; transition: border-color .18s, color .18s; }
+.stat b { font: 500 40px/1 var(--serif); letter-spacing: -.02em; }
+.stat span { font-size: 14px; color: var(--muted); }
+.stat:hover { border-bottom-color: var(--accent); color: var(--accent); }
+.stat:hover span { color: var(--accent); }
+.stat-sep { width: 1px; height: 30px; background: var(--line); }
+.stat-note { flex-basis: 100%; font-size: 12px; color: var(--muted); }
+.pill { margin-left: 10px; padding: 4px 12px; font: 600 12px var(--sans); background: var(--accent-soft); color: var(--accent); border: 1px solid #e0b9a0; border-radius: 999px; }
+.pill:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+@media (max-width: 760px) { .stat b { font-size: 34px; } .stat-sep { display: none; } }

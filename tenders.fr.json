@@ -1,5 +1,5 @@
 {
- "_note": "SAMPLE entries only.",
+ "_note": "SAMPLE entries only. 'publishedDaysAgo' is for samples; real entries use an ISO 'published' date.",
  "tenders": [
   {
    "id": "s1",
@@ -17,7 +17,8 @@
    "value": "moins de 150 000 €",
    "source": "Doffin",
    "fit": "pour une entreprise de peinture capable de planifier autour d'une date limite fixe.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 15
   },
   {
    "id": "n2",
@@ -35,7 +36,8 @@
    "value": "moins de 180 000 €",
    "source": "Doffin",
    "fit": "pour une petite entreprise d'électricité qui aime les chantiers bien définis près de chez elle.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 16
   },
   {
    "id": "n3",
@@ -53,7 +55,8 @@
    "value": "environ 140 000 €",
    "source": "Doffin",
    "fit": "pour une entreprise du bâtiment qui aime les réparations bien délimitées.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 26
   },
   {
    "id": "n4",
@@ -71,7 +74,8 @@
    "value": "Accord-cadre",
    "source": "Doffin",
    "fit": "pour une entreprise de ventilation et de chauffage qui cherche un travail régulier et récurrent.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 29
   },
   {
    "id": "s4",
@@ -89,7 +93,8 @@
    "value": "environ 120 000 € par an",
    "source": "TED",
    "fit": "pour une entreprise de nettoyage qui veut un contrat local stable.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 18
   },
   {
    "id": "e2",
@@ -107,7 +112,8 @@
    "value": "moins de 200 000 €",
    "source": "TED",
    "fit": "pour une entreprise de plomberie avec une petite équipe, qui aime le travail planifié et récurrent.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 1
   },
   {
    "id": "e3",
@@ -125,7 +131,8 @@
    "value": "environ 110 000 €",
    "source": "TED",
    "fit": "pour une entreprise de peinture capable de planifier autour d'une date limite fixe.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 24
   },
   {
    "id": "e4",
@@ -143,7 +150,8 @@
    "value": "moins de 90 000 €",
    "source": "TED",
    "fit": "pour une petite entreprise d'électricité qui aime les chantiers bien définis près de chez elle.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 14
   },
   {
    "id": "s5",
@@ -161,7 +169,8 @@
    "value": "moins de 200 000 €",
    "source": "TED",
    "fit": "pour une entreprise de plomberie avec une petite équipe, qui aime le travail planifié et récurrent.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 8
   },
   {
    "id": "d2",
@@ -179,7 +188,8 @@
    "value": "Accord-cadre",
    "source": "TED",
    "fit": "pour une entreprise de ventilation et de chauffage qui cherche un travail régulier et récurrent.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 28
   },
   {
    "id": "d3",
@@ -197,7 +207,8 @@
    "value": "environ 160 000 €",
    "source": "TED",
    "fit": "pour une entreprise du bâtiment qui aime les réparations bien délimitées.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 5
   },
   {
    "id": "d4",
@@ -215,7 +226,8 @@
    "value": "environ 80 000 € par an",
    "source": "TED",
    "fit": "pour une entreprise de nettoyage qui veut un contrat local stable.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 1
   },
   {
    "id": "s6",
@@ -233,7 +245,8 @@
    "value": "environ 180 000 €",
    "source": "Hilma",
    "fit": "pour une entreprise du bâtiment qui aime les réparations bien délimitées.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 5
   },
   {
    "id": "f2",
@@ -251,7 +264,8 @@
    "value": "moins de 170 000 €",
    "source": "Hilma",
    "fit": "pour une entreprise de ventilation et de chauffage qui cherche un travail régulier et récurrent.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 31
   },
   {
    "id": "f3",
@@ -269,7 +283,8 @@
    "value": "moins de 100 000 €",
    "source": "Hilma",
    "fit": "pour une entreprise de peinture capable de planifier autour d'une date limite fixe.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 8
   },
   {
    "id": "f4",
@@ -287,7 +302,8 @@
    "value": "environ 190 000 €",
    "source": "Hilma",
    "fit": "pour une petite entreprise d'électricité qui aime les chantiers bien définis près de chez elle.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 11
   },
   {
    "id": "s7",
@@ -305,7 +321,8 @@
    "value": "moins de 100 000 €",
    "source": "TED",
    "fit": "pour une petite entreprise d'électricité qui aime les chantiers bien définis près de chez elle.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 28
   },
   {
    "id": "i2",
@@ -323,7 +340,8 @@
    "value": "moins de 120 000 €",
    "source": "TED",
    "fit": "pour une entreprise de plomberie avec une petite équipe, qui aime le travail planifié et récurrent.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 10
   },
   {
    "id": "s2",
@@ -341,7 +359,8 @@
    "value": "Accord-cadre",
    "source": "TED",
    "fit": "pour une entreprise de ventilation et de chauffage qui cherche un travail régulier et récurrent.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 12
   },
   {
    "id": "p2",
@@ -359,7 +378,8 @@
    "value": "moins de 110 000 €",
    "source": "TED",
    "fit": "pour une entreprise de peinture capable de planifier autour d'une date limite fixe.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 32
   },
   {
    "id": "p3",
@@ -377,7 +397,8 @@
    "value": "moins de 130 000 €",
    "source": "TED",
    "fit": "pour une petite entreprise d'électricité qui aime les chantiers bien définis près de chez elle.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 9
   },
   {
    "id": "p4",
@@ -395,7 +416,8 @@
    "value": "environ 90 000 € par an",
    "source": "TED",
    "fit": "pour une entreprise de nettoyage qui veut un contrat local stable.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 19
   },
   {
    "id": "s3",
@@ -413,7 +435,8 @@
    "value": "Périmètre clair",
    "source": "TED",
    "fit": "pour une petite entreprise d'électricité qui aime les chantiers bien définis près de chez elle.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 2
   },
   {
    "id": "g2",
@@ -431,7 +454,8 @@
    "value": "moins de 190 000 €",
    "source": "TED",
    "fit": "pour une entreprise de plomberie avec une petite équipe, qui aime le travail planifié et récurrent.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 18
   },
   {
    "id": "g3",
@@ -449,7 +473,8 @@
    "value": "environ 170 000 €",
    "source": "TED",
    "fit": "pour une entreprise du bâtiment qui aime les réparations bien délimitées.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 8
   },
   {
    "id": "g4",
@@ -467,7 +492,8 @@
    "value": "Accord-cadre",
    "source": "TED",
    "fit": "pour une entreprise de ventilation et de chauffage qui cherche un travail régulier et récurrent.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 5
   },
   {
    "id": "x1",
@@ -485,7 +511,8 @@
    "value": "environ 100 000 € par an",
    "source": "TED",
    "fit": "pour une entreprise de nettoyage qui veut un contrat local stable.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 10
   },
   {
    "id": "x2",
@@ -503,7 +530,8 @@
    "value": "moins de 120 000 €",
    "source": "TED",
    "fit": "pour une entreprise de peinture capable de planifier autour d'une date limite fixe.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 20
   },
   {
    "id": "x3",
@@ -521,7 +549,8 @@
    "value": "moins de 200 000 €",
    "source": "TED",
    "fit": "pour une entreprise de ventilation et de chauffage qui cherche un travail régulier et récurrent.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 30
   },
   {
    "id": "x4",
@@ -539,7 +568,8 @@
    "value": "moins de 150 000 €",
    "source": "TED",
    "fit": "pour une entreprise du bâtiment qui aime les réparations bien délimitées.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 7
   },
   {
    "id": "x5",
@@ -557,7 +587,8 @@
    "value": "moins de 110 000 €",
    "source": "TED",
    "fit": "pour une petite entreprise d'électricité qui aime les chantiers bien définis près de chez elle.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 17
   },
   {
    "id": "x6",
@@ -575,7 +606,8 @@
    "value": "moins de 140 000 €",
    "source": "TED",
    "fit": "pour une entreprise de plomberie avec une petite équipe, qui aime le travail planifié et récurrent.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 27
   },
   {
    "id": "x7",
@@ -593,7 +625,8 @@
    "value": "moins de 60 000 €",
    "source": "TED",
    "fit": "pour une entreprise de peinture capable de planifier autour d'une date limite fixe.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 4
   },
   {
    "id": "x8",
@@ -611,7 +644,8 @@
    "value": "moins de 90 000 €",
    "source": "TED",
    "fit": "pour une petite entreprise d'électricité qui aime les chantiers bien définis près de chez elle.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 19
   },
   {
    "id": "x9",
@@ -629,7 +663,8 @@
    "value": "Accord-cadre",
    "source": "TED",
    "fit": "pour une entreprise de ventilation et de chauffage qui cherche un travail régulier et récurrent.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 29
   },
   {
    "id": "y1",
@@ -647,7 +682,8 @@
    "value": "environ 130 000 € par an",
    "source": "TED",
    "fit": "pour une entreprise de nettoyage qui veut un contrat local stable.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 0
   },
   {
    "id": "y2",
@@ -665,7 +701,8 @@
    "value": "moins de 180 000 €",
    "source": "TED",
    "fit": "pour une entreprise du bâtiment qui aime les réparations bien délimitées.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 23
   },
   {
    "id": "y3",
@@ -683,7 +720,8 @@
    "value": "environ 95 000 €",
    "source": "TED",
    "fit": "pour une entreprise de peinture capable de planifier autour d'une date limite fixe.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 13
   },
   {
    "id": "y4",
@@ -701,7 +739,8 @@
    "value": "moins de 100 000 €",
    "source": "TED",
    "fit": "pour une entreprise de plomberie avec une petite équipe, qui aime le travail planifié et récurrent.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 17
   },
   {
    "id": "r1",
@@ -719,7 +758,8 @@
    "value": "moins de 170 000 €",
    "source": "Doffin",
    "fit": "pour un couvreur habitué au feutre et au bitume sur toits plats.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 22
   },
   {
    "id": "r2",
@@ -737,7 +777,8 @@
    "value": "environ 130 000 €",
    "source": "TED",
    "fit": "pour un couvreur habitué au feutre et au bitume sur toits plats.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 25
   },
   {
    "id": "fl1",
@@ -755,7 +796,8 @@
    "value": "moins de 90 000 €",
    "source": "TED",
    "fit": "pour une entreprise de sols capable de travailler en dehors des heures d'ouverture.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 2
   },
   {
    "id": "fl2",
@@ -773,7 +815,8 @@
    "value": "moins de 120 000 €",
    "source": "Hilma",
    "fit": "pour une entreprise de sols capable de travailler en dehors des heures d'ouverture.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 12
   },
   {
    "id": "wd1",
@@ -791,7 +834,8 @@
    "value": "environ 150 000 €",
    "source": "TED",
    "fit": "pour une entreprise de menuiserie extérieure avec ses propres poseurs.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 10
   },
   {
    "id": "wd2",
@@ -809,7 +853,8 @@
    "value": "moins de 160 000 €",
    "source": "Doffin",
    "fit": "pour une entreprise de menuiserie extérieure avec ses propres poseurs.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 7
   },
   {
    "id": "in1",
@@ -827,7 +872,8 @@
    "value": "environ 140 000 €",
    "source": "TED",
    "fit": "pour une entreprise d'isolation qui aime les chantiers reproductibles dans plusieurs bâtiments.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 10
   },
   {
    "id": "in2",
@@ -845,7 +891,8 @@
    "value": "moins de 180 000 €",
    "source": "TED",
    "fit": "pour une entreprise d'isolation qui aime les chantiers reproductibles dans plusieurs bâtiments.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 7
   },
   {
    "id": "fa1",
@@ -863,7 +910,8 @@
    "value": "environ 170 000 €",
    "source": "Hilma",
    "fit": "pour une entreprise de façade expérimentée en bardage, avec un périmètre clair.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 6
   },
   {
    "id": "fa2",
@@ -881,7 +929,8 @@
    "value": "moins de 200 000 €",
    "source": "TED",
    "fit": "pour une entreprise de façade expérimentée en bardage, avec un périmètre clair.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 29
   },
   {
    "id": "gw1",
@@ -899,7 +948,8 @@
    "value": "environ 190 000 €",
    "source": "Doffin",
    "fit": "pour une entreprise de terrassement avec sa propre pelleteuse et des missions claires.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 15
   },
   {
    "id": "gw2",
@@ -917,7 +967,8 @@
    "value": "moins de 150 000 €",
    "source": "TED",
    "fit": "pour une entreprise de terrassement avec sa propre pelleteuse et des missions claires.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 25
   },
   {
    "id": "dm1",
@@ -935,7 +986,8 @@
    "value": "moins de 160 000 €",
    "source": "TED",
    "fit": "pour une entreprise de démolition soigneuse, qui gère aussi le tri des déchets.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 17
   },
   {
    "id": "dm2",
@@ -953,7 +1005,8 @@
    "value": "environ 120 000 €",
    "source": "Hilma",
    "fit": "pour une entreprise de démolition soigneuse, qui gère aussi le tri des déchets.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 14
   },
   {
    "id": "sc1",
@@ -971,7 +1024,8 @@
    "value": "Accord-cadre",
    "source": "TED",
    "fit": "pour une entreprise d'échafaudage qui veut du travail récurrent auprès d'un acheteur public.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 29
   },
   {
    "id": "sc2",
@@ -989,7 +1043,8 @@
    "value": "moins de 100 000 €",
    "source": "TED",
    "fit": "pour une entreprise d'échafaudage qui veut du travail récurrent auprès d'un acheteur public.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 6
   }
  ]
 }

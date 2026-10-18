@@ -1,5 +1,5 @@
 {
- "_note": "SAMPLE entries only.",
+ "_note": "SAMPLE entries only. 'publishedDaysAgo' is for samples; real entries use an ISO 'published' date.",
  "tenders": [
   {
    "id": "s1",
@@ -17,7 +17,8 @@
    "value": "meno di 150.000 €",
    "source": "Doffin",
    "fit": "per un'impresa di tinteggiatura capace di pianificare in base a una scadenza fissa.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 15
   },
   {
    "id": "n2",
@@ -35,7 +36,8 @@
    "value": "meno di 180.000 €",
    "source": "Doffin",
    "fit": "per una piccola impresa elettrica che ama i lavori ben definiti vicino a casa.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 16
   },
   {
    "id": "n3",
@@ -53,7 +55,8 @@
    "value": "circa 140.000 €",
    "source": "Doffin",
    "fit": "per un'impresa edile che ama le riparazioni ben delimitate.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 26
   },
   {
    "id": "n4",
@@ -71,7 +74,8 @@
    "value": "Accordo quadro",
    "source": "Doffin",
    "fit": "per un'impresa di ventilazione e riscaldamento che cerca lavoro stabile e ricorrente.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 29
   },
   {
    "id": "s4",
@@ -89,7 +93,8 @@
    "value": "circa 120.000 € all'anno",
    "source": "TED",
    "fit": "per un'impresa di pulizie che vuole un contratto locale stabile.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 18
   },
   {
    "id": "e2",
@@ -107,7 +112,8 @@
    "value": "meno di 200.000 €",
    "source": "TED",
    "fit": "per un'impresa idraulica con un piccolo team che ama il lavoro pianificato e ricorrente.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 1
   },
   {
    "id": "e3",
@@ -125,7 +131,8 @@
    "value": "circa 110.000 €",
    "source": "TED",
    "fit": "per un'impresa di tinteggiatura capace di pianificare in base a una scadenza fissa.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 24
   },
   {
    "id": "e4",
@@ -143,7 +150,8 @@
    "value": "meno di 90.000 €",
    "source": "TED",
    "fit": "per una piccola impresa elettrica che ama i lavori ben definiti vicino a casa.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 14
   },
   {
    "id": "s5",
@@ -161,7 +169,8 @@
    "value": "meno di 200.000 €",
    "source": "TED",
    "fit": "per un'impresa idraulica con un piccolo team che ama il lavoro pianificato e ricorrente.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 8
   },
   {
    "id": "d2",
@@ -179,7 +188,8 @@
    "value": "Accordo quadro",
    "source": "TED",
    "fit": "per un'impresa di ventilazione e riscaldamento che cerca lavoro stabile e ricorrente.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 28
   },
   {
    "id": "d3",
@@ -197,7 +207,8 @@
    "value": "circa 160.000 €",
    "source": "TED",
    "fit": "per un'impresa edile che ama le riparazioni ben delimitate.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 5
   },
   {
    "id": "d4",
@@ -215,7 +226,8 @@
    "value": "circa 80.000 € all'anno",
    "source": "TED",
    "fit": "per un'impresa di pulizie che vuole un contratto locale stabile.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 1
   },
   {
    "id": "s6",
@@ -233,7 +245,8 @@
    "value": "circa 180.000 €",
    "source": "Hilma",
    "fit": "per un'impresa edile che ama le riparazioni ben delimitate.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 5
   },
   {
    "id": "f2",
@@ -251,7 +264,8 @@
    "value": "meno di 170.000 €",
    "source": "Hilma",
    "fit": "per un'impresa di ventilazione e riscaldamento che cerca lavoro stabile e ricorrente.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 31
   },
   {
    "id": "f3",
@@ -269,7 +283,8 @@
    "value": "meno di 100.000 €",
    "source": "Hilma",
    "fit": "per un'impresa di tinteggiatura capace di pianificare in base a una scadenza fissa.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 8
   },
   {
    "id": "f4",
@@ -287,7 +302,8 @@
    "value": "circa 190.000 €",
    "source": "Hilma",
    "fit": "per una piccola impresa elettrica che ama i lavori ben definiti vicino a casa.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 11
   },
   {
    "id": "s7",
@@ -305,7 +321,8 @@
    "value": "meno di 100.000 €",
    "source": "TED",
    "fit": "per una piccola impresa elettrica che ama i lavori ben definiti vicino a casa.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 28
   },
   {
    "id": "i2",
@@ -323,7 +340,8 @@
    "value": "meno di 120.000 €",
    "source": "TED",
    "fit": "per un'impresa idraulica con un piccolo team che ama il lavoro pianificato e ricorrente.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 10
   },
   {
    "id": "s2",
@@ -341,7 +359,8 @@
    "value": "Accordo quadro",
    "source": "TED",
    "fit": "per un'impresa di ventilazione e riscaldamento che cerca lavoro stabile e ricorrente.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 12
   },
   {
    "id": "p2",
@@ -359,7 +378,8 @@
    "value": "meno di 110.000 €",
    "source": "TED",
    "fit": "per un'impresa di tinteggiatura capace di pianificare in base a una scadenza fissa.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 32
   },
   {
    "id": "p3",
@@ -377,7 +397,8 @@
    "value": "meno di 130.000 €",
    "source": "TED",
    "fit": "per una piccola impresa elettrica che ama i lavori ben definiti vicino a casa.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 9
   },
   {
    "id": "p4",
@@ -395,7 +416,8 @@
    "value": "circa 90.000 € all'anno",
    "source": "TED",
    "fit": "per un'impresa di pulizie che vuole un contratto locale stabile.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 19
   },
   {
    "id": "s3",
@@ -413,7 +435,8 @@
    "value": "Ambito definito",
    "source": "TED",
    "fit": "per una piccola impresa elettrica che ama i lavori ben definiti vicino a casa.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 2
   },
   {
    "id": "g2",
@@ -431,7 +454,8 @@
    "value": "meno di 190.000 €",
    "source": "TED",
    "fit": "per un'impresa idraulica con un piccolo team che ama il lavoro pianificato e ricorrente.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 18
   },
   {
    "id": "g3",
@@ -449,7 +473,8 @@
    "value": "circa 170.000 €",
    "source": "TED",
    "fit": "per un'impresa edile che ama le riparazioni ben delimitate.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 8
   },
   {
    "id": "g4",
@@ -467,7 +492,8 @@
    "value": "Accordo quadro",
    "source": "TED",
    "fit": "per un'impresa di ventilazione e riscaldamento che cerca lavoro stabile e ricorrente.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 5
   },
   {
    "id": "x1",
@@ -485,7 +511,8 @@
    "value": "circa 100.000 € all'anno",
    "source": "TED",
    "fit": "per un'impresa di pulizie che vuole un contratto locale stabile.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 10
   },
   {
    "id": "x2",
@@ -503,7 +530,8 @@
    "value": "meno di 120.000 €",
    "source": "TED",
    "fit": "per un'impresa di tinteggiatura capace di pianificare in base a una scadenza fissa.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 20
   },
   {
    "id": "x3",
@@ -521,7 +549,8 @@
    "value": "meno di 200.000 €",
    "source": "TED",
    "fit": "per un'impresa di ventilazione e riscaldamento che cerca lavoro stabile e ricorrente.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 30
   },
   {
    "id": "x4",
@@ -539,7 +568,8 @@
    "value": "meno di 150.000 €",
    "source": "TED",
    "fit": "per un'impresa edile che ama le riparazioni ben delimitate.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 7
   },
   {
    "id": "x5",
@@ -557,7 +587,8 @@
    "value": "meno di 110.000 €",
    "source": "TED",
    "fit": "per una piccola impresa elettrica che ama i lavori ben definiti vicino a casa.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 17
   },
   {
    "id": "x6",
@@ -575,7 +606,8 @@
    "value": "meno di 140.000 €",
    "source": "TED",
    "fit": "per un'impresa idraulica con un piccolo team che ama il lavoro pianificato e ricorrente.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 27
   },
   {
    "id": "x7",
@@ -593,7 +625,8 @@
    "value": "meno di 60.000 €",
    "source": "TED",
    "fit": "per un'impresa di tinteggiatura capace di pianificare in base a una scadenza fissa.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 4
   },
   {
    "id": "x8",
@@ -611,7 +644,8 @@
    "value": "meno di 90.000 €",
    "source": "TED",
    "fit": "per una piccola impresa elettrica che ama i lavori ben definiti vicino a casa.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 19
   },
   {
    "id": "x9",
@@ -629,7 +663,8 @@
    "value": "Accordo quadro",
    "source": "TED",
    "fit": "per un'impresa di ventilazione e riscaldamento che cerca lavoro stabile e ricorrente.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 29
   },
   {
    "id": "y1",
@@ -647,7 +682,8 @@
    "value": "circa 130.000 € all'anno",
    "source": "TED",
    "fit": "per un'impresa di pulizie che vuole un contratto locale stabile.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 0
   },
   {
    "id": "y2",
@@ -665,7 +701,8 @@
    "value": "meno di 180.000 €",
    "source": "TED",
    "fit": "per un'impresa edile che ama le riparazioni ben delimitate.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 23
   },
   {
    "id": "y3",
@@ -683,7 +720,8 @@
    "value": "circa 95.000 €",
    "source": "TED",
    "fit": "per un'impresa di tinteggiatura capace di pianificare in base a una scadenza fissa.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 13
   },
   {
    "id": "y4",
@@ -701,7 +739,8 @@
    "value": "meno di 100.000 €",
    "source": "TED",
    "fit": "per un'impresa idraulica con un piccolo team che ama il lavoro pianificato e ricorrente.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 17
   },
   {
    "id": "r1",
@@ -719,7 +758,8 @@
    "value": "meno di 170.000 €",
    "source": "Doffin",
    "fit": "per un'impresa di coperture abituata a guaina e bitume sui tetti piani.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 22
   },
   {
    "id": "r2",
@@ -737,7 +777,8 @@
    "value": "circa 130.000 €",
    "source": "TED",
    "fit": "per un'impresa di coperture abituata a guaina e bitume sui tetti piani.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 25
   },
   {
    "id": "fl1",
@@ -755,7 +796,8 @@
    "value": "meno di 90.000 €",
    "source": "TED",
    "fit": "per un'impresa di pavimenti in grado di lavorare fuori dagli orari di apertura.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 2
   },
   {
    "id": "fl2",
@@ -773,7 +815,8 @@
    "value": "meno di 120.000 €",
    "source": "Hilma",
    "fit": "per un'impresa di pavimenti in grado di lavorare fuori dagli orari di apertura.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 12
   },
   {
    "id": "wd1",
@@ -791,7 +834,8 @@
    "value": "circa 150.000 €",
    "source": "TED",
    "fit": "per un'impresa di serramenti con posatori propri.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 10
   },
   {
    "id": "wd2",
@@ -809,7 +853,8 @@
    "value": "meno di 160.000 €",
    "source": "Doffin",
    "fit": "per un'impresa di serramenti con posatori propri.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 7
   },
   {
    "id": "in1",
@@ -827,7 +872,8 @@
    "value": "circa 140.000 €",
    "source": "TED",
    "fit": "per un'impresa di isolamento che ama i lavori ripetibili in più edifici.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 10
   },
   {
    "id": "in2",
@@ -845,7 +891,8 @@
    "value": "meno di 180.000 €",
    "source": "TED",
    "fit": "per un'impresa di isolamento che ama i lavori ripetibili in più edifici.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 7
   },
   {
    "id": "fa1",
@@ -863,7 +910,8 @@
    "value": "circa 170.000 €",
    "source": "Hilma",
    "fit": "per un'impresa di facciate con esperienza nei rivestimenti e un ambito chiaro.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 6
   },
   {
    "id": "fa2",
@@ -881,7 +929,8 @@
    "value": "meno di 200.000 €",
    "source": "TED",
    "fit": "per un'impresa di facciate con esperienza nei rivestimenti e un ambito chiaro.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 29
   },
   {
    "id": "gw1",
@@ -899,7 +948,8 @@
    "value": "circa 190.000 €",
    "source": "Doffin",
    "fit": "per un'impresa di movimento terra con escavatore proprio e incarichi chiari.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 15
   },
   {
    "id": "gw2",
@@ -917,7 +967,8 @@
    "value": "meno di 150.000 €",
    "source": "TED",
    "fit": "per un'impresa di movimento terra con escavatore proprio e incarichi chiari.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 25
   },
   {
    "id": "dm1",
@@ -935,7 +986,8 @@
    "value": "meno di 160.000 €",
    "source": "TED",
    "fit": "per un'impresa di demolizioni accurata, che gestisce anche la separazione dei rifiuti.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 17
   },
   {
    "id": "dm2",
@@ -953,7 +1005,8 @@
    "value": "circa 120.000 €",
    "source": "Hilma",
    "fit": "per un'impresa di demolizioni accurata, che gestisce anche la separazione dei rifiuti.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 14
   },
   {
    "id": "sc1",
@@ -971,7 +1024,8 @@
    "value": "Accordo quadro",
    "source": "TED",
    "fit": "per un'impresa di ponteggi che vuole lavoro ricorrente con un ente pubblico.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 29
   },
   {
    "id": "sc2",
@@ -989,7 +1043,8 @@
    "value": "meno di 100.000 €",
    "source": "TED",
    "fit": "per un'impresa di ponteggi che vuole lavoro ricorrente con un ente pubblico.",
-   "link": null
+   "link": null,
+   "publishedDaysAgo": 6
   }
  ]
 }

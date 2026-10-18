@@ -45,7 +45,7 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
   var map = null, loading = false, mapOn = false, infoTip = null;
   var markers = {};          // tender id -> marker
   var bounds = {};           // country code -> LatLngBounds
-  var state = { level: 'overview', cc: null, id: null, trade: '' };
+  var state = { level: 'overview', cc: null, id: null, trade: '', newOnly: false };
 
   function el(tag, cls, text) { var n = document.createElement(tag); if (cls) n.className = cls; if (text) n.textContent = text; return n; }
   function fill(t, o) { return t.replace(/\{(\w+)\}/g, function (_, k) { return o[k]; }); }
@@ -81,6 +81,7 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
     if (state.level === 'country') renderCountry();
     if (state.level === 'tender') renderTender();
     if (cnt) { var n = scoped().length; cnt.textContent = countText(n); }
+    renderNewPill();
     applyMap();
     if (state.level !== 'overview' && window.matchMedia('(max-width: 900px)').matches) {
       side.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -88,7 +89,10 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
     var f = views[state.level]; if (f && f.hasAttribute('tabindex') && state.level !== 'overview') f.focus({ preventScroll: true });
   }
 
-  function matches(t) { return !state.trade || t.trade === state.trade; }
+  function matches(t) {
+    if (state.newOnly && !(window.stTenders && window.stTenders.isNew && window.stTenders.isNew(t))) return false;
+    return !state.trade || t.trade === state.trade;
+  }
   function order(a, b) {
     var pa = PRIORITY.indexOf(a.country), pb = PRIORITY.indexOf(b.country);
     if (pa < 0) pa = 99; if (pb < 0) pb = 99;
@@ -311,6 +315,22 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
     document.head.appendChild(s);
   }
 
+  // "new this week" filter: a small pill next to the count, set from the hero counter
+  function renderNewPill() {
+    if (!cnt) return;
+    var pill = document.getElementById('f-new');
+    if (!state.newOnly) { if (pill) pill.remove(); return; }
+    if (!pill) {
+      pill = document.createElement('button'); pill.type = 'button'; pill.id = 'f-new'; pill.className = 'pill';
+      pill.addEventListener('click', function () { state.newOnly = false; render(); });
+      cnt.parentNode.insertBefore(pill, cnt.nextSibling);
+    }
+    pill.textContent = ((window.stLabels && window.stLabels.fresh) || 'new this week') + ' ✕';
+  }
+  window.stMap = {
+    setNew: function (on) { state.newOnly = !!on; state.trade = ''; go('overview'); },
+    reset: function () { state.newOnly = false; state.trade = ''; go('overview'); }
+  };
   // ---------- start ----------
   (window.stTendersReady || Promise.resolve([])).then(function (list) {
     tenders = list; list.forEach(function (t) { byId[t.id] = t; });
