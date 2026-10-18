@@ -46,6 +46,25 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
   var markers = {};          // tender id -> marker
   var bounds = {};           // country code -> LatLngBounds
   var state = { level: 'overview', cc: null, id: null, trade: '', newOnly: false };
+  var camT = null;
+
+  // the filters and the map share one calm card
+  var mf = document.querySelector('.mapfilters');
+  if (mf && !document.querySelector('.mapcard')) {
+    var card = document.createElement('div'); card.className = 'mapcard';
+    stage.parentNode.insertBefore(card, mf); card.appendChild(mf); card.appendChild(stage);
+  }
+  // "clear" button: appears as soon as a filter or a country is active
+  var CLEAR = { en: 'Clear', nb: 'Nullstill', da: 'Nulstil', sv: 'Rensa', fi: 'Tyhjennä', is: 'Hreinsa', pl: 'Wyczyść', de: 'Zurücksetzen', cs: 'Vymazat', sk: 'Vymazať', nl: 'Wissen', lt: 'Išvalyti', et: 'Tühjenda', lv: 'Notīrīt', fr: 'Effacer', es: 'Borrar', it: 'Azzera' };
+  var clr = null;
+  if (cnt) {
+    var lg = (document.documentElement.lang || 'en').toLowerCase();
+    clr = document.createElement('button'); clr.type = 'button'; clr.className = 'clear'; clr.hidden = true;
+    clr.textContent = CLEAR[lg] || CLEAR[lg.split('-')[0]] || CLEAR.en;
+    cnt.parentNode.insertBefore(clr, cnt.nextSibling);
+    clr.addEventListener('click', function () { state.newOnly = false; state.trade = ''; go('overview'); });
+  }
+  function updateClear() { if (clr) clr.hidden = !(state.cc || state.trade || state.newOnly); }
 
   function el(tag, cls, text) { var n = document.createElement(tag); if (cls) n.className = cls; if (text) n.textContent = text; return n; }
   function fill(t, o) { return t.replace(/\{(\w+)\}/g, function (_, k) { return o[k]; }); }
@@ -71,7 +90,10 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
 
   function render() {
     stage.dataset.level = state.level;
-    Object.keys(views).forEach(function (k) { views[k].hidden = k !== state.level; });
+    Object.keys(views).forEach(function (k) {
+      var show = k === state.level, v = views[k];
+      if (show && v.hidden) { v.hidden = false; v.classList.remove('enter'); void v.offsetWidth; v.classList.add('enter'); } else v.hidden = !show;
+    });
     tiles.querySelectorAll('li').forEach(function (li) {
       li.classList.toggle('sel', !!state.cc && li.querySelector('b').textContent === state.cc);
     });
@@ -82,6 +104,7 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
     if (state.level === 'tender') renderTender();
     if (cnt) { var n = scoped().length; cnt.textContent = countText(n); }
     renderNewPill();
+    updateClear();
     applyMap();
     if (state.level !== 'overview' && window.matchMedia('(max-width: 900px)').matches) {
       side.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -121,7 +144,7 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
   function fillList(ul, list, withCountry) {
     ul.textContent = '';
     list.forEach(function (t) {
-      var li = el('li'), b = el('button'); b.type = 'button'; b.dataset.id = t.id;
+      var li = el('li'), b = el('button'); b.type = 'button'; b.dataset.id = t.id; b.style.setProperty('--tc', TRADE[t.trade] || '#cdbd9c');
       var top = el('span', 'tl-top');
       top.appendChild(tradeIcon(t.trade)); top.appendChild(el('b', '', withCountry ? t.city + ' · ' + cname(t.country) : t.city + ' · ' + t.region));
       b.appendChild(top);
@@ -213,11 +236,50 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
     var small = state.level === 'overview';
     return { path: gm.SymbolPath.CIRCLE, scale: big ? 13 : small ? 6 : 9, fillColor: TRADE[t.trade] || '#1c1914', fillOpacity: 1, strokeColor: big ? '#1c1914' : '#ffffff', strokeWeight: big ? 3 : small ? 1.5 : 2.5 };
   }
+  // marker hover lights up the matching list item and brings it into view (inside the panel only)
+  function listHot(id, on) {
+    var b = side.querySelector('.tlist button[data-id="' + id + '"]'); if (!b) return;
+    b.classList.toggle('on', on);
+    if (on && b.offsetParent) {
+      var r = b.getBoundingClientRect(), br = side.getBoundingClientRect();
+      if (r.top < br.top + 8 || r.bottom > br.bottom - 8) side.scrollTo({ top: side.scrollTop + (r.top - br.top) - side.clientHeight / 3, behavior: 'smooth' });
+    }
+  }
   function hot(id, on) {
     var m = markers[id]; if (!m || !map) return;
     m.setIcon(icon(byId[id], on || state.id === id)); m.setZIndex(on || state.id === id ? 10 : 1);
   }
 
+  // zoom level that fits a bounding box in the map canvas (Web Mercator maths, so we do not depend on fitBounds timing)
+  function zoomFor(b, pad) {
+    var W = Math.max(100, canvas.offsetWidth - 2 * pad), H = Math.max(100, canvas.offsetHeight - 2 * pad);
+    var ne = b.getNorthEast(), sw = b.getSouthWest();
+    var y = function (lat) { var s = Math.sin(lat * Math.PI / 180); return Math.log((1 + s) / (1 - s)) / 2; };
+    var latFrac = Math.max(0.0001, (y(ne.lat()) - y(sw.lat())) / Math.PI);
+    var dLng = ne.lng() - sw.lng(); if (dLng < 0) dLng += 360;
+    var lngFrac = Math.max(0.0001, dLng / 360);
+    var z = Math.min(Math.log(H / 256 / latFrac) / Math.LN2, Math.log(W / 256 / lngFrac) / Math.LN2);
+    return Math.max(3, Math.min(9, Math.floor(z + (W > 460 ? 0.35 : 0)))); // small screens: never crop the country
+  }
+
+  // glide to a country (or back to Europe): pan first, then zoom, then settle exactly on the centre
+  var camTok = 0;
+  function smoothFit(b) {
+    clearTimeout(camT);
+    var gm = google.maps, tok = ++camTok;
+    var bb = b || new gm.LatLngBounds({ lat: EUROPE.south, lng: EUROPE.west }, { lat: EUROPE.north, lng: EUROPE.east });
+    var center = bb.getCenter(), z = null;
+    camT = setTimeout(function () {
+      if (tok !== camTok || !canvas.offsetWidth) return;
+      z = zoomFor(bb, b ? 28 : 0);
+      map.panTo(center);
+      camT = setTimeout(function () {
+        if (tok !== camTok) return;
+        map.setZoom(z);
+        gm.event.addListenerOnce(map, 'idle', function () { if (tok === camTok) map.setCenter(center); });
+      }, 520);
+    }, 30);
+  }
   function applyMap() {
     if (!map || !mapOn) return;
     var gm = google.maps;
@@ -228,12 +290,13 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
     });
     tenders.forEach(function (t) {
       var m = markers[t.id]; if (!m) return;
-      m.setVisible(matches(t) && (state.level === 'overview' || t.country === state.cc));
+      var vis = matches(t) && (state.level === 'overview' || t.country === state.cc);
+      if (vis && !m.getVisible() && state.level === 'country') { m.setVisible(true); m.setAnimation(gm.Animation.DROP); } else m.setVisible(vis);
       m.setIcon(icon(t, state.id === t.id)); m.setZIndex(state.id === t.id ? 10 : 1);
     });
     gm.event.trigger(map, 'resize');
-    if (state.level === 'overview') map.fitBounds(EUROPE, 0);
-    else if (state.level === 'country' && bounds[state.cc]) map.fitBounds(bounds[state.cc], 28);
+    if (state.level === 'overview') smoothFit(null);
+    else if (state.level === 'country' && bounds[state.cc]) smoothFit(bounds[state.cc]);
     else if (state.level === 'tender' && byId[state.id]) {
       var t = byId[state.id]; map.panTo({ lat: t.lat, lng: t.lng });
     }
@@ -291,8 +354,8 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
       var m = new gm.Marker({ map: map, position: { lat: t.lat, lng: t.lng }, title: t.city + ' · ' + t.title, icon: icon(t, false), visible: false });
       markers[t.id] = m;
       m.addListener('click', function () { go('tender', t.country, t.id); });
-      m.addListener('mouseover', function () { hot(t.id, true); });
-      m.addListener('mouseout', function () { hot(t.id, false); });
+      m.addListener('mouseover', function () { hot(t.id, true); listHot(t.id, true); });
+      m.addListener('mouseout', function () { hot(t.id, false); listHot(t.id, false); });
     });
     if (legendEl) {
       var seen = {};
@@ -335,7 +398,8 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
   }
   window.stMap = {
     setNew: function (on) { state.newOnly = !!on; state.trade = ''; go('overview'); },
-    reset: function () { state.newOnly = false; state.trade = ''; go('overview'); }
+    reset: function () { state.newOnly = false; state.trade = ''; go('overview'); },
+    view: function () { return map ? { center: map.getCenter().toJSON(), zoom: map.getZoom(), cc: state.cc } : null; }
   };
   // ---------- start ----------
   (window.stTendersReady || Promise.resolve([])).then(function (list) {

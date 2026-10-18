@@ -608,3 +608,50 @@ footer a:hover { color: var(--accent); }
 .hero-stats .stat:hover span { color: var(--muted); }
 .hero-stats .stat:hover::after { transform: translateX(3px); opacity: 1; }
 @media (max-width: 760px) { .hero-stats { grid-template-columns: 1fr 1fr; gap: 10px; } .hero-stats .stat { padding: 14px 16px; } .hero-stats .stat b { font-size: 40px; } }
+
+/* ===== map as the visual centre ===== */
+#coverage .wrap { max-width: 1260px; }
+#coverage .label { justify-content: center; }
+#coverage .label::after { content: ""; width: 26px; height: 2px; border-radius: 2px; background: var(--accent); opacity: .7; }
+#coverage h2 { text-align: center; font-size: clamp(30px, 3.8vw, 46px); }
+#coverage .note { text-align: center; margin-left: auto; margin-right: auto; margin-bottom: 40px; }
+
+.mapcard { background: var(--paper); border: 1px solid var(--line); border-radius: 26px; overflow: hidden;
+  box-shadow: 0 2px 4px rgba(28,25,20,.05), 0 44px 90px -46px rgba(28,25,20,.42); }
+.mapcard .mapfilters { margin: 0; padding: 16px 22px; gap: 12px 18px; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; box-shadow: none; background: linear-gradient(180deg, #fffefb, #fbf7ee); align-items: flex-end; }
+.mapcard .mapfilters select { min-width: 210px; }
+.mapcard .fcount { margin: 0 0 12px auto; font-weight: 600; color: var(--ink); }
+.mapcard .pill { margin: 0 0 8px; }
+.clear { margin: 0 0 6px; height: 36px; padding: 0 16px; font: 600 13px var(--sans); background: transparent; color: var(--ink); border: 1px solid var(--line); border-radius: 999px; }
+.clear:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
+.clear[hidden] { display: none; }
+.mapcard .mapstage { margin: 0; padding: 14px; gap: 14px; border: 0; border-radius: 0; box-shadow: none; background: transparent; grid-template-columns: minmax(0, 2.1fr) minmax(310px, 1fr); }
+.mapcard .mapstage .gmap { height: clamp(480px, 74vh, 720px); border-radius: 18px; box-shadow: inset 0 0 0 1px rgba(28,25,20,.07); }
+.mapcard .mapstage .tilemap { padding: 18px 0; }
+.mapcard .mapstage .mapside { max-height: clamp(480px, 74vh, 720px); padding: 26px 22px 22px; background: #fbf7ee; border-radius: 18px; scrollbar-width: thin; scrollbar-color: #d6cab2 transparent; }
+.mapcard .mapstage .mapside::-webkit-scrollbar { width: 8px; }
+.mapcard .mapstage .mapside::-webkit-scrollbar-thumb { background: #d6cab2; border-radius: 8px; }
+
+/* side panel: calmer list, colour bar per trade, soft hand-over between views */
+.mapside .enter { animation: viewIn .28s var(--ease) both; }
+@keyframes viewIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.ms-lead { margin-bottom: 6px; }
+.ms-hint { margin-bottom: 4px; }
+.mapside .tlist { gap: 8px; margin-top: 16px; }
+.tlist button { border-left: 4px solid var(--tc, var(--line)); padding: 13px 16px 13px 14px; }
+.tlist button.on, .tlist button:focus-visible { background: #fff; border-color: #cdbd9c; border-left-color: var(--tc, #cdbd9c); box-shadow: var(--shadow-s); transform: translateY(-1px); }
+.tl-top b { color: var(--ink); font-weight: 600; letter-spacing: 0; }
+.tl-title { font-size: 16px; }
+.ms-country { font-size: 30px; margin-top: 16px; }
+.back { padding: 7px 14px; border-radius: 999px; font-weight: 600; }
+.tdetail .td-dl div { padding: 10px 0; }
+
+@media (max-width: 900px) {
+  .mapcard { border-radius: 20px; }
+  .mapcard .mapfilters { padding: 14px 16px; }
+  .mapcard .mapfilters select { min-width: 0; }
+  .mapcard .fcount { margin: 0; }
+  .mapcard .mapstage { padding: 10px; grid-template-columns: 1fr; gap: 10px; }
+  .mapcard .mapstage .gmap { height: clamp(340px, 56vh, 460px); border-radius: 14px; }
+  .mapcard .mapstage .mapside { max-height: none; padding: 22px 18px; border-radius: 14px; }
+}
