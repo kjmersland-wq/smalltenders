@@ -655,3 +655,30 @@ footer a:hover { color: var(--accent); }
   .mapcard .mapstage .gmap { height: clamp(340px, 56vh, 460px); border-radius: 14px; }
   .mapcard .mapstage .mapside { max-height: none; padding: 22px 18px; border-radius: 14px; }
 }
+
+/* country landing pages + footer country links */
+.foot-countries { flex-basis: 100%; }
+.country-hero { padding: 84px 0 96px; }
+.country-hero h1 { max-width: 20ch; }
+.country-hero .lead { max-width: 60ch; }
+.country-hero::after { height: 120px; }
+.country-hero .hero-stats[hidden] { display: none; }
+.country-hero .hero-stats { margin: 34px 0 0; }
+.country-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 18px; }
+.linkcard { text-decoration: none; color: var(--ink); }
+.linkcard:hover { transform: translateY(-3px); box-shadow: var(--shadow-m); }
+.c-open { margin-top: auto; font: 600 14px var(--sans); color: var(--accent); }
+.c-more { margin: 26px 0 0; font: 15px var(--sans); }
+.country-info { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 40px; align-items: start; }
+.country-info p { font: 16px/1.7 var(--sans); }
+.c-lang { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 26px; box-shadow: var(--shadow-s); }
+.c-lang .label { margin-bottom: 10px; }
+.c-small { font: 14px var(--sans); color: var(--muted); }
+.cta-band { text-align: center; max-width: 760px; }
+.cta-band .actions { justify-content: center; margin: 26px 0 18px; }
+.cta-band p { font: 17px/1.65 var(--sans); }
+.cp-landing { font-weight: 600; }
+@media (max-width: 900px) { .country-info { grid-template-columns: 1fr; gap: 24px; } .country-hero { padding: 56px 0 84px; } }
+
+.country-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 760px) { .country-cards { grid-template-columns: 1fr; } }

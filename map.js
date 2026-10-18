@@ -167,6 +167,10 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
     if (empty) { empty.hidden = list.length > 0; }
   }
 
+  // country pages exist for the main markets
+  var LANDING = { NO: 'norway', SE: 'sweden', DK: 'denmark', FI: 'finland', PL: 'poland', DE: 'germany' };
+  var COUNTRY_PAGE = { en: 'Country page', nb: 'Landsside', da: 'Landeside', sv: 'Landssida', fi: 'Maasivu', is: 'Landssíða', pl: 'Strona kraju', de: 'Länderseite', cs: 'Stránka země', sk: 'Stránka krajiny', nl: 'Landpagina', lt: 'Šalies puslapis', et: 'Riigi leht', lv: 'Valsts lapa', fr: 'Page du pays', es: 'Página del país', it: 'Pagina del paese' };
+  function landingLabel() { var l = lang().toLowerCase(); return COUNTRY_PAGE[l] || COUNTRY_PAGE[l.split('-')[0]] || COUNTRY_PAGE.en; }
   function renderCountry() {
     var v = views.country, cc = state.cc, list = scoped();
     v.querySelector('.back').textContent = '← ' + D.backAll;
@@ -178,6 +182,10 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
     if (!list.length) {
       var hasOthers = state.trade && tenders.some(function (t) { return t.country === cc; });
       more.appendChild(el('span', 'empty', fill(hasOthers ? (D.noneFilter || D.none) : D.none, { country: cname(cc) })));
+    }
+    if (LANDING[cc]) {   // the country page (English) for the main markets
+      var lp = el('a', 'cp-landing', cname(cc) + ': ' + landingLabel() + (lang().toLowerCase().indexOf('en') === 0 ? '' : ' (EN)') + ' →'); lp.href = '/countries/' + LANDING[cc] + '/';
+      more.appendChild(lp); more.appendChild(document.createElement('br'));
     }
     if (hrefOf[cc]) {
       var a = el('a', '', D.openPage); a.href = hrefOf[cc];
