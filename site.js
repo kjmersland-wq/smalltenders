@@ -26,11 +26,17 @@ window.SITE = {
     if (S.checkoutUrl) { n.setAttribute('href', S.checkoutUrl); n.setAttribute('rel', 'noopener'); }
   });
 
+  // nav: a soft shadow once the page has scrolled
+  (function () {
+    var nav = document.querySelector('.nav'); if (!nav) return;
+    function on() { nav.classList.toggle('scrolled', window.scrollY > 8); }
+    window.addEventListener('scroll', on, { passive: true }); on();
+  })();
   // trade strip under the hero: one chip per trade (labels come from the page's own trade filter, so it is localised)
   (function () {
     var sel = document.getElementById('f-trade'), hero = document.querySelector('.hero');
     if (!sel || !hero) return;
-    var ICON = {
+    var ICON = window.stIcons = {
       electrical: 'M13 2L4 14h7l-1 8 9-12h-7l1-8z',
       plumbing: 'M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z',
       hvac: 'M12 12m-2 0a2 2 0 1 0 4 0 2 2 0 1 0-4 0M12 10V4a3 3 0 0 1 3 3M14 12h6a3 3 0 0 1-3 3M12 14v6a3 3 0 0 1-3-3M10 12H4a3 3 0 0 1 3-3',

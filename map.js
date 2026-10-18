@@ -89,6 +89,14 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
     var f = views[state.level]; if (f && f.hasAttribute('tabindex') && state.level !== 'overview') f.focus({ preventScroll: true });
   }
 
+  // small line icon for a trade (shared from site.js); falls back to a coloured dot
+  function tradeIcon(trade) {
+    var color = TRADE[trade] || '#1c1914', d = window.stIcons && window.stIcons[trade];
+    if (!d) { var dot = el('i'); dot.style.background = color; return dot; }
+    var NS = 'http://www.w3.org/2000/svg', svg = document.createElementNS(NS, 'svg'), p = document.createElementNS(NS, 'path');
+    svg.setAttribute('viewBox', '0 0 24 24'); svg.setAttribute('aria-hidden', 'true'); svg.setAttribute('class', 'tl-ico'); svg.style.color = color;
+    p.setAttribute('d', d); svg.appendChild(p); return svg;
+  }
   function matches(t) {
     if (state.newOnly && !(window.stTenders && window.stTenders.isNew && window.stTenders.isNew(t))) return false;
     return !state.trade || t.trade === state.trade;
@@ -115,8 +123,7 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
     list.forEach(function (t) {
       var li = el('li'), b = el('button'); b.type = 'button'; b.dataset.id = t.id;
       var top = el('span', 'tl-top');
-      var dot = el('i'); dot.style.background = TRADE[t.trade] || '#1c1914';
-      top.appendChild(dot); top.appendChild(el('b', '', withCountry ? t.city + ' · ' + cname(t.country) : t.city + ' · ' + t.region));
+      top.appendChild(tradeIcon(t.trade)); top.appendChild(el('b', '', withCountry ? t.city + ' · ' + cname(t.country) : t.city + ' · ' + t.region));
       b.appendChild(top);
       b.appendChild(el('span', 'tl-title', t.title));
       b.appendChild(el('small', '', t.tradeName + ' · ' + D.deadline + ' ' + fmt(t) + ' · ' + t.value));

@@ -496,3 +496,102 @@ h1 { font-size: clamp(40px, 5.8vw, 72px); line-height: 1.04; letter-spacing: -.0
 .pill { margin-left: 10px; padding: 4px 12px; font: 600 12px var(--sans); background: var(--accent-soft); color: var(--accent); border: 1px solid #e0b9a0; border-radius: 999px; }
 .pill:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
 @media (max-width: 760px) { .stat b { font-size: 34px; } .stat-sep { display: none; } }
+
+/* ===== refinement pass 2: typography, hero depth, one map card, pricing, footer ===== */
+:root {
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI Variable Text", "Segoe UI", Roboto, sans-serif;
+  --radius-lg: 22px;
+}
+::selection { background: var(--accent-soft); color: var(--ink); }
+a { text-underline-offset: 3px; text-decoration-thickness: 1px; }
+h1, h2, h3 { text-wrap: balance; font-feature-settings: "kern", "liga"; }
+p, li { text-wrap: pretty; }
+.stat b, .plan-price, .fcount, .tc-cc { font-variant-numeric: lining-nums tabular-nums; }
+body { font-size: 17px; line-height: 1.6; }
+
+/* nav */
+.nav { transition: box-shadow .25s var(--ease), background-color .25s; }
+.nav.scrolled { box-shadow: 0 10px 30px -22px rgba(28,25,20,.5); }
+
+/* section headers share one quiet pattern */
+.label { display: flex; align-items: center; gap: 12px; color: var(--accent); }
+.label::before { content: ""; width: 26px; height: 2px; border-radius: 2px; background: var(--accent); opacity: .7; }
+h2 { font-weight: 500; }
+.note { color: #7a7063; }
+
+/* hero */
+.kicker { display: inline-flex; align-items: center; gap: 10px; padding: 7px 14px; margin-bottom: 26px; border: 1px solid #ead8c6; background: rgba(255,254,251,.75); border-radius: 999px; letter-spacing: .14em; }
+.kicker::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px rgba(154,59,22,.12); }
+h1 { font-weight: 500; }
+.lead { color: #6f6556; }
+.btn.lg { padding: 15px 26px; border-radius: 12px; }
+.btn:not(.ghost):not(.sm) { background: linear-gradient(180deg, #2a251e, #1c1914); }
+.hero-cards { position: relative; }
+.hero-cards::before { content: ""; position: absolute; inset: -40px -30px; z-index: -1; border-radius: 50%; background: radial-gradient(closest-side, rgba(233,190,160,.45), rgba(233,190,160,0)); filter: blur(8px); }
+.tcard { border-radius: 18px; box-shadow: 0 1px 2px rgba(28,25,20,.05), 0 24px 48px -28px rgba(28,25,20,.32); }
+.chip { background: var(--accent-soft); letter-spacing: .01em; }
+.fitbox { border-radius: 0 10px 10px 0; background: #f6e6d8; }
+
+/* benefits and steps */
+.tile { border-radius: 20px; padding: 34px 30px 36px; background: linear-gradient(180deg, #fffefb, #fdf9f1); }
+.tile .ico { width: 52px; height: 52px; padding: 13px; border-radius: 14px; background: #f6e6d8; }
+.tile p { font-size: 15px; line-height: 1.65; }
+.steps li { padding-top: 26px; }
+.steps .n { width: 36px; height: 36px; font-size: 15px; }
+.steps p { font-size: 15px; line-height: 1.65; }
+
+/* trade strip */
+.ts-list button { padding: 9px 16px 9px 12px; background: #fffefb; }
+.ts-list button:hover { box-shadow: 0 8px 18px -12px rgba(154,59,22,.5); }
+
+/* map: one calm card holding the map and the side panel */
+.mapfilters { border-radius: 16px; }
+.mapstage { padding: 12px; gap: 12px; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius-lg); box-shadow: var(--shadow-m); }
+.mapstage .mappanel { padding: 0; border: 0; box-shadow: none; background: transparent; border-radius: 0; }
+.mapstage .gmap { border-radius: 16px; box-shadow: inset 0 0 0 1px rgba(28,25,20,.06); }
+.mapstage .mapside { border: 0; box-shadow: none; background: #fbf7ee; border-radius: 16px; padding: 28px; }
+.mapstage .mapctl, .mapstage .tradelegend { padding: 0 6px; }
+.mapstage .tradelegend { margin: 12px 0 6px; }
+.tlist button { background: #fffefb; border-radius: 14px; padding: 14px 16px; }
+.tl-top { gap: 9px; }
+.tl-top .tl-ico { width: 18px; height: 18px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.ms-lead { font-size: 26px; line-height: 1.25; }
+.tdetail h3 { font-size: 24px; }
+
+/* pricing */
+.plan-main { border-radius: var(--radius-lg); background: linear-gradient(180deg, #fffefb 0%, #fdf8ee 100%); padding: 44px 44px 38px; }
+.plan-main::before { height: 5px; }
+.plan-price { font-weight: 500; letter-spacing: -.03em; }
+.plan-price small { font-size: 17px; margin-left: 2px; }
+.plan-list li { font-size: 16px; }
+.plan-fine { padding-top: 16px; border-top: 1px solid var(--line); margin-top: 22px; }
+.plan-help { border-radius: var(--radius-lg); background: linear-gradient(180deg, rgba(255,254,251,.7), rgba(246,238,224,.7)); }
+.plan-help h3::before { content: ""; display: block; width: 44px; height: 44px; margin-bottom: 16px; border-radius: 14px; background: #f6e6d8 url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239a3b16' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='5' width='18' height='14' rx='3'/><path d='M3.5 7l8.5 6 8.5-6'/></svg>") center / 24px no-repeat; }
+
+/* sample form */
+.form-wrap h2 { margin-bottom: 10px; }
+form input, form select { height: 50px; border-radius: 12px; border-color: var(--line); background-color: #fff; transition: border-color .15s, box-shadow .15s; }
+form input:focus, form select:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 4px rgba(154,59,22,.12); }
+form button { height: 50px; border-radius: 12px; padding: 0 26px; }
+
+/* footer */
+footer { margin-top: 0; padding: 64px 0 72px; background: var(--bg-alt); border-top: 1px solid var(--line); }
+footer .wrap { gap: 18px 48px; }
+footer p { line-height: 1.7; }
+footer a { color: #6f6556; }
+footer a:hover { color: var(--accent); }
+.foot-links a { color: var(--ink); }
+
+@media (max-width: 900px) {
+  .mapstage { padding: 10px; }
+  .plan-main { padding: 30px 24px 28px; }
+}
+@media (max-width: 760px) {
+  body { font-size: 16px; }
+  .kicker { padding: 6px 12px; }
+  .mapstage .mapside { padding: 22px; }
+  .tile { padding: 26px 22px 28px; }
+}
+
+@media (max-width: 760px) { .kicker { letter-spacing: .08em; font-size: 11px; padding: 6px 12px; } }
