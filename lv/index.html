@@ -55,14 +55,19 @@
           <li>Konts nav vajadzīgs</li>
         </ul>
       </div>
-      <aside class="hero-card" aria-hidden="true">
-        <p class="hc-head">Izdevums · piemērs</p>
-        <div class="hc-row"><span class="chip">Krāsošana</span><span class="hc-d">pēc 18 dienām</span></div>
-        <p class="hc-t">Krāsošana, pašvaldības ēkas</p>
-        <p class="hc-m">Norvēģija · Innlandet</p>
-        <div class="hc-row"><span class="chip">Ventilācija</span><span class="hc-d">pēc 24 dienām</span></div>
-        <p class="hc-t">Ventilācijas apkope, skolu ēkas</p>
-        <p class="hc-m">Polija · Mazovija</p>
+      <aside class="hero-cards" aria-hidden="true">
+        <article class="tcard compact">
+          <div class="tc-top"><span class="chip">Krāsošana</span><span class="tc-cc">Norvēģija</span></div>
+          <h3>Krāsošana, pašvaldības ēkas</h3>
+          <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>atlikušas 18 dienas</span><span class="badge">zem 150 000 €</span></div>
+          <p class="fitbox"><b>Labi der</b> 3–10 darbinieki, publiskie pasūtītāji</p>
+        </article>
+        <article class="tcard compact">
+          <div class="tc-top"><span class="chip">Ventilācija</span><span class="tc-cc">Polija</span></div>
+          <h3>Ventilācijas apkope, skolu ēkas</h3>
+          <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>atlikušas 24 dienas</span><span class="badge">Veids: Vispārīgā vienošanās</span></div>
+          <p class="fitbox"><b>Labi der</b> stabils, atkārtots darbs</p>
+        </article>
         <p class="hc-foot">Katrs ieraksts ved uz oriģinālo paziņojumu.</p>
       </aside>
     </div>
@@ -75,7 +80,7 @@
         <h2>Piecpadsmit valstis, solis pa solim</h2>
         <p class="note">Katra flīze ir valsts, novietota aptuveni tur, kur tā atrodas. Noklikšķiniet uz savas, lai lasītu lapu savā valodā.</p>
         <div class="coverage">
-          <ul class="tilemap">
+          <div class="mappanel" id="mappanel" data-src="/countries.geojson" data-btn="Rādīt interaktīvo karti" data-back="Rādīt vienkāršās flīzes"><ul class="tilemap">
             <li style="grid-area:1/1" data-wave="1"><a href="/is/"><b>IS</b><span>Ísland</span></a></li>
             <li style="grid-area:1/3" data-wave="1"><a href="/no/"><b>NO</b><span>Norge</span></a></li>
             <li style="grid-area:1/4" data-wave="1"><a href="/sv/"><b>SE</b><span>Sverige</span></a></li>
@@ -92,6 +97,10 @@
             <li style="grid-area:5/4" data-wave="3"><a href="/sk/"><b>SK</b><span>Slovensko</span></a></li>
             <li style="grid-area:6/3" data-wave="3"><a href="/at/"><b>AT</b><span>Österreich</span></a></li>
           </ul>
+            <div class="gmap" hidden role="region" aria-label="Karte ar valstīm, kuras aptveram"></div>
+            <p class="maptip" hidden></p>
+            <div class="mapctl"><button type="button" class="mapload" hidden></button><p class="mapnote" hidden>Google Maps ielādējas tikai pēc klikšķa. Google var iestatīt sīkfailus.</p></div>
+          </div>
           <ul class="legend">
             <li data-wave="1"><b>Tagad</b> Norvēģija, Dānija, Zviedrija, Somija un Islande</li>
             <li data-wave="2"><b>Tālāk</b> Polija un Vācija</li>
@@ -129,35 +138,26 @@
         <h2>Ieskats vienā izdevumā</h2>
         <p class="note">Tie ir tikai piemēri. Īstas saites uz oficiālajiem paziņojumiem parādīsies, kad saraksts sāks darboties — un oriģinālais paziņojums vienmēr ir pirmajā vietā.</p>
         <div class="cards">
-          <article class="card">
-            <span class="chip">Krāsošana</span>
+          <article class="tcard">
+            <div class="tc-top"><span class="chip">Krāsošana</span><span class="tc-cc">Norvēģija</span></div>
             <h3>Krāsošana, pašvaldības ēkas</h3>
-            <dl>
-              <div><dt>Kur</dt><dd>Norvēģija · Innlandet</dd></div>
-              <div><dt>Termiņš</dt><dd>pēc 18 dienām</dd></div>
-              <div><dt>Vērtība</dt><dd>zem 150 000 €</dd></div>
-            </dl>
-            <p class="fits"><b>Labi der</b> krāsošanas uzņēmumam ar 3–10 darbiniekiem, īpaši, ja jau strādājat ar publiskajiem pasūtītājiem.</p>
+            <p class="tc-where">Innlandet</p>
+            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>atlikušas 18 dienas</span><span class="badge">zem 150 000 €</span></div>
+            <p class="fitbox"><b>Labi der</b> krāsošanas uzņēmumam ar 3–10 darbiniekiem, īpaši, ja jau strādājat ar publiskajiem pasūtītājiem.</p>
           </article>
-          <article class="card">
-            <span class="chip">Ventilācija</span>
+          <article class="tcard">
+            <div class="tc-top"><span class="chip">Ventilācija</span><span class="tc-cc">Polija</span></div>
             <h3>Ventilācijas apkope, skolu ēkas</h3>
-            <dl>
-              <div><dt>Kur</dt><dd>Polija · Mazovija</dd></div>
-              <div><dt>Termiņš</dt><dd>pēc 24 dienām</dd></div>
-              <div><dt>Veids</dt><dd>Vispārīgā vienošanās</dd></div>
-            </dl>
-            <p class="fits"><b>Labi der</b> ja vēlaties stabilu, atkārtotu darbu un jums jau ir servisa automašīnas.</p>
+            <p class="tc-where">Mazovija</p>
+            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>atlikušas 24 dienas</span><span class="badge">Veids: Vispārīgā vienošanās</span></div>
+            <p class="fitbox"><b>Labi der</b> ja vēlaties stabilu, atkārtotu darbu un jums jau ir servisa automašīnas.</p>
           </article>
-          <article class="card">
-            <span class="chip">Elektrība</span>
+          <article class="tcard">
+            <div class="tc-top"><span class="chip">Elektrība</span><span class="tc-cc">Vācija</span></div>
             <h3>Sadalņu nomaiņa</h3>
-            <dl>
-              <div><dt>Kur</dt><dd>Vācija · reģionāls</dd></div>
-              <div><dt>Termiņš</dt><dd>pēc 12 dienām</dd></div>
-              <div><dt>Apjoms</dt><dd>Skaidri norobežots</dd></div>
-            </dl>
-            <p class="fits"><b>Labi der</b> augošam uzņēmumam: skaidrs apjoms, lielāks nekā viena cilvēka uzņēmumam, bet mazāks nekā valsts mēroga tīkliem.</p>
+            <p class="tc-where">reģionāls</p>
+            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>atlikušas 12 dienas</span><span class="badge">Apjoms: Skaidri norobežots</span></div>
+            <p class="fitbox"><b>Labi der</b> augošam uzņēmumam: skaidrs apjoms, lielāks nekā viena cilvēka uzņēmumam, bet mazāks nekā valsts mēroga tīkliem.</p>
           </article>
         </div>
       </div>
@@ -204,5 +204,6 @@
       <p><strong>Valstis:</strong> <a href="/">English</a> · <a href="/no/">Norge</a> · <a href="/da/">Danmark</a> · <a href="/sv/">Sverige</a> · <a href="/fi/">Suomi</a> · <a href="/is/">Ísland</a> · <a href="/pl/">Polska</a> · <a href="/de/">Deutschland</a> · <a href="/cs/">Česko</a> · <a href="/sk/">Slovensko</a> · <a href="/at/">Österreich</a> · <a href="/nl/">Nederland</a> · <a href="/be/">België</a> · <a href="/lt/">Lietuva</a> · <a href="/ee/">Eesti</a> · <a href="/lv/" aria-current="page">Latvija</a></p>
     </div>
   </footer>
+  <script src="/map.js" defer></script>
 </body>
 </html>

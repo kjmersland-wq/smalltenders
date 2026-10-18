@@ -55,14 +55,19 @@
           <li>Kontot pole vaja</li>
         </ul>
       </div>
-      <aside class="hero-card" aria-hidden="true">
-        <p class="hc-head">Väljaanne · näide</p>
-        <div class="hc-row"><span class="chip">Maalimine</span><span class="hc-d">18 päeva pärast</span></div>
-        <p class="hc-t">Maalimine, omavalitsuse hooned</p>
-        <p class="hc-m">Norra · Innlandet</p>
-        <div class="hc-row"><span class="chip">Ventilatsioon</span><span class="hc-d">24 päeva pärast</span></div>
-        <p class="hc-t">Ventilatsiooni hooldus, koolihooned</p>
-        <p class="hc-m">Poola · Masoovia</p>
+      <aside class="hero-cards" aria-hidden="true">
+        <article class="tcard compact">
+          <div class="tc-top"><span class="chip">Maalimine</span><span class="tc-cc">Norra</span></div>
+          <h3>Maalimine, omavalitsuse hooned</h3>
+          <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>jäänud 18 päeva</span><span class="badge">alla 150 000 €</span></div>
+          <p class="fitbox"><b>Sobib hästi</b> 3–10 töötajat, avaliku sektori tööd</p>
+        </article>
+        <article class="tcard compact">
+          <div class="tc-top"><span class="chip">Ventilatsioon</span><span class="tc-cc">Poola</span></div>
+          <h3>Ventilatsiooni hooldus, koolihooned</h3>
+          <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>jäänud 24 päeva</span><span class="badge">Liik: Raamleping</span></div>
+          <p class="fitbox"><b>Sobib hästi</b> stabiilne, korduv töö</p>
+        </article>
         <p class="hc-foot">Iga kirje viib algse teate juurde.</p>
       </aside>
     </div>
@@ -75,7 +80,7 @@
         <h2>Viisteist riiki, samm-sammult</h2>
         <p class="note">Iga plaat on riik, paigutatud ligikaudu sinna, kus ta asub. Vajuta enda omale, et lugeda lehte oma keeles.</p>
         <div class="coverage">
-          <ul class="tilemap">
+          <div class="mappanel" id="mappanel" data-src="/countries.geojson" data-btn="Näita interaktiivset kaarti" data-back="Näita lihtsaid plaate"><ul class="tilemap">
             <li style="grid-area:1/1" data-wave="1"><a href="/is/"><b>IS</b><span>Ísland</span></a></li>
             <li style="grid-area:1/3" data-wave="1"><a href="/no/"><b>NO</b><span>Norge</span></a></li>
             <li style="grid-area:1/4" data-wave="1"><a href="/sv/"><b>SE</b><span>Sverige</span></a></li>
@@ -92,6 +97,10 @@
             <li style="grid-area:5/4" data-wave="3"><a href="/sk/"><b>SK</b><span>Slovensko</span></a></li>
             <li style="grid-area:6/3" data-wave="3"><a href="/at/"><b>AT</b><span>Österreich</span></a></li>
           </ul>
+            <div class="gmap" hidden role="region" aria-label="Kaart riikidest, mida katame"></div>
+            <p class="maptip" hidden></p>
+            <div class="mapctl"><button type="button" class="mapload" hidden></button><p class="mapnote" hidden>Google Maps laaditakse alles klõpsamisel. Google võib salvestada küpsiseid.</p></div>
+          </div>
           <ul class="legend">
             <li data-wave="1"><b>Praegu</b> Norra, Taani, Rootsi, Soome ja Island</li>
             <li data-wave="2"><b>Järgmiseks</b> Poola ja Saksamaa</li>
@@ -129,35 +138,26 @@
         <h2>Pilguheit ühele väljaandele</h2>
         <p class="note">Need on näited. Päris lingid ametlikele teadetele lisanduvad, kui loend käivitub — ja algne teade on alati esikohal.</p>
         <div class="cards">
-          <article class="card">
-            <span class="chip">Maalimine</span>
+          <article class="tcard">
+            <div class="tc-top"><span class="chip">Maalimine</span><span class="tc-cc">Norra</span></div>
             <h3>Maalimine, omavalitsuse hooned</h3>
-            <dl>
-              <div><dt>Kus</dt><dd>Norra · Innlandet</dd></div>
-              <div><dt>Tähtaeg</dt><dd>18 päeva pärast</dd></div>
-              <div><dt>Väärtus</dt><dd>alla 150 000 €</dd></div>
-            </dl>
-            <p class="fits"><b>Sobib hästi</b> 3–10 töötajaga maalrifirmale, eriti kui teete juba avaliku sektori töid.</p>
+            <p class="tc-where">Innlandet</p>
+            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>jäänud 18 päeva</span><span class="badge">alla 150 000 €</span></div>
+            <p class="fitbox"><b>Sobib hästi</b> 3–10 töötajaga maalrifirmale, eriti kui teete juba avaliku sektori töid.</p>
           </article>
-          <article class="card">
-            <span class="chip">Ventilatsioon</span>
+          <article class="tcard">
+            <div class="tc-top"><span class="chip">Ventilatsioon</span><span class="tc-cc">Poola</span></div>
             <h3>Ventilatsiooni hooldus, koolihooned</h3>
-            <dl>
-              <div><dt>Kus</dt><dd>Poola · Masoovia</dd></div>
-              <div><dt>Tähtaeg</dt><dd>24 päeva pärast</dd></div>
-              <div><dt>Liik</dt><dd>Raamleping</dd></div>
-            </dl>
-            <p class="fits"><b>Sobib hästi</b> kui soovid stabiilset, korduvat tööd ja sul on teenindusautod juba liikvel.</p>
+            <p class="tc-where">Masoovia</p>
+            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>jäänud 24 päeva</span><span class="badge">Liik: Raamleping</span></div>
+            <p class="fitbox"><b>Sobib hästi</b> kui soovid stabiilset, korduvat tööd ja sul on teenindusautod juba liikvel.</p>
           </article>
-          <article class="card">
-            <span class="chip">Elekter</span>
+          <article class="tcard">
+            <div class="tc-top"><span class="chip">Elekter</span><span class="tc-cc">Saksamaa</span></div>
             <h3>Lülitusseadmete vahetus</h3>
-            <dl>
-              <div><dt>Kus</dt><dd>Saksamaa · piirkondlik</dd></div>
-              <div><dt>Tähtaeg</dt><dd>12 päeva pärast</dd></div>
-              <div><dt>Maht</dt><dd>Selgelt piiritletud</dd></div>
-            </dl>
-            <p class="fits"><b>Sobib hästi</b> kasvavale ettevõttele: selge maht, suurem kui ühe inimese firmale, aga väiksem kui üleriigilistele ketitele.</p>
+            <p class="tc-where">piirkondlik</p>
+            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>jäänud 12 päeva</span><span class="badge">Maht: Selgelt piiritletud</span></div>
+            <p class="fitbox"><b>Sobib hästi</b> kasvavale ettevõttele: selge maht, suurem kui ühe inimese firmale, aga väiksem kui üleriigilistele ketitele.</p>
           </article>
         </div>
       </div>
@@ -204,5 +204,6 @@
       <p><strong>Riigid:</strong> <a href="/">English</a> · <a href="/no/">Norge</a> · <a href="/da/">Danmark</a> · <a href="/sv/">Sverige</a> · <a href="/fi/">Suomi</a> · <a href="/is/">Ísland</a> · <a href="/pl/">Polska</a> · <a href="/de/">Deutschland</a> · <a href="/cs/">Česko</a> · <a href="/sk/">Slovensko</a> · <a href="/at/">Österreich</a> · <a href="/nl/">Nederland</a> · <a href="/be/">België</a> · <a href="/lt/">Lietuva</a> · <a href="/ee/" aria-current="page">Eesti</a> · <a href="/lv/">Latvija</a></p>
     </div>
   </footer>
+  <script src="/map.js" defer></script>
 </body>
 </html>

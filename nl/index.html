@@ -55,14 +55,19 @@
           <li>Geen account nodig</li>
         </ul>
       </div>
-      <aside class="hero-card" aria-hidden="true">
-        <p class="hc-head">Editie · voorbeeld</p>
-        <div class="hc-row"><span class="chip">Schilderwerk</span><span class="hc-d">over 18 dagen</span></div>
-        <p class="hc-t">Schilderwerk, gemeentelijke gebouwen</p>
-        <p class="hc-m">Noorwegen · Innlandet</p>
-        <div class="hc-row"><span class="chip">Ventilatie</span><span class="hc-d">over 24 dagen</span></div>
-        <p class="hc-t">Onderhoud ventilatiesystemen, schoolgebouwen</p>
-        <p class="hc-m">Polen · Mazovië</p>
+      <aside class="hero-cards" aria-hidden="true">
+        <article class="tcard compact">
+          <div class="tc-top"><span class="chip">Schilderwerk</span><span class="tc-cc">Noorwegen</span></div>
+          <h3>Schilderwerk, gemeentelijke gebouwen</h3>
+          <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>nog 18 dagen</span><span class="badge">onder €150.000</span></div>
+          <p class="fitbox"><b>Past goed</b> 3–10 medewerkers, overheidswerk</p>
+        </article>
+        <article class="tcard compact">
+          <div class="tc-top"><span class="chip">Ventilatie</span><span class="tc-cc">Polen</span></div>
+          <h3>Onderhoud ventilatiesystemen, schoolgebouwen</h3>
+          <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>nog 24 dagen</span><span class="badge">Soort: Raamovereenkomst</span></div>
+          <p class="fitbox"><b>Past goed</b> vast, terugkerend werk</p>
+        </article>
         <p class="hc-foot">Elk item verwijst naar de oorspronkelijke aankondiging.</p>
       </aside>
     </div>
@@ -75,7 +80,7 @@
         <h2>Vijftien landen, stap voor stap</h2>
         <p class="note">Elke tegel is een land, ongeveer geplaatst waar het ligt. Klik op jouw land om de pagina in je eigen taal te lezen.</p>
         <div class="coverage">
-          <ul class="tilemap">
+          <div class="mappanel" id="mappanel" data-src="/countries.geojson" data-btn="Toon de interactieve kaart" data-back="Toon eenvoudige tegels"><ul class="tilemap">
             <li style="grid-area:1/1" data-wave="1"><a href="/is/"><b>IS</b><span>Ísland</span></a></li>
             <li style="grid-area:1/3" data-wave="1"><a href="/no/"><b>NO</b><span>Norge</span></a></li>
             <li style="grid-area:1/4" data-wave="1"><a href="/sv/"><b>SE</b><span>Sverige</span></a></li>
@@ -92,6 +97,10 @@
             <li style="grid-area:5/4" data-wave="3"><a href="/sk/"><b>SK</b><span>Slovensko</span></a></li>
             <li style="grid-area:6/3" data-wave="3"><a href="/at/"><b>AT</b><span>Österreich</span></a></li>
           </ul>
+            <div class="gmap" hidden role="region" aria-label="Kaart van de landen die we dekken"></div>
+            <p class="maptip" hidden></p>
+            <div class="mapctl"><button type="button" class="mapload" hidden></button><p class="mapnote" hidden>Google Maps wordt pas geladen als je klikt. Google kan cookies plaatsen.</p></div>
+          </div>
           <ul class="legend">
             <li data-wave="1"><b>Nu</b> Noorwegen, Denemarken, Zweden, Finland en IJsland</li>
             <li data-wave="2"><b>Daarna</b> Polen en Duitsland</li>
@@ -129,35 +138,26 @@
         <h2>Een kijkje in één editie</h2>
         <p class="note">Dit zijn voorbeelden. Echte links naar de officiële aankondigingen volgen zodra de lijst van start gaat — en de oorspronkelijke aankondiging komt altijd eerst.</p>
         <div class="cards">
-          <article class="card">
-            <span class="chip">Schilderwerk</span>
+          <article class="tcard">
+            <div class="tc-top"><span class="chip">Schilderwerk</span><span class="tc-cc">Noorwegen</span></div>
             <h3>Schilderwerk, gemeentelijke gebouwen</h3>
-            <dl>
-              <div><dt>Plaats</dt><dd>Noorwegen · Innlandet</dd></div>
-              <div><dt>Deadline</dt><dd>over 18 dagen</dd></div>
-              <div><dt>Waarde</dt><dd>onder €150.000</dd></div>
-            </dl>
-            <p class="fits"><b>Past goed</b> bij een schildersbedrijf met 3–10 medewerkers, zeker als je al overheidsopdrachten doet.</p>
+            <p class="tc-where">Innlandet</p>
+            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>nog 18 dagen</span><span class="badge">onder €150.000</span></div>
+            <p class="fitbox"><b>Past goed</b> bij een schildersbedrijf met 3–10 medewerkers, zeker als je al overheidsopdrachten doet.</p>
           </article>
-          <article class="card">
-            <span class="chip">Ventilatie</span>
+          <article class="tcard">
+            <div class="tc-top"><span class="chip">Ventilatie</span><span class="tc-cc">Polen</span></div>
             <h3>Onderhoud ventilatiesystemen, schoolgebouwen</h3>
-            <dl>
-              <div><dt>Plaats</dt><dd>Polen · Mazovië</dd></div>
-              <div><dt>Deadline</dt><dd>over 24 dagen</dd></div>
-              <div><dt>Soort</dt><dd>Raamovereenkomst</dd></div>
-            </dl>
-            <p class="fits"><b>Past goed</b> als je graag vast, terugkerend werk wilt en al servicebusjes hebt rondrijden.</p>
+            <p class="tc-where">Mazovië</p>
+            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>nog 24 dagen</span><span class="badge">Soort: Raamovereenkomst</span></div>
+            <p class="fitbox"><b>Past goed</b> als je graag vast, terugkerend werk wilt en al servicebusjes hebt rondrijden.</p>
           </article>
-          <article class="card">
-            <span class="chip">Elektra</span>
+          <article class="tcard">
+            <div class="tc-top"><span class="chip">Elektra</span><span class="tc-cc">Duitsland</span></div>
             <h3>Vervanging van schakelinstallaties</h3>
-            <dl>
-              <div><dt>Plaats</dt><dd>Duitsland · regionaal</dd></div>
-              <div><dt>Deadline</dt><dd>over 12 dagen</dd></div>
-              <div><dt>Omvang</dt><dd>Duidelijk afgebakend</dd></div>
-            </dl>
-            <p class="fits"><b>Past goed</b> bij een groeiend bedrijf: een duidelijke omvang, groter dan een eenmanszaak, kleiner dan de landelijke ketens.</p>
+            <p class="tc-where">regionaal</p>
+            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>nog 12 dagen</span><span class="badge">Omvang: Duidelijk afgebakend</span></div>
+            <p class="fitbox"><b>Past goed</b> bij een groeiend bedrijf: een duidelijke omvang, groter dan een eenmanszaak, kleiner dan de landelijke ketens.</p>
           </article>
         </div>
       </div>
@@ -204,5 +204,6 @@
       <p><strong>Landen:</strong> <a href="/">English</a> · <a href="/no/">Norge</a> · <a href="/da/">Danmark</a> · <a href="/sv/">Sverige</a> · <a href="/fi/">Suomi</a> · <a href="/is/">Ísland</a> · <a href="/pl/">Polska</a> · <a href="/de/">Deutschland</a> · <a href="/cs/">Česko</a> · <a href="/sk/">Slovensko</a> · <a href="/at/">Österreich</a> · <a href="/nl/" aria-current="page">Nederland</a> · <a href="/be/">België</a> · <a href="/lt/">Lietuva</a> · <a href="/ee/">Eesti</a> · <a href="/lv/">Latvija</a></p>
     </div>
   </footer>
+  <script src="/map.js" defer></script>
 </body>
 </html>

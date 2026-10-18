@@ -55,14 +55,19 @@
           <li>Enginn aðgangur nauðsynlegur</li>
         </ul>
       </div>
-      <aside class="hero-card" aria-hidden="true">
-        <p class="hc-head">Útgáfa · dæmi</p>
-        <div class="hc-row"><span class="chip">Málun</span><span class="hc-d">eftir 18 daga</span></div>
-        <p class="hc-t">Málun, byggingar sveitarfélags</p>
-        <p class="hc-m">Noregur · Innlandet</p>
-        <div class="hc-row"><span class="chip">Loftræsting</span><span class="hc-d">eftir 24 daga</span></div>
-        <p class="hc-t">Þjónusta við loftræstikerfi, skólabyggingar</p>
-        <p class="hc-m">Pólland · Masóvía</p>
+      <aside class="hero-cards" aria-hidden="true">
+        <article class="tcard compact">
+          <div class="tc-top"><span class="chip">Málun</span><span class="tc-cc">Noregur</span></div>
+          <h3>Málun, byggingar sveitarfélags</h3>
+          <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>18 dagar eftir</span><span class="badge">undir €150.000</span></div>
+          <p class="fitbox"><b>Hentar vel</b> 3–10 starfsmenn, opinber verkefni</p>
+        </article>
+        <article class="tcard compact">
+          <div class="tc-top"><span class="chip">Loftræsting</span><span class="tc-cc">Pólland</span></div>
+          <h3>Þjónusta við loftræstikerfi, skólabyggingar</h3>
+          <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>24 dagar eftir</span><span class="badge">Tegund: Rammasamningur</span></div>
+          <p class="fitbox"><b>Hentar vel</b> jöfn, endurtekin vinna</p>
+        </article>
         <p class="hc-foot">Hver færsla vísar á upprunalegu auglýsinguna.</p>
       </aside>
     </div>
@@ -75,7 +80,7 @@
         <h2>Fimmtán lönd, eitt skref í einu</h2>
         <p class="note">Hver reitur er land, staðsett nokkurn veginn þar sem það er. Smelltu á þitt til að lesa síðuna á þínu eigin tungumáli.</p>
         <div class="coverage">
-          <ul class="tilemap">
+          <div class="mappanel" id="mappanel" data-src="/countries.geojson" data-btn="Sýna gagnvirka kortið" data-back="Sýna einfalda reiti"><ul class="tilemap">
             <li style="grid-area:1/1" data-wave="1"><a href="/is/"><b>IS</b><span>Ísland</span></a></li>
             <li style="grid-area:1/3" data-wave="1"><a href="/no/"><b>NO</b><span>Norge</span></a></li>
             <li style="grid-area:1/4" data-wave="1"><a href="/sv/"><b>SE</b><span>Sverige</span></a></li>
@@ -92,6 +97,10 @@
             <li style="grid-area:5/4" data-wave="3"><a href="/sk/"><b>SK</b><span>Slovensko</span></a></li>
             <li style="grid-area:6/3" data-wave="3"><a href="/at/"><b>AT</b><span>Österreich</span></a></li>
           </ul>
+            <div class="gmap" hidden role="region" aria-label="Kort af löndunum sem við náum yfir"></div>
+            <p class="maptip" hidden></p>
+            <div class="mapctl"><button type="button" class="mapload" hidden></button><p class="mapnote" hidden>Google Maps hleðst aðeins þegar þú smellir. Google gæti sett vefkökur.</p></div>
+          </div>
           <ul class="legend">
             <li data-wave="1"><b>Núna</b> Noregur, Danmörk, Svíþjóð, Finnland og Ísland</li>
             <li data-wave="2"><b>Næst</b> Pólland og Þýskaland</li>
@@ -129,35 +138,26 @@
         <h2>Innlit í eitt tölublað</h2>
         <p class="note">Þetta eru dæmi. Raunverulegir tenglar á opinberu auglýsingarnar koma þegar listinn fer af stað — og frumritið er alltaf fyrst.</p>
         <div class="cards">
-          <article class="card">
-            <span class="chip">Málun</span>
+          <article class="tcard">
+            <div class="tc-top"><span class="chip">Málun</span><span class="tc-cc">Noregur</span></div>
             <h3>Málun, byggingar sveitarfélags</h3>
-            <dl>
-              <div><dt>Staður</dt><dd>Noregur · Innlandet</dd></div>
-              <div><dt>Frestur</dt><dd>eftir 18 daga</dd></div>
-              <div><dt>Verðmæti</dt><dd>undir €150.000</dd></div>
-            </dl>
-            <p class="fits"><b>Hentar vel</b> málningarfyrirtæki með 3–10 starfsmenn, sérstaklega ef þið takið nú þegar að ykkur opinber verkefni.</p>
+            <p class="tc-where">Innlandet</p>
+            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>18 dagar eftir</span><span class="badge">undir €150.000</span></div>
+            <p class="fitbox"><b>Hentar vel</b> málningarfyrirtæki með 3–10 starfsmenn, sérstaklega ef þið takið nú þegar að ykkur opinber verkefni.</p>
           </article>
-          <article class="card">
-            <span class="chip">Loftræsting</span>
+          <article class="tcard">
+            <div class="tc-top"><span class="chip">Loftræsting</span><span class="tc-cc">Pólland</span></div>
             <h3>Þjónusta við loftræstikerfi, skólabyggingar</h3>
-            <dl>
-              <div><dt>Staður</dt><dd>Pólland · Masóvía</dd></div>
-              <div><dt>Frestur</dt><dd>eftir 24 daga</dd></div>
-              <div><dt>Tegund</dt><dd>Rammasamningur</dd></div>
-            </dl>
-            <p class="fits"><b>Hentar vel</b> ef þú vilt jafna, endurtekna vinnu og ert nú þegar með þjónustubíla á ferðinni.</p>
+            <p class="tc-where">Masóvía</p>
+            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>24 dagar eftir</span><span class="badge">Tegund: Rammasamningur</span></div>
+            <p class="fitbox"><b>Hentar vel</b> ef þú vilt jafna, endurtekna vinnu og ert nú þegar með þjónustubíla á ferðinni.</p>
           </article>
-          <article class="card">
-            <span class="chip">Raflagnir</span>
+          <article class="tcard">
+            <div class="tc-top"><span class="chip">Raflagnir</span><span class="tc-cc">Þýskaland</span></div>
             <h3>Endurnýjun rafmagnstaflna</h3>
-            <dl>
-              <div><dt>Staður</dt><dd>Þýskaland · svæðisbundið</dd></div>
-              <div><dt>Frestur</dt><dd>eftir 12 daga</dd></div>
-              <div><dt>Umfang</dt><dd>Afmarkað</dd></div>
-            </dl>
-            <p class="fits"><b>Hentar vel</b> vaxandi fyrirtæki: skýrt umfang, stærra en eins manns fyrirtæki en minna en landsbundnar keðjur.</p>
+            <p class="tc-where">svæðisbundið</p>
+            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>12 dagar eftir</span><span class="badge">Umfang: Afmarkað</span></div>
+            <p class="fitbox"><b>Hentar vel</b> vaxandi fyrirtæki: skýrt umfang, stærra en eins manns fyrirtæki en minna en landsbundnar keðjur.</p>
           </article>
         </div>
       </div>
@@ -204,5 +204,6 @@
       <p><strong>Lönd:</strong> <a href="/">English</a> · <a href="/no/">Norge</a> · <a href="/da/">Danmark</a> · <a href="/sv/">Sverige</a> · <a href="/fi/">Suomi</a> · <a href="/is/" aria-current="page">Ísland</a> · <a href="/pl/">Polska</a> · <a href="/de/">Deutschland</a> · <a href="/cs/">Česko</a> · <a href="/sk/">Slovensko</a> · <a href="/at/">Österreich</a> · <a href="/nl/">Nederland</a> · <a href="/be/">België</a> · <a href="/lt/">Lietuva</a> · <a href="/ee/">Eesti</a> · <a href="/lv/">Latvija</a></p>
     </div>
   </footer>
+  <script src="/map.js" defer></script>
 </body>
 </html>

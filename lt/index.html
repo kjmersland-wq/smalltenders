@@ -55,14 +55,19 @@
           <li>Paskyros nereikia</li>
         </ul>
       </div>
-      <aside class="hero-card" aria-hidden="true">
-        <p class="hc-head">Leidimas · pavyzdys</p>
-        <div class="hc-row"><span class="chip">Dažymas</span><span class="hc-d">po 18 dienų</span></div>
-        <p class="hc-t">Dažymas, savivaldybės pastatai</p>
-        <p class="hc-m">Norvegija · Innlandet</p>
-        <div class="hc-row"><span class="chip">Vėdinimas</span><span class="hc-d">po 24 dienų</span></div>
-        <p class="hc-t">Vėdinimo sistemų priežiūra, mokyklų pastatai</p>
-        <p class="hc-m">Lenkija · Mazovija</p>
+      <aside class="hero-cards" aria-hidden="true">
+        <article class="tcard compact">
+          <div class="tc-top"><span class="chip">Dažymas</span><span class="tc-cc">Norvegija</span></div>
+          <h3>Dažymas, savivaldybės pastatai</h3>
+          <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>liko 18 dienų</span><span class="badge">iki 150 000 €</span></div>
+          <p class="fitbox"><b>Gerai tinka</b> 3–10 darbuotojų, viešieji užsakovai</p>
+        </article>
+        <article class="tcard compact">
+          <div class="tc-top"><span class="chip">Vėdinimas</span><span class="tc-cc">Lenkija</span></div>
+          <h3>Vėdinimo sistemų priežiūra, mokyklų pastatai</h3>
+          <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>liko 24 dienos</span><span class="badge">Rūšis: Preliminarioji sutartis</span></div>
+          <p class="fitbox"><b>Gerai tinka</b> pastovus, pasikartojantis darbas</p>
+        </article>
         <p class="hc-foot">Kiekvienas įrašas veda į originalų skelbimą.</p>
       </aside>
     </div>
@@ -75,7 +80,7 @@
         <h2>Penkiolika šalių, žingsnis po žingsnio</h2>
         <p class="note">Kiekvienas langelis – šalis, išdėstyta maždaug ten, kur ji yra. Spustelėkite savąją ir perskaitykite puslapį savo kalba.</p>
         <div class="coverage">
-          <ul class="tilemap">
+          <div class="mappanel" id="mappanel" data-src="/countries.geojson" data-btn="Rodyti interaktyvų žemėlapį" data-back="Rodyti paprastus langelius"><ul class="tilemap">
             <li style="grid-area:1/1" data-wave="1"><a href="/is/"><b>IS</b><span>Ísland</span></a></li>
             <li style="grid-area:1/3" data-wave="1"><a href="/no/"><b>NO</b><span>Norge</span></a></li>
             <li style="grid-area:1/4" data-wave="1"><a href="/sv/"><b>SE</b><span>Sverige</span></a></li>
@@ -92,6 +97,10 @@
             <li style="grid-area:5/4" data-wave="3"><a href="/sk/"><b>SK</b><span>Slovensko</span></a></li>
             <li style="grid-area:6/3" data-wave="3"><a href="/at/"><b>AT</b><span>Österreich</span></a></li>
           </ul>
+            <div class="gmap" hidden role="region" aria-label="Šalių, kurias aptarnaujame, žemėlapis"></div>
+            <p class="maptip" hidden></p>
+            <div class="mapctl"><button type="button" class="mapload" hidden></button><p class="mapnote" hidden>Google Maps įkeliamas tik spustelėjus. Google gali įrašyti slapukus.</p></div>
+          </div>
           <ul class="legend">
             <li data-wave="1"><b>Dabar</b> Norvegija, Danija, Švedija, Suomija ir Islandija</li>
             <li data-wave="2"><b>Toliau</b> Lenkija ir Vokietija</li>
@@ -129,35 +138,26 @@
         <h2>Žvilgsnis į vieną leidimą</h2>
         <p class="note">Tai tik pavyzdžiai. Tikros nuorodos į oficialius skelbimus atsiras, kai sąrašas startuos — o originalus skelbimas visada svarbiausias.</p>
         <div class="cards">
-          <article class="card">
-            <span class="chip">Dažymas</span>
+          <article class="tcard">
+            <div class="tc-top"><span class="chip">Dažymas</span><span class="tc-cc">Norvegija</span></div>
             <h3>Dažymas, savivaldybės pastatai</h3>
-            <dl>
-              <div><dt>Kur</dt><dd>Norvegija · Innlandet</dd></div>
-              <div><dt>Terminas</dt><dd>po 18 dienų</dd></div>
-              <div><dt>Vertė</dt><dd>iki 150 000 €</dd></div>
-            </dl>
-            <p class="fits"><b>Gerai tinka</b> dažymo įmonei, turinčiai 3–10 darbuotojų, ypač jei jau dirbate su viešaisiais užsakovais.</p>
+            <p class="tc-where">Innlandet</p>
+            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>liko 18 dienų</span><span class="badge">iki 150 000 €</span></div>
+            <p class="fitbox"><b>Gerai tinka</b> dažymo įmonei, turinčiai 3–10 darbuotojų, ypač jei jau dirbate su viešaisiais užsakovais.</p>
           </article>
-          <article class="card">
-            <span class="chip">Vėdinimas</span>
+          <article class="tcard">
+            <div class="tc-top"><span class="chip">Vėdinimas</span><span class="tc-cc">Lenkija</span></div>
             <h3>Vėdinimo sistemų priežiūra, mokyklų pastatai</h3>
-            <dl>
-              <div><dt>Kur</dt><dd>Lenkija · Mazovija</dd></div>
-              <div><dt>Terminas</dt><dd>po 24 dienų</dd></div>
-              <div><dt>Rūšis</dt><dd>Preliminarioji sutartis</dd></div>
-            </dl>
-            <p class="fits"><b>Gerai tinka</b> jei norite pastovaus, pasikartojančio darbo ir jau turite aptarnavimo automobilių.</p>
+            <p class="tc-where">Mazovija</p>
+            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>liko 24 dienos</span><span class="badge">Rūšis: Preliminarioji sutartis</span></div>
+            <p class="fitbox"><b>Gerai tinka</b> jei norite pastovaus, pasikartojančio darbo ir jau turite aptarnavimo automobilių.</p>
           </article>
-          <article class="card">
-            <span class="chip">Elektra</span>
+          <article class="tcard">
+            <div class="tc-top"><span class="chip">Elektra</span><span class="tc-cc">Vokietija</span></div>
             <h3>Skirstomųjų įrenginių keitimas</h3>
-            <dl>
-              <div><dt>Kur</dt><dd>Vokietija · regioninis</dd></div>
-              <div><dt>Terminas</dt><dd>po 12 dienų</dd></div>
-              <div><dt>Apimtis</dt><dd>Aiškiai apribota</dd></div>
-            </dl>
-            <p class="fits"><b>Gerai tinka</b> augančiai įmonei: aiški apimtis, didesnė nei vieno žmogaus verslui, bet mažesnė nei nacionaliniams tinklams.</p>
+            <p class="tc-where">regioninis</p>
+            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>liko 12 dienų</span><span class="badge">Apimtis: Aiškiai apribota</span></div>
+            <p class="fitbox"><b>Gerai tinka</b> augančiai įmonei: aiški apimtis, didesnė nei vieno žmogaus verslui, bet mažesnė nei nacionaliniams tinklams.</p>
           </article>
         </div>
       </div>
@@ -204,5 +204,6 @@
       <p><strong>Šalys:</strong> <a href="/">English</a> · <a href="/no/">Norge</a> · <a href="/da/">Danmark</a> · <a href="/sv/">Sverige</a> · <a href="/fi/">Suomi</a> · <a href="/is/">Ísland</a> · <a href="/pl/">Polska</a> · <a href="/de/">Deutschland</a> · <a href="/cs/">Česko</a> · <a href="/sk/">Slovensko</a> · <a href="/at/">Österreich</a> · <a href="/nl/">Nederland</a> · <a href="/be/">België</a> · <a href="/lt/" aria-current="page">Lietuva</a> · <a href="/ee/">Eesti</a> · <a href="/lv/">Latvija</a></p>
     </div>
   </footer>
+  <script src="/map.js" defer></script>
 </body>
 </html>

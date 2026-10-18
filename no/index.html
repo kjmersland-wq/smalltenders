@@ -55,14 +55,19 @@
           <li>Ingen konto nødvendig</li>
         </ul>
       </div>
-      <aside class="hero-card" aria-hidden="true">
-        <p class="hc-head">Utgave · eksempel</p>
-        <div class="hc-row"><span class="chip">Maling</span><span class="hc-d">om 18 dager</span></div>
-        <p class="hc-t">Maling, kommunale bygg</p>
-        <p class="hc-m">Norge · Innlandet</p>
-        <div class="hc-row"><span class="chip">Ventilasjon</span><span class="hc-d">om 24 dager</span></div>
-        <p class="hc-t">Ventilasjonsservice, skolebygg</p>
-        <p class="hc-m">Polen · Mazowsze</p>
+      <aside class="hero-cards" aria-hidden="true">
+        <article class="tcard compact">
+          <div class="tc-top"><span class="chip">Maling</span><span class="tc-cc">Norge</span></div>
+          <h3>Maling, kommunale bygg</h3>
+          <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>18 dager igjen</span><span class="badge">under €150 000</span></div>
+          <p class="fitbox"><b>Passer godt</b> 3–10 ansatte, offentlig arbeid</p>
+        </article>
+        <article class="tcard compact">
+          <div class="tc-top"><span class="chip">Ventilasjon</span><span class="tc-cc">Polen</span></div>
+          <h3>Ventilasjonsservice, skolebygg</h3>
+          <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>24 dager igjen</span><span class="badge">Type: Rammeavtale</span></div>
+          <p class="fitbox"><b>Passer godt</b> jevnt, gjentakende arbeid</p>
+        </article>
         <p class="hc-foot">Hver oppføring lenker til den opprinnelige kunngjøringen.</p>
       </aside>
     </div>
@@ -75,7 +80,7 @@
         <h2>Femten land, ett skritt av gangen</h2>
         <p class="note">Hver rute er et land, plassert omtrent der det ligger. Klikk på ditt for å lese siden på ditt eget språk.</p>
         <div class="coverage">
-          <ul class="tilemap">
+          <div class="mappanel" id="mappanel" data-src="/countries.geojson" data-btn="Vis det interaktive kartet" data-back="Vis enkle fliser"><ul class="tilemap">
             <li style="grid-area:1/1" data-wave="1"><a href="/is/"><b>IS</b><span>Ísland</span></a></li>
             <li style="grid-area:1/3" data-wave="1"><a href="/no/"><b>NO</b><span>Norge</span></a></li>
             <li style="grid-area:1/4" data-wave="1"><a href="/sv/"><b>SE</b><span>Sverige</span></a></li>
@@ -92,6 +97,10 @@
             <li style="grid-area:5/4" data-wave="3"><a href="/sk/"><b>SK</b><span>Slovensko</span></a></li>
             <li style="grid-area:6/3" data-wave="3"><a href="/at/"><b>AT</b><span>Österreich</span></a></li>
           </ul>
+            <div class="gmap" hidden role="region" aria-label="Kart over landene vi dekker"></div>
+            <p class="maptip" hidden></p>
+            <div class="mapctl"><button type="button" class="mapload" hidden></button><p class="mapnote" hidden>Laster Google Maps når du klikker. Google kan sette informasjonskapsler.</p></div>
+          </div>
           <ul class="legend">
             <li data-wave="1"><b>Nå</b> Norge, Danmark, Sverige, Finland og Island</li>
             <li data-wave="2"><b>Neste</b> Polen og Tyskland</li>
@@ -129,35 +138,26 @@
         <h2>En titt på en utgave</h2>
         <p class="note">Dette er eksempler. Ekte lenker til de offisielle kunngjøringene kommer når listen starter — og originalen kommer alltid først.</p>
         <div class="cards">
-          <article class="card">
-            <span class="chip">Maling</span>
+          <article class="tcard">
+            <div class="tc-top"><span class="chip">Maling</span><span class="tc-cc">Norge</span></div>
             <h3>Maling, kommunale bygg</h3>
-            <dl>
-              <div><dt>Sted</dt><dd>Norge · Innlandet</dd></div>
-              <div><dt>Frist</dt><dd>om 18 dager</dd></div>
-              <div><dt>Verdi</dt><dd>under €150 000</dd></div>
-            </dl>
-            <p class="fits"><b>Passer godt</b> for et malerfirma med 3–10 ansatte, særlig hvis dere allerede tar offentlige oppdrag.</p>
+            <p class="tc-where">Innlandet</p>
+            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>18 dager igjen</span><span class="badge">under €150 000</span></div>
+            <p class="fitbox"><b>Passer godt</b> for et malerfirma med 3–10 ansatte, særlig hvis dere allerede tar offentlige oppdrag.</p>
           </article>
-          <article class="card">
-            <span class="chip">Ventilasjon</span>
+          <article class="tcard">
+            <div class="tc-top"><span class="chip">Ventilasjon</span><span class="tc-cc">Polen</span></div>
             <h3>Ventilasjonsservice, skolebygg</h3>
-            <dl>
-              <div><dt>Sted</dt><dd>Polen · Mazowsze</dd></div>
-              <div><dt>Frist</dt><dd>om 24 dager</dd></div>
-              <div><dt>Type</dt><dd>Rammeavtale</dd></div>
-            </dl>
-            <p class="fits"><b>Passer godt</b> hvis du ønsker jevnt, gjentakende arbeid og allerede har servicebiler på veien.</p>
+            <p class="tc-where">Mazowsze</p>
+            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>24 dager igjen</span><span class="badge">Type: Rammeavtale</span></div>
+            <p class="fitbox"><b>Passer godt</b> hvis du ønsker jevnt, gjentakende arbeid og allerede har servicebiler på veien.</p>
           </article>
-          <article class="card">
-            <span class="chip">Elektro</span>
+          <article class="tcard">
+            <div class="tc-top"><span class="chip">Elektro</span><span class="tc-cc">Tyskland</span></div>
             <h3>Utskifting av elektriske sentraler</h3>
-            <dl>
-              <div><dt>Sted</dt><dd>Tyskland · regionalt</dd></div>
-              <div><dt>Frist</dt><dd>om 12 dager</dd></div>
-              <div><dt>Omfang</dt><dd>Avgrenset</dd></div>
-            </dl>
-            <p class="fits"><b>Passer godt</b> for et voksende firma: tydelig omfang, større enn et enmannsfirma, men mindre enn de nasjonale kjedene.</p>
+            <p class="tc-where">regionalt</p>
+            <div class="badges"><span class="badge dl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>12 dager igjen</span><span class="badge">Omfang: Avgrenset</span></div>
+            <p class="fitbox"><b>Passer godt</b> for et voksende firma: tydelig omfang, større enn et enmannsfirma, men mindre enn de nasjonale kjedene.</p>
           </article>
         </div>
       </div>
@@ -204,5 +204,6 @@
       <p><strong>Land:</strong> <a href="/">English</a> · <a href="/no/" aria-current="page">Norge</a> · <a href="/da/">Danmark</a> · <a href="/sv/">Sverige</a> · <a href="/fi/">Suomi</a> · <a href="/is/">Ísland</a> · <a href="/pl/">Polska</a> · <a href="/de/">Deutschland</a> · <a href="/cs/">Česko</a> · <a href="/sk/">Slovensko</a> · <a href="/at/">Österreich</a> · <a href="/nl/">Nederland</a> · <a href="/be/">België</a> · <a href="/lt/">Lietuva</a> · <a href="/ee/">Eesti</a> · <a href="/lv/">Latvija</a></p>
     </div>
   </footer>
+  <script src="/map.js" defer></script>
 </body>
 </html>
