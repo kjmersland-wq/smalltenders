@@ -1,7 +1,8 @@
 // "Where we look": Google map with a three-level flow.
 //   overview -> click a country -> country (zoom, markers, list) -> click a tender -> detail panel
 // The side panel and the list work without Google too (the tiles open the same views).
-// The map itself loads as the section nears the screen, unless the visitor chose the simple tiles.
+// The map itself loads only when the visitor asks for it (or chose it on an earlier visit);
+// until then no request goes to Google and the simple tiles are shown.
 
 // Put your Google Maps JavaScript API key here (restrict it to smalltenders.com in Google Cloud).
 const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
@@ -568,7 +569,9 @@ const GOOGLE_MAPS_KEY = 'AIzaSyBgoNqkHj-teEQ4O3tqMhs8DEC-gtPbMEI';
       pref('map'); loadMap();
     });
     render();
-    if (pref() === 'tiles') return;
+    // Google Maps is contacted only after the visitor asks for it: the button above, or an
+    // earlier visit where they chose the map. Until then the simple tiles are shown.
+    if (pref() !== 'map') return;
     if ('IntersectionObserver' in window) {
       var io = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { io.disconnect(); loadMap(); } }, { rootMargin: '400px 0px' });
       io.observe(panel);
